@@ -1,0 +1,9 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Genesis Mesh trust primitives are exposed through a stable Trust API and language SDKs.
+    <break time="650ms"/>
+    Developers can verify agreements, boundary decisions, evidence, disclosure proofs, consensus proofs, and data-usage policies without embedding protocol internals.
+    <break time="650ms"/>
+    That is how portable trust becomes usable from real software.
+  </voice>
+</speak>

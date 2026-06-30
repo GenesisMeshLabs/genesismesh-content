@@ -1,4 +1,4 @@
-"""Generate Azure Speech narration from a campaign's voiceover.md.
+"""Generate Azure Speech narration from a campaign's voiceover.
 
 Usage:
     python videos/scripts/generate_tts.py portable-trust
@@ -65,6 +65,24 @@ def read_campaign(path: Path) -> dict:
     return json.loads(campaign_file.read_text(encoding="utf-8"))
 
 
+def read_voiceover(path: Path) -> tuple[str, bool, Path]:
+    ssml_file = path / "voiceover.ssml"
+    if ssml_file.exists():
+        text = ssml_file.read_text(encoding="utf-8").strip()
+        if not text:
+            raise SystemExit(f"Voiceover is empty: {ssml_file}")
+        return text, True, ssml_file
+
+    markdown_file = path / "voiceover.md"
+    if not markdown_file.exists():
+        raise SystemExit(f"Missing voiceover.md or voiceover.ssml: {path}")
+
+    text = markdown_file.read_text(encoding="utf-8").strip()
+    if not text:
+        raise SystemExit(f"Voiceover is empty: {markdown_file}")
+    return text, False, markdown_file
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("campaign", help="Campaign slug under campaigns/")
@@ -76,13 +94,7 @@ def main() -> int:
 
     path = campaign_dir(args.campaign)
     campaign = read_campaign(path)
-    voiceover_file = path / "voiceover.md"
-    if not voiceover_file.exists():
-        raise SystemExit(f"Missing voiceover.md: {voiceover_file}")
-
-    text = voiceover_file.read_text(encoding="utf-8").strip()
-    if not text:
-        raise SystemExit(f"Voiceover is empty: {voiceover_file}")
+    text, is_ssml, voiceover_file = read_voiceover(path)
 
     speech_key = (
         os.environ.get("AZURE_SPEECH_KEY")
@@ -124,9 +136,14 @@ def main() -> int:
     audio_config = speechsdk.audio.AudioOutputConfig(filename=str(out_path))
     synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
 
-    result = synthesizer.speak_text_async(text).get()
+    if is_ssml:
+        result = synthesizer.speak_ssml_async(text).get()
+    else:
+        result = synthesizer.speak_text_async(text).get()
     if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
-        print(f"Speech synthesized: {out_path}")
+        mode = "SSML" if is_ssml else "plain text"
+        print(f"Speech synthesized from {mode}: {voiceover_file}")
+        print(f"Output: {out_path}")
         return 0
 
     if result.reason == speechsdk.ResultReason.Canceled:

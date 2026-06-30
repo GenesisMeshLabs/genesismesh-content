@@ -54,7 +54,9 @@ Campaign rules:
 
 ## Dynamic Voiceover
 
-The text-to-speech step reads each campaign's `voiceover.md`. Voice is dynamic:
+The text-to-speech step reads each campaign's voiceover. Use `voiceover.md` for drafting and `voiceover.ssml` for production delivery. If `voiceover.ssml` exists, the TTS script uses it. Otherwise it falls back to `voiceover.md`.
+
+Voice is dynamic:
 
 - Set a default voice in `videos/scripts/.env`.
 - Override it per campaign in `campaign.json`.
@@ -62,6 +64,20 @@ The text-to-speech step reads each campaign's `voiceover.md`. Voice is dynamic:
 - Replace the TTS provider later without changing campaign content.
 
 The current script targets Azure AI Speech using the Speech SDK.
+
+SSML is useful for campaign speeches because it controls pauses, emphasis, pacing, and pronunciation while keeping the article draft readable.
+
+Minimal campaign SSML:
+
+```xml
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Genesis Mesh is <emphasis level="moderate">portable trust</emphasis> for sovereign systems.
+    <break time="600ms"/>
+    Systems can connect today. But trust still breaks at the boundary.
+  </voice>
+</speak>
+```
 
 Expected `.env` keys:
 
@@ -110,9 +126,10 @@ videos/renders/<campaign-slug>.mp4
 
 1. Edit `article.md`.
 2. Edit `voiceover.md`.
-3. Adjust `campaign.json` images, voice, and timing.
-4. Generate narration with `generate_tts.py`.
-5. Generate video with `generate_video.py`.
-6. Review the rendered video before publishing.
+3. Add or update `voiceover.ssml` when the speech is ready for production TTS.
+4. Adjust `campaign.json` images, voice, and timing.
+5. Generate narration with `generate_tts.py`.
+6. Generate video with `generate_video.py`.
+7. Review the rendered video before publishing.
 
 Shared GIFs from the Genesis Mesh docs live in `shared/examples/gifs/` and can be added to campaigns later as proof/demo material.

@@ -1,0 +1,15 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    It is not enough to trust once.
+    <break time="700ms"/>
+    Trust changes.
+    <break time="300ms"/>
+    Keys are compromised.
+    <break time="300ms"/>
+    Roles expire.
+    <break time="300ms"/>
+    Communities withdraw recognition.
+    <break time="700ms"/>
+    Genesis Mesh makes recognition explicit, and makes revocation <emphasis level="moderate">provable</emphasis> across organizational boundaries.
+  </voice>
+</speak>

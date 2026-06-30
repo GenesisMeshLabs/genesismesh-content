@@ -1,0 +1,9 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Data access needs more than a yes or no.
+    <break time="650ms"/>
+    It needs intent, policy, evidence, and verification.
+    <break time="650ms"/>
+    Genesis Mesh can make data-access decisions auditable across systems without turning the mesh into a data translation layer.
+  </voice>
+</speak>

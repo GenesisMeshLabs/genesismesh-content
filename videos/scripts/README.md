@@ -28,6 +28,8 @@ Aliases also work: `AZURE_TTS_KEY`, `SPEECH_KEY`, `speech_key`, `AZURE_TTS_ENDPO
 
 ## Generate Narration
 
+The TTS script prefers `voiceover.ssml` when present and falls back to `voiceover.md` for draft narration.
+
 ```powershell
 python .\videos\scripts\generate_tts.py portable-trust
 ```
@@ -48,6 +50,18 @@ The output is:
 
 ```text
 campaigns/<campaign>/audio/narration.wav
+```
+
+SSML files should be Azure-compatible:
+
+```xml
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Put production narration here.
+    <break time="500ms"/>
+    Use emphasis only where the delivery needs it.
+  </voice>
+</speak>
 ```
 
 ## Generate Video

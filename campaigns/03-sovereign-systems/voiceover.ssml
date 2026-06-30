@@ -1,0 +1,9 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Genesis Mesh is portable trust for sovereign systems.
+    <break time="600ms"/>
+    Each operator controls its own keys, policies, recognition, revocation, and trust decisions.
+    <break time="650ms"/>
+    That makes the protocol relevant to companies, cloud platforms, edge networks, governments, and independent communities.
+  </voice>
+</speak>

@@ -1,0 +1,12 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Systems can connect.
+    <break time="450ms"/>
+    But they cannot carry trust across boundaries.
+    <break time="650ms"/>
+    That problem applies to agents, APIs, services, devices, pipelines, and organizations.
+    <break time="650ms"/>
+    Genesis Mesh is <emphasis level="moderate">portable trust</emphasis> for sovereign systems:
+    a protocol for identity, recognition, revocation, and auditable trust state.
+  </voice>
+</speak>

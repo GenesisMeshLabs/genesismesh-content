@@ -1,0 +1,11 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Genesis Mesh is not tied to one runtime or one language.
+    <break time="650ms"/>
+    The protocol surface is becoming stable across Python, TypeScript, Go, and dot net.
+    <break time="650ms"/>
+    When multiple implementations verify the same signed trust artifacts, Genesis Mesh becomes a protocol,
+    <break time="300ms"/>
+    not just a codebase.
+  </voice>
+</speak>

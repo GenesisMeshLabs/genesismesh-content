@@ -1,0 +1,11 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Agent networks need more than routing.
+    <break time="650ms"/>
+    They need identity, capability boundaries, revocation, and provenance.
+    <break time="650ms"/>
+    Genesis Mesh is not an agent framework.
+    <break time="350ms"/>
+    It is the trust layer agents can consume.
+  </voice>
+</speak>

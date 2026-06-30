@@ -1,0 +1,9 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Edge infrastructure is distributed by default.
+    <break time="650ms"/>
+    Devices, nodes, and operators need to cooperate across environments without giving one system central authority.
+    <break time="650ms"/>
+    Genesis Mesh gives edge systems portable identity, recognition, revocation, and auditability.
+  </voice>
+</speak>

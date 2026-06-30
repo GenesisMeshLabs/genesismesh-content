@@ -1,0 +1,11 @@
+<speak version="1.0" xml:lang="en-US">
+  <voice name="en-US-Adam:DragonHDLatestNeural">
+    Enterprises already have identity systems and governance.
+    <break time="650ms"/>
+    Genesis Mesh does not replace local authority.
+    <break time="350ms"/>
+    It lets organizations recognize external trust while keeping their own policy and revocation decisions.
+    <break time="650ms"/>
+    That is the difference between integration and centralization.
+  </voice>
+</speak>
