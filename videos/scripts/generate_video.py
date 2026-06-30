@@ -25,7 +25,14 @@ def campaign_dir(slug: str) -> Path:
     path = CAMPAIGNS / slug
     if path.exists():
         return path
-    matches = [candidate.parent for candidate in CAMPAIGNS.rglob("campaign.json") if candidate.parent.name == slug]
+    matches = []
+    for candidate in CAMPAIGNS.rglob("campaign.json"):
+        try:
+            campaign = json.loads(candidate.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        if candidate.parent.name == slug or campaign.get("slug") == slug:
+            matches.append(candidate.parent)
     if len(matches) == 1:
         return matches[0]
     if len(matches) > 1:

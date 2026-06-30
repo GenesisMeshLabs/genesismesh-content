@@ -7,19 +7,19 @@ The campaign structure is split into horizontal narrative campaigns first, then 
 ```text
 genesismesh-content/
   campaigns/
-    why-genesismesh/
-    portable-trust/
-    sovereign-systems/
-    recognition-and-revocation/
-    auditable-trust-state/
-    protocol-interoperability/
-    trust-api-and-sdks/
-    use-cases/
-      ai-agents/
-      edge-infrastructure/
-      supply-chain-trust/
-      enterprise-integration/
-      data-access-governance/
+    01-why-genesismesh/
+    02-portable-trust/
+    03-sovereign-systems/
+    04-recognition-and-revocation/
+    05-auditable-trust-state/
+    06-protocol-interoperability/
+    07-trust-api-and-sdks/
+    08-use-cases/
+      01-ai-agents/
+      02-edge-infrastructure/
+      03-supply-chain-trust/
+      04-enterprise-integration/
+      05-data-access-governance/
   shared/
     images/
       brand/
@@ -71,7 +71,7 @@ AZURE_SPEECH_ENDPOINT=https://<resource>.cognitiveservices.azure.com/
 AZURE_SPEECH_VOICE=en-US-Adam:DragonHDLatestNeural
 ```
 
-Generate audio:
+Generate audio using the stable campaign slug from `campaign.json`:
 
 ```powershell
 python .\videos\scripts\generate_tts.py portable-trust
