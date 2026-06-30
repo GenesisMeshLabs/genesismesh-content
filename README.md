@@ -141,6 +141,8 @@ Cost posture:
 - Revid voice generation is opt-in with `--revid-voice`.
 - Revid background music is opt-in with `--music`.
 - `stock-video` is the default media type because it avoids AI visual-generation cost; use `moving-image` or `ai-video` deliberately when the campaign needs it.
+- For production campaign videos, prefer Revid `audio-to-video` with the generated Azure narration. This keeps the approved voice track and lets Revid supply stock footage and captions.
+- `audio-to-video` requires a public audio URL. If `--audio-url` is omitted, the script uploads `campaigns/<campaign>/audio/narration.wav` to a temporary file host and caches the direct URL under `videos/revid-jobs/`.
 
 Estimate credits:
 
@@ -159,6 +161,13 @@ Render with Revid-generated voice and moving AI images:
 ```powershell
 python .\videos\scripts\generate_revid_video.py estimate portable-trust --media-type moving-image --revid-voice
 python .\videos\scripts\generate_revid_video.py render portable-trust --media-type moving-image --revid-voice --yes
+```
+
+Render with approved Azure audio, real stock footage, and subtitles:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py estimate portable-trust --workflow audio-to-video --media-type stock-video --density high --caption-preset Elegant --ratio 16:9
+python .\videos\scripts\generate_revid_video.py render portable-trust --workflow audio-to-video --media-type stock-video --density high --caption-preset Elegant --ratio 16:9 --yes
 ```
 
 Poll a render:

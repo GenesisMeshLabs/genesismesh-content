@@ -3,6 +3,7 @@
 Usage:
     python videos/scripts/generate_revid_video.py payload portable-trust
     python videos/scripts/generate_revid_video.py render portable-trust
+    python videos/scripts/generate_revid_video.py render portable-trust --workflow audio-to-video --audio-url https://...
     python videos/scripts/generate_revid_video.py status <revid-job-id>
     python videos/scripts/generate_revid_video.py poll <revid-job-id>
 
@@ -32,6 +33,7 @@ ENV_FILE = Path(__file__).resolve().parent / ".env"
 JOBS_DIR = ROOT / "videos" / "revid-jobs"
 DEFAULT_API_BASE = "https://www.revid.ai/api/public/v3"
 USER_AGENT = "GenesisMeshContent/1.0 (+https://github.com/GenesisMeshLabs/genesismesh-content)"
+TMPFILES_UPLOAD_URL = "https://tmpfiles.org/api/v1/upload"
 
 
 def load_env(path: Path) -> None:
@@ -148,22 +150,138 @@ def estimate_json(payload: dict) -> dict:
     return json.loads(raw) if raw.strip() else {}
 
 
+def build_media(args: argparse.Namespace) -> dict:
+    media: dict = {
+        "type": args.media_type,
+        "quality": args.quality,
+        "density": args.density,
+        "animation": args.animation,
+    }
+    if args.image_model:
+        media["imageModel"] = args.image_model
+    if args.video_model:
+        media["videoModel"] = args.video_model
+    if args.media_preset:
+        media["mediaPreset"] = args.media_preset
+    if args.b_roll_type:
+        media["bRollType"] = args.b_roll_type
+    if args.max_items:
+        media["maxItems"] = args.max_items
+    return media
+
+
+def tmpfiles_download_url(page_url: str) -> str:
+    return page_url.replace("https://tmpfiles.org/", "https://tmpfiles.org/dl/")
+
+
+def safe_job_name(value: str) -> str:
+    return value.replace("\\", "-").replace("/", "-")
+
+
+def upload_audio_to_tmpfiles(audio_file: Path, campaign_slug: str) -> str:
+    if not audio_file.exists():
+        raise SystemExit(f"Missing generated narration audio: {audio_file}")
+
+    JOBS_DIR.mkdir(parents=True, exist_ok=True)
+    cache_file = JOBS_DIR / f"{safe_job_name(campaign_slug)}.audio-url.txt"
+    if cache_file.exists():
+        cached_url = cache_file.read_text(encoding="utf-8").strip()
+        if cached_url:
+            return cached_url
+
+    boundary = f"----GenesisMeshContent{int(time.time())}"
+    file_bytes = audio_file.read_bytes()
+    body = b"".join(
+        [
+            f"--{boundary}\r\n".encode("utf-8"),
+            f'Content-Disposition: form-data; name="file"; filename="{audio_file.name}"\r\n'.encode("utf-8"),
+            b"Content-Type: audio/wav\r\n\r\n",
+            file_bytes,
+            b"\r\n",
+            f"--{boundary}--\r\n".encode("utf-8"),
+        ]
+    )
+    req = urllib.request.Request(
+        TMPFILES_UPLOAD_URL,
+        data=body,
+        method="POST",
+        headers={
+            "Content-Type": f"multipart/form-data; boundary={boundary}",
+            "Accept": "application/json",
+            "User-Agent": USER_AGENT,
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=120) as response:
+            raw = response.read().decode("utf-8")
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise SystemExit(f"Temporary audio upload failed {exc.code}: {detail}") from exc
+
+    response = json.loads(raw)
+    if response.get("status") != "success" or not response.get("data", {}).get("url"):
+        raise SystemExit(f"Temporary audio upload failed: {raw}")
+    direct_url = tmpfiles_download_url(response["data"]["url"])
+    cache_file.write_text(direct_url + "\n", encoding="utf-8")
+    print(f"Audio uploaded for Revid: {direct_url}", file=sys.stderr)
+    return direct_url
+
+
 def build_payload(args: argparse.Namespace) -> dict:
     path = campaign_dir(args.campaign)
     campaign = read_campaign(path)
+    campaign_slug = campaign.get("slug", args.campaign)
     script, source_path = read_text_source(path, args.source)
+
+    if args.workflow == "audio-to-video":
+        audio_url = args.audio_url
+        if not audio_url:
+            audio_file = Path(args.audio_file) if args.audio_file else path / "audio" / "narration.wav"
+            audio_url = upload_audio_to_tmpfiles(audio_file, campaign_slug)
+        payload: dict = {
+            "workflow": "audio-to-video",
+            "source": {
+                "url": audio_url,
+                "recordingType": "audio",
+            },
+            "media": build_media(args),
+            "captions": {
+                "enabled": not args.no_subtitles,
+                "preset": args.caption_preset,
+                "position": args.caption_position,
+            },
+            "options": {
+                "useWholeAudio": True,
+                "hasToTranscript": True,
+                "disableAudio": not args.music,
+                "disableVoice": True,
+                "preventSummarization": True,
+                "outputCount": 1,
+            },
+            "render": {
+                "resolution": args.resolution,
+                "compression": args.compression,
+                "frameRate": args.frame_rate,
+            },
+            "aspectRatio": args.ratio,
+            "metadata": {
+                "campaign": campaign_slug,
+                "title": campaign.get("title", campaign_slug),
+                "source": str(source_path.relative_to(ROOT)).replace("\\", "/"),
+                "audio": "azure-tts-narration",
+                "generator": "genesismesh-content/videos/scripts/generate_revid_video.py",
+            },
+        }
+        if args.extra:
+            payload.update(json.loads(args.extra))
+        return payload
 
     payload: dict = {
         "workflow": "script-to-video",
         "source": {
             "text": script,
         },
-        "media": {
-            "type": args.media_type,
-            "quality": args.quality,
-            "density": args.density,
-            "animation": args.animation,
-        },
+        "media": build_media(args),
         "voice": {
             "enabled": args.revid_voice,
         },
@@ -206,7 +324,7 @@ def build_payload(args: argparse.Namespace) -> dict:
 
 
 def find_job_id(response: dict) -> str | None:
-    for key in ("id", "jobId", "job_id", "renderId", "render_id", "videoId", "video_id"):
+    for key in ("id", "pid", "projectId", "project_id", "jobId", "job_id", "renderId", "render_id", "videoId", "video_id"):
         value = response.get(key)
         if isinstance(value, str) and value:
             return value
@@ -234,7 +352,14 @@ def save_json(path: Path, data: dict) -> None:
 
 def download(url: str, out: Path) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
-    with urllib.request.urlopen(url, timeout=120) as response:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Referer": "https://www.revid.ai/",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=300) as response:
         out.write_bytes(response.read())
 
 
@@ -245,10 +370,18 @@ def main() -> int:
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument("campaign", help="Campaign slug from campaign.json")
     common.add_argument("--source", default="auto", help="auto, voiceover, article, or a file path")
+    common.add_argument("--workflow", default="script-to-video", choices=["script-to-video", "audio-to-video"])
+    common.add_argument("--audio-url", help="Public audio URL for audio-to-video. Use the generated Azure narration WAV.")
+    common.add_argument("--audio-file", help="Local generated narration WAV to upload for audio-to-video. Defaults to campaign audio/narration.wav.")
     common.add_argument("--media-type", default="stock-video", help="stock-video, moving-image, ai-video, motion-graphics, or custom")
     common.add_argument("--quality", default="standard", help="standard, pro, or ultra")
     common.add_argument("--density", default="medium", help="low, medium, or high")
     common.add_argument("--animation", default="soft", help="none, soft, dynamic, or depth; applies to moving-image")
+    common.add_argument("--image-model", help="cheap, good, or ultra for generated images")
+    common.add_argument("--video-model", help="base, pro, ultra, veo3, or sora2 for generated video")
+    common.add_argument("--media-preset", help="Revid visual preset such as REALISM")
+    common.add_argument("--b-roll-type", help="Revid b-roll style, such as split-screen")
+    common.add_argument("--max-items", type=int, help="Maximum visual items/scenes")
     common.add_argument("--ratio", default="16:9", help="9:16, 16:9, 1:1, 4:5, or auto")
     common.add_argument("--caption-preset", default="Wrap 1", help="Revid caption/subtitle preset")
     common.add_argument("--caption-position", default="bottom", help="Caption position")
