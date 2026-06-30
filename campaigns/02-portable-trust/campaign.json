@@ -24,6 +24,7 @@
   ],
   "slogan": "Trust should move without one central owner.",
   "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice_role": "Adam - core thesis voice",
   "duration_seconds_per_image": 5,
   "images": [
     "../../shared/images/marketing/marketing-hero-trust-fabric.png",

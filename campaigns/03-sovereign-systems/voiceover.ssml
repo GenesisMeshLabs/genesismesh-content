@@ -1,9 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    Genesis Mesh is portable trust for sovereign systems.
-    <break time="600ms"/>
-    Each operator controls its own keys, policies, recognition, revocation, and trust decisions.
-    <break time="650ms"/>
-    That makes the protocol relevant to companies, cloud platforms, edge networks, governments, and independent communities.
+  <voice name="en-US-Ava:DragonHDLatestNeural">
+    Every cross-boundary trust architecture eventually asks the same question: <emphasis level="moderate">who is in charge</emphasis>?
+    <break time="550ms"/>
+    Two financial institutions may need to cooperate, but neither wants the other identity provider in its trust chain. A shared broker looks simple, until both organizations accept someone else key management, uptime, and revocation rules.
+    <break time="550ms"/>
+    <emphasis level="moderate">Sovereign systems</emphasis> reject that tradeoff. Each operator keeps its own keys, its own recognition policy, and its own revocation decisions.
+    <break time="550ms"/>
+    Genesis Mesh lets sovereigns cooperate through signed recognition, not centralized control. They can recognize one another, exchange attestations, and revoke trust without surrendering local authority.
+    <break time="550ms"/>
+    The value is not isolation. The value is joining a recognition network <emphasis level="moderate">without giving up sovereignty</emphasis>.
   </voice>
 </speak>

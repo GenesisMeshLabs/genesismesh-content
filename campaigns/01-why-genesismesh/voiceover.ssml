@@ -1,12 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    Systems can connect.
-    <break time="450ms"/>
-    But they cannot carry trust across boundaries.
-    <break time="650ms"/>
-    That problem applies to agents, APIs, services, devices, pipelines, and organizations.
-    <break time="650ms"/>
-    Genesis Mesh is <emphasis level="moderate">portable trust</emphasis> for sovereign systems:
-    a protocol for identity, recognition, revocation, and auditable trust state.
+  <voice name="en-US-Andrew:DragonHDLatestNeural">
+    Systems today connect well. APIs talk to APIs. Services discover each other. Traffic flows across organizational lines.
+    <break time="550ms"/>
+    The trust problem is different. When a request crosses a boundary, authorization state often does not travel with it. Each system re-verifies, re-interprets, or simply assumes.
+    <break time="550ms"/>
+    Genesis Mesh starts from a different premise: <emphasis level="moderate">trust should be carried by the protocol</emphasis>, not assumed by the connectivity layer.
+    <break time="550ms"/>
+    A sovereign system issues signed evidence when it recognizes another. That evidence can be verified without a live call to a central registry, and it can be revoked with a signed withdrawal.
+    <break time="550ms"/>
+    This is <emphasis level="moderate">portable trust for sovereign systems</emphasis>: explicit, verifiable, and withdrawable across organizational boundaries.
   </voice>
 </speak>

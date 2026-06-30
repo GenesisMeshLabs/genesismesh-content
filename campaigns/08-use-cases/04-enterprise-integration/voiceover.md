@@ -1,5 +1,9 @@
-Enterprises already have identity systems and governance.
+Enterprise integration usually asks one party to adopt the other identity system, or asks both parties to trust a shared broker.
 
-Genesis Mesh does not replace local authority. It lets organizations recognize external trust while keeping their own policy and revocation decisions.
+That makes cooperation depend on someone else infrastructure, key lifecycle, and revocation decisions.
 
-That is the difference between integration and centralization.
+Genesis Mesh enables integration without authority transfer. Each enterprise keeps its own Network Authority, keys, enrollment, and policy.
+
+The relationship is expressed as signed bilateral recognition. Each side states what it recognizes, under what terms, for how long, and how that recognition can be revoked.
+
+Local authority stays local. Cross-boundary cooperation stays explicit.

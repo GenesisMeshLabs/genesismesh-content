@@ -1,11 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    Agent networks need more than routing.
-    <break time="650ms"/>
-    They need identity, capability boundaries, revocation, and provenance.
-    <break time="650ms"/>
-    Genesis Mesh is not an agent framework.
-    <break time="350ms"/>
-    It is the trust layer agents can consume.
+  <voice name="en-US-Nova:DragonHDLatestNeural">
+    Multi-agent systems have a trust problem that orchestration frameworks do not solve.
+    <break time="550ms"/>
+    A framework can route work between agents. It does not prove which authority enrolled the acting agent, what it is allowed to do, or whether that enrollment has been revoked.
+    <break time="550ms"/>
+    Genesis Mesh targets <emphasis level="moderate">cross-boundary trust</emphasis>, not intra-runtime coordination.
+    <break time="550ms"/>
+    When an agent from Sovereign A calls a service run by Sovereign B, the trust path should be explicit: a signed attestation, a recognition treaty, and evidence of the authorization decision.
+    <break time="550ms"/>
+    Genesis Mesh is <emphasis level="moderate">not an agent framework</emphasis>. It is the <emphasis level="moderate">trust layer agents can consume</emphasis>.
   </voice>
 </speak>

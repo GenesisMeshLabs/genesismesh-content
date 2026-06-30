@@ -23,7 +23,8 @@
     "genesismesh/ops/go-to-market.md"
   ],
   "slogan": "Use Genesis Mesh trust primitives from the systems developers already build with.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Emma:DragonHDLatestNeural",
+  "voice_role": "Emma - developer adoption voice",
   "duration_seconds_per_image": 5,
   "images": [
     "../../shared/images/marketing/marketing-protocol-interoperability.png",

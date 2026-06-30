@@ -1,15 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    It is not enough to trust once.
-    <break time="700ms"/>
-    Trust changes.
-    <break time="300ms"/>
-    Keys are compromised.
-    <break time="300ms"/>
-    Roles expire.
-    <break time="300ms"/>
-    Communities withdraw recognition.
-    <break time="700ms"/>
-    Genesis Mesh makes recognition explicit, and makes revocation <emphasis level="moderate">provable</emphasis> across organizational boundaries.
+  <voice name="en-US-Brian:DragonHDLatestNeural">
+    Trust is <emphasis level="moderate">not a binary state</emphasis> that you set once and forget. It is a lifecycle.
+    <break time="550ms"/>
+    Systems recognize each other, cooperate under that recognition, and then circumstances change. A partner is compromised. A contract expires. A key is rotated by the wrong party.
+    <break time="550ms"/>
+    Most trust systems are designed to say yes. They are much weaker when they need to say no.
+    <break time="550ms"/>
+    Genesis Mesh treats <emphasis level="moderate">recognition and revocation symmetrically</emphasis>. Both are explicit, signed operations. A recognition treaty declares the terms. A revocation artifact declares when trust ended, why, and under whose key.
+    <break time="550ms"/>
+    The ability to <emphasis level="moderate">cut trust off with proof</emphasis> is not an optional security feature. It is a prerequisite for operating across boundaries.
   </voice>
 </speak>

@@ -22,7 +22,8 @@
     "genesismesh/ops/go-to-market.md"
   ],
   "slogan": "Enterprises can keep local authority while recognizing external trust.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Jane:DragonHDLatestNeural",
+  "voice_role": "Jane - enterprise integration voice",
   "duration_seconds_per_image": 5,
   "images": [
     "../../../shared/images/marketing/marketing-independent-operators.png",

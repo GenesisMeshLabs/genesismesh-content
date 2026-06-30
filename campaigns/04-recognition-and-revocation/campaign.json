@@ -22,7 +22,8 @@
     "genesismesh/ops/go-to-market.md"
   ],
   "slogan": "It is not enough to trust once. You must be able to cut trust off with proof.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Brian:DragonHDLatestNeural",
+  "voice_role": "Brian - security lifecycle voice",
   "duration_seconds_per_image": 5,
   "images": [
     "../../shared/images/marketing/marketing-independent-operators.png",

@@ -22,7 +22,8 @@
     "genesismesh/docs/development/roadmap.md"
   ],
   "slogan": "Genesis Mesh is not tied to one runtime or one language.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Steffan:DragonHDLatestNeural",
+  "voice_role": "Steffan - protocol precision voice",
   "duration_seconds_per_image": 5,
   "images": [
     "../../shared/images/marketing/marketing-protocol-interoperability.png",

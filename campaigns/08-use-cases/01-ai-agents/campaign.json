@@ -22,7 +22,8 @@
     "genesismesh/ops/go-to-market.md"
   ],
   "slogan": "Agents are an overlay. Trust is the layer beneath them.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Nova:DragonHDLatestNeural",
+  "voice_role": "Nova - AI agents voice",
   "duration_seconds_per_image": 5,
   "images": [
     "../../../shared/images/marketing/marketing-agent-network.png",

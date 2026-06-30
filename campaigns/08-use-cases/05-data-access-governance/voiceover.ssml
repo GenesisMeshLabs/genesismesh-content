@@ -1,9 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    Data access needs more than a yes or no.
-    <break time="650ms"/>
-    It needs intent, policy, evidence, and verification.
-    <break time="650ms"/>
-    Genesis Mesh can make data-access decisions auditable across systems without turning the mesh into a data translation layer.
+  <voice name="en-US-Phoebe:DragonHDLatestNeural">
+    Data governance policies describe who can access what, under what conditions, and for what purpose.
+    <break time="550ms"/>
+    The harder question is whether an access event was actually authorized <emphasis level="moderate">at the moment it happened</emphasis>, by an authority allowed to grant it.
+    <break time="550ms"/>
+    Genesis Mesh treats a data access event as a trust decision. A <emphasis level="moderate">DataUsage disclosure record</emphasis> carries the purpose, policy reference, issuer, timestamp, and signature.
+    <break time="550ms"/>
+    That artifact can be retained, presented to an auditor, and verified without reconstructing the decision from logs.
+    <break time="550ms"/>
+    Genesis Mesh is not a data catalog, lineage tracker, or translation layer. It makes the <emphasis level="moderate">authorization context auditable</emphasis>.
   </voice>
 </speak>

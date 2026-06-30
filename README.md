@@ -70,6 +70,8 @@ Voice is dynamic:
 
 The current script targets Azure AI Speech using the Speech SDK.
 
+The selected campaign voice map lives in `videos/scripts/VOICE_PLAN.md`. Each campaign uses a distinct Azure `DragonHDLatestNeural` voice that was available to this workspace at selection time.
+
 SSML is useful for campaign speeches because it controls pauses, emphasis, pacing, and pronunciation while keeping the article draft readable.
 
 Minimal campaign SSML:

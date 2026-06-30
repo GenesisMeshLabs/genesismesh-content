@@ -1,11 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    Genesis Mesh is not tied to one runtime or one language.
-    <break time="650ms"/>
-    The protocol surface is becoming stable across Python, TypeScript, Go, and dot net.
-    <break time="650ms"/>
-    When multiple implementations verify the same signed trust artifacts, Genesis Mesh becomes a protocol,
-    <break time="300ms"/>
-    not just a codebase.
+  <voice name="en-US-Steffan:DragonHDLatestNeural">
+    A trust layer that only works in one language or one runtime is not a trust layer. It is a library with a marketing story around it.
+    <break time="550ms"/>
+    Real interoperability means different implementations can produce and verify the same trust artifacts. Not similar artifacts. The <emphasis level="moderate">same canonical bytes</emphasis>, signed and verified against the same public key.
+    <break time="550ms"/>
+    Genesis Mesh defines interoperability at the <emphasis level="moderate">cryptographic layer</emphasis>: Ed25519 signing, canonical JSON serialization, and the exact header set for signed admin requests.
+    <break time="550ms"/>
+    A Go service can produce an attestation today, and a .NET tool can verify it later without access to the original service, runtime, or database.
+    <break time="550ms"/>
+    That is what makes <emphasis level="moderate">portable trust actually portable</emphasis>.
   </voice>
 </speak>

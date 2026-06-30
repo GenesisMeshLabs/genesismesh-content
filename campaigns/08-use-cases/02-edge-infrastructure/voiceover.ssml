@@ -1,9 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    Edge infrastructure is distributed by default.
-    <break time="650ms"/>
-    Devices, nodes, and operators need to cooperate across environments without giving one system central authority.
-    <break time="650ms"/>
-    Genesis Mesh gives edge systems portable identity, recognition, revocation, and auditability.
+  <voice name="en-US-Davis:DragonHDLatestNeural">
+    Edge infrastructure does not always have a reliable connection back to a central authority.
+    <break time="550ms"/>
+    A branch gateway may need to verify requests <emphasis level="moderate">while offline</emphasis>. It may hold a cached attestation, signed by its Network Authority, proving its identity and capabilities.
+    <break time="550ms"/>
+    If the gateway is later compromised, the operator issues a signed revocation. Online systems can enforce it on their next check. Offline systems catch up when they reconnect.
+    <break time="550ms"/>
+    Genesis Mesh does not pretend revocation is instant everywhere. It makes revocation <emphasis level="moderate">explicit, signed, and auditable</emphasis>.
+    <break time="550ms"/>
+    Distributed infrastructure needs <emphasis level="moderate">identity that travels</emphasis> with it.
   </voice>
 </speak>

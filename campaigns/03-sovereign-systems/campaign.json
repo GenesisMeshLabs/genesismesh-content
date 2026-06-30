@@ -21,7 +21,8 @@
     "genesismesh/docs/development/strategy.md"
   ],
   "slogan": "Each operator controls its own keys, policies, recognition, revocation, and trust decisions.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Ava:DragonHDLatestNeural",
+  "voice_role": "Ava - calm sovereign systems narrative",
   "duration_seconds_per_image": 5,
   "images": [
     "../../shared/images/marketing/marketing-independent-operators.png",

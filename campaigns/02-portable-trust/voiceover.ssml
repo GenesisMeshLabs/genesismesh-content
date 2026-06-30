@@ -1,10 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
   <voice name="en-US-Adam:DragonHDLatestNeural">
-    Trust should move between independent systems without one central owner.
-    <break time="650ms"/>
-    It helps independent organizations recognize each other without giving up control of their own keys, policies, or revocation decisions.
-    <break time="650ms"/>
-    That is the core Genesis Mesh thesis:
-    make trust <emphasis level="moderate">explicit</emphasis>, verifiable, portable, and withdrawable across organizational boundaries.
+    Zero trust tells us to verify every request. But most zero trust systems still live inside one organization boundary.
+    <break time="550ms"/>
+    <emphasis level="moderate">Portable trust</emphasis> answers the harder question: what happens when trust has to cross that boundary?
+    <break time="550ms"/>
+    A portable trust decision is <emphasis level="moderate">explicit</emphasis>. It was made at a specific time, by a specific authority, for a specific purpose. It is <emphasis level="moderate">self-contained</emphasis>, so another party can verify it offline. And it is <emphasis level="moderate">revocable</emphasis>, so the issuing authority can withdraw it with proof.
+    <break time="550ms"/>
+    Genesis Mesh turns that idea into protocol artifacts: signed attestations, agreements, evidence records, and revocations that can move between independent systems.
+    <break time="550ms"/>
+    Trust should move with the decision, not remain trapped inside the system that made it.
   </voice>
 </speak>

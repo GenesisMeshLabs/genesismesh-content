@@ -21,7 +21,8 @@
     "genesismesh/docs/development/strategy.md"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Andrew:DragonHDLatestNeural",
+  "voice_role": "Andrew - flagship authoritative",
   "duration_seconds_per_image": 5,
   "images": [
     "../../shared/images/marketing/marketing-hero-trust-fabric.png",

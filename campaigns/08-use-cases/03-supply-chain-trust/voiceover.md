@@ -1,5 +1,9 @@
-Open-source supply chains depend on maintainer trust.
+Software supply-chain security usually focuses on the artifact: what was built, what it contains, and whether it was tampered with.
 
-Genesis Mesh can make that trust portable: a maintainer is attested by one community, recognized by another, and revoked when conditions change.
+But there is another question beneath that: who was authorized to produce this release, under what delegation, and can that authorization be withdrawn?
 
-The first proof is not a marketplace. It is a protocol proof for delegation, release gates, and revocation.
+A valid signature does not prove the signer was still authorized. Maintainer compromise works because trusted keys can be misused.
+
+Genesis Mesh adds the authorization layer. Maintainer authority can be attested, bounded, checked at release gates, and revoked with a signed withdrawal.
+
+It does not replace SBOMs, signature verification, or vulnerability scanning. It complements them by making authorization explicit and withdrawable.

@@ -33,6 +33,8 @@ Aliases also work: `AZURE_TTS_KEY`, `SPEECH_KEY`, `speech_key`, `AZURE_TTS_ENDPO
 
 The TTS script prefers `voiceover.ssml` when present and falls back to `voiceover.md` for draft narration.
 
+The campaign voice map lives in `VOICE_PLAN.md`. The current set uses distinct Azure `DragonHDLatestNeural` voices per campaign.
+
 ```powershell
 python .\videos\scripts\generate_tts.py portable-trust
 ```

@@ -1,9 +1,13 @@
 <speak version="1.0" xml:lang="en-US">
-  <voice name="en-US-Adam:DragonHDLatestNeural">
-    Every trust decision should leave evidence that can be verified later.
-    <break time="650ms"/>
-    Genesis Mesh records signed evidence about specific trust decisions.
-    <break time="650ms"/>
-    That makes trust auditable without making Genesis Mesh the authority over who deserves trust.
+  <voice name="en-US-Serena:DragonHDLatestNeural">
+    After an incident, the question is never only what happened. It is why that action was allowed to happen.
+    <break time="550ms"/>
+    Logs can show that a request occurred. Policies can suggest what should have been allowed. But neither is the same as <emphasis level="moderate">signed evidence</emphasis> of the trust state at that moment.
+    <break time="550ms"/>
+    Auditable trust state means every significant trust decision leaves a signed artifact: who trusted whom, what it permitted, when it was issued, and under which key.
+    <break time="550ms"/>
+    Genesis Mesh produces that evidence as <emphasis level="moderate">protocol output</emphasis>. Agreements, attestations, boundary decisions, consensus outcomes, and data usage disclosures become verifiable records.
+    <break time="550ms"/>
+    The audit trail is not reconstructed after the fact. It is created <emphasis level="moderate">when the trust decision happens</emphasis>.
   </voice>
 </speak>

@@ -22,7 +22,8 @@
     "genesismesh/ops/go-to-market.md"
   ],
   "slogan": "Attest delegation, gate releases, and revoke trust after compromise.",
-  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "voice": "en-US-Alloy:DragonHDLatestNeural",
+  "voice_role": "Alloy - supply-chain trust voice",
   "duration_seconds_per_image": 5,
   "images": [
     "../../../shared/images/marketing/marketing-supply-chain-trust.png",
