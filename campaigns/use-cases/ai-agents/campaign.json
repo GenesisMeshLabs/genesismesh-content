@@ -1,0 +1,13 @@
+{
+  "slug": "use-cases/ai-agents",
+  "title": "Use Case: AI Agents",
+  "slogan": "Agents are an overlay. Trust is the layer beneath them.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../../shared/images/marketing/marketing-agent-network.png",
+    "../../../shared/images/marketing/marketing-hero-trust-fabric.png"
+  ],
+  "thumbnail": "../../../shared/images/marketing/marketing-agent-network.png",
+  "output": "../../../videos/renders/use-cases-ai-agents.mp4"
+}

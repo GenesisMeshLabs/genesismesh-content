@@ -1,0 +1,14 @@
+{
+  "slug": "sovereign-systems",
+  "title": "Sovereign Systems",
+  "slogan": "Each operator controls its own keys, policies, recognition, revocation, and trust decisions.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-independent-operators.png",
+    "../../shared/images/marketing/marketing-hero-trust-fabric.png",
+    "../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../shared/images/marketing/marketing-independent-operators.png",
+  "output": "../../videos/renders/sovereign-systems.mp4"
+}

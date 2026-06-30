@@ -1,0 +1,13 @@
+{
+  "slug": "protocol-interoperability",
+  "title": "Protocol Interoperability",
+  "slogan": "Genesis Mesh is not tied to one runtime or one language.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-protocol-interoperability.png",
+    "../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../shared/images/marketing/marketing-protocol-interoperability.png",
+  "output": "../../videos/renders/protocol-interoperability.mp4"
+}

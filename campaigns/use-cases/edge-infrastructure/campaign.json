@@ -1,0 +1,13 @@
+{
+  "slug": "use-cases/edge-infrastructure",
+  "title": "Use Case: Edge Infrastructure",
+  "slogan": "Distributed devices need identity, revocation, and trust paths across boundaries.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../../shared/images/marketing/marketing-independent-operators.png",
+    "../../../shared/images/marketing/marketing-hero-trust-fabric.png"
+  ],
+  "thumbnail": "../../../shared/images/marketing/marketing-independent-operators.png",
+  "output": "../../../videos/renders/use-cases-edge-infrastructure.mp4"
+}

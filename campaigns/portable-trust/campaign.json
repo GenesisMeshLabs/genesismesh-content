@@ -1,0 +1,14 @@
+{
+  "slug": "portable-trust",
+  "title": "Portable Trust",
+  "slogan": "Trust should move without one central owner.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-hero-trust-fabric.png",
+    "../../shared/images/marketing/marketing-independent-operators.png",
+    "../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../shared/images/marketing/social-card.png",
+  "output": "../../videos/renders/portable-trust.mp4"
+}

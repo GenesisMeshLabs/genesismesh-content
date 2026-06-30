@@ -1,0 +1,13 @@
+{
+  "slug": "use-cases/supply-chain-trust",
+  "title": "Use Case: Supply-Chain Trust",
+  "slogan": "Attest delegation, gate releases, and revoke trust after compromise.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../../shared/images/marketing/marketing-supply-chain-trust.png",
+    "../../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../../shared/images/marketing/marketing-supply-chain-trust.png",
+  "output": "../../../videos/renders/use-cases-supply-chain-trust.mp4"
+}

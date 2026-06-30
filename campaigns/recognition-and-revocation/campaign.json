@@ -1,0 +1,14 @@
+{
+  "slug": "recognition-and-revocation",
+  "title": "Recognition and Revocation",
+  "slogan": "It is not enough to trust once. You must be able to cut trust off with proof.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-independent-operators.png",
+    "../../shared/images/marketing/marketing-provenance-chain.png",
+    "../../shared/images/marketing/marketing-supply-chain-trust.png"
+  ],
+  "thumbnail": "../../shared/images/marketing/marketing-provenance-chain.png",
+  "output": "../../videos/renders/recognition-and-revocation.mp4"
+}

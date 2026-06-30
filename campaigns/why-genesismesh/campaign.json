@@ -1,0 +1,14 @@
+{
+  "slug": "why-genesismesh",
+  "title": "Why Genesis Mesh?",
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-hero-trust-fabric.png",
+    "../../shared/images/marketing/marketing-independent-operators.png",
+    "../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../shared/images/marketing/social-card.png",
+  "output": "../../videos/renders/why-genesismesh.mp4"
+}

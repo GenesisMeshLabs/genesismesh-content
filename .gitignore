@@ -1,0 +1,24 @@
+# Generated campaign outputs
+campaigns/*/audio/*
+campaigns/*/renders/*
+campaigns/**/audio/*
+campaigns/**/renders/*
+videos/renders/*
+videos/thumbnails/*
+videos/source/*
+
+# Keep directories
+!campaigns/*/audio/.gitkeep
+!campaigns/*/renders/.gitkeep
+!campaigns/**/audio/.gitkeep
+!campaigns/**/renders/.gitkeep
+!videos/renders/.gitkeep
+!videos/thumbnails/.gitkeep
+!videos/source/.gitkeep
+
+# Local secrets
+videos/scripts/.env
+
+# Python
+__pycache__/
+*.pyc

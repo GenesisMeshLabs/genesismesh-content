@@ -1,0 +1,13 @@
+{
+  "slug": "auditable-trust-state",
+  "title": "Auditable Trust State",
+  "slogan": "Every trust decision should leave evidence that can be verified later.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-provenance-chain.png",
+    "../../shared/images/marketing/marketing-supply-chain-trust.png"
+  ],
+  "thumbnail": "../../shared/images/marketing/marketing-provenance-chain.png",
+  "output": "../../videos/renders/auditable-trust-state.mp4"
+}

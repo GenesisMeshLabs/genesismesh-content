@@ -1,0 +1,13 @@
+{
+  "slug": "use-cases/data-access-governance",
+  "title": "Use Case: Data Access Governance",
+  "slogan": "Data access should carry intent, policy, evidence, and verification.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../../shared/images/marketing/marketing-provenance-chain.png",
+    "../../../shared/images/marketing/marketing-protocol-interoperability.png"
+  ],
+  "thumbnail": "../../../shared/images/marketing/marketing-provenance-chain.png",
+  "output": "../../../videos/renders/use-cases-data-access-governance.mp4"
+}

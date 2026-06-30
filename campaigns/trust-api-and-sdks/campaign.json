@@ -1,0 +1,13 @@
+{
+  "slug": "trust-api-and-sdks",
+  "title": "Trust API and SDKs",
+  "slogan": "Use Genesis Mesh trust primitives from the systems developers already build with.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-protocol-interoperability.png",
+    "../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../shared/images/marketing/marketing-protocol-interoperability.png",
+  "output": "../../videos/renders/trust-api-and-sdks.mp4"
+}

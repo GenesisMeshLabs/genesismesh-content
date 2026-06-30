@@ -1,0 +1,13 @@
+{
+  "slug": "use-cases/enterprise-integration",
+  "title": "Use Case: Enterprise Integration",
+  "slogan": "Enterprises can keep local authority while recognizing external trust.",
+  "voice": "en-US-Adam:DragonHDLatestNeural",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../../shared/images/marketing/marketing-independent-operators.png",
+    "../../../shared/images/marketing/marketing-protocol-interoperability.png"
+  ],
+  "thumbnail": "../../../shared/images/marketing/marketing-independent-operators.png",
+  "output": "../../../videos/renders/use-cases-enterprise-integration.mp4"
+}
