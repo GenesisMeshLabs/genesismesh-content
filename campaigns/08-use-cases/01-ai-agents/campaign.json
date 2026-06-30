@@ -1,6 +1,26 @@
 {
   "slug": "use-cases/ai-agents",
   "title": "Use Case: AI Agents",
+  "status": "draft",
+  "audience": [
+    "builders",
+    "ai",
+    "security",
+    "platform"
+  ],
+  "channels": [
+    "website",
+    "linkedin",
+    "video",
+    "article"
+  ],
+  "primary_message": "Agent networks need identity, capability boundaries, revocation, and provenance beneath routing.",
+  "call_to_action": "Use Genesis Mesh as the trust layer agents can consume, not as another agent framework.",
+  "source_docs": [
+    "genesismesh/VISION.md",
+    "genesismesh/docs/development/strategy.md",
+    "genesismesh/ops/go-to-market.md"
+  ],
   "slogan": "Agents are an overlay. Trust is the layer beneath them.",
   "voice": "en-US-Adam:DragonHDLatestNeural",
   "duration_seconds_per_image": 5,

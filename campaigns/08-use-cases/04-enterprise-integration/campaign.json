@@ -1,6 +1,26 @@
 {
   "slug": "use-cases/enterprise-integration",
   "title": "Use Case: Enterprise Integration",
+  "status": "draft",
+  "audience": [
+    "enterprise",
+    "platform",
+    "security",
+    "governance"
+  ],
+  "channels": [
+    "website",
+    "linkedin",
+    "video",
+    "article"
+  ],
+  "primary_message": "Enterprises can recognize external trust while keeping local authority over policy and revocation.",
+  "call_to_action": "Use Genesis Mesh to integrate across boundaries without making one system the authority for all trust.",
+  "source_docs": [
+    "genesismesh/VISION.md",
+    "genesismesh/docs/development/strategy.md",
+    "genesismesh/ops/go-to-market.md"
+  ],
   "slogan": "Enterprises can keep local authority while recognizing external trust.",
   "voice": "en-US-Adam:DragonHDLatestNeural",
   "duration_seconds_per_image": 5,

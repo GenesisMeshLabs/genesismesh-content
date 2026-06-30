@@ -1,6 +1,27 @@
 {
   "slug": "use-cases/edge-infrastructure",
   "title": "Use Case: Edge Infrastructure",
+  "status": "draft",
+  "audience": [
+    "edge",
+    "operators",
+    "platform",
+    "security"
+  ],
+  "channels": [
+    "website",
+    "linkedin",
+    "video",
+    "article"
+  ],
+  "primary_message": "Distributed devices, nodes, and operators need portable identity and revocation across environments.",
+  "call_to_action": "Apply Genesis Mesh where edge systems must cooperate without centralizing authority.",
+  "source_docs": [
+    "genesismesh/VISION.md",
+    "genesismesh/docs/development/strategy.md",
+    "genesismesh/docs/development/roadmap.md",
+    "genesismesh/ops/go-to-market.md"
+  ],
   "slogan": "Distributed devices need identity, revocation, and trust paths across boundaries.",
   "voice": "en-US-Adam:DragonHDLatestNeural",
   "duration_seconds_per_image": 5,

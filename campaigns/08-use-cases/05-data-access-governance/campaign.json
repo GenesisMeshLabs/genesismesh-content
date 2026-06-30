@@ -1,6 +1,26 @@
 {
   "slug": "use-cases/data-access-governance",
   "title": "Use Case: Data Access Governance",
+  "status": "draft",
+  "audience": [
+    "data",
+    "security",
+    "compliance",
+    "enterprise"
+  ],
+  "channels": [
+    "website",
+    "linkedin",
+    "video",
+    "article"
+  ],
+  "primary_message": "Data access decisions should carry intent, policy, evidence, and verification across systems.",
+  "call_to_action": "Make data-access decisions auditable without turning Genesis Mesh into a data translation layer.",
+  "source_docs": [
+    "genesismesh/VISION.md",
+    "genesismesh/docs/development/strategy.md",
+    "genesismesh/ops/go-to-market.md"
+  ],
   "slogan": "Data access should carry intent, policy, evidence, and verification.",
   "voice": "en-US-Adam:DragonHDLatestNeural",
   "duration_seconds_per_image": 5,

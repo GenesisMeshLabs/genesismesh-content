@@ -1,6 +1,25 @@
 {
   "slug": "sovereign-systems",
   "title": "Sovereign Systems",
+  "status": "draft",
+  "audience": [
+    "operators",
+    "enterprise",
+    "government",
+    "platform"
+  ],
+  "channels": [
+    "website",
+    "linkedin",
+    "video",
+    "article"
+  ],
+  "primary_message": "Each operator keeps control of keys, policy, recognition, revocation, and trust decisions.",
+  "call_to_action": "Design systems that recognize external trust without surrendering local authority.",
+  "source_docs": [
+    "genesismesh/VISION.md",
+    "genesismesh/docs/development/strategy.md"
+  ],
   "slogan": "Each operator controls its own keys, policies, recognition, revocation, and trust decisions.",
   "voice": "en-US-Adam:DragonHDLatestNeural",
   "duration_seconds_per_image": 5,

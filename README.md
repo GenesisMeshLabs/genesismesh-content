@@ -6,6 +6,7 @@ The campaign structure is split into horizontal narrative campaigns first, then 
 
 ```text
 genesismesh-content/
+  MESSAGING.md
   campaigns/
     01-why-genesismesh/
     02-portable-trust/
@@ -44,6 +45,8 @@ Short slogan:
 ```text
 Genesis Mesh: portable trust for sovereign systems.
 ```
+
+Use `MESSAGING.md` as the top-level messaging contract before drafting or generating campaign content.
 
 Campaign rules:
 
@@ -124,12 +127,27 @@ videos/renders/<campaign-slug>.mp4
 
 ## Campaign Workflow
 
-1. Edit `article.md`.
-2. Edit `voiceover.md`.
-3. Add or update `voiceover.ssml` when the speech is ready for production TTS.
-4. Adjust `campaign.json` images, voice, and timing.
-5. Generate narration with `generate_tts.py`.
-6. Generate video with `generate_video.py`.
-7. Review the rendered video before publishing.
+1. Check `MESSAGING.md`.
+2. Update `campaign.json` metadata: status, audience, channels, primary message, call to action, and source docs.
+3. Edit `article.md`.
+4. Edit `voiceover.md`.
+5. Add or update `voiceover.ssml` when the speech is ready for production TTS.
+6. Adjust `campaign.json` images, voice, and timing.
+7. Generate narration with `generate_tts.py`.
+8. Generate video with `generate_video.py`.
+9. Review the rendered video before publishing.
+
+Each campaign should keep this structure:
+
+```text
+article.md
+campaign.json
+voiceover.md
+voiceover.ssml
+audio/
+renders/
+```
+
+`source_docs` entries in `campaign.json` refer to source paths in the upstream `genesismesh` repository unless the file also exists in this content repo.
 
 Shared GIFs from the Genesis Mesh docs live in `shared/examples/gifs/` and can be added to campaigns later as proof/demo material.

@@ -1,5 +1,7 @@
 # Campaigns
 
+Campaign content must follow the top-level `MESSAGING.md` guardrails. The folder names are ordered for GitHub browsing, while scripts use the stable `slug` in each `campaign.json`.
+
 ## Horizontal Campaigns
 
 These are the main Genesis Mesh narratives.
