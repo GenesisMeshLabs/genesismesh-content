@@ -22,6 +22,9 @@ Supported names:
 AZURE_SPEECH_KEY=...
 AZURE_SPEECH_ENDPOINT=https://<resource>.cognitiveservices.azure.com/
 AZURE_SPEECH_VOICE=en-US-Adam:DragonHDLatestNeural
+REVID_API_KEY=...
+REVID_API_BASE=https://www.revid.ai/api/public/v3
+REVID_VOICE_ID=...
 ```
 
 Aliases also work: `AZURE_TTS_KEY`, `SPEECH_KEY`, `speech_key`, `AZURE_TTS_ENDPOINT`, `SPEECH_ENDPOINT`, `endpoint_url`, `AZURE_TTS_VOICE`, `speech_voice`.
@@ -77,3 +80,43 @@ python .\videos\scripts\generate_video.py portable-trust --no-audio
 ```
 
 The output path comes from the campaign's `campaign.json`.
+
+## Generate Revid Video
+
+Use Revid for higher-polish campaign videos with stock footage, moving AI images, richer subtitles, and optional Revid voices.
+
+Credit rules:
+
+- Run `estimate` before `render`.
+- Azure TTS remains the default voice path for this repo.
+- Revid voice is disabled by default; enable it with `--revid-voice`.
+- Revid music is disabled by default; enable it with `--music`.
+- `stock-video` is the default media type to avoid AI visual-generation cost.
+- Use `moving-image` or `ai-video` only when the campaign needs AI-generated visuals.
+
+Estimate:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py estimate portable-trust
+```
+
+Render:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py render portable-trust --yes
+```
+
+Use moving AI images and Revid voice deliberately:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py estimate portable-trust --media-type moving-image --revid-voice
+python .\videos\scripts\generate_revid_video.py render portable-trust --media-type moving-image --revid-voice --yes
+```
+
+Poll and download when ready:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py poll <revid-project-id>
+```
+
+Job responses are written under `videos/revid-jobs/` and ignored by Git.

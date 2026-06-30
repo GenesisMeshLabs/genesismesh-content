@@ -6,6 +6,7 @@ campaigns/**/renders/*
 videos/renders/*
 videos/thumbnails/*
 videos/source/*
+videos/revid-jobs/*
 
 # Keep directories
 !campaigns/*/audio/.gitkeep
@@ -15,6 +16,7 @@ videos/source/*
 !videos/renders/.gitkeep
 !videos/thumbnails/.gitkeep
 !videos/source/.gitkeep
+!videos/revid-jobs/.gitkeep
 
 # Local secrets
 videos/scripts/.env
@@ -22,3 +24,6 @@ videos/scripts/.env
 # Python
 __pycache__/
 *.pyc
+
+# Draft content
+drafts/*

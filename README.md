@@ -32,7 +32,9 @@ genesismesh-content/
     scripts/
       generate_tts.py
       generate_video.py
+      generate_revid_video.py
       .env
+    revid-jobs/
     renders/
     thumbnails/
     source/
@@ -125,6 +127,44 @@ The output goes to:
 videos/renders/<campaign-slug>.mp4
 ```
 
+## Revid Video Generation
+
+`generate_revid_video.py` is the optional higher-polish video path. Use it for stock footage, moving AI images, richer captions, and social-video variants.
+
+Cost posture:
+
+- Revid render calls consume credits. The Revid API documents a base render cost plus generation costs.
+- Always run `estimate` before `render`.
+- Azure Speech remains the default TTS path because it is cheaper for this workspace.
+- Revid voice generation is opt-in with `--revid-voice`.
+- Revid background music is opt-in with `--music`.
+- `stock-video` is the default media type because it avoids AI visual-generation cost; use `moving-image` or `ai-video` deliberately when the campaign needs it.
+
+Estimate credits:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py estimate portable-trust
+```
+
+Render with default cost controls:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py render portable-trust --yes
+```
+
+Render with Revid-generated voice and moving AI images:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py estimate portable-trust --media-type moving-image --revid-voice
+python .\videos\scripts\generate_revid_video.py render portable-trust --media-type moving-image --revid-voice --yes
+```
+
+Poll a render:
+
+```powershell
+python .\videos\scripts\generate_revid_video.py poll <revid-project-id>
+```
+
 ## Campaign Workflow
 
 1. Check `MESSAGING.md`.
@@ -134,7 +174,7 @@ videos/renders/<campaign-slug>.mp4
 5. Add or update `voiceover.ssml` when the speech is ready for production TTS.
 6. Adjust `campaign.json` images, voice, and timing.
 7. Generate narration with `generate_tts.py`.
-8. Generate video with `generate_video.py`.
+8. Generate a fast local video with `generate_video.py`, or estimate and render a polished Revid video with `generate_revid_video.py`.
 9. Review the rendered video before publishing.
 
 Each campaign should keep this structure:
