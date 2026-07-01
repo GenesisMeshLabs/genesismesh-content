@@ -8,11 +8,8 @@ videos/scripts/.env.*
 
 # Generated campaign outputs
 campaigns/*/audio/*
-campaigns/*/renders/*
 campaigns/**/audio/*
-campaigns/**/renders/*
 videos/renders/*
-videos/source/*
 videos/revid-jobs/*
 
 # Generated media and provider artifacts
@@ -32,12 +29,9 @@ videos/revid-jobs/*
 
 # Keep intended placeholder directories
 !campaigns/*/audio/.gitkeep
-!campaigns/*/renders/.gitkeep
 !campaigns/**/audio/.gitkeep
-!campaigns/**/renders/.gitkeep
 !videos/renders/.gitkeep
 !videos/thumbnails/.gitkeep
-!videos/source/.gitkeep
 !videos/revid-jobs/.gitkeep
 
 # Local/private drafts

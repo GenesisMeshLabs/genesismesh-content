@@ -30,16 +30,18 @@ genesismesh-content/
     examples/
       gifs/
     templates/
+  skills/
+    genesismesh-campaign-pipeline/
   videos/
     scripts/
       generate_tts.py
       generate_video.py
       generate_revid_video.py
+      generate_thumbnails.py
       .env
     revid-jobs/
     renders/
     thumbnails/
-    source/
 ```
 
 ## Positioning
@@ -51,6 +53,8 @@ Genesis Mesh: portable trust for sovereign systems.
 ```
 
 Use `MESSAGING.md` as the top-level messaging contract before drafting or generating campaign content.
+
+Reusable agent workflows live under `skills/`. Use `skills/genesismesh-campaign-pipeline/SKILL.md` for end-to-end campaign creation: campaign scaffolding, article interrogation, voiceover, SSML, Azure TTS, Revid rendering, thumbnails, and publishing metadata.
 
 Campaign rules:
 
@@ -133,6 +137,13 @@ videos/renders/<campaign-slug>.mp4
 
 Keep `videos/renders/` as the single local location for rendered videos. Do not duplicate MP4s into campaign folders; campaign `campaign.json` files reference the canonical render path.
 
+Use `videos/` as the video production workspace:
+
+- `videos/scripts/`: reusable local automation.
+- `videos/thumbnails/`: final upload thumbnails, reviewed and safe to commit.
+- `videos/renders/`: generated local MP4s and review frames, ignored by Git.
+- `videos/revid-jobs/`: Revid request/status files and temporary upload metadata, ignored by Git.
+
 Final upload thumbnails live in:
 
 ```text
@@ -208,7 +219,6 @@ patreon.md
 voiceover.md
 voiceover.ssml
 audio/
-renders/
 ```
 
 Use `youtube.md` for YouTube-optimized titles, descriptions, tags, thumbnails, and video links. Use `patreon.md` for the article/founder-note version; Patreon titles can stay editorial and do not need to match YouTube titles exactly.
@@ -224,5 +234,5 @@ Before making this repository public, keep this boundary intact:
 - Commit campaign source: `article.md`, `voiceover.md`, `voiceover.ssml`, `youtube.md`, `patreon.md`, `campaign.json`, messaging docs, scripts, shared public images, final upload thumbnails, and examples.
 - Do not commit local `.env` files, API keys, Azure/Revid credentials, generated narration, rendered videos, Revid job responses, temporary audio URLs, or local drafts.
 - Use `videos/scripts/.env.example` for documented environment variables.
-- Keep generated output under ignored folders such as `campaigns/**/audio/`, `campaigns/**/renders/`, `videos/renders/`, and `videos/revid-jobs/`.
+- Keep generated output under ignored folders such as `campaigns/**/audio/`, `videos/renders/`, and `videos/revid-jobs/`.
 - If a generated asset is intentionally public, move it into a deliberate shared/public path and review it before committing.

@@ -14,6 +14,7 @@ This repository contains campaign articles, messaging guardrails, voiceover scri
 
 - Draft long-form article work can live under `drafts/`; this directory is ignored locally.
 - Publishable campaign content lives under `campaigns/`.
+- Reusable agent workflows live under `skills/`; use `skills/genesismesh-campaign-pipeline/SKILL.md` for end-to-end campaign creation.
 - Keep `article.md`, `voiceover.md`, and `voiceover.ssml` separate:
   - `article.md` is for human reading.
   - `voiceover.md` is the editable narration draft.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Genesis Mesh Campaign Pipeline"
+  short_description: "Build Genesis Mesh campaigns end to end"
+  default_prompt: "Use $genesismesh-campaign-pipeline to create a new Genesis Mesh campaign end to end."

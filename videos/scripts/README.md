@@ -122,3 +122,17 @@ python .\videos\scripts\generate_revid_video.py poll <revid-project-id>
 ```
 
 Job responses are written under `videos/revid-jobs/` and ignored by Git.
+
+## Generate Thumbnails
+
+Generate one final upload thumbnail:
+
+```powershell
+python .\videos\scripts\generate_thumbnails.py --slug portable-trust --text "TRUST THAT\nTRAVELS" --background shared/images/marketing/marketing-hero-trust-fabric.png
+```
+
+The output is:
+
+```text
+videos/thumbnails/<slug>.png
+```
