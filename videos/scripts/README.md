@@ -19,12 +19,12 @@ The scripts load `videos/scripts/.env` automatically. Do not commit real keys.
 Supported names:
 
 ```text
-AZURE_SPEECH_KEY=...
+AZURE_SPEECH_KEY=
 AZURE_SPEECH_ENDPOINT=https://<resource>.cognitiveservices.azure.com/
 AZURE_SPEECH_VOICE=en-US-Adam:DragonHDLatestNeural
-REVID_API_KEY=...
+REVID_API_KEY=
 REVID_API_BASE=https://www.revid.ai/api/public/v3
-REVID_VOICE_ID=...
+REVID_VOICE_ID=
 ```
 
 Aliases also work: `AZURE_TTS_KEY`, `SPEECH_KEY`, `speech_key`, `AZURE_TTS_ENDPOINT`, `SPEECH_ENDPOINT`, `endpoint_url`, `AZURE_TTS_VOICE`, `speech_voice`.

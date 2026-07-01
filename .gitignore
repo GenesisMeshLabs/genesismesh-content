@@ -1,3 +1,11 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+videos/scripts/.env
+videos/scripts/.env.*
+!videos/scripts/.env.example
+
 # Generated campaign outputs
 campaigns/*/audio/*
 campaigns/*/renders/*
@@ -8,7 +16,22 @@ videos/thumbnails/*
 videos/source/*
 videos/revid-jobs/*
 
-# Keep directories
+# Generated media and provider artifacts
+*.mp3
+*.mp4
+*.wav
+*.m4a
+*.aac
+*.mov
+*.webm
+*.srt
+*.vtt
+*.audio-url.txt
+*.fileio-response.json
+*.tmpfiles-response.json
+*.status.json
+
+# Keep intended placeholder directories
 !campaigns/*/audio/.gitkeep
 !campaigns/*/renders/.gitkeep
 !campaigns/**/audio/.gitkeep
@@ -18,12 +41,17 @@ videos/revid-jobs/*
 !videos/source/.gitkeep
 !videos/revid-jobs/.gitkeep
 
-# Local secrets
-videos/scripts/.env
+# Local/private drafts
+drafts/
 
-# Python
+# Python and local tooling
 __pycache__/
 *.pyc
+.pytest_cache/
+.ruff_cache/
 
-# Draft content
-drafts/*
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

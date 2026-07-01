@@ -4,6 +4,8 @@ This folder is for articles, campaign assets, voiceover scripts, generated audio
 
 The campaign structure is split into horizontal narrative campaigns first, then use-case campaigns. This keeps Genesis Mesh positioned as portable trust infrastructure for sovereign systems, not as an AI-only product.
 
+This repository is intended to be public. The checked-in content should be publishable campaign source, reusable tooling, messaging guidance, and shared public assets. Local secrets, drafts, generated audio, generated videos, Revid job responses, and temporary upload metadata are intentionally ignored.
+
 ```text
 genesismesh-content/
   MESSAGING.md
@@ -89,7 +91,7 @@ Minimal campaign SSML:
 Expected `.env` keys:
 
 ```text
-AZURE_SPEECH_KEY=...
+AZURE_SPEECH_KEY=
 AZURE_SPEECH_ENDPOINT=https://<resource>.cognitiveservices.azure.com/
 AZURE_SPEECH_VOICE=en-US-Adam:DragonHDLatestNeural
 ```
@@ -202,3 +204,13 @@ renders/
 `source_docs` entries in `campaign.json` refer to source paths in the upstream `genesismesh` repository unless the file also exists in this content repo.
 
 Shared GIFs from the Genesis Mesh docs live in `shared/examples/gifs/` and can be added to campaigns later as proof/demo material.
+
+## Public Repository Safety
+
+Before making this repository public, keep this boundary intact:
+
+- Commit campaign source: `article.md`, `voiceover.md`, `voiceover.ssml`, `campaign.json`, messaging docs, scripts, shared public images, and examples.
+- Do not commit local `.env` files, API keys, Azure/Revid credentials, generated narration, rendered videos, Revid job responses, temporary audio URLs, or local drafts.
+- Use `videos/scripts/.env.example` for documented environment variables.
+- Keep generated output under ignored folders such as `campaigns/**/audio/`, `campaigns/**/renders/`, `videos/renders/`, and `videos/revid-jobs/`.
+- If a generated asset is intentionally public, move it into a deliberate shared/public path and review it before committing.
