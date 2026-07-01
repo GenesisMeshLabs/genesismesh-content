@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "why-genesismesh",
   "title": "Why Genesis Mesh?",
   "status": "draft",
@@ -29,6 +29,17 @@
     "../../shared/images/marketing/marketing-independent-operators.png",
     "../../shared/images/marketing/marketing-provenance-chain.png"
   ],
-  "thumbnail": "../../shared/images/marketing/social-card.png",
-  "output": "../../videos/renders/why-genesismesh.mp4"
+  "thumbnail": "../../videos/thumbnails/why-genesismesh.png",
+  "output": "../../videos/renders/why-genesismesh-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "fv1XebByCbE",
+      "url": "https://www.youtube.com/watch?v=fv1XebByCbE",
+      "title": "What Is Portable Trust? Genesis Mesh Explained",
+      "thumbnail": "../../videos/thumbnails/why-genesismesh.png",
+      "thumbnail_text": "TRUST BREAKS AT THE BOUNDARY",
+      "render": "../../videos/renders/why-genesismesh-revid-stock.mp4"
+    }
+  }
 }
+

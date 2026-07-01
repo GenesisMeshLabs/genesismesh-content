@@ -131,6 +131,14 @@ The output goes to:
 videos/renders/<campaign-slug>.mp4
 ```
 
+Keep `videos/renders/` as the single local location for rendered videos. Do not duplicate MP4s into campaign folders; campaign `campaign.json` files reference the canonical render path.
+
+Final upload thumbnails live in:
+
+```text
+videos/thumbnails/<campaign-slug>.png
+```
+
 ## Revid Video Generation
 
 `generate_revid_video.py` is the optional higher-polish video path. Use it for stock footage, moving AI images, richer captions, and social-video variants.
@@ -195,11 +203,15 @@ Each campaign should keep this structure:
 ```text
 article.md
 campaign.json
+youtube.md
+patreon.md
 voiceover.md
 voiceover.ssml
 audio/
 renders/
 ```
+
+Use `youtube.md` for YouTube-optimized titles, descriptions, tags, thumbnails, and video links. Use `patreon.md` for the article/founder-note version; Patreon titles can stay editorial and do not need to match YouTube titles exactly.
 
 `source_docs` entries in `campaign.json` refer to source paths in the upstream `genesismesh` repository unless the file also exists in this content repo.
 
@@ -209,7 +221,7 @@ Shared GIFs from the Genesis Mesh docs live in `shared/examples/gifs/` and can b
 
 Before making this repository public, keep this boundary intact:
 
-- Commit campaign source: `article.md`, `voiceover.md`, `voiceover.ssml`, `campaign.json`, messaging docs, scripts, shared public images, and examples.
+- Commit campaign source: `article.md`, `voiceover.md`, `voiceover.ssml`, `youtube.md`, `patreon.md`, `campaign.json`, messaging docs, scripts, shared public images, final upload thumbnails, and examples.
 - Do not commit local `.env` files, API keys, Azure/Revid credentials, generated narration, rendered videos, Revid job responses, temporary audio URLs, or local drafts.
 - Use `videos/scripts/.env.example` for documented environment variables.
 - Keep generated output under ignored folders such as `campaigns/**/audio/`, `campaigns/**/renders/`, `videos/renders/`, and `videos/revid-jobs/`.

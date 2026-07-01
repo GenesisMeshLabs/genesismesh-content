@@ -29,6 +29,16 @@
     "../../shared/images/marketing/marketing-protocol-interoperability.png",
     "../../shared/images/marketing/marketing-provenance-chain.png"
   ],
-  "thumbnail": "../../shared/images/marketing/marketing-protocol-interoperability.png",
-  "output": "../../videos/renders/protocol-interoperability.mp4"
+  "thumbnail": "../../videos/thumbnails/protocol-interoperability.png",
+  "output": "../../videos/renders/protocol-interoperability-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "v4ORssb6nLw",
+      "url": "https://www.youtube.com/watch?v=v4ORssb6nLw",
+      "title": "Why Trust Protocols Need Interoperability",
+      "thumbnail": "../../videos/thumbnails/protocol-interoperability.png",
+      "thumbnail_text": "ONE TRUST LAYER. MANY RUNTIMES.",
+      "render": "../../videos/renders/protocol-interoperability-revid-stock.mp4"
+    }
+  }
 }

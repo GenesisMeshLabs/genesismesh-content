@@ -29,6 +29,16 @@
     "../../shared/images/marketing/marketing-hero-trust-fabric.png",
     "../../shared/images/marketing/marketing-provenance-chain.png"
   ],
-  "thumbnail": "../../shared/images/marketing/marketing-independent-operators.png",
-  "output": "../../videos/renders/sovereign-systems.mp4"
+  "thumbnail": "../../videos/thumbnails/sovereign-systems.png",
+  "output": "../../videos/renders/sovereign-systems-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "OS9rGqOMkHY",
+      "url": "https://www.youtube.com/watch?v=OS9rGqOMkHY",
+      "title": "Sovereign Systems: Trust Without Central Control",
+      "thumbnail": "../../videos/thumbnails/sovereign-systems.png",
+      "thumbnail_text": "WHO OWNS THE TRUST?",
+      "render": "../../videos/renders/sovereign-systems-revid-stock.mp4"
+    }
+  }
 }

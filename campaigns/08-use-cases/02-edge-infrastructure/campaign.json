@@ -30,6 +30,16 @@
     "../../../shared/images/marketing/marketing-independent-operators.png",
     "../../../shared/images/marketing/marketing-hero-trust-fabric.png"
   ],
-  "thumbnail": "../../../shared/images/marketing/marketing-independent-operators.png",
-  "output": "../../../videos/renders/use-cases-edge-infrastructure.mp4"
+  "thumbnail": "../../../videos/thumbnails/use-cases-edge-infrastructure.png",
+  "output": "../../../videos/renders/use-cases-edge-infrastructure-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "J7OpYQy3ZkU",
+      "url": "https://www.youtube.com/watch?v=J7OpYQy3ZkU",
+      "title": "Edge Infrastructure Needs Portable Identity",
+      "thumbnail": "../../../videos/thumbnails/use-cases-edge-infrastructure.png",
+      "thumbnail_text": "IDENTITY DRIFTS AT THE EDGE",
+      "render": "../../../videos/renders/use-cases-edge-infrastructure-revid-stock.mp4"
+    }
+  }
 }

@@ -12,7 +12,6 @@ campaigns/*/renders/*
 campaigns/**/audio/*
 campaigns/**/renders/*
 videos/renders/*
-videos/thumbnails/*
 videos/source/*
 videos/revid-jobs/*
 

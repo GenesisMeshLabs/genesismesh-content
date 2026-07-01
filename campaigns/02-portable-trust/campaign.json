@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "portable-trust",
   "title": "Portable Trust",
   "status": "draft",
@@ -31,6 +31,17 @@
     "../../shared/images/marketing/marketing-independent-operators.png",
     "../../shared/images/marketing/marketing-provenance-chain.png"
   ],
-  "thumbnail": "../../shared/images/marketing/social-card.png",
-  "output": "../../videos/renders/portable-trust.mp4"
+  "thumbnail": "../../videos/thumbnails/portable-trust.png",
+  "output": "../../videos/renders/portable-trust-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "y3GBM5h-RdY",
+      "url": "https://www.youtube.com/watch?v=y3GBM5h-RdY",
+      "title": "Portable Trust Across Boundaries",
+      "thumbnail": "../../videos/thumbnails/portable-trust.png",
+      "thumbnail_text": "TRUST THAT TRAVELS",
+      "render": "../../videos/renders/portable-trust-revid-stock.mp4"
+    }
+  }
 }
+

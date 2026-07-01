@@ -29,6 +29,16 @@
     "../../../shared/images/marketing/marketing-provenance-chain.png",
     "../../../shared/images/marketing/marketing-protocol-interoperability.png"
   ],
-  "thumbnail": "../../../shared/images/marketing/marketing-provenance-chain.png",
-  "output": "../../../videos/renders/use-cases-data-access-governance.mp4"
+  "thumbnail": "../../../videos/thumbnails/use-cases-data-access-governance.png",
+  "output": "../../../videos/renders/use-cases-data-access-governance-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "kg_JsRjsxzU",
+      "url": "https://www.youtube.com/watch?v=kg_JsRjsxzU",
+      "title": "Auditable Data Access: Proof, Not Logs",
+      "thumbnail": "../../../videos/thumbnails/use-cases-data-access-governance.png",
+      "thumbnail_text": "PERMISSIONS ARE NOT ENOUGH",
+      "render": "../../../videos/renders/use-cases-data-access-governance-revid-stock.mp4"
+    }
+  }
 }

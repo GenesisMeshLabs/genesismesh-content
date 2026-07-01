@@ -30,6 +30,16 @@
     "../../shared/images/marketing/marketing-provenance-chain.png",
     "../../shared/images/marketing/marketing-supply-chain-trust.png"
   ],
-  "thumbnail": "../../shared/images/marketing/marketing-provenance-chain.png",
-  "output": "../../videos/renders/recognition-and-revocation.mp4"
+  "thumbnail": "../../videos/thumbnails/recognition-and-revocation.png",
+  "output": "../../videos/renders/recognition-and-revocation-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "PVOfYM48DYo",
+      "url": "https://www.youtube.com/watch?v=PVOfYM48DYo",
+      "title": "How to Revoke Trust With Proof - Genesis Mesh",
+      "thumbnail": "../../videos/thumbnails/recognition-and-revocation.png",
+      "thumbnail_text": "CUT OFF TRUST WITH PROOF",
+      "render": "../../videos/renders/recognition-and-revocation-revid-stock.mp4"
+    }
+  }
 }

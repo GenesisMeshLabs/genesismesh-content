@@ -29,6 +29,16 @@
     "../../shared/images/marketing/marketing-provenance-chain.png",
     "../../shared/images/marketing/marketing-supply-chain-trust.png"
   ],
-  "thumbnail": "../../shared/images/marketing/marketing-provenance-chain.png",
-  "output": "../../videos/renders/auditable-trust-state.mp4"
+  "thumbnail": "../../videos/thumbnails/auditable-trust-state.png",
+  "output": "../../videos/renders/auditable-trust-state-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "gp5yqnNQdZI",
+      "url": "https://www.youtube.com/watch?v=gp5yqnNQdZI",
+      "title": "Why Every Trust Decision Needs a Signed Record",
+      "thumbnail": "../../videos/thumbnails/auditable-trust-state.png",
+      "thumbnail_text": "EVERY DECISION LEAVES PROOF",
+      "render": "../../videos/renders/auditable-trust-state-revid-stock.mp4"
+    }
+  }
 }

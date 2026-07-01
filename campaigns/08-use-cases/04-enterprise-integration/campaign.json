@@ -29,6 +29,16 @@
     "../../../shared/images/marketing/marketing-independent-operators.png",
     "../../../shared/images/marketing/marketing-protocol-interoperability.png"
   ],
-  "thumbnail": "../../../shared/images/marketing/marketing-independent-operators.png",
-  "output": "../../../videos/renders/use-cases-enterprise-integration.mp4"
+  "thumbnail": "../../../videos/thumbnails/use-cases-enterprise-integration.png",
+  "output": "../../../videos/renders/use-cases-enterprise-integration-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "Sj1-k7y5jhg",
+      "url": "https://www.youtube.com/watch?v=Sj1-k7y5jhg",
+      "title": "Enterprise Integration Without Central Authority",
+      "thumbnail": "../../../videos/thumbnails/use-cases-enterprise-integration.png",
+      "thumbnail_text": "NO CENTRAL BROKER",
+      "render": "../../../videos/renders/use-cases-enterprise-integration-revid-stock.mp4"
+    }
+  }
 }

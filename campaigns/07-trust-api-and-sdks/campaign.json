@@ -30,6 +30,16 @@
     "../../shared/images/marketing/marketing-protocol-interoperability.png",
     "../../shared/images/marketing/marketing-provenance-chain.png"
   ],
-  "thumbnail": "../../shared/images/marketing/marketing-protocol-interoperability.png",
-  "output": "../../videos/renders/trust-api-and-sdks.mp4"
+  "thumbnail": "../../videos/thumbnails/trust-api-and-sdks.png",
+  "output": "../../videos/renders/trust-api-and-sdks-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "E2UQRM7c3Vo",
+      "url": "https://www.youtube.com/watch?v=E2UQRM7c3Vo",
+      "title": "Genesis Mesh Trust API and SDKs Overview",
+      "thumbnail": "../../videos/thumbnails/trust-api-and-sdks.png",
+      "thumbnail_text": "VERIFY TRUST IN CODE",
+      "render": "../../videos/renders/trust-api-and-sdks-revid-stock.mp4"
+    }
+  }
 }

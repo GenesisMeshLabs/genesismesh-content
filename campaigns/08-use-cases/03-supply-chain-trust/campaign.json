@@ -29,6 +29,16 @@
     "../../../shared/images/marketing/marketing-supply-chain-trust.png",
     "../../../shared/images/marketing/marketing-provenance-chain.png"
   ],
-  "thumbnail": "../../../shared/images/marketing/marketing-supply-chain-trust.png",
-  "output": "../../../videos/renders/use-cases-supply-chain-trust.mp4"
+  "thumbnail": "../../../videos/thumbnails/use-cases-supply-chain-trust.png",
+  "output": "../../../videos/renders/use-cases-supply-chain-trust-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "H41w_3mMrcE",
+      "url": "https://www.youtube.com/watch?v=H41w_3mMrcE",
+      "title": "Supply Chain Trust: Beyond Artifact Signing",
+      "thumbnail": "../../../videos/thumbnails/use-cases-supply-chain-trust.png",
+      "thumbnail_text": "SIGNING IS NOT ENOUGH",
+      "render": "../../../videos/renders/use-cases-supply-chain-trust-revid-stock.mp4"
+    }
+  }
 }

@@ -29,6 +29,16 @@
     "../../../shared/images/marketing/marketing-agent-network.png",
     "../../../shared/images/marketing/marketing-hero-trust-fabric.png"
   ],
-  "thumbnail": "../../../shared/images/marketing/marketing-agent-network.png",
-  "output": "../../../videos/renders/use-cases-ai-agents.mp4"
+  "thumbnail": "../../../videos/thumbnails/use-cases-ai-agents.png",
+  "output": "../../../videos/renders/use-cases-ai-agents-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "hx_OZ6EsejI",
+      "url": "https://www.youtube.com/watch?v=hx_OZ6EsejI",
+      "title": "AI Agents Need Portable Trust Across Organizations",
+      "thumbnail": "../../../videos/thumbnails/use-cases-ai-agents.png",
+      "thumbnail_text": "AGENTS NEED PROOF",
+      "render": "../../../videos/renders/use-cases-ai-agents-revid-stock.mp4"
+    }
+  }
 }
