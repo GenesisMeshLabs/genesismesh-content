@@ -75,10 +75,7 @@ def main() -> int:
         "channels": ["website", "linkedin", "video", "article"],
         "primary_message": "",
         "call_to_action": "",
-        "source_docs": [
-            "genesismesh/VISION.md",
-            "genesismesh/docs/development/strategy.md",
-        ],
+        "source_docs": [],
         "slogan": "Genesis Mesh: portable trust for sovereign systems.",
         "voice": "",
         "voice_role": "",

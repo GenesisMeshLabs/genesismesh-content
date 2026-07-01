@@ -29,6 +29,8 @@ Read these before acting:
 - `videos/scripts/VOICE_PLAN.md`
 - `skills/genesismesh-campaign-pipeline/references/campaign-contract.md`
 
+`agents/openai.yaml` is UI metadata for agents that surface this skill in a picker or prompt list. It is not a workflow step and does not need to be loaded unless maintaining the skill metadata itself.
+
 Inspect nearby campaign examples:
 
 - Horizontal: `campaigns/01-why-genesismesh/`
@@ -108,6 +110,8 @@ For nested use cases, use the stable slug from `campaign.json`, for example:
 ```powershell
 python .\videos\scripts\generate_tts.py use-cases/healthcare-trust
 ```
+
+`generate_tts.py` resolves stable slugs by scanning campaign JSON when a direct folder path does not exist, so numbered folders such as `campaigns/08-use-cases/02-healthcare-trust/` are valid. Do not assume the on-disk folder starts with the exact stable slug.
 
 Verify `campaigns/<campaign>/audio/narration.wav` exists.
 
