@@ -4,9 +4,9 @@ Genesis Mesh may look like a response to the current rise of AI agents, sovereig
 
 It isn’t.
 
-**My work has a documented pattern of AI experimentation going back to 2016, covering distributed AI infrastructure, assistants and neural networks. By 2023, that work had moved into original multi-agent architecture. Genesis Mesh grew from the trust and authority problems that appeared once those systems became distributed.**
+**Connectorzzz had a documented pattern of AI experimentation going back to 2016, covering distributed AI infrastructure, assistants and neural networks. By 2023, that work had moved into original multi-agent architecture. Genesis Mesh grew from the trust and authority problems that appeared once those systems became distributed.**
 
-Genesis Mesh today: [genesismesh.org](https://genesismesh.org) · [GitHub](https://github.com/GenesisMeshLabs)
+[GitHub organisation where it all started](https://github.com/connectorzzz26)
 
 Years before Genesis Mesh had a name, I built a Proof of Concept called the **Intelligent Agents Network**.
 
