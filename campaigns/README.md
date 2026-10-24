@@ -31,6 +31,7 @@ These come after the horizontal campaigns.
 | `08-use-cases/03-supply-chain-trust` | `use-cases/supply-chain-trust` | Maintainer attestations, release gates, and revocation after compromise. |
 | `08-use-cases/04-enterprise-integration` | `use-cases/enterprise-integration` | Enterprises keep local authority while recognizing external trust. |
 | `08-use-cases/05-data-access-governance` | `use-cases/data-access-governance` | Data access carries intent, policy, evidence, and verification. |
+| `08-use-cases/06-nas-sovereign-storage` | `use-cases/nas-sovereign-storage` | Your NAS, Your Authority: a proposed storage integration with operator-owned identity, policy and revocation. Article draft; integration untested. |
 
 ## Published Posts
 

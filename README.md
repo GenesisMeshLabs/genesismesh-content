@@ -23,6 +23,7 @@ genesismesh-content/
       03-supply-chain-trust/
       04-enterprise-integration/
       05-data-access-governance/
+      06-nas-sovereign-storage/
   shared/
     images/
       brand/

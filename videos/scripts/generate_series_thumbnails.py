@@ -37,10 +37,12 @@ GROUPS = {
     "edge": ("TRUST AT THE EDGE", (255, 128, 102), BRAND_BG),
     "running": ("RUNNING IT FOR REAL", (178, 150, 255), MARKETING / "marketing-independent-operators.png"),
     "proof": ("PROOF, NOT PROMISES", LIME, MARKETING / "marketing-protocol-interoperability.png"),
+    "storage": ("SOVEREIGN STORAGE", LIME, MARKETING / "marketing-independent-operators.png"),
 }
 
 # campaign folder (relative to campaigns/) -> (group, part label, hook text)
 SPECS = {
+    "08-use-cases/06-nas-sovereign-storage": ("storage", "", "YOUR NAS,\nYOUR AUTHORITY", "nas"),
     "10-genesis-mesh-did-not-start-with-genesis-mesh": ("origins", "", "BEFORE IT\nHAD A NAME", "network"),
     "11-after-the-signature": ("opener", "", "AFTER THE\nSIGNATURE", "signature"),
     "12-policy-and-evidence/01-policy-you-can-read": ("policy", "1/2", "POLICY YOU\nCAN READ", "documents"),
@@ -283,6 +285,23 @@ def motif_bricks(draw, accent, seed):
             draw.rounded_rectangle((x, y, x + 115, y + 70), 8, fill=PANEL, outline=(accent if row < 4 else WHITE) + (255,), width=5)
 
 
+def motif_nas(draw, accent, seed):
+    # Local storage with a separate key: the operator owns access authority.
+    draw.rounded_rectangle((850, 170, 1170, 510), 22, fill=PANEL, outline=WHITE + (255,), width=6)
+    for x in (878, 970, 1062):
+        draw.rounded_rectangle((x, 200, x + 70, 455), 10, fill=INK + (255,), outline=accent + (255,), width=4)
+        draw.line((x + 22, 225, x + 48, 225), fill=WHITE + (180,), width=5)
+        draw.ellipse((x + 27, 415, x + 43, 431), fill=accent + (255,))
+    draw.line((880, 484, 1000, 484), fill=WHITE + (180,), width=4)
+    draw.ellipse((1124, 475, 1142, 493), outline=accent + (255,), width=4)
+    # Keep the key below the NAS, clear of the footer and headline panel.
+    cx, cy = 910, 570
+    draw.ellipse((cx - 28, cy - 28, cx + 28, cy + 28), outline=accent + (255,), width=9)
+    draw.line((cx + 28, cy, 1150, cy), fill=accent + (255,), width=10)
+    draw.line((1090, cy, 1090, cy + 24), fill=accent + (255,), width=10)
+    draw.line((1130, cy, 1130, cy + 24), fill=accent + (255,), width=10)
+
+
 def motif_signature(draw, accent, seed):
     motif_network(draw, accent, seed)
     draw.rounded_rectangle((850, 470, 1190, 600), 16, fill=PANEL, outline=WHITE + (255,), width=5)
@@ -291,6 +310,7 @@ def motif_signature(draw, accent, seed):
 
 
 MOTIFS = {
+    "nas": motif_nas,
     "eye": motif_eye,
     "rotate": motif_rotate,
     "magnifier": motif_magnifier,

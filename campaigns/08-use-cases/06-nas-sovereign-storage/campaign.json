@@ -1,0 +1,57 @@
+{
+  "slug": "use-cases/nas-sovereign-storage",
+  "title": "Your NAS, Your Authority",
+  "status": "draft",
+  "audience": [
+    "homelab builders",
+    "self-hosters",
+    "creators and small studios",
+    "storage-service developers"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "website",
+    "video"
+  ],
+  "primary_message": "Owning your NAS should include owning the authority that grants, limits and withdraws access; Genesis Mesh supplies trust primitives for an enforcing storage integration.",
+  "call_to_action": "Start with one NAS-facing service and a test dataset, then demonstrate scoped access, denial and revocation before publishing a setup guide.",
+  "source_docs": [
+    "genesismesh/VISION.md",
+    "genesismesh/docs/development/strategy.md",
+    "genesismesh/docs/concepts/use-cases.md",
+    "genesismesh/docs/concepts/routing.md",
+    "genesismesh/docs/examples/attestation-backed-evaluation.md",
+    "genesismesh/docs/examples/declarative-boundary-policy.md",
+    "genesismesh/genesis_mesh/trust/context/engine.py",
+    "genesismesh/genesis_mesh/gossip/crl_gossip.py",
+    "genesismesh/docs/concepts/rust-gateway.md",
+    "genesismesh/ops/go-to-market.md"
+  ],
+  "slogan": "Your storage. Your keys. Your authority.",
+  "voice": "",
+  "voice_role": "",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../../shared/images/marketing/marketing-hero-trust-fabric.png",
+    "../../../shared/images/marketing/marketing-independent-operators.png",
+    "../../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../../videos/thumbnails/use-cases-nas-sovereign-storage.png",
+  "output": "../../../videos/renders/use-cases-nas-sovereign-storage-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "",
+      "url": "",
+      "title": "",
+      "thumbnail": "../../../videos/thumbnails/use-cases-nas-sovereign-storage.png",
+      "thumbnail_text": "YOUR NAS,\nYOUR AUTHORITY",
+      "render": "../../../videos/renders/use-cases-nas-sovereign-storage-revid-stock.mp4"
+    },
+    "patreon": {
+      "url": "",
+      "title": "Your NAS, Your Authority",
+      "thumbnail": "thumbnail.png"
+    }
+  }
+}
