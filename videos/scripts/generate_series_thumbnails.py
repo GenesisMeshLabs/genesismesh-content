@@ -9,6 +9,7 @@ group stands apart.
     python videos/scripts/generate_series_thumbnails.py 13-governed # folders matching
 """
 from pathlib import Path
+import json
 import math
 import random
 import sys
@@ -37,6 +38,7 @@ GROUPS = {
     "edge": ("TRUST AT THE EDGE", (255, 128, 102), BRAND_BG),
     "running": ("RUNNING IT FOR REAL", (178, 150, 255), MARKETING / "marketing-independent-operators.png"),
     "proof": ("PROOF, NOT PROMISES", LIME, MARKETING / "marketing-protocol-interoperability.png"),
+    "incidents": ("AUTHORITY IN PRACTICE", (255, 190, 80), MARKETING / "marketing-supply-chain-trust.png"),
 }
 
 # campaign folder (relative to campaigns/) -> (group, part label, hook text)
@@ -61,6 +63,8 @@ SPECS = {
     "16-proof-not-promises/02-what-a-proof-proves": ("proof", "2/4", "WHAT A PROOF\nPROVES", "lemma"),
     "16-proof-not-promises/03-finding-our-own-flaws-first": ("proof", "3/4", "FINDING OUR\nOWN FLAWS\nFIRST", "bug"),
     "16-proof-not-promises/04-the-rules-cant-live-in-one-head": ("proof", "4/4", "THE RULES\nCAN'T LIVE IN\nONE HEAD", "bricks"),
+    "17-a-signed-release-can-still-be-malicious": ("incidents", "1/2", "SIGNED.\nSTILL\nMALICIOUS.", "sealed_box"),
+    "18-revoking-the-first-credential-is-not-the-end-of-the-attack": ("incidents", "2/2", "REVOKED.\nWHAT STILL\nHAS ACCESS?", "credentials"),
 }
 
 
@@ -199,6 +203,16 @@ def motif_key(draw, accent, seed):
         draw.line((cx + 260, cy, cx + 260, cy + 40), fill=colour + (alpha,), width=16)
 
 
+def motif_credentials(draw, accent, seed):
+    # Revoked original and remaining credential, both within the safe area.
+    for cx, cy, colour in ((900, 270, (105, 105, 105)), (990, 450, accent)):
+        draw.ellipse((cx - 50, cy - 50, cx + 50, cy + 50), outline=colour + (255,), width=13)
+        draw.line((cx + 50, cy, cx + 205, cy), fill=colour + (255,), width=15)
+        for offset in (160, 195):
+            draw.line((cx + offset, cy, cx + offset, cy + 42), fill=colour + (255,), width=14)
+    draw.line((850, 320, 950, 220), fill=WHITE + (200,), width=8)
+
+
 def motif_servers(draw, accent, seed):
     for i in range(3):
         y = 170 + i * 120
@@ -295,6 +309,7 @@ MOTIFS = {
     "rotate": motif_rotate,
     "magnifier": motif_magnifier,
     "key": motif_key,
+    "credentials": motif_credentials,
     "servers": motif_servers,
     "two_nodes": motif_two_nodes,
     "sealed_box": motif_sealed_box,
@@ -369,7 +384,20 @@ def main(argv):
         if not (CAMPAIGNS / folder).is_dir():
             raise SystemExit(f"missing campaign folder: {folder}")
         group, part, hook, *motif = spec
-        print(make(folder, group, part, hook.replace("\\n", "\n"), *motif).relative_to(ROOT))
+        thumbnail = make(folder, group, part, hook.replace("\\n", "\n"), *motif)
+        print(thumbnail.relative_to(ROOT))
+        # Patreon-first campaigns keep their cover beside the article. When a
+        # campaign has production metadata, keep its upload copy in sync too.
+        campaign_path = CAMPAIGNS / folder / "campaign.json"
+        if campaign_path.exists():
+            campaign = json.loads(campaign_path.read_text(encoding="utf-8"))
+            upload_thumbnail = (campaign_path.parent / campaign["thumbnail"]).resolve()
+            thumbnail_root = (ROOT / "videos" / "thumbnails").resolve()
+            if not upload_thumbnail.is_relative_to(thumbnail_root):
+                raise SystemExit(f"upload thumbnail must be under videos/thumbnails: {upload_thumbnail}")
+            upload_thumbnail.parent.mkdir(parents=True, exist_ok=True)
+            upload_thumbnail.write_bytes(thumbnail.read_bytes())
+            print(upload_thumbnail.relative_to(ROOT))
 
 
 if __name__ == "__main__":

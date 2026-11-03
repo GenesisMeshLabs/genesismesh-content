@@ -1,0 +1,65 @@
+{
+  "slug": "a-signed-release-can-still-be-malicious",
+  "title": "A Signed Release Can Still Be Malicious",
+  "status": "source-ready",
+  "audience": [
+    "security leaders",
+    "platform engineers",
+    "independent operators"
+  ],
+  "channels": [
+    "patreon",
+    "article",
+    "youtube"
+  ],
+  "primary_message": "A valid signature proves a limited statement under a key; safe release authority also needs scoped permissions, enforced policy and separately protected evidence.",
+  "call_to_action": "Inspect one release boundary: who can change its policy, override its approvals, and alter its evidence?",
+  "source_docs": [
+    "VISION.md",
+    "docs/development/strategy.md",
+    "docs/concepts/security-model.md",
+    "docs/concepts/governed-changes.md",
+    "docs/operations/independent-verification.md"
+  ],
+  "external_sources": [
+    {
+      "title": "LiteLLM's canonical investigation (23 October 2026)",
+      "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain"
+    }
+  ],
+  "source_reviewed_at": "2026-11-03",
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "voice": "en-US-Alloy:DragonHDLatestNeural",
+  "voice_role": "Alloy - deliberate reuse of the supply-chain voice for compromised release authority",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-hero-trust-fabric.png",
+    "../../shared/images/marketing/marketing-independent-operators.png",
+    "../../shared/images/marketing/marketing-supply-chain-trust.png"
+  ],
+  "thumbnail": "../../videos/thumbnails/a-signed-release-can-still-be-malicious.png",
+  "output": "../../videos/renders/a-signed-release-can-still-be-malicious-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "",
+      "url": "",
+      "title": "LiteLLM's Signed Malicious Release: When Provenance Isn't Enough",
+      "thumbnail": "../../videos/thumbnails/a-signed-release-can-still-be-malicious.png",
+      "thumbnail_text": "SIGNED. STILL MALICIOUS.",
+      "render": "../../videos/renders/a-signed-release-can-still-be-malicious-revid-stock.mp4"
+    },
+    "patreon": {
+      "url": "",
+      "title": "A Signed Release Can Still Be Malicious",
+      "thumbnail": "thumbnail.png"
+    }
+  },
+  "production": {
+    "article": "approved",
+    "voiceover": "prepared",
+    "thumbnail": "generated",
+    "audio": "pending-azure-credentials",
+    "video": "pending-audio-and-approved-revid-estimate",
+    "publication": "not-published"
+  }
+}

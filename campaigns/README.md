@@ -66,3 +66,22 @@ The series covering v0.53 to v1.7, in publishing order. Each numbered group can 
 | `16-proof-not-promises/02-what-a-proof-proves` | What a Proof Proves | v0.53.1, v0.61.1 | Formal models, their scope and a falsified property. |
 | `16-proof-not-promises/03-finding-our-own-flaws-first` | Finding Our Own Flaws First | v1.0.2 to v1.7 | Published flaws and fixes, and the review process. |
 | `16-proof-not-promises/04-the-rules-cant-live-in-one-head` | The Rules Can't Live in One Head | after v1.7 | The engineering gates that keep regressions out. |
+
+## Authority in Practice
+
+Two incident-led campaigns, prepared for Patreon first and YouTube later. The articles were approved on 3 November 2026. These folders are source-ready, not published: each has `article.md`, `patreon.md`, a campaign cover, `campaign.json`, narration/SSML and YouTube metadata. Generated narration and video remain pending; no Revid render has been approved or started.
+
+| Folder | Title | Role |
+|---|---|---|
+| `17-a-signed-release-can-still-be-malicious` | A Signed Release Can Still Be Malicious | LiteLLM's October 2026 compromise: valid signatures do not make compromised release authority safe. |
+| `18-revoking-the-first-credential-is-not-the-end-of-the-attack` | Revoking the First Credential Is Not the End of the Attack | ConnectWise/Storm-0940: follow downstream credentials, permissions and sessions after the initial revocation. |
+
+Both retain the approved articles' limitations: Genesis Mesh is portable trust infrastructure, not guaranteed incident prevention or a universal kill switch. Incident facts were checked against the primary reports on 3 November 2026; the Patreon posts include inspectable source links.
+
+Thumbnails follow the existing series style. `thumbnail.png` is the Patreon-first cover; the identical upload copy lives under `videos/thumbnails/` and is referenced by `campaign.json`. Regenerate both copies together:
+
+```powershell
+python .\videos\scripts\generate_series_thumbnails.py 17-a-signed 18-revoking
+```
+
+Use the stable slug in each `campaign.json` with the existing narration and video scripts. Generate Azure narration first, then obtain the Revid audio-to-video estimate and explicit approval before rendering. Publication remains a separate step. Add the video link to each Patreon post when the YouTube version exists.

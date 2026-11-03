@@ -16,3 +16,12 @@ Azure Speech voices were selected from the voices available to this workspace. T
 | `08-use-cases/03-supply-chain-trust` | `en-US-Alloy:DragonHDLatestNeural` | Alloy - supply-chain trust voice |
 | `08-use-cases/04-enterprise-integration` | `en-US-Jane:DragonHDLatestNeural` | Jane - enterprise integration voice |
 | `08-use-cases/05-data-access-governance` | `en-US-Phoebe:DragonHDLatestNeural` | Phoebe - data governance voice |
+
+## Authority in Practice
+
+These campaigns deliberately reuse the established supply-chain and security-lifecycle voices. The article arguments follow those subjects, so continuity is preferable to assigning an unverified new voice. Narration is prepared in Markdown and SSML; synthesis and current voice availability still need verification in the configured Azure workspace.
+
+| Campaign | Voice | Role |
+|---|---|---|
+| `17-a-signed-release-can-still-be-malicious` | `en-US-Alloy:DragonHDLatestNeural` | Alloy - supply-chain authority and the limits of release signing |
+| `18-revoking-the-first-credential-is-not-the-end-of-the-attack` | `en-US-Brian:DragonHDLatestNeural` | Brian - revocation, downstream authority and security lifecycle |

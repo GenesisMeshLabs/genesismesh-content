@@ -1,0 +1,65 @@
+{
+  "slug": "revoking-the-first-credential-is-not-the-end-of-the-attack",
+  "title": "Revoking the First Credential Is Not the End of the Attack",
+  "status": "source-ready",
+  "audience": [
+    "security leaders",
+    "platform engineers",
+    "independent operators"
+  ],
+  "channels": [
+    "patreon",
+    "article",
+    "youtube"
+  ],
+  "primary_message": "Revocation must account for where a compromised credential's authority has travelled, including new credentials, permissions, sessions and enforcement points.",
+  "call_to_action": "Test one revocation path end to end, including downstream credentials, stale state and the next denied request.",
+  "source_docs": [
+    "VISION.md",
+    "docs/development/strategy.md",
+    "docs/operations/revocation.md",
+    "docs/concepts/security-model.md",
+    "docs/concepts/governed-changes.md"
+  ],
+  "external_sources": [
+    {
+      "title": "Microsoft's investigation and containment guidance (21 October 2026)",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+    }
+  ],
+  "source_reviewed_at": "2026-11-03",
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "voice": "en-US-Brian:DragonHDLatestNeural",
+  "voice_role": "Brian - deliberate reuse of the security lifecycle voice for revocation and downstream authority",
+  "duration_seconds_per_image": 5,
+  "images": [
+    "../../shared/images/marketing/marketing-hero-trust-fabric.png",
+    "../../shared/images/marketing/marketing-independent-operators.png",
+    "../../shared/images/marketing/marketing-provenance-chain.png"
+  ],
+  "thumbnail": "../../videos/thumbnails/revoking-the-first-credential-is-not-the-end-of-the-attack.png",
+  "output": "../../videos/renders/revoking-the-first-credential-is-not-the-end-of-the-attack-revid-stock.mp4",
+  "publishing": {
+    "youtube": {
+      "video_id": "",
+      "url": "",
+      "title": "ConnectWise and Storm-0940: Why Revoking One Credential Isn't Enough",
+      "thumbnail": "../../videos/thumbnails/revoking-the-first-credential-is-not-the-end-of-the-attack.png",
+      "thumbnail_text": "REVOKED. WHAT STILL HAS ACCESS?",
+      "render": "../../videos/renders/revoking-the-first-credential-is-not-the-end-of-the-attack-revid-stock.mp4"
+    },
+    "patreon": {
+      "url": "",
+      "title": "Revoking the First Credential Is Not the End of the Attack",
+      "thumbnail": "thumbnail.png"
+    }
+  },
+  "production": {
+    "article": "approved",
+    "voiceover": "prepared",
+    "thumbnail": "generated",
+    "audio": "pending-azure-credentials",
+    "video": "pending-audio-and-approved-revid-estimate",
+    "publication": "not-published"
+  }
+}
