@@ -43,3 +43,5 @@ Genesis Mesh is a portable trust layer for sovereign systems.
 - Keep research/incident findings separate from product guarantees. Include limitations and a reader-verifiable next step.
 - Use the existing brand assets and series thumbnail system, with visual QA.
 - Keep campaigns in draft until evidence and design review pass and the user approves the exact content and publication destination. Approval of an article does not authorize publication.
+
+- Keep public articles evergreen: generally describe capabilities without individual SDK names or version numbers unless requested or necessary for accuracy. Separate implemented capability from planned broader coverage; retain exact SDK/platform coverage, pinned revisions and dated release checks in the internal evidence ledger. Never imply unimplemented parity.

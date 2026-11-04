@@ -16,6 +16,12 @@ A useful long-form starting range is 900–1,600 words, with shorter focused not
 
 Explain the Network Authority on first use. Keep portable trust for sovereign systems as the frame; agents are one application. Show who owns keys, who recognizes whom, who decides, who executes, and who verifies. Do not attribute local authority to a gateway or imply that Genesis Mesh chooses who deserves trust.
 
+### Evergreen public articles, precise internal evidence
+
+Generally describe capabilities without naming individual SDKs or version numbers in public-facing campaign prose, unless the user requests them or omission would create material ambiguity. Keep the article focused on the real flow, prerequisites and limits. Precise code/docs/test links can carry revision detail without version numbers in the narrative.
+
+Keep SDK/platform coverage, full revisions, package versions and dated release checks in the internal evidence ledger. These checks remain mandatory; evergreen wording is not permission to hide availability gaps. Distinguish implemented capabilities from planned broader parity. Where coverage is partial, use a bounded statement such as “available in supported integrations; broader coverage is planned” only when evidence supports both parts. Do not turn “some implementations” into “all SDKs.” If a reader could reasonably assume unsupported behavior, clarify the scope and name the implementation or version only as much as necessary.
+
 ## 2. Research claims and product claims are different
 
 - **Research:** cite the original paper, incident report, advisory, or primary dataset; record its date, scope and limitations. Separate a reported finding from our inference. Do not turn a theoretical property into a deployed guarantee.
@@ -67,7 +73,7 @@ Start from the upstream repository's current manifests, public-surface contract,
 - Edge runtime/device client, online authorization, offline grants, record admission and reconciliation.
 - Demo applications, fixtures, conformance harness and deployment examples.
 
-For each row, record exact package/version or revision, operation, code/docs/test links, release status, and known gaps. Mark an omitted surface “not relevant” with a reason. A shared name or protocol does not prove equivalent behavior across implementations. Do not say “the SDKs support…” unless all named SDKs are checked; name the verified language and version instead.
+For each row, record exact package/version or revision, operation, code/docs/test links, release status, and known gaps. Mark an omitted surface “not relevant” with a reason. A shared name or protocol does not prove equivalent behavior across implementations. Do not say “the SDKs support…” unless the implied scope is verified. In public prose, describe the bounded capability and distinguish planned expansion without listing SDK names or versions by default; retain the exact verified language/version matrix internally. Name an implementation or version publicly only when needed to avoid material ambiguity or requested by the user.
 
 Use real, inspected flows to ground the story. Depending on topic, trace:
 
@@ -98,7 +104,7 @@ Place a primary-source link close to every material factual claim. A bibliograph
 
 Every substantive article and publication description must provide:
 
-- **Check it yourself:** an exact, tested example or documented procedure, prerequisites, pinned version, expected result and at least one relevant denial/failure case. If not run, say “documented example, not executed in this review.” Do not label it tested.
+- **Check it yourself:** an exact, tested example or documented procedure, prerequisites, expected result and at least one relevant denial/failure case. Keep the pinned version in the internal ledger and linked reproducible instructions rather than routinely inserting it into evergreen prose; expose any version constraint necessary for the reader to reproduce the example. If not run, say “documented example, not executed in this review.” Do not label it tested.
 - **Website**, **documentation**, **demo**, and **GitHub** links, verified at review time. Prefer the specific relevant docs/demo/source over four generic homepages. If no public demo exists or it is unavailable, state that and link a reproducible local example instead; do not fabricate a URL.
 - A distinction between illustrative footage/diagrams and actual product output. A recorded demo is not evidence that the live service is currently available.
 
