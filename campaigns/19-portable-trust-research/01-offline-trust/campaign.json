@@ -28,13 +28,14 @@
   "voice": "",
   "voice_role": "",
   "images": [],
-  "thumbnail": "",
+  "thumbnail": "../../../videos/thumbnails/offline-trust.png",
   "output": "",
   "publishing": {
     "patreon": {
       "title": "Offline trust and revocation: what a disconnected system can know",
       "url": "https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054",
-      "published_at": "2026-11-04"
+      "published_at": "2026-11-04",
+      "thumbnail": "thumbnail.png"
     },
     "linkedin": {
       "url": "",
@@ -43,6 +44,6 @@
   },
   "article_approved": true,
   "published": true,
-  "media_production": "not_started",
+  "media_production": "thumbnail_ready_audio_video_not_started",
   "source_reviewed_at": "2026-11-04"
 }
