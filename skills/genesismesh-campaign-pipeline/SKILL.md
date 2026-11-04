@@ -18,6 +18,7 @@ The default deliverable is a short, substantive article, branded cover, source l
 - Pin code, docs and tests to inspected revisions; separate documented, implemented, test-covered and actually tested behavior. Verify package/release availability independently from repository heads. Research, incident reports and formal models are not product guarantees.
 - Inventory all relevant SDK languages, gateway, Network Authority, CLI and edge surfaces. Do not assume parity. Trace exact fallback triggers, exclusions, opt-in flags, freshness limits and reconnect behavior for the version recorded in the evidence ledger; distinguish queued evidence from queued actions.
 - Include citations beside material claims, a reproducible “Check it yourself” section, and verified Website, documentation, demo and GitHub links. If a public demo is unavailable, say so and supply a documented local example instead.
+- For reader-facing walkthroughs and guides, prefer the verified canonical page on `docs.genesismesh.org`, with the exact relevant anchor when available. Open the page and verify its content and anchor; never derive or guess a URL from a repository path. Keep direct GitHub links for code/tests and pinned internal evidence. If no canonical docs counterpart can be verified, use a valid repository document and label it explicitly as repository documentation.
 - Use the existing branded series thumbnail layout and supplied logo, palette and typography; inspect actual final pixels at full size and 320 × 180. Keep hooks and diagrams no stronger than the evidence.
 - Do not publish or push campaign drafts to the public repository until those gates pass. Existing generator scripts do not enforce approval.
 - Keep Genesis Mesh framed as portable trust for sovereign systems. Read `MESSAGING.md` before drafting.
@@ -213,7 +214,7 @@ Before calling the campaign complete:
 
 - `evidence.md` and `review.md` complete; no unresolved blocking claims
 - implementation/docs/test distinctions and current release availability checked across all relevant surfaces
-- claim-level citations, reproducible reader check, and public Website/docs/demo/GitHub links verified
+- claim-level citations, reproducible reader check, and public Website/docs/demo/GitHub links verified; reader-facing walkthroughs/guides use verified canonical docs pages and exact anchors where available, with repository-document fallbacks labeled explicitly
 - final thumbnail inspected at full resolution and 320 × 180 against the design system
 - derived assets contain no new unsupported claims
 - exact final assets and destination channels explicitly approved before publication

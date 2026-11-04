@@ -34,7 +34,7 @@ Keep SDK/platform coverage, full revisions, package versions and dated release c
 
 Create `evidence.md` beside the campaign. Keep unreleased/private source details in an ignored local review packet until approved for public disclosure. Public copy and citations must use reader-accessible sources.
 
-Record the review date and full commit SHA for each source repository, package/release versions, and the intended publication date. Use immutable code/docs/test links (`blob/<full-SHA>/path#Lx-Ly`) for claims; a moving branch, repository homepage, screenshot or roadmap alone is insufficient. Verify paths and line ranges; never invent permalinks. Recheck current release/deployment status before publication.
+Record the review date and full commit SHA for each source repository, package/release versions, and the intended publication date. Keep immutable code/docs/test links (`blob/<full-SHA>/path#Lx-Ly`) in the internal claim ledger; use verified canonical documentation pages for reader-facing guides as described below. For implementation/test citations, retain direct pinned GitHub links; a moving branch, repository homepage, screenshot or roadmap alone is insufficient. Verify paths and line ranges; never invent permalinks. Recheck current release/deployment status before publication.
 
 Use one ledger entry per material claim:
 
@@ -101,6 +101,10 @@ Never describe a configured alternate path as transparent error recovery, or cac
 ## 6. Citations and a reader's next step
 
 Place a primary-source link close to every material factual claim. A bibliography alone does not show which source supports which statement. Quote sparingly and accurately. Links to code establish implementation; links to docs establish documented use; test links and run results establish only their stated scope.
+
+Reader-facing walkthroughs, tutorials and guides should link to the verified canonical page on `docs.genesismesh.org`, not its GitHub Markdown source, when that canonical counterpart exists. Use the exact relevant section anchor when available. Find the page through the site's navigation, search or an authoritative link; open it and verify that its content supports the claim and that the anchor exists. A successful HTTP response alone does not verify a section or the correctness of the destination. Never guess a URL or anchor by translating a repository filename or heading.
+
+Keep direct GitHub links for implementation code and tests. Keep pinned source-document revisions, package/platform coverage and dated checks in the internal evidence ledger, recording the public docs destination alongside its underlying evidence. Canonical docs can change or lag the source: compare their substance before linking, and do not replace a precise implementation citation with an unrelated docs homepage. If no canonical counterpart can be verified, a valid repository document is acceptable; label it “Repository documentation” rather than presenting it as the docs website. This presentation rule does not weaken the claim-verification requirements.
 
 Every substantive article and publication description must provide:
 
