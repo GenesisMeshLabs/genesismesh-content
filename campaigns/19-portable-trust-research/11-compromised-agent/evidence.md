@@ -23,32 +23,39 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 
 ## Material claims
 
+Exact wording below follows the shortened article revision. Source inspection and test-execution status are unchanged.
+
 ### Claim 7-1
-- Exact wording / scope: Guard requires signed request, trusted decision/token and matching agreement before permitted spawn.
+- Exact wording / scope: The agent sends a signed ExecutionMediationRequest referencing a stored boundary decision and carrying an invocation token, capability and command.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py#L126-L267
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py#L730-L864
-- Documentation / reader check: https://docs.genesismesh.org/examples/process-level-mediation.html
-- Observed verification and limits: Implemented and test-covered; beta CLI. Test source only, no execution.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/mediation.py#L24-L55
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py#L730-L864
+- Verification and limits: Decision is resolved from guard store/directory, not carried inline. Beta workflow.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 7-2
-- Exact wording / scope: Allowlist compares full command; prefix tails deliberately remain unconstrained.
+- Exact wording / scope: The guard checks the request signature, trusted operator decision, token issuer, bearer, capability, expiry and agreement match.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py#L65-L123
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py#L314-L420
-- Documentation / reader check: https://docs.genesismesh.org/examples/process-level-mediation.html
-- Observed verification and limits: Implemented and test-covered; no claim of shell sandbox or kernel enforcement.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py#L126-L267
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py#L730-L864
+- Verification and limits: Only mediated path; mandatory deployment confinement not provided by starting daemon.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 7-3
-- Exact wording / scope: Advisory mode permits bypass; mandatory mode requires verified deployment restrictions.
+- Exact wording / scope: the token counter is process-local and resets on restart, and the guard does not fetch revocations.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: No product implementation claim; see documentation/research scope below.
-- Test: No matching test asserted.
-- Documentation / reader check: https://docs.genesismesh.org/examples/process-level-mediation.html
-- Observed verification and limits: Canonical guide explicitly distinguishes modes; no production containment tested.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py#L53-L111
+- Test source: no matching test asserted.
+- Verification and limits: Code inspected. No durable/global budget or fresh revocation guarantee; local expiry and other checks still apply.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
+
+### Claim 7-4
+- Exact wording / scope: The script validates artifacts, constructs a receipt with an example process ID, and rejects an allowlist mismatch.
+- Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/process-level-mediation-demo.py#L105-L143
+- Test source: no matching test asserted.
+- Verification and limits: Artifact illustration with PID12345, not live isolated subprocess execution. Not run here.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ## Research and primary reader links
 - Research source: https://arxiv.org/abs/2609.00267
@@ -68,3 +75,7 @@ Sources show a mechanism and tests show asserted cases. Production adoption stil
 Reproduction refinement: process-level-mediation-demo.py creates a receipt directly with subprocess_pid=12345. It is an artifact-validation demonstration, not live isolated subprocess execution. Public copy states this distinction. Source inspected: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/process-level-mediation-demo.py#L105-L143 .
 
 The request carries decision_id and the token, not an embedded BoundaryDecision. Model inspected: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/mediation.py#L24-L55 . Guard resolves its decision store/directory. Budget state is process-local and resets; no revocation fetch. https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py#L53-L111 and request handler inspected. Canonical rendered guide lags pinned Markdown on this paragraph; implementation citation used.
+
+## Concise revision
+
+Shortened 2026-11-04 at the user's request. One scenario and one mechanism retained, with essential refusals and limitations. The same pinned evidence supports this revision; no new feature, deployment or test-run claim was added. Independent concise-revision review is pending. Superseded prose was removed, not silently treated as reviewed. No publication or schedule field changed.

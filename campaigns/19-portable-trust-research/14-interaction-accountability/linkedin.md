@@ -1,7 +1,5 @@
-Who requested it? Who allowed it? What did the executor report doing?
+A signed execution log answers who reported an outcome. It does not prove that every action was reported.
 
-Those are different claims, and an agent-to-agent workflow should preserve the distinction.
-
-This article walks through Genesis Mesh execution evidence, including a limit that matters in an audit: a valid chain prefix can verify even when its last records are withheld. An independent count or observation is needed to spot that missing ending.
+This short article follows Genesis Mesh execution evidence and a useful limit: a valid chain prefix can verify after its ending is withheld. An independent count or observation matters.
 
 Read: {{PATREON_URL_AFTER_VERIFIED_PUBLICATION}}

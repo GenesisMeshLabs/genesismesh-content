@@ -1,6 +1,6 @@
 # Evidence review: idea 18
 
-Scope: NA certificate CRL data and revocation behavior; documented distinct partner-feed/grant propagation timing. No CRSet implementation or private revocation guarantee is claimed.
+Scope: NA certificate CRL data, published revocation and local-state limits; no CRSet integration, private query or issuer-activity privacy.
 
 ## Evidence snapshot and release status
 
@@ -31,71 +31,92 @@ Canonical documentation pages were reached through the live documentation naviga
 Reader procedures require a disposable source checkout and the development dependencies in the installation guide. Source-based test commands select actual inspected test files. Local demo commands are copied from the linked documentation. All are explicitly marked not executed. Failure outcomes are documented or asserted in inspected test source; they are not new runtime results.
 
 
-## Claim-level ledger
+## Exact claim ledger for the concise revision
 
-### R01 Research context
-
-Exact article wording:
-
-[CRSet](https://arxiv.org/abs/2501.17089) studies non-interactive credential revocation with protection for issuer activity. Its published design lets relying parties obtain encoded status material and check it locally. It is a research mechanism with its own assumptions and implementation, not a Genesis Mesh feature claimed here.
-
-Source: https://arxiv.org/abs/2501.17089
-Evidence: original arXiv abstract/metadata inspected; research proposal/prototype, not Genesis Mesh implementation. No quoted performance numbers or prevention guarantees are transferred. Decision: retain bounded research hook.
+Each entry quotes the final saved paragraph verbatim. Illustrative scenes are not deployment evidence. Source observations and releases remain as recorded above; no product test was executed during this shortening pass.
 
 ### C01
 
-Exact claim or sentence excerpt: The signature lets a consumer check who signed that status material; it does not conceal those fields.
+An organization revokes a departing contractor's credential. Its partner needs the update to stop accepting access, while an observer may learn something from the timing and identifiers. This illustrative case has both an enforcement requirement and a privacy question.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: Illustrative scenario; no factual deployment claim.
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/crl.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Illustrative operator scenario; no customer or deployment assertion.
 
 ### C02
 
-Exact claim or sentence excerpt: A new sequence does not necessarily mean another credential was revoked.
+[CRSet](https://arxiv.org/abs/2501.17089) studies non-interactive revocation with issuer-activity privacy; that research mechanism is not a Genesis Mesh feature claimed here.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S01
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Primary research context only; no product guarantee or integration inferred.
 
 ### C03
 
-Exact claim or sentence excerpt: A grant revocation reaches an offline holder at its next sync.
+Genesis Mesh's Network Authority is the operator's service for issuing and revoking membership credentials. The [revocation runbook](https://docs.genesismesh.org/operations/revocation.html) describes a privileged operator revoking a certificate, publication of a signed certificate revocation list, and refusal of the revoked certificate's heartbeat and renewal.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S02
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/operations/revocation.md
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+### C04
 
-## Detailed implementation and counterexamples
+The [CRL model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py) exposes issuer, sequence, issue time, next-update time and revoked entries. Each entry contains certificate ID, revocation time, reason and issuer. Signing authenticates that material; it does not hide it. An opaque identifier may still be linkable to other records.
 
-CRL model exposes issuer, sequence, issued_at, next_update and per-entry certificate_id/revoked_at/reason/issuer. Route is public GET /crl. test_na_crl covers signed empty list, revoke/list inclusion and heartbeat 403 / renewal 403, refresh of expiring list with same entries and higher sequence. Article explicitly rejects inference that every sequence change is a new revocation. Partner attestation import and grant-holder sync are described separately from certificate CRLs; no uniform stale-state/fallback behavior is asserted.
+Sources: S03
 
-## Direct implementation and test inventory
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/crl.py
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py
-- Test source, inspected not executed: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py
+### C05
 
-## Reader documentation verified
+Sequence changes also need careful interpretation. The [authority tests](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py) refresh an expiring list with a higher sequence but unchanged revoked entries. A sequence increment is not necessarily another departure or compromise.
 
-- https://docs.genesismesh.org/operations/revocation.html
-- https://docs.genesismesh.org/installation.html
+Sources: S04
 
-## Review limits
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Independent reviewer must confirm final wording and derived assets. No product testing or live deployment certification is inferred. New Patreon publication and scheduling are not authorized. Current user instruction authorizes repository publication of the complete list after review; root coordinates that action. No publication performed by this author.
+### C06
 
-## Research version and compatibility check
+A receiving peer checks the revocation state it holds. It cannot enforce an update it has not received. This flow establishes neither private status queries nor issuer-activity hiding; caching alone does not erase visible metadata.
 
-Primary paper: https://arxiv.org/abs/2501.17089v3 ; revised/submitted 2025-09-17. CRSet non-interactive revocation mechanism with issuer-activity privacy objective; research design/implementation is separate from GM CRLs.
+Sources: S04
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C07
+
+Use synthetic identities in a disposable [development installation](https://docs.genesismesh.org/installation.html):
+
+Sources: S05
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C08
+
+```text
+python -m pytest genesis_mesh/tests/test_na_crl.py -v
+```
+
+Sources: S05
+
+Classification: Previously documented/source-based procedure; not executed.
+
+### C09
+
+The fixtures enroll and revoke a node: its certificate should appear in the list, and heartbeat and renewal should return refusal. A separate test refreshes the list without adding revocations. Compare the before-and-after fields. This source-based test procedure was not executed in this review.
+
+Sources: S05
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+## Inspected sources retained by this revision
+
+- S01: https://arxiv.org/abs/2501.17089
+- S02: https://docs.genesismesh.org/operations/revocation.html
+- S03: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py
+- S04: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py
+- S05: https://docs.genesismesh.org/installation.html
+
+## Revision decision
+
+The article was shortened at the user's request without new capability claims. Secondary tours and repeated explanation were removed. Exact article/Patreon parity is preserved. Publication states and covers are unchanged. Independent review of this concise revision is pending; repository publication is coordinated by the parent. No new Patreon or LinkedIn action is authorized by this record.

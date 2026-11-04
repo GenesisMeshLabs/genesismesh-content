@@ -1,11 +1,9 @@
-An agent can propose a payment. That does not mean it should decide its own spending authority.
+An agent can propose a payment. It should not rewrite the rule that authorizes it.
 
-Genesis Mesh's boundary-policy example puts the rule under the operator's control and returns a signed decision tied to the evaluated context.
+Genesis Mesh's boundary-policy workflow returns a signed decision tied to the evaluated context. The executor must still supply trusted facts, use the same parameters and control the credentials.
 
-The hard part is the integration: trusted facts, exact execution parameters, and no unrestricted path around the policy check.
+A short example of separating reasoning, permission and execution:
 
-A signed ALLOW is not proof that the action ran.
-
-Read: [PATREON_URL_PENDING]
+[PATREON_URL_PENDING]
 
 #GenesisMesh #AgentSecurity #Policy

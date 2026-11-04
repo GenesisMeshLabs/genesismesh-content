@@ -47,5 +47,15 @@
   "series_order": 12,
   "thumbnail_alt_text": "A feedback star and a permission card are separated by the words IS NOT, distinguishing reputation from authorization.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "a7c3133e2dad0a7afaa601ae2103a39f7057e8ecd379184af7d03097cf1898aa"
+  "article_sha256": "26a1598eb65face7a14e5bf65b85e8beeb91421f50017ed769dde3814637e715",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 319,
+    "previous_visible_word_count": 699,
+    "reduction_percent": 54.4,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

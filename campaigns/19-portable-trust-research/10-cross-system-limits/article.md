@@ -1,46 +1,28 @@
 # Can an agent keep its limits when it crosses systems?
 
-A planner asks a tool to read a report. The tool delegates to another agent, which calls an HTTP service. The messages arrive successfully. Did the original permission survive the journey?
+A planner asks a tool to read a report. The tool delegates to an agent, which calls an HTTP service. In this illustrative workflow, successful delivery says nothing about whether each receiver enforces the original permission.
 
-In this illustrative workflow, the transport changes three times. The important boundary is at each consumer: which authority does it recognize, what action is permitted, and what prevents a request from being reused beyond its intended scope?
+The [Agent Identity Protocol paper](https://arxiv.org/abs/2603.24775) studies delegation across MCP, A2A and HTTP; it does not establish Genesis Mesh compatibility with that protocol.
 
-The [Agent Identity Protocol paper](https://arxiv.org/abs/2603.24775) explores delegation across MCP, A2A and HTTP. Its proposal is useful research context. It is not evidence that every integration carrying a token implements the same checks, nor that Genesis Mesh is wire-compatible with that protocol.
+Genesis Mesh's [beta invocation-token workflow](https://docs.genesismesh.org/examples/invocation-bound-tokens.html) provides an inspectable building block. An issuer starts with an `AgreementRecord` or delegated scope and signs an `InvocationToken` naming a bearer, capabilities, expiry and optional budget and constraints. Issuance refuses capabilities outside the supplied scope. [Implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L108-L199)
 
-## Inspect what crosses the boundary
+For our report request, the receiver calls `verify_invocation_token` with trusted issuer keys, the requested capability, bearer identity and verification time. A wrong bearer, expired token or ungranted capability fails. The receiver must authenticate that identity, validate the authorization basis and map the actual operation to the checked capability; copying an asserted bearer name is insufficient.
 
-Genesis Mesh has a [documented beta invocation-token workflow](https://docs.genesismesh.org/examples/invocation-bound-tokens.html). An issuer starts with an `AgreementRecord`, or a delegated scope, and creates a signed `InvocationToken` naming its bearer and capabilities. The token also carries its agreement identifier, expiry and optional invocation budget and constraints.
+Limits must survive the adapter too. The [verifier](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L257-L311) counts caller-supplied use records, so a budget is not a shared replay counter. The integration must coordinate trustworthy use state. The API does not verify the whole linked use-record chain.
 
-The Python functions are `issue_invocation_token` and `verify_invocation_token`; the CLI exposes the corresponding `trust token` commands. In the [inspected implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L108-L199), issuance refuses capabilities absent from the supplied source scope.
+The supported `peer_sovereign:` constraint checks the bearer, not a general URL or service audience; unknown constraints are refused. Additional resource and audience binding remains integration work. [Constraint checks](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L207-L250)
 
-For our report example, an issuer can grant `reports.read` to one named agent. At the receiving boundary, verification takes trusted issuer keys, the requested capability, the bearer's identity and a verification time. A token for a different bearer or capability fails. Changing JSON fields without a valid new signature does not expand the grant. [Verification and tests](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py#L203-L304)
-
-Those checks are concrete. They are not a complete cross-protocol integration. The consumer must authenticate the caller, select trusted issuer keys, validate the underlying authorization basis and map the requested operation to the capability it verifies. Copying a bearer name from an untrusted request is not proof that the caller controls that identity.
-
-## A budget needs trustworthy use state
-
-A token's maximum-use field does not create a shared counter across services. The inspected verifier counts the `use_records` supplied by its caller; when no records are supplied, the count is zero. The integration must retain and coordinate the relevant state if it intends to enforce a shared budget. [Token verifier](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L257-L311)
-
-The workflow can produce signed `InvocationUseRecord` objects linked by digests. The documented API does not verify that whole use chain for you. Do not turn a linked record format into a claim of global replay prevention.
-
-Scope has similar limits. The current constraint vocabulary includes `not_before:` and `peer_sovereign:`; the latter checks the bearer identity. It is not a general URL, merchant or HTTP-audience binding. Unrecognized constraints are refused by the verifier. A receiving adapter must enforce the additional resource and audience semantics its application needs. [Constraint implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L207-L250)
-
-## Keep the boundary local
-
-Genesis Mesh is portable trust infrastructure for independently operated systems. Carrying evidence lets another operator inspect a request's basis; it does not require that operator to accept it.
-
-For the planner-to-tool-to-service journey, write down the consumer's checks at each hop. Identify who can mint a new token, where scope is narrowed, where use state is kept, and where the side effect occurs. Any missing adapter is still engineering work, even if the message transport is standardized.
+The consuming service owns execution. Transporting a token does not authorize it to broaden the action.
 
 ## Check it yourself
 
-Use the [invocation-token walkthrough](https://docs.genesismesh.org/examples/invocation-bound-tokens.html) with a source checkout and the example agreement and signing keys. Run its documented local demo:
+From an installed source checkout, use the [token walkthrough](https://docs.genesismesh.org/examples/invocation-bound-tokens.html) and its example agreement and keys:
 
 ```text
 python docs/examples/assets/scripts/invocation-bound-tokens-demo.py --no-gif
 ```
 
-Verify a permitted capability for the intended bearer, then repeat with the wrong bearer or a capability outside the grant. Inspect the refusal codes and the budget example with explicit use records. This is a documented example, not executed in this review.
-
-The useful test is not merely whether a token reaches the next service. It is whether that service enforces the intended limit with trustworthy inputs.
+Expect acceptance for the intended bearer and capability; repeat with a wrong bearer or ungranted capability and inspect the refusal. Check the budget using explicit use records. This documented example was not executed in this review.
 
 
 [Genesis Mesh](https://genesismesh.org/) · [Public demo](https://mesh.genesismesh.org/) · [Source repository](https://github.com/GenesisMeshLabs/genesismesh)

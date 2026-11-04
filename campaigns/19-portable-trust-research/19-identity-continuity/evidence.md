@@ -18,49 +18,34 @@ The public website and trust demo were viewed without authentication on 2026-11-
 
 ## Material claims
 
+Concise revision: each quotation below appears in the revised article. The same claims apply to the identical Patreon copy; LinkedIn uses a narrower summary. Existing dated source and release checks remain the baseline. No product examples or tests were executed.
+
 ### 19-1
 
-Exact article wording: Genesis Mesh's reference implementation provides a narrower mechanism: a signed `ModelAttestation`.
+Exact article wording: An operator supplies trusted agent keys and an `AttestationPolicy`; `verify_model_attestation` checks signature, expiry and configured model, prompt-hash and tool-hash allowlists.
 
-Affected sections/assets: Record fields and construction; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/attestation.py#L47).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_verifiable_logic_attestation.py#L135). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered. The record contains declared configuration. Hashing does not establish the actual runtime or protect predictable inputs against guessing.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/logic_attestation.py#L86).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_verifiable_logic_attestation.py#L187); not executed.
+- Scope, limits and authority boundary: Beta reference functions. A signed ModelAttestation describes declared configuration, not independent runtime measurement. Its fields are defined in genesis_mesh/models/attestation.py at line 47. Empty allowlists are unrestricted; model version is recorded but not allowlisted; require_bound_token checks presence only.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 19-2
 
-Exact article wording: The `verify_model_attestation` function checks the signature and expiry, then compares the declared model, prompt hash and tool hash with the configured allowlists.
+Exact article wording: A `LogicAttestationGate` integrates that check into a local boundary evaluation.
 
-Affected sections/assets: Declaration checks; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/logic_attestation.py#L86).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_verifiable_logic_attestation.py#L187). **Not executed** in this review.
-- Scope, limitations and decision: Implemented. Empty allowlists permit any value. The model version tag is recorded but not allowlisted. require_bound_token checks presence rather than equality with an expected invocation token. All these limits appear in the public article.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/logic_attestation.py#L143).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_verifiable_logic_attestation.py#L370); not executed.
+- Scope, limits and authority boundary: Opt-in local Python gate; no automatic gateway enforcement or universal SDK parity. Source-inspected prompt/tool mismatches refuse the declared configuration.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 19-3
 
-Exact article wording: A `LogicAttestationGate` can add that check to a local boundary evaluation.
+Exact article wording: The relying application authenticates the caller, binds the decision to the requested action and controls execution.
 
-Affected sections/assets: Opt-in Python integration; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/logic_attestation.py#L143).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_verifiable_logic_attestation.py#L370). **Not executed** in this review.
-- Scope, limitations and decision: Implemented, opt-in Python gate. No automatic gateway or SDK parity, hardware measurement or remote-attestation guarantee is claimed.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
-
-### 19-4
-
-Exact article wording: The relying application still authenticates the caller and controls execution.
-
-Affected sections/assets: Identity-to-authorization boundary; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/context.py#L44).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_attestation_boundary.py#L233). **Not executed** in this review.
-- Scope, limitations and decision: Bounded to documented attestation-backed evaluation. Subject equality is not caller authentication; the relying application owns that boundary.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/context.py#L44).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_attestation_boundary.py#L233); not executed.
+- Scope, limits and authority boundary: Consuming-integration responsibility, not a claim that signature verification authenticates the caller or measures the process. The attestation-backed example separates local policy evaluation from caller authentication.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ## Documentation and source comparison
 
@@ -92,9 +77,13 @@ Read-only GitHub source fetches and primary paper/documentation reads were perfo
 
 The reader procedure uses documented commands, prerequisites, expected acceptance and refusal cases, and an explicit statement that it was not executed in this review. The article contains no financial or legal recommendation or regulatory-compliance claim.
 
-Reader URL inventory: links.json. Final hashes and release gates: review.md and hashes.json. Recheck release/deployment evidence before any later material revision or publication claim.
+Reader URL inventory: campaign.json source_docs and the article citations. Final asset hashes and release gates are recorded in review.md. Recheck release/deployment evidence before any later material revision or publication claim.
 
 
 ## Final beta qualification
 
 Logic-attestation functions are explicitly qualified as beta in the article and Patreon copy. The canonical [public contract](https://docs.genesismesh.org/reference/public-contract.html) was opened and checked on 2026-11-04. This classification does not establish production deployment or complete SDK parity.
+
+## Concise revision record
+
+The article was shortened at the user's request on 2026-11-04. Secondary mechanisms and repeated caveats were removed; the retained claim quotations above supersede the earlier wording. Same-session primary-source, pinned implementation, canonical-documentation and release checks remain applicable. No new capability or deployment claim was added. The condensed revision awaits independent review against its updated hashes.

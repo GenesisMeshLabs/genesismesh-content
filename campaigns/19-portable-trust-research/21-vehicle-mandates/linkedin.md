@@ -1,9 +1,9 @@
-A car having a payment credential does not tell us what its owner allowed it to buy.
+A payment credential does not explain what a vehicle's owner allowed it to buy.
 
-A useful machine-payment mandate must bind the requester, merchant, service, amount, currency and time window. A per-request cap also isn't a shared spending balance.
+Genesis Mesh's policy and governed-action mechanisms offer authorization building blocks. The proposed payment adapter must still enforce the approved purchase and handle provider idempotency and reconciliation.
 
-This article uses Genesis Mesh's documented policy and governed-action mechanisms to examine that boundary. The EV/payment adapter is an illustrative integration, not an existing Genesis Mesh payment product.
+A per-request cap is not a shared spending balance. This is an illustrative design, not an existing EV payment product.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 
-#GenesisMesh #MachinePayments #IoT #Authorization
+#GenesisMesh #MachinePayments #IoT

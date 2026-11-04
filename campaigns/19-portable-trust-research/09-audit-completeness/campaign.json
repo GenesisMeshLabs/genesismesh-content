@@ -46,5 +46,15 @@
   "series_order": 9,
   "thumbnail_alt_text": "Numbered evidence rows include a visible gap, asking what a signed audit history may leave out.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "0783915954f8be85f4c7684b3bc2cd909274e61e95605da1a33a66adbf6f59e6"
+  "article_sha256": "3fdf8c581f627336870ec516e2972bb6e56abc457e326b9ab5a8f6d46a1dbbed",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 319,
+    "previous_visible_word_count": 649,
+    "reduction_percent": 50.8,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

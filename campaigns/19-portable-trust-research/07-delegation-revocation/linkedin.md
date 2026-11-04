@@ -1,10 +1,8 @@
-One identity can hold authority through several independent relationships.
+If finance withdraws an agent's invoice access, should unrelated maintenance work stop too?
 
-If finance withdraws invoice access, should an unrelated maintenance workflow stop too?
+Genesis Mesh's beta delegation-chain workflow makes a request's authority path inspectable. It does not automatically preserve every alternative path or stop dispatched work.
 
-The answer depends on what is being revoked: a credential, an agreement, one delegation path, or the identity itself.
-
-This article uses Genesis Mesh's documented delegation-chain example to make the authority path inspectable, then separates it from VERA's research on preserving alternate paths. Genesis Mesh's chain verifier is not a claim of automatic graph-wide revocation.
+The short article separates chain verification from the runtime decisions needed for precise revocation.
 
 Read: [PATREON_URL_PENDING]
 

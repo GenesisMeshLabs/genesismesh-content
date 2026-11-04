@@ -17,11 +17,10 @@
   "call_to_action": "Inspect the linked example and its failure path before integrating.",
   "source_docs": [
     "https://arxiv.org/abs/2511.02841",
-    "https://docs.genesismesh.org/concepts/security-model.html",
-    "https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html",
-    "https://docs.genesismesh.org/installation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_node_vouching_horizon.py"
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_node_vouching_horizon.py",
+    "https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html",
+    "https://docs.genesismesh.org/installation.html"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/identity-checks.png",
@@ -44,7 +43,8 @@
   },
   "approval": {
     "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
-    "patreon_publication": false
+    "patreon_publication": false,
+    "technical_review": "passed_source_based_independent_review"
   },
   "idea_number": 16,
   "series_order": 16,
@@ -53,5 +53,15 @@
   ],
   "thumbnail_alt_text": "A speech bubble saying I AM leads to a proof question, distinguishing a conversational claim from verified identity.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "ffb9ceed104f31518b69de59fc6e48d78ff03c2a137b770f2ba00b26fe4133c4"
+  "article_sha256": "1e2951a5411943ec1a2dbd7905b04423774b6c9fd5a56294ad3483b1440d0a52",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 286,
+    "previous_visible_word_count": 599,
+    "reduction_percent": 52.3,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

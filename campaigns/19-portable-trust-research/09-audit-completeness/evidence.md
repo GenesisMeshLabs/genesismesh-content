@@ -23,32 +23,31 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 
 ## Material claims
 
+Exact wording below follows the shortened article revision. Source inspection and test-execution status are unchanged.
+
 ### Claim 5-1
-- Exact wording / scope: Held anchors bound the history; without them integrity is narrower than completeness.
+- Exact wording / scope: Without held anchors, the conclusion is narrower: integrity of the supplied material, not assurance that nothing was removed.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/workflows/audit_pack.py#L334-L489
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_audit_pack.py#L265-L277
-- Documentation / reader check: https://docs.genesismesh.org/operations/audit-verification-walkthrough.html
-- Observed verification and limits: Implemented and test-covered; offline check, no private key. Tests not run.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_audit_pack.py#L265-L277
+- Verification and limits: Anchors must be held outside authority control; test-covered, not tested here.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 5-2
-- Exact wording / scope: External changes can produce change_unmatched.
+- Exact wording / scope: A change absent from the evidence store can produce change_unmatched.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/workflows/audit_pack.py#L1068-L1160
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_audit_pack.py#L279-L325
-- Documentation / reader check: https://docs.genesismesh.org/operations/audit-verification-walkthrough.html
-- Observed verification and limits: Implemented and test-covered; completeness only against supplied outside source/range/tolerance.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_audit_pack.py#L279-L325
+- Verification and limits: Only against supplied external source and checked range/tolerance; not universal real-world completeness.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 5-3
-- Exact wording / scope: Rust verifier is a second implementation, same-project port, not independent specification assurance.
+- Exact wording / scope: The walkthrough also compares the Rust verifier: a same-project port, not independent proof that the shared specification is correct.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: No product implementation claim; see documentation/research scope below.
-- Test: No matching test asserted.
-- Documentation / reader check: https://docs.genesismesh.org/operations/audit-verification-walkthrough.html
-- Observed verification and limits: Documented in canonical independent-verification guide; public1.9.1 verifier release assets recorded by parent; binary not run.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Implementation: no new product implementation claim; documented scope below.
+- Test source: no matching test asserted.
+- Verification and limits: Canonical independent-verification guide verified; binary not run; comparison is documented.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ## Research and primary reader links
 - Research source: No external research hook required; first-party audit verification mechanism.
@@ -62,3 +61,7 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 ## Reproduction scope
 The article links the actual documented local procedure with prerequisites, expected result and failure. Its command was inspected in the documented example; it was not run here. Example source dates and expiry must be current when readers create their own records. Prefer the source demo's controlled fixture clock, where supplied, to blindly reusing historical timestamps; the delegation demo uses a fixed scenario time.
 Sources show a mechanism and tests show asserted cases. Production adoption still needs integration-specific execution binding, key management, trusted facts and appropriate confinement. No research performance or security percentage is transferred to Genesis Mesh.
+
+## Concise revision
+
+Shortened 2026-11-04 at the user's request. One scenario and one mechanism retained, with essential refusals and limitations. The same pinned evidence supports this revision; no new feature, deployment or test-run claim was added. Independent concise-revision review is pending. Superseded prose was removed, not silently treated as reviewed. No publication or schedule field changed.

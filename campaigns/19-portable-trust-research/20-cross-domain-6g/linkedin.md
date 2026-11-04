@@ -1,11 +1,9 @@
-Encrypted connectivity does not decide which claims one network operator should accept from another.
+Encrypted connectivity does not decide which partner claims a network operator should accept.
 
-For independently operated edge and network functions, recognition and local service permission need explicit boundaries.
+Genesis Mesh's recognition treaties make the accepting domain's scope explicit. Local service permission and enforcement remain separate.
 
-I use a 5G-based research prototype exploring a future 6G problem to examine Genesis Mesh's scoped recognition treaties—and the integration work that remains between recognizing a partner and authorizing a service operation.
-
-No deployed 6G integration is implied.
+A 5G research prototype motivates this future 6G question; the article does not claim a deployed telecom integration.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 
-#GenesisMesh #EdgeComputing #Telecom #DigitalTrust
+#GenesisMesh #EdgeComputing #Telecom

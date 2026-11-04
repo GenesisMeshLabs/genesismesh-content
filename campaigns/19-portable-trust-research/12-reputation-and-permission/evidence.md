@@ -23,32 +23,31 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 
 ## Material claims
 
+Exact wording below follows the shortened article revision. Source inspection and test-execution status are unchanged.
+
 ### Claim 8-1
-- Exact wording / scope: BoundaryEngine checks supplied capability, validity and freshness before signed decision.
+- Exact wording / scope: The boundary engine checks capability, validity and freshness in the supplied context before returning a signed BoundaryDecision.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/engine.py#L45-L118
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Documentation / reader check: https://docs.genesismesh.org/examples/declarative-boundary-policy.html
-- Observed verification and limits: Implemented; no guarantee about truth of arbitrary context facts.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: No claim that arbitrary supplied facts are independently true. Reputation cannot expand signed agreement scope.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 8-2
-- Exact wording / scope: Configured enforce and observe gates have distinct blocking behavior.
+- Exact wording / scope: An enforce gate can deny; an observe gate records without blocking.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/policy.py#L439-L511
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Documentation / reader check: https://docs.genesismesh.org/examples/declarative-boundary-policy.html
-- Observed verification and limits: Implemented and test-covered; no built-in external reputation connector claimed.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: No universal reputation connector claimed. New gate types require trusted implementation/testing.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 8-3
-- Exact wording / scope: Study reports manipulation/comparability weaknesses in its observed ERC8004 dataset.
+- Exact wording / scope: Inspect the signed decision: the amount-cap request is denied, while the business-hours gate configured in observe mode records its outcome without becoming an enforcement rule.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: No product implementation claim; see documentation/research scope below.
-- Test: No matching test asserted.
-- Documentation / reader check: https://docs.genesismesh.org/examples/declarative-boundary-policy.html
-- Observed verification and limits: Original paper abstract v3 dated2026-10-18 inspected; scoped observation, no percentages or universal generalization reused.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/boundary-policy-demo.py#L50-L126
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: Documented expected behavior; no demo executed. Research dataset finding remains bounded.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ## Research and primary reader links
 - Research source: https://arxiv.org/abs/2606.26028
@@ -62,3 +61,7 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 ## Reproduction scope
 The article links the actual documented local procedure with prerequisites, expected result and failure. Its command was inspected in the documented example; it was not run here. Example source dates and expiry must be current when readers create their own records. Prefer the source demo's controlled fixture clock, where supplied, to blindly reusing historical timestamps; the delegation demo uses a fixed scenario time.
 Sources show a mechanism and tests show asserted cases. Production adoption still needs integration-specific execution binding, key management, trusted facts and appropriate confinement. No research performance or security percentage is transferred to Genesis Mesh.
+
+## Concise revision
+
+Shortened 2026-11-04 at the user's request. One scenario and one mechanism retained, with essential refusals and limitations. The same pinned evidence supports this revision; no new feature, deployment or test-run claim was added. Independent concise-revision review is pending. Superseded prose was removed, not silently treated as reviewed. No publication or schedule field changed.

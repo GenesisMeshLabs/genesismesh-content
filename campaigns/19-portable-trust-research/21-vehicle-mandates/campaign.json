@@ -14,17 +14,17 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "A car having a payment credential does not tell us what its owner allowed it to buy. A useful machine-payment mandate must bind the requester, merchant, service, amount, currency and time window. A per-request cap also isn't a shared spending balance.",
+  "primary_message": "A payment credential does not explain what a vehicle's owner allowed it to buy.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://portalcientifico.upm.es/en/ipublic/item/9930578",
-    "https://docs.genesismesh.org/examples/attestation-backed-evaluation.html",
-    "https://docs.genesismesh.org/sdk/typescript/governance.html",
-    "https://docs.genesismesh.org/examples/declarative-boundary-policy.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L453",
+    "https://docs.genesismesh.org/sdk/typescript/governance.html",
     "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360",
-    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L415",
-    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L439"
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/sdk/index.html",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/vehicle-mandates.png",
@@ -51,7 +51,7 @@
     "patreon_publication": false,
     "linkedin_publication": false,
     "repository_publication_authorized": true,
-    "technical_review": "pending_final_record",
+    "technical_review": "passed_source_based_independent_review",
     "visual_review": "handled_by_root"
   },
   "research_scope": "Illustrative design discussion; no telecom/payment/deployment claim",
@@ -61,5 +61,15 @@
   ],
   "thumbnail_alt_text": "An owner mandate points toward a car, illustrating bounded machine-payment authority, not an implemented payment network.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "82360a4616c103e46e9db982c74f6cb356f703be3854960e2857ae1de409ebca"
+  "article_sha256": "215b2af50086ccc6fd95ef3350f9b4a94bd329df98a1f70e174431aae8a31be3",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 354,
+    "previous_visible_word_count": 726,
+    "reduction_percent": 51.2,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

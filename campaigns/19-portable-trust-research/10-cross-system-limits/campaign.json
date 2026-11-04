@@ -47,5 +47,15 @@
   "series_order": 10,
   "thumbnail_alt_text": "MCP, A2A and HTTP boxes cross separate boundaries, illustrating the need to preserve and recheck limits at each handoff.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "3a11e71cf3cba793c6df84538ccad05a38018613059a0ef2bd27ee0d16f2d284"
+  "article_sha256": "26b3f4f2ea8c0bf49865966e31327220e040a4f27246ee12961a50fa817ee316",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 313,
+    "previous_visible_word_count": 630,
+    "reduction_percent": 50.3,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

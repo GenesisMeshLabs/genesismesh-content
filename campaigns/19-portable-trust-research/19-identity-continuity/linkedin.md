@@ -1,10 +1,8 @@
-The same agent key can return after an update with a different prompt and a larger tool set.
+An agent can keep its identity key while its prompt and tools change.
 
-Identity continuity is useful. It does not establish that the runtime is unchanged.
+Genesis Mesh's beta logic-attestation functions let an operator check signed configuration declarations. They do not independently measure the running process.
 
-This article examines Genesis Mesh's signed configuration declarations: what the operator can check, what empty allowlists permit, and why a declaration is not independent measurement of the running process.
-
-The important question is which facts your execution boundary establishes again before an action.
+The execution boundary still needs to authenticate the caller and enforce permission for the action.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 

@@ -17,13 +17,12 @@
   "call_to_action": "Inspect the linked example and its failure path before integrating.",
   "source_docs": [
     "https://arxiv.org/abs/2508.01332",
-    "https://docs.genesismesh.org/examples/execution-evidence-chain.html",
     "https://docs.genesismesh.org/concepts/governed-changes.html",
-    "https://docs.genesismesh.org/installation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/execution.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_execution.py",
-    "https://docs.genesismesh.org/reference/public-contract.html"
+    "https://docs.genesismesh.org/reference/public-contract.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://docs.genesismesh.org/examples/execution-evidence-chain.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_execution.py"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/interaction-accountability.png",
@@ -46,7 +45,8 @@
   },
   "approval": {
     "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
-    "patreon_publication": false
+    "patreon_publication": false,
+    "technical_review": "passed_source_based_independent_review"
   },
   "idea_number": 14,
   "series_order": 14,
@@ -55,5 +55,15 @@
   ],
   "thumbnail_alt_text": "A conceptual sequence distinguishes identity, policy, action and evidence in an accountable interaction.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "53473c9121423126f78764ec94e78999ce78c0fad5c9062bcf841d0de7a99668"
+  "article_sha256": "c15d824b75e9455bf8e11aaf3af1e57f30ae63307df9881cfbb91c6cbc73f28a",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 287,
+    "previous_visible_word_count": 610,
+    "reduction_percent": 53.0,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

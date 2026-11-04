@@ -1,6 +1,6 @@
 # Evidence review: idea 17
 
-Scope: Python reference selective-disclosure model, Merkle membership verifier and optional context gate. No IRAC, issuer hiding, zero-knowledge, unlinkability, anonymity, authentication or robust replay-prevention claim.
+Scope: Beta Merkle capability membership, exact exposed fields and unsalted hashes; no IRAC/issuer hiding, anonymity, ZK, freshness or anti-replay guarantee.
 
 ## Evidence snapshot and release status
 
@@ -31,73 +31,94 @@ Canonical documentation pages were reached through the live documentation naviga
 Reader procedures require a disposable source checkout and the development dependencies in the installation guide. Source-based test commands select actual inspected test files. Local demo commands are copied from the linked documentation. All are explicitly marked not executed. Failure outcomes are documented or asserted in inspected test source; they are not new runtime results.
 
 
-## Claim-level ledger
+## Exact claim ledger for the concise revision
 
-### R01 Research context
-
-Exact article wording:
-
-[IRAC research](https://arxiv.org/abs/2512.20234) addresses issuer-hiding anonymous credentials: proving eligibility without singling out the issuer from an approved set. Its construction and privacy claims belong to that paper. Genesis Mesh's selective-disclosure example uses a different mechanism, with different visible information.
-
-Source: https://arxiv.org/abs/2512.20234
-Evidence: original arXiv abstract/metadata inspected; research proposal/prototype, not Genesis Mesh implementation. No quoted performance numbers or prevention guarantees are transferred. Decision: retain bounded research hook.
+Each entry quotes the final saved paragraph verbatim. Illustrative scenes are not deployment evidence. Source observations and releases remain as recorded above; no product test was executed during this shortening pass.
 
 ### C01
 
-Exact claim or sentence excerpt: Those fields remain visible.
+A contractor needs to prove access to a dataset. In this illustrative case, the verifier needs one capability, not the contractor's entire affiliation trail.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: Illustrative scenario; no factual deployment claim.
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Illustrative operator scenario; no customer or deployment assertion.
 
 ### C02
 
-Exact claim or sentence excerpt: The implementation also contains a gate that compares the commitment's agreement and the revealed capability with the requested context.
+[IRAC research](https://arxiv.org/abs/2512.20234) explores issuer-hiding credentials; Genesis Mesh's selective-disclosure example uses a different mechanism and does not implement that privacy guarantee.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S01
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Primary research context only; no product guarantee or integration inferred.
 
 ### C03
 
-Exact claim or sentence excerpt: Common, guessable capability names can be tested against exposed hashes.
+The [Genesis Mesh walkthrough](https://docs.genesismesh.org/examples/selective-disclosure.html) signs a Merkle commitment to a capability set. The holder presents one capability and a path to that root instead of the complete list.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S02
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/selective-disclosure.md
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+### C04
 
-## Detailed implementation and counterexamples
+The [actual models](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py) still expose the capability count, agreement ID, issuer ID and timestamp in `CapabilityCommitment`; `CapabilityMembershipProof` also names the prover. These are visible metadata, not issuer anonymity.
 
-Material documentation discrepancy resolved in article: guide introduction says agreement hidden/only root and count, but CapabilityCommitment explicitly serializes agreement_id, issuer_sovereign_id and time; proof serializes prover_sovereign_id. Leaves are unsalted SHA-256(capability), not salted. verify_capability_proof checks issuer signature/path/leaf/root; SelectiveDisclosureGate separately binds agreement and requested capability. Optional nullifier path checks expiry and membership in supplied used set, not a complete anti-replay design; article deliberately does not promise replay prevention. Tests establish source coverage only.
+Sources: S03
 
-## Direct implementation and test inventory
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py
-- Test source, inspected not executed: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py
+### C05
 
-## Reader documentation verified
+Using issuer keys chosen by the operator, `verify_capability_proof` checks the signature, leaf and path. The [context gate](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py) separately compares the commitment's agreement and revealed capability with the requested operation. The dataset service still owns access policy and execution.
 
-- https://docs.genesismesh.org/examples/selective-disclosure.html
-- https://docs.genesismesh.org/installation.html
+Sources: S04
 
-## Review limits
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Independent reviewer must confirm final wording and derived assets. No product testing or live deployment certification is inferred. New Patreon publication and scheduling are not authorized. Current user instruction authorizes repository publication of the complete list after review; root coordinates that action. No publication performed by this author.
+### C06
 
-## Research version and compatibility check
+Leaves are unsalted hashes of capability strings. Guessable names can be tested against exposed hashes; this is not a formal zero-knowledge proof. A valid membership result does not establish anonymity, fresh permission or replay prevention. These functions and CLI commands are [beta](https://docs.genesismesh.org/reference/public-contract.html).
 
-Primary paper: https://arxiv.org/abs/2512.20234v1 ; revised/submitted 2025-12-23. IRAC cryptographic construction, security analysis and evaluation. Not implemented or integrated by this campaign.
+Sources: S05
 
-Beta public surfaces: trust disclose commit/prove/verify/nullify and selective-disclosure public functions. Inspected contract: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/contract/public-surface.json . Canonical public contract opened: https://docs.genesismesh.org/reference/public-contract.html . Article explicitly identifies beta scope.
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C07
+
+Use the [development installation](https://docs.genesismesh.org/installation.html) and the walkthrough's agreement and signing keys:
+
+Sources: S06
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C08
+
+```text
+python docs/examples/assets/scripts/selective-disclosure-demo.py --no-gif
+```
+
+Sources: S06
+
+Classification: Previously documented/source-based procedure; not executed.
+
+### C09
+
+Inspect both serialized artifacts. List every identifier, timestamp, count and capability received by the verifier. A valid proof should verify; changing the revealed capability without updating its leaf produces `leaf_hash_mismatch`, as covered by the [source tests](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py). This documented example was not executed in this review.
+
+Sources: S07
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+## Inspected sources retained by this revision
+
+- S01: https://arxiv.org/abs/2512.20234
+- S02: https://docs.genesismesh.org/examples/selective-disclosure.html
+- S03: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py
+- S04: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py
+- S05: https://docs.genesismesh.org/reference/public-contract.html
+- S06: https://docs.genesismesh.org/installation.html
+- S07: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py
+
+## Revision decision
+
+The article was shortened at the user's request without new capability claims. Secondary tours and repeated explanation were removed. Exact article/Patreon parity is preserved. Publication states and covers are unchanged. Independent review of this concise revision is pending; repository publication is coordinated by the parent. No new Patreon or LinkedIn action is authorized by this record.

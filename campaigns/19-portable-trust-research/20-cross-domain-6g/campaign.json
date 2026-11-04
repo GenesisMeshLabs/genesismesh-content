@@ -14,16 +14,17 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "Encrypted connectivity does not decide which claims one network operator should accept from another. For independently operated edge and network functions, recognition and local service permission need explicit boundaries.",
+  "primary_message": "Encrypted connectivity does not decide which partner claims a network operator should accept.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2310.19366",
     "https://docs.genesismesh.org/examples/recognition-treaties.html",
-    "https://docs.genesismesh.org/examples/attestation-backed-evaluation.html",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py#L145",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py#L95",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/recognition-treaty-demo.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/context.py#L148"
+    "https://docs.genesismesh.org/installation.html",
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/sdk/index.html",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/cross-domain-6g.png",
@@ -50,7 +51,7 @@
     "patreon_publication": false,
     "linkedin_publication": false,
     "repository_publication_authorized": true,
-    "technical_review": "pending_final_record",
+    "technical_review": "passed_source_based_independent_review",
     "visual_review": "handled_by_root"
   },
   "research_scope": "Illustrative design discussion; no telecom/payment/deployment claim",
@@ -60,5 +61,15 @@
   ],
   "thumbnail_alt_text": "Two independently outlined network domains illustrate cross-domain authorization as a design question, not a deployed 6G system.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "0a704f511064b23f50d8244d94ccde958c5c4ba16dbfec12ef2c27cd900752bd"
+  "article_sha256": "ca15f690a9fb924f33897f0c7cf752841498e47e7b081fbe0cbba5bafd929507",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 336,
+    "previous_visible_word_count": 700,
+    "reduction_percent": 52.0,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

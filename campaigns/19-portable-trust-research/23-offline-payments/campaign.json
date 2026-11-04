@@ -14,18 +14,18 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "Offline authorization and offline payment are different guarantees. A pre-issued grant can bound a device's permitted actions and support later examination of signed use records. It does not reserve funds, settle a payment or prevent double-spending across disconnected wallets.",
+  "primary_message": "Offline permission is not proof of funds or settlement.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2408.06956",
-    "https://docs.genesismesh.org/examples/pre-issued-grants.html",
-    "https://docs.genesismesh.org/operations/grants.html",
+    "https://docs.genesismesh.org/reference/public-contract.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L266",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L383",
+    "https://docs.genesismesh.org/examples/pre-issued-grants.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/grants.py#L766",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/operations/grants.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L366",
-    "https://docs.genesismesh.org/reference/public-contract.html"
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/sdk/index.html",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/offline-payments.png",
@@ -52,7 +52,7 @@
     "patreon_publication": false,
     "linkedin_publication": false,
     "repository_publication_authorized": true,
-    "technical_review": "pending_final_record",
+    "technical_review": "passed_source_based_independent_review",
     "visual_review": "handled_by_root"
   },
   "research_scope": "Illustrative design discussion; no telecom/payment/deployment claim",
@@ -62,5 +62,15 @@
   ],
   "thumbnail_alt_text": "A broken link separates an authority from a local-proof question, illustrating offline authorization limits without promising payment settlement.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "4633376a9c8bcb9234a908b6ea3fd54307b0e646a1634da96e9bb2914839c3a3"
+  "article_sha256": "686c7bc240e69c1af1914d045818f279fdaeb59a093715f2b3e8c74dd9abe61c",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 351,
+    "previous_visible_word_count": 719,
+    "reduction_percent": 51.2,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

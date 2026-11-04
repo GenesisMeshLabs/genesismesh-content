@@ -18,12 +18,8 @@
   "source_docs": [
     "https://arxiv.org/abs/2601.14567",
     "https://docs.genesismesh.org/rfcs/rfc-001-sovereign-identity.html",
-    "https://docs.genesismesh.org/concepts/security-model.html",
-    "https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html",
-    "https://docs.genesismesh.org/installation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/public.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_peer_identity_renewal.py"
+    "https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/identity-mobility.png",
@@ -46,7 +42,8 @@
   },
   "approval": {
     "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
-    "patreon_publication": false
+    "patreon_publication": false,
+    "technical_review": "passed_source_based_independent_review"
   },
   "idea_number": 11,
   "series_order": 13,
@@ -55,5 +52,15 @@
   ],
   "thumbnail_alt_text": "One identity connects to edge and cloud endpoints while the address changes; the illustration does not claim automatic migration.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "461d4310542d44ce0455d85bc2b2547ed4728b57d35c5d0f3172907291a94377"
+  "article_sha256": "2dce37492a2ade778502c6ee62bb56fbcb7ccfc74d241d873ec52f0321fbebbb",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 299,
+    "previous_visible_word_count": 594,
+    "reduction_percent": 49.7,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

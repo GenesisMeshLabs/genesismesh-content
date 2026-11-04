@@ -47,5 +47,15 @@
   "series_order": 7,
   "thumbnail_alt_text": "A conceptual four-node delegation graph with one crossed path asks which delegation was revoked; it does not claim graph-preserving revocation support.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "31f61006635c4383d6640f4f63a8e8463d0cc5ef994bf24f548cf0890d126f16"
+  "article_sha256": "fad4c03fe45a10e7a2eb66fdde97a9b3237bd4c0402e8d0a6be9dc3a4a35d310",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 293,
+    "previous_visible_word_count": 604,
+    "reduction_percent": 51.5,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

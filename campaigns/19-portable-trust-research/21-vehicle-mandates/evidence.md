@@ -18,49 +18,43 @@ The public website and trust demo were viewed without authentication on 2026-11-
 
 ## Material claims
 
+Concise revision: each quotation below appears in the revised article. The same claims apply to the identical Patreon copy; LinkedIn uses a narrower summary. Existing dated source and release checks remain the baseline. No product examples or tests were executed.
+
 ### 21-1
 
-Exact article wording: The policy engine already has concrete gates for required parameters, maximum numeric values, allowlists and claims in the authority-held attestation.
+Exact article wording: A per-request maximum does not enforce a shared balance or daily budget; aggregate spending needs durable state and concurrency controls.
 
-Affected sections/assets: Policy inputs; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L453).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_boundary_policy.py#L283). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered. Payment labels are application-defined. A maximum for one request is not a monetary balance or aggregate spending budget.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L453).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_boundary_policy.py#L283); not executed.
+- Scope, limits and authority boundary: Existing required, maximum, allowlist and attestation-claim gates evaluate request facts. Vehicle, merchant and monetary fields are proposed application labels; no balance accounting is supplied by a numeric maximum.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 21-2
 
-Exact article wording: A verified denial does not run the action callback.
+Exact article wording: On the ordinary online path, a verified denial prevents the application's callback.
 
-Affected sections/assets: Ordinary governed-action path; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered in TypeScript 1.9.1. Article chooses the ordinary online path without opt-in break-glass. No blanket fallback or SDK parity is claimed.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts); not executed.
+- Scope, limits and authority boundary: Inspected TypeScript governedAction flow, without opt-in break-glass. Trusted keys, expected policies and applicable expected attestation are prerequisites. No universal SDK or fallback claim.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 21-3
 
-Exact article wording: After the callback, an executor signs metadata describing the result.
+Exact article wording: An allowed callback executes separately from subsequent signed execution evidence.
 
-Affected sections/assets: Execution vs decision; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L415).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered. A payment callback is not supplied by this helper. Signed outcome metadata does not prove settlement or energy delivery.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L415).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts); not executed.
+- Scope, limits and authority boundary: The helper invokes caller-supplied execution and subsequently records executor-signed metadata. The application supplies any payment adapter; the helper does not establish settlement or energy delivery.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 21-4
 
-Exact article wording: If evidence submission fails after payment, repeating the payment is not a safe way to repair the audit record.
+Exact article wording: If evidence upload fails after payment, repairing the record must not charge the owner again.
 
-Affected sections/assets: Illustrative payment design inference; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L439).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts). **Not executed** in this review.
-- Scope, limitations and decision: Design inference from the separate action and evidence stages. The payment adapter must provide its own idempotency and provider reconciliation.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L439).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts); not executed.
+- Scope, limits and authority boundary: Design inference from distinct action and evidence stages. Matching purchase fields, provider idempotency and reconciliation remain proposed adapter duties; no implemented EV/CBDC/payment integration claimed.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ## Documentation and source comparison
 
@@ -93,4 +87,8 @@ Read-only GitHub source fetches and primary paper/documentation reads were perfo
 
 The reader procedure uses documented commands, prerequisites, expected acceptance and refusal cases, and an explicit statement that it was not executed in this review. The article contains no financial or legal recommendation or regulatory-compliance claim.
 
-Reader URL inventory: links.json. Final hashes and release gates: review.md and hashes.json. Recheck release/deployment evidence before any later material revision or publication claim.
+Reader URL inventory: campaign.json source_docs and the article citations. Final asset hashes and release gates are recorded in review.md. Recheck release/deployment evidence before any later material revision or publication claim.
+
+## Concise revision record
+
+The article was shortened at the user's request on 2026-11-04. Secondary mechanisms and repeated caveats were removed; the retained claim quotations above supersede the earlier wording. Same-session primary-source, pinned implementation, canonical-documentation and release checks remain applicable. No new capability or deployment claim was added. The condensed revision awaits independent review against its updated hashes.

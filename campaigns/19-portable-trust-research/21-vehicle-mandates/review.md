@@ -4,7 +4,9 @@ Original research idea: 21. Review date: 2026-11-04.
 
 ## Evidence and editorial review
 
-The source-based technical and editorial review passed after the recorded corrections. The adjacent evidence ledger records the inspected mechanisms, exact source revisions, release availability and limits. Research proposals, illustrative scenarios and implemented behavior remain distinct. Documented reproduction procedures were not executed in this review; no deployment or performance certification is implied.
+On 2026-11-04 this article was substantially shortened at the user's request. The revised article and LinkedIn draft passed a separate agent's source-based technical and editorial review against the prior evidence ledger and the same-session pinned source snapshot. The concrete mechanism, authority and execution boundary, relevant failure path, material limitations and documented reader check remain. Exact revised claims are recorded in evidence.md. Article and Patreon copy are byte-identical.
+
+The review checked the shortened wording, not just the preceding longer version. No product test, demo or deployment was executed for this review.
 
 ## Visual review
 
@@ -20,10 +22,16 @@ The campaign and upload thumbnail copies are byte-identical. The public generati
 
 Repository publication was explicitly requested for all completed campaign packages. This record does not authorize a new Patreon release: this article is not published or scheduled on Patreon. LinkedIn remains a draft; its pending link must be replaced only after the Patreon publication is verified.
 
+## Concise revision
+
+Visible words: 354 (previously 726; reduction 51.2%). Counts include the title, headings, code and footer labels, excluding Markdown markup and link destinations. Alphanumeric words retain internal apostrophes, dots, underscores and hyphens.
+
+Title, slug, idea and series identifiers, cover and channel publication states are preserved. The six existing campaign packages and all shared files are unchanged. This revision does not publish or schedule anything on Patreon or LinkedIn.
+
 ## Asset hashes
 
-- article.md: `82360a4616c103e46e9db982c74f6cb356f703be3854960e2857ae1de409ebca`
-- patreon.md: `82360a4616c103e46e9db982c74f6cb356f703be3854960e2857ae1de409ebca`
-- linkedin.md: `bb522903cbae3bf958eb2458adb4431aa79656a1e51f4eb0a4d600767e4a9b45`
-- evidence.md: `3dffd367b6b7fa8ed6f6cab5632c5a4e8836def8928e4afcbf4f7afa4e56690c`
+- article.md: `215b2af50086ccc6fd95ef3350f9b4a94bd329df98a1f70e174431aae8a31be3`
+- patreon.md: `215b2af50086ccc6fd95ef3350f9b4a94bd329df98a1f70e174431aae8a31be3`
+- linkedin.md: `803c3eb5ba8c05d000fa457fc7e1111455eb9f2d180b2c4f3fe15fe1a572b4ff`
+- evidence.md: `a0cfeed7d1a15b47fcfc4bae72703f9909ea65eac441c44a929d58c2ddc79c14`
 - thumbnail.png: `aa8b15399fb397c103f9bd95dfd8ac1b2ee7f74204d6f469bca93317db424159`

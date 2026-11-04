@@ -14,17 +14,19 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "The same agent key can return after an update with a different prompt and a larger tool set. Identity continuity is useful. It does not establish that the runtime is unchanged.",
+  "primary_message": "An agent can keep its identity key while its prompt and tools change.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2604.25189",
-    "https://docs.genesismesh.org/examples/verifiable-logic-attestation.html",
-    "https://docs.genesismesh.org/examples/attestation-backed-evaluation.html",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/attestation.py#L47",
+    "https://docs.genesismesh.org/reference/public-contract.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/logic_attestation.py#L86",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/logic_attestation.py#L143",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/context.py#L44",
-    "https://docs.genesismesh.org/reference/public-contract.html"
+    "https://docs.genesismesh.org/examples/attestation-backed-evaluation.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://docs.genesismesh.org/examples/verifiable-logic-attestation.html",
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/sdk/index.html",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/identity-continuity.png",
@@ -51,7 +53,7 @@
     "patreon_publication": false,
     "linkedin_publication": false,
     "repository_publication_authorized": true,
-    "technical_review": "pending_final_record",
+    "technical_review": "passed_source_based_independent_review",
     "visual_review": "handled_by_root"
   },
   "research_scope": "Illustrative design discussion; no telecom/payment/deployment claim",
@@ -61,5 +63,15 @@
   ],
   "thumbnail_alt_text": "One identity points to before and after states, asking whether persistent identity proves continuity of current behavior.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "e9709bd5ce623f86efca9b80a4114edfc777ba6011b367bdccd05a5d6be4c54e"
+  "article_sha256": "b9fb5a11c5848862e82902acc6e514326b1908cf5c387e0706d5ac7803da80a5",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 317,
+    "previous_visible_word_count": 726,
+    "reduction_percent": 56.3,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

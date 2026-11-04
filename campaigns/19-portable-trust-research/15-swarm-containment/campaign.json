@@ -18,14 +18,12 @@
   "source_docs": [
     "https://arxiv.org/abs/2609.00267",
     "https://docs.genesismesh.org/examples/delegation-chain.html",
-    "https://docs.genesismesh.org/examples/process-level-mediation.html",
-    "https://docs.genesismesh.org/installation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py",
+    "https://docs.genesismesh.org/examples/process-level-mediation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py",
-    "https://docs.genesismesh.org/reference/public-contract.html"
+    "https://docs.genesismesh.org/reference/public-contract.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/swarm-containment.png",
@@ -48,7 +46,8 @@
   },
   "approval": {
     "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
-    "patreon_publication": false
+    "patreon_publication": false,
+    "technical_review": "passed_source_based_independent_review"
   },
   "idea_number": 15,
   "series_order": 15,
@@ -57,5 +56,15 @@
   ],
   "thumbnail_alt_text": "A small team graph has one crossed member, asking how delegated scope changes the impact of compromise.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "d24ce76c2bae3b08aa9a9d20da1c53c4534b82bd9285a700dba40d1ec6994eac"
+  "article_sha256": "6157f15c7a40d54302757d4912abe6197711a39419fd34d64cc7bcdf49a57733",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 288,
+    "previous_visible_word_count": 623,
+    "reduction_percent": 53.8,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

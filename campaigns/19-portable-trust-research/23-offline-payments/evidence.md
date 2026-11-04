@@ -18,60 +18,43 @@ The public website and trust demo were viewed without authentication on 2026-11-
 
 ## Material claims
 
+Concise revision: each quotation below appears in the revised article. The same claims apply to the identical Patreon copy; LinkedIn uses a narrower summary. Existing dated source and release checks remain the baseline. No product examples or tests were executed.
+
 ### 23-1
 
-Exact article wording: It can issue a signed `CapabilityGrant` for a registered bearer key, defined capabilities, a validity interval, a maximum number of uses and a closed parameter envelope.
+Exact article wording: It specifies a registered bearer key, capabilities, validity interval, use budget and closed parameter envelope.
 
-Affected sections/assets: Grant issuance beta; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L266).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L242). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered; grant routes are beta. Evidence store, out-of-band records and grants must be enabled, with an authorized operator and registered executor key. Uses are not money.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L266).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L242); not executed.
+- Scope, limits and authority boundary: Beta grant routes and signed CapabilityGrant fields. TimeToken ties bounded use progression to a known chain position. Charging and payment adaptations are illustrative; a use count is not a balance or shared monetary budget.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 23-2
 
-Exact article wording: A holder operating within a grant records a signed `GrantExecutionEvidence`.
+Exact article wording: A holder records signed `GrantExecutionEvidence`, including sequence, previous-use digest, request parameters and reported outcome.
 
-Affected sections/assets: Record schema; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L383).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L336). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered. The outcome is the holder's signed report, not independent proof of physical state or settlement.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L383).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L336); not executed.
+- Scope, limits and authority boundary: Signed evidence records reported execution, not independently measured physical or financial effects. Uses carry time-token and grant bindings; no instant settlement follows.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 23-3
 
-Exact article wording: The admission rules include capability and envelope checks, budget, time-token ordering and validity, upload timing and known revocation.
+Exact article wording: On reconnection, the authority checks submitted uses against scope, budget, time-token and revocation rules before admitting evidence.
 
-Affected sections/assets: Admission checks; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/grants.py#L766).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L382). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered. use_problem assumes earlier signature, bearer, digest and chain-position checks. Some checks depend on available history. It is not described as a complete standalone verifier.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/grants.py#L766).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L382); not executed.
+- Scope, limits and authority boundary: Admission uses required supplied state and chain context; invalid records may be quarantined. No automatic fallback claim or universal client parity. A refusal cannot undo an action already performed.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 23-4
 
-Exact article wording: A disconnected holder cannot learn a revocation that happened after its last update.
+Exact article wording: Disconnection also prevents immediate knowledge of a new revocation.
 
-Affected sections/assets: Offline limit; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/operations/grants.md).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L543). **Not executed** in this review.
-- Scope, limitations and decision: Offline information limit supported by the operating guide. No universal fallback, tamper-proof clock or state, immediate revocation or payment double-spend prevention is claimed.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
-
-### 23-5
-
-Exact article wording: Assigning an order to admitted records is not distributed payment settlement.
-
-Affected sections/assets: Domain boundary; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L366).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L436). **Not executed** in this review.
-- Scope, limitations and decision: Explicit domain distinction: ordering admitted evidence does not settle money or undo an already performed action.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/grants.py#L766).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L543); not executed.
+- Scope, limits and authority boundary: Offline information limit documented in the grant operating guide. Expiry, budgets and time-token limits do not establish tamper-proof state, payment conservation, replay safety, double-spending prevention or settlement.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ## Documentation and source comparison
 
@@ -103,9 +86,13 @@ Read-only GitHub source fetches and primary paper/documentation reads were perfo
 
 The reader procedure uses documented commands, prerequisites, expected acceptance and refusal cases, and an explicit statement that it was not executed in this review. The article contains no financial or legal recommendation or regulatory-compliance claim.
 
-Reader URL inventory: links.json. Final hashes and release gates: review.md and hashes.json. Recheck release/deployment evidence before any later material revision or publication claim.
+Reader URL inventory: campaign.json source_docs and the article citations. Final asset hashes and release gates are recorded in review.md. Recheck release/deployment evidence before any later material revision or publication claim.
 
 
 ## Final beta qualification
 
 Grant routes are explicitly qualified as beta in the article and Patreon copy. The canonical [public contract](https://docs.genesismesh.org/reference/public-contract.html) was opened and checked on 2026-11-04. This classification does not establish production deployment or complete SDK parity.
+
+## Concise revision record
+
+The article was shortened at the user's request on 2026-11-04. Secondary mechanisms and repeated caveats were removed; the retained claim quotations above supersede the earlier wording. Same-session primary-source, pinned implementation, canonical-documentation and release checks remain applicable. No new capability or deployment claim was added. The condensed revision awaits independent review against its updated hashes.

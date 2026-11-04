@@ -1,6 +1,6 @@
 # Evidence review: idea 11
 
-Scope: Stable sovereign wire identity and the Python reference peer's key/certificate continuity. No workload migration, key transfer, all-SDK identity API or agent:// support is claimed.
+Scope: Sovereign wire identity, unsigned metadata, signed genesis anchoring and operator review of root mismatch; no automatic agent/workload migration.
 
 ## Evidence snapshot and release status
 
@@ -31,62 +31,81 @@ Canonical documentation pages were reached through the live documentation naviga
 Reader procedures require a disposable source checkout and the development dependencies in the installation guide. Source-based test commands select actual inspected test files. Local demo commands are copied from the linked documentation. All are explicitly marked not executed. Failure outcomes are documented or asserted in inspected test source; they are not new runtime results.
 
 
-## Claim-level ledger
+## Exact claim ledger for the concise revision
 
-### R01 Research context
-
-Exact article wording:
-
-The proposed [Agent Identity URI Scheme](https://arxiv.org/abs/2601.14567) studies topology-independent names and capability discovery. It is useful research context for separating identity from location. Genesis Mesh does not claim to implement that paper's `agent://` scheme or its discovery system.
-
-Source: https://arxiv.org/abs/2601.14567
-Evidence: original arXiv abstract/metadata inspected; research proposal/prototype, not Genesis Mesh implementation. No quoted performance numbers or prevention guarantees are transferred. Decision: retain bounded research hook.
+Each entry quotes the final saved paragraph verbatim. Illustrative scenes are not deployment evidence. Source observations and releases remain as recorded above; no product test was executed during this shortening pass.
 
 ### C01
 
-Exact claim or sentence excerpt: A consumer checks the identity's trust fields against the root-signed genesis block and starts from a root key it already has a reason to trust.
+An inventory agent moves from a laptop to an edge machine, then to the cloud. In this illustrative case, its operator wants a new address without silently creating a new trust relationship.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: Illustrative scenario; no factual deployment claim.
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/rfcs/rfc-001-sovereign-identity.md
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/public.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Illustrative operator scenario; no customer or deployment assertion.
 
 ### C02
 
-Exact claim or sentence excerpt: Roles come from the certificate rather than the sender's preferred description.
+The proposed [Agent Identity URI Scheme](https://arxiv.org/abs/2601.14567) studies this separation; Genesis Mesh does not claim to implement its `agent://` scheme.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S01
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_peer_identity_renewal.py
+Classification: Primary research context only; no product guarantee or integration inferred.
 
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+### C03
 
-## Detailed implementation and counterexamples
+In Genesis Mesh, a sovereign is an independently administered trust domain. Its Network Authority is the operator's service for membership credentials and trust material. The [identity specification](https://docs.genesismesh.org/rfcs/rfc-001-sovereign-identity.html) gives the domain a stable `sovereign_id`; its `endpoint` is only a reachability hint.
 
-The unsigned sovereign.json route and RFC are consistent; the old SovereignIdentity Python model is not the wire shape and is not used as evidence. Peer packages are internal and maintained for fixes, not new features. Renewal test asserts identical node_public_key with different cert_id, rejects superseded material and accepts the renewed announcement.
+Sources: S02
 
-## Direct implementation and test inventory
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/public.py
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py
-- Test source, inspected not executed: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_peer_identity_renewal.py
+### C04
 
-## Reader documentation verified
+The important artifact is the root-signed genesis block. A consumer starts with a trusted root key, verifies genesis, and compares the required trust fields returned by `GET /sovereign.json` with it. That identity document is unsigned: its descriptive fields cannot replace the cryptographic anchor. The [public route](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/public.py) exposes both documents.
 
-- https://docs.genesismesh.org/rfcs/rfc-001-sovereign-identity.html
-- https://docs.genesismesh.org/concepts/security-model.html
-- https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html
-- https://docs.genesismesh.org/installation.html
+Sources: S03
 
-## Review limits
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Independent reviewer must confirm final wording and derived assets. No product testing or live deployment certification is inferred. New Patreon publication and scheduling are not authorized. Current user instruction authorizes repository publication of the complete list after review; root coordinates that action. No publication performed by this author.
+### C05
 
-## Research version and compatibility check
+An address change therefore need not change the domain's identity. A root-key mismatch is different: it requires operator review, not silent acceptance because the name or URL looks familiar. The receiving system still decides whether a verified identity may access its resources.
 
-Primary paper: https://arxiv.org/abs/2601.14567v2 ; revised/submitted 2026-07-13. Proposed topology-independent naming/discovery scheme; authors report evaluation. No benchmark values repeated or reproduced.
+Sources: S03
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C06
+
+This is domain continuity, not automatic workload or private-key migration. The operator must secure key provisioning and retire old access paths. A node key and certificate are separate from the sovereign's root; the reference peer packages remain [internal, maintained for fixes without new features](https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html).
+
+Sources: S04
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C07
+
+Use an authority you operate, its independently trusted root key and the [documented identity procedure](https://docs.genesismesh.org/rfcs/rfc-001-sovereign-identity.html). Fetch `/sovereign.json` and `/genesis`, verify genesis and compare the required trust fields.
+
+Sources: S02
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C08
+
+An endpoint-only change should preserve the anchor. A changed root must trigger review, even if `sovereign_id` is unchanged. This documented procedure was not executed in this review.
+
+Sources: S02
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+## Inspected sources retained by this revision
+
+- S01: https://arxiv.org/abs/2601.14567
+- S02: https://docs.genesismesh.org/rfcs/rfc-001-sovereign-identity.html
+- S03: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/public.py
+- S04: https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html
+
+## Revision decision
+
+The article was shortened at the user's request without new capability claims. Secondary tours and repeated explanation were removed. Exact article/Patreon parity is preserved. Publication states and covers are unchanged. Independent review of this concise revision is pending; repository publication is coordinated by the parent. No new Patreon or LinkedIn action is authorized by this record.

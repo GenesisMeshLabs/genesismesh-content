@@ -1,7 +1,5 @@
-Removing a name is not the same as hiding an affiliation.
+Proving one capability can reveal less than sending the full list. It does not necessarily hide the issuer.
 
-Genesis Mesh's selective-disclosure example can prove one capability without sending the complete capability list. Its actual artifacts still include identifiers and a capability count. That boundary matters.
-
-This article compares the mechanism with issuer-hiding credential research, without treating the research as an implemented feature. The practical next step is simple: inspect every serialized field the verifier receives.
+Genesis Mesh's selective-disclosure artifacts still expose agreement, issuer and prover identifiers. This short article examines the exact fields and the limits of its Merkle proof.
 
 Read: {{PATREON_URL_AFTER_VERIFIED_PUBLICATION}}

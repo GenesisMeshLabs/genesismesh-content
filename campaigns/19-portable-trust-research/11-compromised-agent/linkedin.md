@@ -1,10 +1,8 @@
-Assume the agent is compromised. What can it still execute?
+Assume the agent ignores every instruction. Can it still execute around the gate?
 
-Genesis Mesh's beta GenesisGuard example checks signed decisions, invocation tokens and command allowlists before mediated execution.
+Genesis Mesh's beta GenesisGuard checks signed authorization artifacts and a command allowlist. Mandatory mediation also requires the operator to remove direct execution and credential paths.
 
-But a sidecar is only a boundary when the deployment removes the paths around it. Advisory mode does not prevent bypass; direct credentials and unrestricted process access matter.
-
-This article separates the gate's checks from the host's containment responsibilities.
+The short article keeps the essential limits: process-local budgets, no revocation fetch, and an illustrative artifact demo.
 
 Read: [PATREON_URL_PENDING]
 

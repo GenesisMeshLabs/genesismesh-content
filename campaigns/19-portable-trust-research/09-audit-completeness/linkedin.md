@@ -1,12 +1,8 @@
-A signed audit log can be intact and still be incomplete.
+Valid signatures do not prove a complete history.
 
-Two questions matter:
-• Was recorded history changed?
-• Did something happen that was never reported?
+Genesis Mesh's audit-pack workflow uses independently held anchors to check recorded history, and an outside change log to find changes never reported to the store.
 
-Genesis Mesh's audit-pack workflow uses independently held anchors for the first question and an outside change log for the second. A second verifier adds another implementation check, with its own limits.
-
-The practical question is who holds your comparison evidence.
+Both comparisons have limits. The key operational question is who holds the evidence outside the system being audited.
 
 Read: [PATREON_URL_PENDING]
 

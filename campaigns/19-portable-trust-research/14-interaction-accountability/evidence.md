@@ -1,6 +1,6 @@
 # Evidence review: idea 14
 
-Scope: Python reference execution record, CLI/example and chain verifier, plus documented NA decision/evidence role. No automatic integration, exactly-once execution or complete audit proof is claimed.
+Scope: Reference execution evidence, sequence/digest/signature verification and valid-prefix limitation; beta CLI, no completeness or execution guarantee.
 
 ## Evidence snapshot and release status
 
@@ -31,75 +31,94 @@ Canonical documentation pages were reached through the live documentation naviga
 Reader procedures require a disposable source checkout and the development dependencies in the installation guide. Source-based test commands select actual inspected test files. Local demo commands are copied from the linked documentation. All are explicitly marked not executed. Failure outcomes are documented or asserted in inspected test source; they are not new runtime results.
 
 
-## Claim-level ledger
+## Exact claim ledger for the concise revision
 
-### R01 Research context
-
-Exact article wording:
-
-[BlockA2A](https://arxiv.org/abs/2508.01332) explores identity, authorization and accountability across agent interactions using its own architecture and prototype. Its experiments are research context here, not evidence that Genesis Mesh implements its architecture or reproduces its results.
-
-Source: https://arxiv.org/abs/2508.01332
-Evidence: original arXiv abstract/metadata inspected; research proposal/prototype, not Genesis Mesh implementation. No quoted performance numbers or prevention guarantees are transferred. Decision: retain bounded research hook.
+Each entry quotes the final saved paragraph verbatim. Illustrative scenes are not deployment evidence. Source observations and releases remain as recorded above; no product test was executed during this shortening pass.
 
 ### C01
 
-Exact claim or sentence excerpt: The receiving application owns execution.
+A purchasing agent requests an invoice. The supplier allows the request, performs a lookup and reports success. In this illustrative exchange, an auditor needs to separate permission from the executor's account of what happened.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: Illustrative scenario; no factual deployment claim.
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/concepts/governed-changes.md
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Illustrative operator scenario; no customer or deployment assertion.
 
 ### C02
 
-Exact claim or sentence excerpt: Signing a report does not run the provider's API or establish that the report is truthful.
+[BlockA2A](https://arxiv.org/abs/2508.01332) studies accountability across agents; its architecture and experimental results are not Genesis Mesh guarantees.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S01
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/execution.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Primary research context only; no product guarantee or integration inferred.
 
 ### C03
 
-Exact claim or sentence excerpt: It has no independently supplied expected final length.
+Genesis Mesh's Network Authority is the operator's service that evaluates requests and signs decisions. The receiving application performs the action. A `BoundaryDecision` records permission; executor-signed `ExecutionEvidence` records the reported outcome. The [governed-changes guide](https://docs.genesismesh.org/concepts/governed-changes.html) describes that boundary.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S02
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/execution-evidence-chain.md
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+### C04
 
-## Detailed implementation and counterexamples
+The [execution record implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py) carries the decision reference, capability, parameters, outcome, time and sequence. Each record can link to the previous record's digest. Verification checks sequence continuity, links and signatures against the supplied executor keys; an expected capability can also be checked.
 
-verify_evidence_chain checks contiguous sequence, previous digests, known executor signatures and optional expected capability. It has no expected total count; a valid prefix remains valid. The article does not claim this function independently reauthorizes execution or validates every decision binding. Source tests cover wrong key, wrong capability, altered data, wrong digest and missing middle record. The public guide's blanket no-deletion phrase is narrowed to middle/start gaps.
+Sources: S03
 
-## Direct implementation and test inventory
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/execution.py
-- Test source, inspected not executed: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_execution.py
+### C05
 
-## Reader documentation verified
+Removing a middle record leaves a gap. But removing the ending is different: records one and two can verify even when record three was withheld. This verifier has no independently supplied final count. Compare the chain with a separately retained provider count or observation.
 
-- https://docs.genesismesh.org/examples/execution-evidence-chain.html
-- https://docs.genesismesh.org/concepts/governed-changes.html
-- https://docs.genesismesh.org/installation.html
+Sources: S03
 
-## Review limits
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Independent reviewer must confirm final wording and derived assets. No product testing or live deployment certification is inferred. New Patreon publication and scheduling are not authorized. Current user instruction authorizes repository publication of the complete list after review; root coordinates that action. No publication performed by this author.
+### C06
 
-## Research version and compatibility check
+A valid executor signature also does not prove the invoice was correct or that every query was reported. Permission, execution and the truth of the report remain distinct. The example's execution CLI is [beta](https://docs.genesismesh.org/reference/public-contract.html).
 
-Primary paper: https://arxiv.org/abs/2508.01332v3 ; revised/submitted 2025-09-21. BlockA2A framework and prototype; no architecture or experiment transferred to Genesis Mesh.
+Sources: S04
 
-Beta public surfaces: trust execution record/verify. Inspected contract: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/contract/public-surface.json . Canonical public contract opened: https://docs.genesismesh.org/reference/public-contract.html . Article explicitly identifies beta scope.
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C07
+
+Use the [development installation](https://docs.genesismesh.org/installation.html) and the [walkthrough's](https://docs.genesismesh.org/examples/execution-evidence-chain.html) agreement, signed decision, executor key and known verifier keys:
+
+Sources: S05, S06
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C08
+
+```text
+python docs/examples/assets/scripts/execution-evidence-chain-demo.py --no-gif
+```
+
+Sources: S05, S06
+
+Classification: Previously documented/source-based procedure; not executed.
+
+### C09
+
+The ordered chain should verify; supplying records one, three, two produces `sequence_gap`. A valid prefix still verifies, so compare it with the expected count. The [source tests](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_execution.py) cover sequence and signature failures. This example was not executed in this review.
+
+Sources: S07
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+## Inspected sources retained by this revision
+
+- S01: https://arxiv.org/abs/2508.01332
+- S02: https://docs.genesismesh.org/concepts/governed-changes.html
+- S03: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py
+- S04: https://docs.genesismesh.org/reference/public-contract.html
+- S05: https://docs.genesismesh.org/installation.html
+- S06: https://docs.genesismesh.org/examples/execution-evidence-chain.html
+- S07: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_execution.py
+
+## Revision decision
+
+The article was shortened at the user's request without new capability claims. Secondary tours and repeated explanation were removed. Exact article/Patreon parity is preserved. Publication states and covers are unchanged. Independent review of this concise revision is pending; repository publication is coordinated by the parent. No new Patreon or LinkedIn action is authorized by this record.

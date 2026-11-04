@@ -47,5 +47,15 @@
   "series_order": 11,
   "thumbnail_alt_text": "A marked actor approaches a resource boundary through a question mark; the illustration asks what remains protected after compromise.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "5b7baa1e11273ca6f50b0d819d668697ac3c5fb26cde98df6fa0e7dd03da13cf"
+  "article_sha256": "81cd93e0b1ed61b2dc3f7beafb498621f379482951a0a52bc19491a6a60dd2a8",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 311,
+    "previous_visible_word_count": 710,
+    "reduction_percent": 56.2,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

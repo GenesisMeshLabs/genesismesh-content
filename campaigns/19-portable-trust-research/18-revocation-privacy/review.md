@@ -1,10 +1,12 @@
 # Review record: Revocation is a privacy problem too
 
-Original research idea: 18. Review date: 2026-11-04.
+Original research idea: 18. Source review date: 2026-11-04.
 
 ## Evidence and editorial review
 
-The source-based technical and editorial review passed after the recorded corrections. The adjacent evidence ledger records the inspected mechanisms, exact source revisions, release availability and limits. Research proposals, illustrative scenarios and implemented behavior remain distinct. Documented reproduction procedures were not executed in this review; no deployment or performance certification is implied.
+On 2026-11-04 this article was substantially shortened at the user's request. The revised article and LinkedIn draft passed a separate agent's source-based technical and editorial review against the prior evidence ledger and the same-session pinned source snapshot. The concrete mechanism, authority and execution boundary, relevant failure path, material limitations and documented reader check remain. Exact revised claims are recorded in evidence.md. Article and Patreon copy are byte-identical.
+
+The review checked the shortened wording, not just the preceding longer version. No product test, demo or deployment was executed for this review.
 
 ## Visual review
 
@@ -20,10 +22,16 @@ The campaign and upload thumbnail copies are byte-identical. The public generati
 
 Repository publication was explicitly requested for all completed campaign packages. This record does not authorize a new Patreon release: this article is not published or scheduled on Patreon. LinkedIn remains a draft; its pending link must be replaced only after the Patreon publication is verified.
 
+## Concise revision
+
+Visible words: 284 (previously 607; reduction 53.2%). Counts include the title, headings, code and footer labels, excluding Markdown markup and link destinations. Alphanumeric words retain internal apostrophes, dots, underscores and hyphens.
+
+Title, slug, idea and series identifiers, cover and channel publication states are preserved. The six existing campaign packages and all shared files are unchanged. This revision does not publish or schedule anything on Patreon or LinkedIn.
+
 ## Asset hashes
 
-- article.md: `4bf0e77a31820cbad2fd85ea909e7d4fe1c5edd89c5d87df9aad81cde84d0f9a`
-- patreon.md: `4bf0e77a31820cbad2fd85ea909e7d4fe1c5edd89c5d87df9aad81cde84d0f9a`
-- linkedin.md: `537d5b6d8721f266792ccaee4d62529f4790dcde08751dffefea031f7d3f8024`
-- evidence.md: `3022684444f919263fd472730e48ff6e6a90e06dc47dd17212c1ec933023deab`
+- article.md: `5b00a5d54caea748fd15c209afaf9ac5661480933d78bd5ebbfc17b5b01dcb5b`
+- patreon.md: `5b00a5d54caea748fd15c209afaf9ac5661480933d78bd5ebbfc17b5b01dcb5b`
+- linkedin.md: `eedf3abfef17c2e821e30affa5615960f4ac8b25d3c8dd6cb5bcc0e0d8de9221`
+- evidence.md: `b303f2c0f9bb77cb4c298e7ea6302e3cb75ffa0183e0fdff7e1a5dc3774ca45e`
 - thumbnail.png: `af80eb8da0ea92a71fbbda01f651b7a2b37aa0fa170264c1bc9edd16e5eefc4c`

@@ -23,32 +23,31 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 
 ## Material claims
 
+Exact wording below follows the shortened article revision. Source inspection and test-execution status are unchanged.
+
 ### Claim 2-1
-- Exact wording / scope: A supplied chain is checked for parent linkage, terms binding, contained capabilities, validity and signatures.
+- Exact wording / scope: Each hop identifies its parent and binds its terms.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py#L283-L390
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py#L552-L603
-- Documentation / reader check: https://docs.genesismesh.org/examples/delegation-chain.html
-- Observed verification and limits: Implemented and test-covered; not executed. Beta CLI. No multi-parent graph evaluator established.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py#L723-L746
+- Verification and limits: Beta chain verification; does not establish live root validity or multi-parent path preservation.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 2-2
-- Exact wording / scope: Changing parent terms invalidates the stored terms digest.
+- Exact wording / scope: The verifier checks linkage, capability containment, validity limits and signatures.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py#L337-L345
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py#L723-L746
-- Documentation / reader check: https://docs.genesismesh.org/examples/delegation-chain.html
-- Observed verification and limits: Implemented and test-covered; does not establish instantaneous online revocation.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py#L283-L390
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py#L552-L603
+- Verification and limits: Source and tests inspected, not run; receiving system remains responsible for current execution policy.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 2-3
-- Exact wording / scope: VERA's alternative-path contract is a research target, not an implemented Genesis Mesh guarantee.
+- Exact wording / scope: The controlled-time example verifies a two-hop chain and refuses a capability outside its parent's scope.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: No product implementation claim; see documentation/research scope below.
-- Test: No matching test asserted.
-- Documentation / reader check: https://docs.genesismesh.org/examples/delegation-chain.html
-- Observed verification and limits: Research abstract read 2026-11-04; no numerical performance or universal security claims reused.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/delegation-chain-demo.py
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py#L552-L603
+- Verification and limits: Documented example uses a fixed scenario clock. Not executed in this review.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ## Research and primary reader links
 - Research source: https://arxiv.org/abs/2608.30091
@@ -62,3 +61,7 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 ## Reproduction scope
 The article links the actual documented local procedure with prerequisites, expected result and failure. Its command was inspected in the documented example; it was not run here. Example source dates and expiry must be current when readers create their own records. Prefer the source demo's controlled fixture clock, where supplied, to blindly reusing historical timestamps; the delegation demo uses a fixed scenario time.
 Sources show a mechanism and tests show asserted cases. Production adoption still needs integration-specific execution binding, key management, trusted facts and appropriate confinement. No research performance or security percentage is transferred to Genesis Mesh.
+
+## Concise revision
+
+Shortened 2026-11-04 at the user's request. One scenario and one mechanism retained, with essential refusals and limitations. The same pinned evidence supports this revision; no new feature, deployment or test-run claim was added. Independent concise-revision review is pending. Superseded prose was removed, not silently treated as reviewed. No publication or schedule field changed.

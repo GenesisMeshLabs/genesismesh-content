@@ -1,10 +1,12 @@
 # Review record: Can a credential reveal your organization even when it hides your name?
 
-Original research idea: 17. Review date: 2026-11-04.
+Original research idea: 17. Source review date: 2026-11-04.
 
 ## Evidence and editorial review
 
-The source-based technical and editorial review passed after the recorded corrections. The adjacent evidence ledger records the inspected mechanisms, exact source revisions, release availability and limits. Research proposals, illustrative scenarios and implemented behavior remain distinct. Documented reproduction procedures were not executed in this review; no deployment or performance certification is implied.
+On 2026-11-04 this article was substantially shortened at the user's request. The revised article and LinkedIn draft passed a separate agent's source-based technical and editorial review against the prior evidence ledger and the same-session pinned source snapshot. The concrete mechanism, authority and execution boundary, relevant failure path, material limitations and documented reader check remain. Exact revised claims are recorded in evidence.md. Article and Patreon copy are byte-identical.
+
+The review checked the shortened wording, not just the preceding longer version. No product test, demo or deployment was executed for this review.
 
 ## Visual review
 
@@ -20,10 +22,16 @@ The campaign and upload thumbnail copies are byte-identical. The public generati
 
 Repository publication was explicitly requested for all completed campaign packages. This record does not authorize a new Patreon release: this article is not published or scheduled on Patreon. LinkedIn remains a draft; its pending link must be replaced only after the Patreon publication is verified.
 
+## Concise revision
+
+Visible words: 269 (previously 575; reduction 53.2%). Counts include the title, headings, code and footer labels, excluding Markdown markup and link destinations. Alphanumeric words retain internal apostrophes, dots, underscores and hyphens.
+
+Title, slug, idea and series identifiers, cover and channel publication states are preserved. The six existing campaign packages and all shared files are unchanged. This revision does not publish or schedule anything on Patreon or LinkedIn.
+
 ## Asset hashes
 
-- article.md: `8e477dd6ee4768169003ed52803ed24f0af11462cfcbd4417a9e2f8226a3ba5b`
-- patreon.md: `8e477dd6ee4768169003ed52803ed24f0af11462cfcbd4417a9e2f8226a3ba5b`
-- linkedin.md: `4df632edaf42d052c68d6834563cb891564f7a991147349196310bfc738afd30`
-- evidence.md: `50a20718ccc856abd384b19fb54323fdaf7cb0ef0583873fa6663a49f9cd024b`
+- article.md: `5ff4f550aba8f835c4396c87dd4d81511ab3422499f942547b81261ee5708e4a`
+- patreon.md: `5ff4f550aba8f835c4396c87dd4d81511ab3422499f942547b81261ee5708e4a`
+- linkedin.md: `eaf280a3de386590e4913568d6d1fa1661bb5c0907fe5528b3dcb0ae84168195`
+- evidence.md: `ad54c7503ccbb951106747f0611997f0024c6eff8e83e3b95b2ee5a99c320827`
 - thumbnail.png: `b1d240b7d02e5bbc715f644d594715ff2459f2657832fff73d025a702899f8f7`

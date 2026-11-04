@@ -23,32 +23,31 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 
 ## Material claims
 
+Exact wording below follows the shortened article revision. Source inspection and test-execution status are unchanged.
+
 ### Claim 3-1
-- Exact wording / scope: The controller receives a signed BoundaryDecision with a policy binding for its context.
+- Exact wording / scope: The authority returns a signed BoundaryDecision whose PolicyBinding identifies policy versions, gate outcomes and the context digest.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/services/boundary_policy.py#L387-L405
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Documentation / reader check: https://docs.genesismesh.org/examples/declarative-boundary-policy.html
-- Observed verification and limits: Implemented; NA service inspected. Demo is documented, not executed.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: Source inspected; source facts must be trusted by integration, no automatic execution binding claimed.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 3-2
-- Exact wording / scope: A failed enforce gate denies; an observe gate records without denying.
+- Exact wording / scope: A failed enforce gate denies; an observe gate records without blocking.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/policy.py#L439-L511
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Documentation / reader check: https://docs.genesismesh.org/examples/declarative-boundary-policy.html
-- Observed verification and limits: Implemented and test-covered. Does not authenticate truth of caller-supplied facts.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: Mode distinction retained. No claim that every missing input blocks an observe rule.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ### Claim 3-3
-- Exact wording / scope: The demo denies amount2500 under cap1000 and refuses legacy route in required mode.
+- Exact wording / scope: Expect a signed policy and a denied 2,500 request under the 1,000 cap, even with the MFA fact set.
 - Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/boundary-policy-demo.py#L50-L126
-- Test: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Documentation / reader check: https://docs.genesismesh.org/examples/declarative-boundary-policy.html
-- Observed verification and limits: Source and documented outcome inspected, no run here.
-- Reviewer decision: qualify as written; never upgrade inspected/test-covered to tested.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: Documented expected result; not executed. Required enforcement refuses legacy route.
+- Decision: retained with the stated scope after author shortening review; independent revision review follows.
 
 ## Research and primary reader links
 - Research source: https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems
@@ -62,3 +61,7 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 ## Reproduction scope
 The article links the actual documented local procedure with prerequisites, expected result and failure. Its command was inspected in the documented example; it was not run here. Example source dates and expiry must be current when readers create their own records. Prefer the source demo's controlled fixture clock, where supplied, to blindly reusing historical timestamps; the delegation demo uses a fixed scenario time.
 Sources show a mechanism and tests show asserted cases. Production adoption still needs integration-specific execution binding, key management, trusted facts and appropriate confinement. No research performance or security percentage is transferred to Genesis Mesh.
+
+## Concise revision
+
+Shortened 2026-11-04 at the user's request. One scenario and one mechanism retained, with essential refusals and limitations. The same pinned evidence supports this revision; no new feature, deployment or test-run claim was added. Independent concise-revision review is pending. Superseded prose was removed, not silently treated as reviewed. No publication or schedule field changed.

@@ -1,9 +1,9 @@
-Selective disclosure starts with a precise question: which fact does this party need?
+Proving one permission should not require exposing every unrelated capability.
 
-Genesis Mesh can prove membership of one capability in a signed commitment without putting the full capability list in the proof. But the surrounding records still carry identifiers, including the agreement and issuer.
+Genesis Mesh's beta selective-disclosure functions support a signed Merkle membership proof. Agreement and issuer identifiers still remain visible; this is not zero-knowledge or anonymous commerce.
 
-That distinction matters when discussing payment privacy. Reduced disclosure is useful; it does not automatically mean anonymity, unlinkability or zero-knowledge payment guarantees.
+The practical question is what the complete record reveals to its recipient.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 
-#GenesisMesh #PrivacyEngineering #SelectiveDisclosure #DigitalTrust
+#GenesisMesh #PrivacyEngineering #SelectiveDisclosure

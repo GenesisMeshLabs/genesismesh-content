@@ -14,16 +14,18 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "A payment can be cryptographically valid and still buy something the owner never authorized. The difficult part is preserving intent across stages: mandate, evaluated request, submitted operation and observed result.",
+  "primary_message": "A valid payment can still buy something the owner never approved.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2609.00060",
-    "https://docs.genesismesh.org/examples/declarative-boundary-policy.html",
-    "https://docs.genesismesh.org/sdk/typescript/governance.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/boundary_policy.py#L225",
     "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360",
-    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L426",
-    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L439"
+    "https://docs.genesismesh.org/examples/declarative-boundary-policy.html",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts",
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/sdk/index.html",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/purchase-binding.png",
@@ -50,7 +52,7 @@
     "patreon_publication": false,
     "linkedin_publication": false,
     "repository_publication_authorized": true,
-    "technical_review": "pending_final_record",
+    "technical_review": "passed_source_based_independent_review",
     "visual_review": "handled_by_root"
   },
   "research_scope": "Illustrative design discussion; no telecom/payment/deployment claim",
@@ -60,5 +62,15 @@
   ],
   "thumbnail_alt_text": "Payment and permission appear in separate panels joined by a question mark, asking whether a settled payment matched the mandate.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "6232f66fd8aebddce632815c42ae9bb6647eff46677161b3b9ca6fd37ae77c17"
+  "article_sha256": "3b2a5949baae5cf999cf964297f178672932b7f7631f8ff7f53ca0d8a31d839e",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 356,
+    "previous_visible_word_count": 737,
+    "reduction_percent": 51.7,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

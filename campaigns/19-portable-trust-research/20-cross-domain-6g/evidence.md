@@ -18,49 +18,43 @@ The public website and trust demo were viewed without authentication on 2026-11-
 
 ## Material claims
 
+Concise revision: each quotation below appears in the revised article. The same claims apply to the identical Patreon copy; LinkedIn uses a narrower summary. Existing dated source and release checks remain the baseline. No product examples or tests were executed.
+
 ### 20-1
 
-Exact article wording: A then checks B's attestation through that treaty.
+Exact article wording: Sovereign B issues a `MembershipAttestation`. Sovereign A signs a `RecognitionTreaty` naming B, accepted keys and permitted roles.
 
-Affected sections/assets: Direct scoped recognition; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py#L145).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_recognition_treaties.py). **Not executed** in this review.
-- Scope, limitations and decision: Implemented and test-covered. The integration supplies trusted issuer keys and local revocation state; the treaty scopes accepted roles, statuses and validity.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py#L95).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_recognition_treaties.py); not executed.
+- Scope, limits and authority boundary: The accepting sovereign signs and scopes recognition. Trusted issuer keys and local state are supplied to verification; no automatic local service permission follows.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 20-2
 
-Exact article wording: The signature on the treaty belongs to the accepting domain.
+Exact article wording: An empty role scope grants nothing.
 
-Affected sections/assets: Authority ownership; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py#L95).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_recognition_treaties.py). **Not executed** in this review.
-- Scope, limitations and decision: Direct recognition by the accepting sovereign. Telecom identities and adapters are illustrative, with no automatic permission implied by recognition.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py#L145).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_recognition_treaties.py); not executed.
+- Scope, limits and authority boundary: Implemented role restriction. Telecom role names and adapters are illustrative, not shipped telecom integrations.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 20-3
 
-Exact article wording: The recognition demo accepts an attestation, revokes the treaty in the accepting domain, then rejects the same attestation with `treaty_locally_revoked`.
+Exact article wording: Revocation is concrete but local: the walkthrough accepts an attestation, revokes the treaty, then returns `treaty_locally_revoked`.
 
-Affected sections/assets: Revocation failure path; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/recognition-treaty-demo.py).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_recognition_treaties.py). **Not executed** in this review.
-- Scope, limitations and decision: Documented and source-inspected. The refusal occurs at the accepting verifier with updated local state; disconnected revocation is not instantaneous.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/recognition-treaty-demo.py).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_recognition_treaties.py); not executed.
+- Scope, limits and authority boundary: Documented and source-inspected behavior at a verifier with updated local state. No instantaneous disconnected revocation or radio/latency guarantee.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ### 20-4
 
-Exact article wording: These are two demonstrated building blocks, not a claim that presenting any foreign attestation automatically feeds the local evaluation route.
+Exact article wording: A foreign attestation does not automatically become a local authorization decision; telecom adapters remain integration work.
 
-Affected sections/assets: Recognition vs execution; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
-
-- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/context.py#L148).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_attestation_boundary.py#L128). **Not executed** in this review.
-- Scope, limitations and decision: Article requires local authorization mapping and actual service enforcement. No automatic foreign-attestation-to-local-evaluation bridge or telecom integration is claimed.
-- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/context.py#L148).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_attestation_boundary.py#L128); not executed.
+- Scope, limits and authority boundary: Explicit integration boundary retained. Paper uses a 5G Service-Based Architecture prototype to explore future 6G access-control questions; no deployed 6G claim.
+- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
 
 ## Documentation and source comparison
 
@@ -92,4 +86,8 @@ Read-only GitHub source fetches and primary paper/documentation reads were perfo
 
 The reader procedure uses documented commands, prerequisites, expected acceptance and refusal cases, and an explicit statement that it was not executed in this review. The article contains no financial or legal recommendation or regulatory-compliance claim.
 
-Reader URL inventory: links.json. Final hashes and release gates: review.md and hashes.json. Recheck release/deployment evidence before any later material revision or publication claim.
+Reader URL inventory: campaign.json source_docs and the article citations. Final asset hashes and release gates are recorded in review.md. Recheck release/deployment evidence before any later material revision or publication claim.
+
+## Concise revision record
+
+The article was shortened at the user's request on 2026-11-04. Secondary mechanisms and repeated caveats were removed; the retained claim quotations above supersede the earlier wording. Same-session primary-source, pinned implementation, canonical-documentation and release checks remain applicable. No new capability or deployment claim was added. The condensed revision awaits independent review against its updated hashes.

@@ -18,11 +18,11 @@
   "source_docs": [
     "https://arxiv.org/abs/2512.20234",
     "https://docs.genesismesh.org/examples/selective-disclosure.html",
-    "https://docs.genesismesh.org/installation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py",
-    "https://docs.genesismesh.org/reference/public-contract.html"
+    "https://docs.genesismesh.org/reference/public-contract.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/issuer-privacy.png",
@@ -45,7 +45,8 @@
   },
   "approval": {
     "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
-    "patreon_publication": false
+    "patreon_publication": false,
+    "technical_review": "passed_source_based_independent_review"
   },
   "idea_number": 17,
   "series_order": 17,
@@ -54,5 +55,15 @@
   ],
   "thumbnail_alt_text": "A credential card names NAME, ISSUER and SCOPE; the issuer field is highlighted to ask what identifying information is disclosed.",
   "source_reviewed_at": "2026-11-04",
-  "article_sha256": "8e477dd6ee4768169003ed52803ed24f0af11462cfcbd4417a9e2f8226a3ba5b"
+  "article_sha256": "5ff4f550aba8f835c4396c87dd4d81511ab3422499f942547b81261ee5708e4a",
+  "concise_revision": {
+    "review_date": "2026-11-04",
+    "visible_word_count": 269,
+    "previous_visible_word_count": 575,
+    "reduction_percent": 53.2,
+    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
+    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+    "review_status": "passed_source_based_independent_review",
+    "examples_executed": false
+  }
 }

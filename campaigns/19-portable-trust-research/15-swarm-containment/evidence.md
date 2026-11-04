@@ -1,6 +1,6 @@
 # Evidence review: idea 15
 
-Scope: Python reference delegation construction/verification and deterministic local guard. No automatic swarm integration, current revocation check in chain verification, general scope-dictionary attenuation or complete containment guarantee is claimed.
+Scope: Attenuating delegation verification as the main mechanism; minimal guard limitations retained to avoid implying containment or bypass prevention.
 
 ## Evidence snapshot and release status
 
@@ -31,66 +31,95 @@ Canonical documentation pages were reached through the live documentation naviga
 Reader procedures require a disposable source checkout and the development dependencies in the installation guide. Source-based test commands select actual inspected test files. Local demo commands are copied from the linked documentation. All are explicitly marked not executed. Failure outcomes are documented or asserted in inspected test source; they are not new runtime results.
 
 
-## Claim-level ledger
+## Exact claim ledger for the concise revision
 
-### R01 Research context
-
-Exact article wording:
-
-[Delegation Without Trust](https://arxiv.org/abs/2609.00267) evaluates multi-agent systems under an untrusted-model assumption: confinement should survive a compromised model. Its broker and experimental results belong to that research. They are not a containment certification for Genesis Mesh or for an application using it.
-
-Source: https://arxiv.org/abs/2609.00267
-Evidence: original arXiv abstract/metadata inspected; research proposal/prototype, not Genesis Mesh implementation. No quoted performance numbers or prevention guarantees are transferred. Decision: retain bounded research hook.
+Each entry quotes the final saved paragraph verbatim. Illustrative scenes are not deployment evidence. Source observations and releases remain as recorded above; no product test was executed during this shortening pass.
 
 ### C01
 
-Exact claim or sentence excerpt: For later hops, the delegator must be the previous hop's recipient.
+A coordinator delegates a dataset-reading task to a specialist. The specialist is compromised and asks to modify the dataset. This illustrative handoff needs both narrow authority and a receiving service that enforces it.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: Illustrative scenario; no factual deployment claim.
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py
-
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+Classification: Illustrative operator scenario; no customer or deployment assertion.
 
 ### C02
 
-Exact claim or sentence excerpt: A deterministic guard checks a signed request, a stored decision, an invocation token and an explicit command allowlist before starting a process.
+[Delegation Without Trust](https://arxiv.org/abs/2609.00267) studies confinement under a compromised-model assumption; its broker results are not a Genesis Mesh containment guarantee.
 
-Affected: article.md, identical patreon.md and derived linkedin.md.
+Sources: S01
 
-Sources inspected:
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py
-- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py
+Classification: Primary research context only; no product guarantee or integration inferred.
 
-Evidence level: documented and/or implemented on the pinned reference source; test-covered only where the linked test asserts it. No test was executed. Availability: published core source/package as above; deployment unverified. Decision: retain with the article's stated scope and limits.
+### C03
 
-## Detailed implementation and counterexamples
+The Genesis Mesh [delegation example](https://docs.genesismesh.org/examples/delegation-chain.html) starts from a signed `AgreementRecord`. Each `DelegatedAgreementRecord` names its parent, delegator, recipient and delegated terms, binds the parent's terms by digest, and carries both parties' signatures.
 
-verify_delegation_chain enforces capabilities as set-subset, expiry ceiling, parent linkage/digest, root signatures and later-hop delegator continuity. It does not establish arbitrary resource/parameter restriction enforcement. Guard implementation and tests inspect request/decision/token signatures, bearer/agreement matching and command allowlist. Daemon stores invocation counts in memory, no durable count; docs specify revocation unseen until token expiry. Mandatory mediation additionally needs operator-enforced removal of bypass routes. The article uses 'capability subset/expiry ceiling', not the guide's overbroad strict/full validity-window claims.
+Sources: S02
 
-## Direct implementation and test inventory
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py
-- Test source, inspected not executed: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py
-- Test source, inspected not executed: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py
+### C04
 
-## Reader documentation verified
+The [verifier](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py) checks the root agreement's signatures, links, digest, capability subset, expiry ceiling and delegation signatures. After the first hop, the delegator must be the preceding recipient. The specialist cannot produce a valid chain that widens reading authority into modification.
 
-- https://docs.genesismesh.org/examples/delegation-chain.html
-- https://docs.genesismesh.org/examples/process-level-mediation.html
-- https://docs.genesismesh.org/installation.html
+Sources: S03
 
-## Review limits
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
 
-Independent reviewer must confirm final wording and derived assets. No product testing or live deployment certification is inferred. New Patreon publication and scheduling are not authorized. Current user instruction authorizes repository publication of the complete list after review; root coordinates that action. No publication performed by this author.
+### C05
 
-## Research version and compatibility check
+That does not authorize a specific dataset operation. The receiver still checks the current relationship, requested resource and parameters before executing. The chain's capability check is not a general resource-policy engine.
 
-Primary paper: https://arxiv.org/abs/2609.00267v1 ; revised/submitted 2026-08-31. Threat model, gap analysis and broker evaluation; no containment benchmark or prevention claim transferred.
+Sources: S03
 
-Beta public surfaces: trust delegate create/cosign/verify and trust guard start/request/verify. Inspected contract: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/contract/public-surface.json . Canonical public contract opened: https://docs.genesismesh.org/reference/public-contract.html . Article explicitly identifies beta scope.
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C06
+
+A separate [process-level guard](https://docs.genesismesh.org/examples/process-level-mediation.html) can constrain its execution path only when the operator removes bypass routes and direct credentials. Its [implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py) has an in-memory budget that resets on restart and makes no revocation fetches: new token revocations remain unseen, while expiry and other local checks still apply. It is not kernel or hardware attestation. Delegation and guard CLI commands are [beta](https://docs.genesismesh.org/reference/public-contract.html).
+
+Sources: S04, S05, S06
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C07
+
+Use a disposable [development installation](https://docs.genesismesh.org/installation.html), the root agreement, parties' keys and recognition-graph exports:
+
+Sources: S07
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+### C08
+
+```text
+python docs/examples/assets/scripts/delegation-chain-demo.py --no-gif
+```
+
+Sources: S07
+
+Classification: Previously documented/source-based procedure; not executed.
+
+### C09
+
+The [walkthrough](https://docs.genesismesh.org/examples/delegation-chain.html) accepts a valid handoff and refuses a capability outside the parent's set. The [tests](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py) also cover forged widening and unauthorized later-hop delegators. Neither example nor tests were executed in this review.
+
+Sources: S02, S08
+
+Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+
+## Inspected sources retained by this revision
+
+- S01: https://arxiv.org/abs/2609.00267
+- S02: https://docs.genesismesh.org/examples/delegation-chain.html
+- S03: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py
+- S04: https://docs.genesismesh.org/examples/process-level-mediation.html
+- S05: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py
+- S06: https://docs.genesismesh.org/reference/public-contract.html
+- S07: https://docs.genesismesh.org/installation.html
+- S08: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py
+
+## Revision decision
+
+The article was shortened at the user's request without new capability claims. Secondary tours and repeated explanation were removed. Exact article/Patreon parity is preserved. Publication states and covers are unchanged. Independent review of this concise revision is pending; repository publication is coordinated by the parent. No new Patreon or LinkedIn action is authorized by this record.

@@ -1,45 +1,27 @@
 # Your car can pay. Who gave it permission?
 
-An electric vehicle reaches a charger and can authenticate to a payment service. Its owner allowed charging on the journey. Does that authorize any price, any merchant or a subscription bundled into the session?
+An electric vehicle reaches a charger. Its owner approved charging, but did that include any price, merchant or bundled subscription? This illustrative scenario separates possession of a payment credential from permission to buy.
 
-This is an illustrative design problem. A usable payment credential answers a different question from an owner's bounded mandate.
+[Research on machine-to-machine payments](https://portalcientifico.upm.es/en/ipublic/item/9930578) proposes a preliminary consumer-IoT/CBDC model; Genesis Mesh supplies authorization building blocks, not an EV or payment product.
 
-[Research on CBDC-based machine-to-machine payments](https://portalcientifico.upm.es/en/ipublic/item/9930578) proposes a preliminary model connecting consumer IoT with a two-tier digital-currency architecture. It motivates the machine-commerce setting here. Genesis Mesh is not that payment system, and the flow below is not an implemented EV or CBDC integration.
+## Make the owner's mandate enforceable
 
-## Make the mandate an explicit policy input
+A proposed controller would validate the vehicle, merchant, service, amount, currency and time window, then submit those application-defined facts for evaluation. It must establish their provenance rather than trust an unverified quote.
 
-The owner or fleet operator needs a controller that translates a purchase request into a small set of facts: the authenticated vehicle, charging provider, intended service, amount, currency and authorization window. These are application facts; the integration must obtain and validate them rather than trusting whatever the vehicle supplies.
+A Genesis Mesh Network Authority, the operator-controlled service issuing and evaluating trust records, evaluates requests under active policies. Its [policy gates](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L453) support required parameters, numeric maxima, allowlists and attestation claims. A per-request maximum does not enforce a shared balance or daily budget; aggregate spending needs durable state and concurrency controls.
 
-Genesis Mesh supplies a general authorization mechanism for such a controller. A Network Authority, the operator-controlled service that issues and evaluates trust records, can admit a subject with a signed `MembershipAttestation` and evaluate a requested capability under active policies. The [attestation-backed example](https://docs.genesismesh.org/examples/attestation-backed-evaluation.html) uses a vendor's allowed applications to demonstrate this boundary.
+In the [documented governed-action flow](https://docs.genesismesh.org/sdk/typescript/governance.html), `governedAction` verifies the authority's decision using trusted keys, expected policies and the applicable attestation. On the ordinary online path, a verified denial prevents the application's callback. An allowed callback executes separately from subsequent signed execution evidence.
 
-An EV integration could adapt that pattern to a charging mandate. Names such as `charging.purchase` or `merchant_id` would be application-defined labels, not existing Genesis Mesh payment APIs.
+For this design, that callback would be a payment adapter. It must match the actual merchant, amount, currency and service to the approved purchase, and reject a changed quote. Provider authentication, idempotency and reconciliation remain its responsibility; Genesis Mesh does not submit the payment.
 
-The policy engine already has concrete gates for required parameters, maximum numeric values, allowlists and claims in the authority-held attestation. Their [implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L453) shows how missing or wrongly typed facts are handled. A controller could use integer minor units and an explicit currency to avoid an ambiguous “amount,” but that monetary representation and its validation must be designed by the integration.
-
-A per-request maximum is not an account balance or a daily spending budget. Enforcing a total across concurrent purchases requires additional durable state and concurrency controls. Calling a numeric gate a “wallet limit” would overstate what it does.
-
-## Put the check before the effect
-
-In a supported governed client, `governedAction` composes evaluation, decision verification, a caller-supplied action and execution evidence. It requires trusted authority keys and expected policy bindings; attestation-based authorization also requires the expected attestation. A verified denial does not run the action callback. [Governed-action guide](https://docs.genesismesh.org/sdk/typescript/governance.html).
-
-The payment adapter would be that callback. It remains responsible for checking that the merchant, amount, currency and service it submits are exactly the approved purchase, and for using the payment provider's own authentication and idempotency controls. Genesis Mesh does not supply the payment operation.
-
-After the callback, an executor signs metadata describing the result. Permission, attempted execution and confirmed payment remain different facts. If evidence submission fails after payment, repeating the payment is not a safe way to repair the audit record. The [client implementation](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360) and its [tests](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts) distinguish the action from subsequent evidence delivery.
-
-## Let the refusal stop at the right place
-
-Suppose the charger changes its quote before the controller submits the purchase. The adapter should reject the mismatch and obtain a new authorization if appropriate. It should not reinterpret an earlier approval as permission for the changed price.
-
-If the authority denies the original request, the ordinary governed-action path must not call the payment provider. If a payment result is uncertain, the controller needs provider-specific reconciliation before retrying. Neither a signature nor an audit entry guarantees that money moved or that energy was delivered.
-
-That is the useful role for a portable trust layer: make the mandate and its decision inspectable, while the owner, controller, merchant and payment system retain their distinct responsibilities.
+The [client implementation](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360) separates action from evidence delivery. If evidence upload fails after payment, repairing the record must not charge the owner again. Neither authorization nor signed execution metadata proves settlement or energy delivery.
 
 ## Check it yourself
 
-Start with a local Network Authority, operator setup credentials, a registered executor key, active policies and the evidence store enabled, as described in the [governed-action walkthrough](https://docs.genesismesh.org/sdk/typescript/governance.html).
+Follow the [governed-action walkthrough](https://docs.genesismesh.org/sdk/typescript/governance.html) with a local authority, setup credentials, registered executor key, active policies and enabled evidence store.
 
-Use its documented non-payment callback first. Confirm an allowed request reaches the callback and a denied request does not. Inspect the separate execution evidence and queued evidence result. This is a documented procedure, not executed in this review; it is not a payment demo.
+Use its non-payment callback. Expect an allowed request to execute and a denied request to stop before the callback; inspect execution evidence separately. This documented procedure was not executed in this review.
 
-Before connecting money, specify the exact purchase tuple and the durable rule that prevents two concurrent approvals from exceeding the owner's mandate.
+Before connecting money, specify the approved purchase fields and how concurrent requests share the owner's budget.
 
-Explore [Genesis Mesh](https://genesismesh.org/), the [documentation](https://docs.genesismesh.org/sdk/index.html), the [public trust demo](https://mesh.genesismesh.org/) and the [source repository](https://github.com/GenesisMeshLabs/genesismesh). The public demo is a trust-system interface, not a demonstration of the illustrative application in this article.
+[Website](https://genesismesh.org/) · [Documentation](https://docs.genesismesh.org/sdk/index.html) · [Trust UI demo](https://mesh.genesismesh.org/) · [GitHub](https://github.com/GenesisMeshLabs/genesismesh). The public demo does not demonstrate this illustrative application.
