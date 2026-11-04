@@ -85,3 +85,11 @@ python .\videos\scripts\generate_series_thumbnails.py 17-a-signed 18-revoking
 ```
 
 Use the stable slug in each `campaign.json` with the existing narration and video scripts. Generate Azure narration first, then obtain the Revid audio-to-video estimate and explicit approval before rendering. Publication remains a separate step. Add the video link to each Patreon post when the YouTube version exists.
+
+## Portable Trust Research
+
+Research-led articles are published here alongside their Patreon release. Only released articles are included; LinkedIn publication and media production are tracked separately.
+
+| Folder | Title | Published |
+|---|---|---|
+| `19-portable-trust-research/01-offline-trust` | Offline trust and revocation: what a disconnected system can know | [Patreon, 2026-11-04](https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054) |

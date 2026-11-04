@@ -1,0 +1,48 @@
+{
+  "slug": "offline-trust",
+  "title": "Offline trust and revocation: what a disconnected system can know",
+  "status": "published",
+  "series_order": 1,
+  "idea_number": 1,
+  "release_week": 1,
+  "release_slot": 1,
+  "audience": [
+    "system builders",
+    "security engineers",
+    "independent operators"
+  ],
+  "channels": [
+    "patreon",
+    "article",
+    "linkedin"
+  ],
+  "primary_message": "Offline trust and revocation: what a disconnected system can know",
+  "call_to_action": "Which action in your system should never proceed on stale trust information?",
+  "source_docs": [
+    "https://arxiv.org/abs/2609.22944",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/main/VISION.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/main/docs/concepts/security-model.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/main/docs/operations/grants.md"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "voice": "",
+  "voice_role": "",
+  "images": [],
+  "thumbnail": "",
+  "output": "",
+  "publishing": {
+    "patreon": {
+      "title": "Offline trust and revocation: what a disconnected system can know",
+      "url": "https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054",
+      "published_at": "2026-11-04"
+    },
+    "linkedin": {
+      "url": "",
+      "status": "draft_not_published"
+    }
+  },
+  "article_approved": true,
+  "published": true,
+  "media_production": "not_started",
+  "source_reviewed_at": "2026-11-04"
+}
