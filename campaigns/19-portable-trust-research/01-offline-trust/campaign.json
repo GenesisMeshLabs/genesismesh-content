@@ -16,13 +16,19 @@
     "article",
     "linkedin"
   ],
-  "primary_message": "Offline trust and revocation: what a disconnected system can know",
+  "primary_message": "Pre-issued grants bound offline authority; revocation freshness, configured exceptions and later evidence admission remain distinct.",
   "call_to_action": "Which action in your system should never proceed on stale trust information?",
   "source_docs": [
-    "https://arxiv.org/abs/2609.22944",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/main/VISION.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/main/docs/concepts/security-model.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/main/docs/operations/grants.md"
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/pre-issued-grants.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/grants.py#L645-L736",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md",
+    "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/src/grant_holder.rs#L630-L692",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md#time",
+    "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/src/grant_holder.rs#L816-L825",
+    "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/edge/src/decision.rs#L132-L226",
+    "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/edge/src/decision.rs#L50-L80",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md#a-refused-use-keeps-its-place",
+    "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/docs/verifier.md"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "voice": "",
@@ -45,5 +51,7 @@
   "article_approved": true,
   "published": true,
   "media_production": "thumbnail_ready_audio_video_not_started",
-  "source_reviewed_at": "2026-11-04"
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "713173b832ab4133076d7cd8ac5032a3ce2c2b10a194cbec9025aff056eae612",
+  "article_updated_at": "2026-11-04"
 }
