@@ -1,6 +1,12 @@
 # Campaign Contract
 
-## Folder Shape
+## Default Article Package
+
+“Campaign” is a repository label. Default to a short, substantive `article.md`, branded `thumbnail.png`, source links, `linkedin.md` draft and the evidence/review packet. Use as few words as substance allows; there is no rigid word count. Add `patreon.md` only for that selected channel and metadata when the chosen scripts require it. Do not create media placeholders or make audio/video a completion requirement.
+
+## Optional Full-Media Folder Shape
+
+The examples and full-media JSON below apply when that media is explicitly requested, not to every article. Voiceover, SSML, audio, video, YouTube files and their approvals are conditional. Preserve compatibility with the selected scripts without inventing unused outputs.
 
 Horizontal campaign:
 
@@ -135,7 +141,7 @@ Every new campaign or material revision must follow [editorial-evidence-standard
 
 The baseline JSON above remains compatible with current scripts. `source_docs` should identify precise evidence, including immutable public links where available, not only vision/strategy files. `status` is a label, not proof of review or permission. Keep it `draft` until applicable evidence, editorial, technical and visual gates pass; never infer approval from a status field. Existing tooling does not automatically enforce this gate.
 
-Do not proceed to voiceover until the exact article is approved. Do not publish, schedule or push campaign drafts to the public repository until explicit publication approval covers the final content/assets and channels. Record verified public URLs only after the action succeeds; do not fabricate release or publication metadata.
+Voiceover is optional and requires an explicit request; if requested, do not proceed until the exact article is approved. Do not publish, schedule or push campaign drafts to the public repository until explicit publication approval covers the final content/assets and channels. Record verified public URLs only after the action succeeds; do not fabricate release or publication metadata.
 
 ## Series Cover Exception
 

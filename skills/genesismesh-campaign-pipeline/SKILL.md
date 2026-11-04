@@ -7,10 +7,11 @@ description: End-to-end Genesis Mesh content campaign creation inside genesismes
 
 Use this skill from the repository root.
 
-The goal is a complete campaign folder that can move from concept to publishable assets while keeping generated/private files out of Git.
+The default deliverable is a short, substantive article, branded cover, source links and a LinkedIn draft. “Campaign” is the existing repository label, not a requirement to produce a multimedia campaign. Keep articles as short as the substance allows, with no rigid word count. Keep generated/private files out of Git.
 
 ## Hard Rules
 
+- Default to article + cover + source links + LinkedIn draft. Voiceover, audio, video, Revid, YouTube assets and media-specific approvals are optional and apply only when the user requests that media. Do not ask for optional media approval or make missing media block an article.
 - Read and apply `references/editorial-evidence-standard.md` and `references/design-system.md` before drafting. Evidence, technical review, visual review and explicit publication approval are mandatory release gates.
 - Every substantive article must explain a concrete, sourced Genesis Mesh flow, its authority boundary, actual SDK/API calls or artifacts, a failure path and limitations. Word count is guidance, not a substitute for substance.
 - Write evergreen public-facing articles: generally describe capabilities without individual SDK names or version numbers, unless the user requests them or they are necessary to avoid material ambiguity. Clearly separate implemented capabilities from planned broader coverage; never imply parity that is not implemented. Keep exact SDK/platform coverage, pinned revisions and dated release checks in the internal evidence ledger; precise source links need not put versions in the prose.
@@ -21,8 +22,8 @@ The goal is a complete campaign folder that can move from concept to publishable
 - Do not publish or push campaign drafts to the public repository until those gates pass. Existing generator scripts do not enforce approval.
 - Keep Genesis Mesh framed as portable trust for sovereign systems. Read `MESSAGING.md` before drafting.
 - Ask until the article is good enough. Do not proceed from `article.md` to voiceover until the user approves the article.
-- Create `campaign.json` early because repo scripts depend on it, then update it at the end.
-- Run Revid `estimate` before `render`; do not run `render --yes` until the user explicitly accepts the estimate.
+- Create/update `campaign.json` when required by the chosen repository workflow or scripts; do not populate unused media fields or fabricate media assets for an article-only deliverable.
+- When Revid video is explicitly requested, run Revid `estimate` before `render`; do not run `render --yes` until the user explicitly accepts the estimate.
 - Keep rendered MP4s in `videos/renders/`, narration in `campaigns/**/audio/`, Revid jobs in `videos/revid-jobs/`, and final upload thumbnails in `videos/thumbnails/`. Do not create campaign-level `renders/` folders.
 - Treat `videos/` as the production workspace: scripts in `videos/scripts/`, committed upload thumbnails in `videos/thumbnails/`, ignored MP4s/review frames in `videos/renders/`, and ignored provider state in `videos/revid-jobs/`.
 - Keep `patreon.md` editorial. YouTube titles can be search/click optimized; Patreon titles do not need to match YouTube.
@@ -34,7 +35,7 @@ Read these before acting:
 
 - `MESSAGING.md`
 - `README.md`
-- `videos/scripts/VOICE_PLAN.md`
+- `videos/scripts/VOICE_PLAN.md` only when narration is requested
 - `skills/genesismesh-campaign-pipeline/references/campaign-contract.md`
 - `skills/genesismesh-campaign-pipeline/references/editorial-evidence-standard.md`
 - `skills/genesismesh-campaign-pipeline/references/design-system.md`
@@ -48,6 +49,8 @@ Inspect nearby campaign examples:
 
 ## Workflow
 
+Default article path: steps 1–2, then 7–9 as applicable. Steps 3–6 are an optional media workflow, used only when explicitly requested. Complete the article, cover, linked evidence and LinkedIn draft without waiting for unrequested media.
+
 ### 1. Classify and Create Folder
 
 Ask whether the campaign is:
@@ -60,14 +63,18 @@ Create the next ordered folder:
 - horizontal: `campaigns/<NN>-<slug>/`
 - use case: `campaigns/08-use-cases/<NN>-<slug>/`
 
-Use the helper to avoid numbering/path mistakes:
+For the default article-only path, inspect existing folder numbers, create the next unused directory without overwriting anything, and add only `article.md`, `linkedin.md`, and the evidence/review packet. Generate the branded cover in step 7. Add `patreon.md` only for a selected Patreon channel. Add `campaign.json` only if the chosen scripts require it, with applicable article metadata and cover paths, not voice/audio/video/YouTube placeholders. When revising an existing article, reuse its folder and preserve unrelated assets.
+
+Do **not** run `scaffold_campaign.py` for article-only work: its current implementation always creates multimedia placeholders. No article-only mode is implemented in that helper.
+
+Only when the user explicitly requests a full multimedia campaign, use the legacy helper to avoid numbering/path mistakes:
 
 ```powershell
 python .\skills\genesismesh-campaign-pipeline\scripts\scaffold_campaign.py --type horizontal --slug portable-trust --title "Portable Trust"
 python .\skills\genesismesh-campaign-pipeline\scripts\scaffold_campaign.py --type use-case --slug healthcare-trust --title "Use Case: Healthcare Trust"
 ```
 
-After scaffolding, adjust `campaign.json` as the campaign becomes concrete.
+After an explicitly requested multimedia scaffold, adjust `campaign.json` as the campaign becomes concrete. Do not use the helper just to obtain numbering or metadata for an article.
 
 ### 2. Interrogate Until Article Is Approved
 
@@ -86,7 +93,7 @@ Create `evidence.md` with pinned implementation/docs/tests, per-surface coverage
 
 Draft `article.md`. Ask focused follow-up questions when the article has weak claims, vague audience, missing proof, or messaging drift. Iterate until the user approves.
 
-### 3. Generate Voiceover
+### 3. Generate Voiceover (Optional, Only When Requested)
 
 Create `voiceover.md` from the approved article without reducing substance unnecessarily. It may be more spoken and structured than the article, but it must preserve the argument.
 
@@ -97,7 +104,7 @@ Then create `voiceover.ssml`:
 - use emphasis sparingly
 - keep SSML valid XML
 
-### 4. Select Voice
+### 4. Select Voice (Optional, Only When Requested)
 
 Use `videos/scripts/VOICE_PLAN.md`.
 
@@ -109,7 +116,7 @@ Prefer an unused DragonHDLatestNeural voice when available. Reuse only when it b
 
 Also write `voice` and `voice_role` into `campaign.json`.
 
-### 5. Generate Azure TTS
+### 5. Generate Azure TTS (Optional, Only When Requested)
 
 Run:
 
@@ -127,7 +134,7 @@ python .\videos\scripts\generate_tts.py use-cases/healthcare-trust
 
 Verify `campaigns/<campaign>/audio/narration.wav` exists.
 
-### 6. Generate Revid Video
+### 6. Generate Revid Video (Optional, Only When Requested)
 
 Estimate first:
 
@@ -175,28 +182,23 @@ Thumbnail copy should imply a problem or outcome. Keep it short, branded, and re
 
 ### 8. Create Publishing Files
 
-Create campaign-root files:
+Create `linkedin.md` as a concise draft accompanying the article, with the approved article link once available. Drafting does not authorize posting. Create `patreon.md` only when Patreon is a selected channel, using the article's editorial framing. Do not insert a YouTube placeholder when no video is requested.
 
-- `youtube.md`
-- `patreon.md`
-
-`youtube.md` should include title, description, tags, category, thumbnail path, render path, and a video URL placeholder if not uploaded yet.
-
-`patreon.md` should use an editorial title and founder-note/article framing. Include the YouTube URL when available, otherwise `[YouTube video link]`.
+Create `youtube.md` only when a YouTube video is requested; include title, description, tags, category, thumbnail path, render path and a video URL placeholder until uploaded. Add the verified YouTube URL to other selected channels only when relevant.
 
 ### 9. Finalize Campaign JSON
 
-Make sure `campaign.json` includes:
+When `campaign.json` is used, make sure it includes only the fields applicable to the selected workflow:
 
 - `slug`, `title`, `status`
 - `audience`, `channels`
 - `primary_message`, `call_to_action`, `source_docs`
 - `slogan`
-- `voice`, `voice_role`
+- `voice`, `voice_role` only for requested narration
 - `images`
 - `thumbnail`
-- `output`
-- `publishing.youtube`
+- `output` only for requested video
+- `publishing.youtube` only for requested YouTube publication
 - optionally `publishing.patreon`
 
 Validate JSON:
@@ -216,12 +218,8 @@ Before calling the campaign complete:
 - derived assets contain no new unsupported claims
 - exact final assets and destination channels explicitly approved before publication
 - article approved by user
-- voiceover and SSML created
-- `VOICE_PLAN.md` updated
-- TTS generated
-- Revid estimate shown and render approved
-- video rendered or an explicit pending job noted
-- thumbnail generated
-- `youtube.md` and `patreon.md` created
-- `campaign.json` finalized and valid
+- short substantive article, branded cover, source links and `linkedin.md` draft complete
+- publishing files created only for selected channels
+- `campaign.json` finalized and valid when used
+- only if narration/video was requested: applicable voiceover/SSML, voice plan, TTS, approved Revid estimate/render and video checks complete or an explicit pending job noted
 - `git status --short --ignored` checked for accidental secrets or generated binaries

@@ -12,7 +12,7 @@ Lead with a concrete operator problem, explain the mechanism, show what a reader
 4. Evidence beside material technical claims, a practical “Check it yourself” section, and a useful call to action.
 5. What the mechanism does **not** establish. Verification is not authorization; authorization is not execution; a signature is not evidence that an action is safe or that its payload is true.
 
-A useful long-form starting range is 900–1,600 words, with shorter focused notes and longer technical walkthroughs when warranted. Word count is guidance, never a quality gate or permission to pad. A short announcement can link to a substantive verified walkthrough; it cannot replace evidence with slogans.
+Default to short, substantive articles: use as few words as the real flow, evidence and limits require, without a rigid word count. Move detailed reproduction steps and technical background into precise source links when that keeps the article useful and readable. Brevity is not permission to replace evidence with slogans. The standard package is the article, branded cover, source links and LinkedIn draft; audio, video and other multimedia are optional only when requested.
 
 Explain the Network Authority on first use. Keep portable trust for sovereign systems as the frame; agents are one application. Show who owns keys, who recognizes whom, who decides, who executes, and who verifies. Do not attribute local authority to a gateway or imply that Genesis Mesh chooses who deserves trust.
 
@@ -119,7 +119,7 @@ Required sequence:
 1. Research and evidence inventory completed; unresolved claims qualified or removed.
 2. Editorial review: substantive flow, honest limits, citations and actionable reader links.
 3. Technical review: status/version distinctions, all relevant surfaces and precise failure/fallback behavior.
-4. User approves the exact article before voiceover or paid media generation.
+4. User approves the exact article. If narration or paid media is explicitly requested, obtain the applicable approval before generating it; otherwise skip media production and media-specific approval steps.
 5. Derived copy/assets checked against the approved article and the [design system](design-system.md). New claims require new evidence and review.
 6. Final public-access/link, media, metadata and privacy checks; user explicitly approves publication to the specified channels.
 

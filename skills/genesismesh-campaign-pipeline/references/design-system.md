@@ -53,9 +53,9 @@ Record generator revision, selected campaign/group/motif, exact hook, source ass
 - Inspect the actual exported image at full resolution and at 320 × 180; a script exit code is not visual approval.
 - Confirm dimensions, RGB format, intact logo, correct spelling, series label/part and footer.
 - Confirm no clipping, overlaps, illegible type, unexpected font fallback or ambiguous arrows.
-- Verify title, hook, artwork, article, narration and publication metadata tell the same evidenced story.
+- Verify title, hook, artwork, article and publication metadata tell the same evidenced story; compare narration too when present.
 - Confirm final cover/upload copies and metadata agree; check the target platform's current upload requirements.
-- Inspect video frames, captions, narration timing and final thumbnail together before release. Mark illustrative footage as appropriate; captions must not introduce unsupported claims.
+- Only when video/narration is requested, inspect video frames, captions, narration timing and final thumbnail together before release. Mark illustrative footage as appropriate; captions must not introduce unsupported claims.
 - Record the reviewer and approved asset hashes. Changes after approval require another affected-asset review.
 
 A campaign is not release-ready until both the editorial and visual checklists pass and publication approval covers the final assets and channels.
