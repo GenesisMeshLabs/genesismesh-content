@@ -12,7 +12,7 @@ Offline trust starts with that limit. A disconnected system can verify informati
 
 In Genesis Mesh, each sovereign operates a Network Authority (NA), the service that issues signed trust records and policy decisions. A **pre-issued grant** lets that authority authorize a bounded class of changes before a controller loses connectivity.
 
-The [worked example](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/pre-issued-grants.md) follows a remote controller rotating a service credential. A policy caps credential lifetime at 90 days. The authority issues a narrower grant:
+The [worked example](https://docs.genesismesh.org/examples/pre-issued-grants.html) follows a remote controller rotating a service credential. A policy caps credential lifetime at 90 days. The authority issues a narrower grant:
 
 - One registered bearer key and the capability `secret.manage`.
 - Four hours of validity and three uses in total.
@@ -29,7 +29,7 @@ EVIDENCE_OUT_OF_BAND=on
 EVIDENCE_GRANTS=on
 ```
 
-The [runbook](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md) also covers operational status and verifier compatibility. Enabling the authority does not upgrade every consumer.
+The [runbook](https://docs.genesismesh.org/operations/grants.html) also covers operational status and verifier compatibility. Enabling the authority does not upgrade every consumer.
 
 ## What happens while disconnected
 
@@ -39,7 +39,7 @@ Two 30-day rotations fit our example. A third needs more than an unused total al
 
 Each rotation produces signed `GrantExecutionEvidence`, including the grant digest, unique use ID, sequence, previous-use digest, time token, resource and outcome metadata. The outbox keeps **evidence**, not a general queue of actions to repeat. A credential version identifier belongs in that record; the secret itself does not.
 
-Time tokens constrain what a holder can claim, but do not make its clock trustworthy. The [time rules](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md#time) include a fixed 300-second skew allowance and ordering checks. The upload window equals the grant's validity duration after the claimed execution time: four hours here.
+Time tokens constrain what a holder can claim, but do not make its clock trustworthy. The [time rules](https://docs.genesismesh.org/operations/grants.html#time) include a fixed 300-second skew allowance and ordering checks. The upload window equals the grant's validity duration after the claimed execution time: four hours here.
 
 A compromised holder can still backdate within the permitted bounds. Small budgets and short validity reduce exposure; they do not make the device honest.
 
@@ -59,7 +59,7 @@ These capabilities exist in supported implementations; broader support across SD
 
 The controller uploads uses in chain order. The authority checks them and assigns positions in the resource's evidence history. That is admission order, not proof of physical execution order across disconnected devices.
 
-A refused use can still be important evidence. An authentic use rejected for an envelope mismatch or revocation may be retained as quarantine. If it legitimately continues the holder's chain, it keeps that position; admitted-use budgets and chain length are therefore different counts. Other failures, including secret-bearing records and chain gaps, have [different handling](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md#a-refused-use-keeps-its-place).
+A refused use can still be important evidence. An authentic use rejected for an envelope mismatch or revocation may be retained as quarantine. If it legitimately continues the holder's chain, it keeps that position; admitted-use budgets and chain length are therefore different counts. Other failures, including secret-bearing records and chain gaps, have [different handling](https://docs.genesismesh.org/operations/grants.html#a-refused-use-keeps-its-place).
 
 Revoking a grant rejects uses dated at or after revocation. Retiring a compromised bearer key rejects its signed uses regardless of claimed execution time. Neither undoes a rotation already performed offline. The holder learns new revocations only when it receives fresh state.
 
@@ -71,11 +71,11 @@ The repository provides a documented local demonstration. From a prepared checko
 python docs/examples/assets/scripts/pre-issued-grants-demo.py --no-gif
 ```
 
-This is a documented example, not executed in this review. Follow the [linked walkthrough](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/pre-issued-grants.md), which preserves the inspected source snapshot. It shows covered uses admitted and an authentic out-of-envelope use quarantined.
+This is a documented example, not executed in this review. Follow the [linked walkthrough](https://docs.genesismesh.org/examples/pre-issued-grants.html). It shows covered uses admitted and an authentic out-of-envelope use quarantined.
 
 Then test an isolated resource or fake action: revoke during an outage, exhaust the token budget, expire the grant, return a DENY and reconnect. Capture four things: the request, local authorization basis, actual side effect and authority's later treatment.
 
-Finally, compare the records with an external change log and verify an audit pack using [the offline verifier](https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/docs/verifier.md). Supply independently held keys and anchors. This second implementation is a same-project port, so agreement cannot rule out a mistake both implementations share.
+Finally, compare the records with an external change log and verify an audit pack using [the offline verifier](https://docs.genesismesh.org/operations/independent-verification.html). Supply independently held keys and anchors. This second implementation is a same-project port, so agreement cannot rule out a mistake both implementations share.
 
 The goal is specific: bounded authority before disconnection, visible exceptions, and evidence that remains useful when the network returns.
 
