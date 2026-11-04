@@ -11,6 +11,13 @@ The goal is a complete campaign folder that can move from concept to publishable
 
 ## Hard Rules
 
+- Read and apply `references/editorial-evidence-standard.md` and `references/design-system.md` before drafting. Evidence, technical review, visual review and explicit publication approval are mandatory release gates.
+- Every substantive article must explain a concrete, sourced Genesis Mesh flow, its authority boundary, actual SDK/API calls or artifacts, a failure path and limitations. Word count is guidance, not a substitute for substance.
+- Pin code, docs and tests to inspected revisions; separate documented, implemented, test-covered and actually tested behavior. Verify package/release availability independently from repository heads. Research, incident reports and formal models are not product guarantees.
+- Inventory all relevant SDK languages, gateway, Network Authority, CLI and edge surfaces. Do not assume parity. Trace exact fallback triggers, exclusions, opt-in flags, freshness limits and reconnect behavior for the named version; distinguish queued evidence from queued actions.
+- Include citations beside material claims, a reproducible “Check it yourself” section, and verified Website, documentation, demo and GitHub links. If a public demo is unavailable, say so and supply a documented local example instead.
+- Use the existing branded series thumbnail layout and supplied logo, palette and typography; inspect actual final pixels at full size and 320 × 180. Keep hooks and diagrams no stronger than the evidence.
+- Do not publish or push campaign drafts to the public repository until those gates pass. Existing generator scripts do not enforce approval.
 - Keep Genesis Mesh framed as portable trust for sovereign systems. Read `MESSAGING.md` before drafting.
 - Ask until the article is good enough. Do not proceed from `article.md` to voiceover until the user approves the article.
 - Create `campaign.json` early because repo scripts depend on it, then update it at the end.
@@ -28,6 +35,8 @@ Read these before acting:
 - `README.md`
 - `videos/scripts/VOICE_PLAN.md`
 - `skills/genesismesh-campaign-pipeline/references/campaign-contract.md`
+- `skills/genesismesh-campaign-pipeline/references/editorial-evidence-standard.md`
+- `skills/genesismesh-campaign-pipeline/references/design-system.md`
 
 `agents/openai.yaml` is UI metadata for agents that surface this skill in a picker or prompt list. It is not a workflow step and does not need to be loaded unless maintaining the skill metadata itself.
 
@@ -71,6 +80,8 @@ Gather at least:
 - source docs or repo evidence
 - intended channels
 - whether the tone is technical, founder-note, enterprise/security, or developer-facing
+
+Create `evidence.md` with pinned implementation/docs/tests, per-surface coverage, release status and observed verification. Trace a real Genesis Mesh flow and its failure path; qualify SDK/gateway/edge differences and exact fallback semantics. Create `review.md` to track blocking issues and approval of exact revisions. Include claim-level citations, a “Check it yourself” section, and verified Website/docs/demo/GitHub links. Keep private or unreleased evidence in the ignored local review packet.
 
 Draft `article.md`. Ask focused follow-up questions when the article has weak claims, vague audience, missing proof, or messaging drift. Iterate until the user approves.
 
@@ -139,7 +150,7 @@ Update `campaign.json` output and publishing render paths to the final file.
 
 ### 7. Generate Thumbnail
 
-Use or update:
+Follow `references/design-system.md`. For existing series layouts, use `videos/scripts/generate_series_thumbnails.py` with a campaign-specific folder filter after adding the intended specification. It writes the campaign cover and synchronizes the configured upload copy when metadata exists. Do not regenerate unrelated campaigns. For standalone thumbnails, use or update:
 
 ```text
 videos/scripts/generate_thumbnails.py
@@ -151,7 +162,7 @@ Generate a single new campaign thumbnail:
 python .\videos\scripts\generate_thumbnails.py --slug <safe-slug> --text "TRUST THAT\nTRAVELS" --background shared/images/marketing/marketing-hero-trust-fabric.png
 ```
 
-For the built-in campaign set, run without arguments.
+The standalone generator without arguments regenerates the entire built-in campaign set. Do not use that batch mode unless the user explicitly requests regeneration of that set; for an individual campaign, pass its specific `--slug`, `--text` and `--background`. Likewise, never run the series generator without a campaign filter unless the user explicitly requests the full series set.
 
 Final thumbnail path:
 
@@ -197,6 +208,12 @@ Get-Content -Raw .\campaigns\<path>\campaign.json | ConvertFrom-Json > $null
 
 Before calling the campaign complete:
 
+- `evidence.md` and `review.md` complete; no unresolved blocking claims
+- implementation/docs/test distinctions and current release availability checked across all relevant surfaces
+- claim-level citations, reproducible reader check, and public Website/docs/demo/GitHub links verified
+- final thumbnail inspected at full resolution and 320 × 180 against the design system
+- derived assets contain no new unsupported claims
+- exact final assets and destination channels explicitly approved before publication
 - article approved by user
 - voiceover and SSML created
 - `VOICE_PLAN.md` updated
