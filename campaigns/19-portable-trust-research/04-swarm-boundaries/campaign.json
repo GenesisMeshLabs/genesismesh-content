@@ -1,0 +1,53 @@
+{
+  "slug": "swarm-boundaries",
+  "title": "A swarm needs boundaries, not just coordination",
+  "series_order": 4,
+  "audience": [
+    "system builders",
+    "security engineers",
+    "independent operators"
+  ],
+  "primary_message": "A swarm needs boundaries, not just coordination",
+  "call_to_action": "Pick one handoff in your workflow: which component checks permission immediately before the change?",
+  "source_docs": [
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/VISION.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/governed-changes.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/delegation-chain.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/process-level-mediation.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/sdk/index.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/security-model.md",
+    "https://arxiv.org/abs/2504.00587",
+    "https://www.youtube.com/watch?v=gp5yqnNQdZI",
+    "https://genesismesh.org",
+    "https://docs.genesismesh.org",
+    "https://mesh.genesismesh.org",
+    "https://github.com/GenesisMeshLabs"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail_alt_text": "Delegate with limits. A network of connected nodes illustrates coordinated agents whose individual actions still need an authority boundary.",
+  "status": "published",
+  "channels": [
+    "patreon",
+    "article",
+    "linkedin"
+  ],
+  "thumbnail": "../../../videos/thumbnails/swarm-boundaries.png",
+  "publishing": {
+    "patreon": {
+      "title": "A swarm needs boundaries, not just coordination",
+      "url": "https://www.patreon.com/GenesisMeshLabs/posts/swarm-needs-not-174297241",
+      "published_at": "2026-11-04",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "url": "",
+      "status": "draft_not_published"
+    }
+  },
+  "article_approved": true,
+  "published": true,
+  "media_production": "thumbnail_ready_audio_video_not_started",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "5b54711ed4ed721fcdbaad53e9527b6f19c86d660a22f4205f59eb19006216e9",
+  "article_updated_at": "2026-11-04"
+}
