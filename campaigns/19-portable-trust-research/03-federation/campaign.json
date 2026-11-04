@@ -1,0 +1,60 @@
+{
+  "slug": "federation",
+  "title": "Federation without surrendering local control",
+  "status": "scheduled",
+  "series_order": 3,
+  "idea_number": 12,
+  "audience": [
+    "system builders",
+    "security engineers",
+    "independent operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Federation without surrendering local control",
+  "call_to_action": "If you could federate one permission with a partner today, which would it be, and who would retain the power to withdraw it?",
+  "source_docs": [
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/recognition-treaties.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/treaty.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/independent-sovereigns.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/VISION.md",
+    "https://arxiv.org/abs/2609.06595",
+    "https://www.youtube.com/watch?v=y3GBM5h-RdY",
+    "https://genesismesh.org",
+    "https://docs.genesismesh.org",
+    "https://mesh.genesismesh.org",
+    "https://github.com/GenesisMeshLabs"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/federation.png",
+  "publishing": {
+    "patreon": {
+      "title": "Federation without surrendering local control",
+      "url": "https://www.patreon.com/GenesisMeshLabs/posts/federation-local-174297216",
+      "status": "scheduled",
+      "thumbnail": "thumbnail.png",
+      "audience": "public",
+      "scheduled_at": "2026-11-06T09:00:00+01:00",
+      "timezone": "Europe/Stockholm"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": ""
+    },
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed",
+      "source_review_date": "2026-11-04"
+    }
+  },
+  "article_approved": true,
+  "published": false,
+  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "thumbnail_alt_text": "Trust across boundaries. Two independent nodes exchange signals above a verification symbol, illustrating scoped recognition between operators, not universal approval.",
+  "word_count": 805,
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "3317942c1ef26ee20b7b8b9971c03979cc83ba6f3d07794c388252eb4fe6dcff"
+}

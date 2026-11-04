@@ -1,0 +1,58 @@
+{
+  "slug": "iot-freshness",
+  "title": "Offline IoT trust has a freshness budget",
+  "status": "scheduled",
+  "series_order": 6,
+  "idea_number": 13,
+  "audience": [
+    "system builders",
+    "security engineers",
+    "independent operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Offline IoT trust has a freshness budget",
+  "call_to_action": "For your device, which action has the smallest tolerance for stale authority?",
+  "source_docs": [
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/edge-agent.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md",
+    "https://d2j16w31g89z0j.cloudfront.net/site/icoin2026/abs/P1-27.pdf",
+    "https://www.youtube.com/watch?v=J7OpYQy3ZkU",
+    "https://genesismesh.org",
+    "https://docs.genesismesh.org",
+    "https://mesh.genesismesh.org",
+    "https://github.com/GenesisMeshLabs"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/iot-freshness.png",
+  "publishing": {
+    "patreon": {
+      "title": "Offline IoT trust has a freshness budget",
+      "url": "https://www.patreon.com/GenesisMeshLabs/posts/offline-iot-has-174297309",
+      "status": "scheduled",
+      "thumbnail": "thumbnail.png",
+      "audience": "public",
+      "scheduled_at": "2026-11-06T16:00:00+01:00",
+      "timezone": "Europe/Stockholm"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": ""
+    },
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed",
+      "source_review_date": "2026-11-04"
+    }
+  },
+  "article_approved": true,
+  "published": false,
+  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "thumbnail_alt_text": "How old is trust? An edge-device chip illustrates the need to limit the age of cached authority information while disconnected.",
+  "word_count": 879,
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "2806797542157754e63593ab8c07a770e197e16051f72b8c47db7d23136b5179"
+}

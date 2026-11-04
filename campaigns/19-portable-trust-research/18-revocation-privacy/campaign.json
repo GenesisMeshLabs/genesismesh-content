@@ -1,0 +1,58 @@
+{
+  "slug": "revocation-privacy",
+  "title": "Revocation is a privacy problem too",
+  "status": "reviewed",
+  "category": "privacy",
+  "audience": [
+    "builders",
+    "security",
+    "operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Revocation tells a verifier when to stop accepting a credential. Its published metadata can also reveal activity.",
+  "call_to_action": "Inspect the linked example and its failure path before integrating.",
+  "source_docs": [
+    "https://arxiv.org/abs/2501.17089",
+    "https://docs.genesismesh.org/operations/revocation.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/crl.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/revocation-privacy.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "Revocation is a privacy problem too",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "approval": {
+    "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
+    "patreon_publication": false
+  },
+  "idea_number": 18,
+  "series_order": 18,
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail_alt_text": "A status feed and an observing eye illustrate the privacy question raised by credential-status checks.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "4bf0e77a31820cbad2fd85ea909e7d4fe1c5edd89c5d87df9aad81cde84d0f9a"
+}

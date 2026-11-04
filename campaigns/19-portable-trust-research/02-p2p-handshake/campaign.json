@@ -1,0 +1,64 @@
+{
+  "slug": "p2p-handshake",
+  "title": "P2P transport is only half the handshake",
+  "status": "scheduled",
+  "series_order": 2,
+  "idea_number": 10,
+  "audience": [
+    "system builders",
+    "security engineers",
+    "independent operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "P2P transport is only half the handshake",
+  "call_to_action": "Which part of your P2P stack can refuse a specific action after authentication succeeds?",
+  "source_docs": [
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/transport/noise_handshake.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/node/peer_identity.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/development/strategy.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/rust-gateway.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/security-model.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/context/decisions.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/tests/test_attestation_boundary.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/tests/test_boundary_policy.py",
+    "https://arxiv.org/abs/2511.11619",
+    "https://www.youtube.com/watch?v=E2UQRM7c3Vo",
+    "https://genesismesh.org",
+    "https://docs.genesismesh.org",
+    "https://mesh.genesismesh.org",
+    "https://github.com/GenesisMeshLabs"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/p2p-handshake.png",
+  "publishing": {
+    "patreon": {
+      "title": "P2P transport is only half the handshake",
+      "url": "https://www.patreon.com/GenesisMeshLabs/posts/p2p-transport-is-174297160",
+      "status": "scheduled",
+      "thumbnail": "thumbnail.png",
+      "audience": "public",
+      "scheduled_at": "2026-11-05T09:00:00+01:00",
+      "timezone": "Europe/Stockholm"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": ""
+    },
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed",
+      "source_review_date": "2026-11-04"
+    }
+  },
+  "article_approved": true,
+  "published": false,
+  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "thumbnail_alt_text": "Connected. Authorized? Requests approach a doorway, illustrating that an established connection does not itself grant permission.",
+  "word_count": 752,
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "10425c15b33eec14bc1fdacb06363090fbfe5116eb0a9d33435da05923ee7053"
+}

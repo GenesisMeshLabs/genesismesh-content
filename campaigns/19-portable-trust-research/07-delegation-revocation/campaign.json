@@ -1,0 +1,51 @@
+{
+  "slug": "delegation-revocation",
+  "title": "How do you revoke one delegation without breaking everything?",
+  "status": "reviewed",
+  "category": "Delegation",
+  "audience": [
+    "builders",
+    "security engineers",
+    "system operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "A supplied chain is checked for parent linkage, terms binding, contained capabilities, validity and signatures.",
+  "call_to_action": "Inspect the linked documented flow and test its stated refusal in your own environment.",
+  "source_docs": [
+    "https://docs.genesismesh.org/examples/delegation-chain.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py",
+    "https://arxiv.org/abs/2608.30091"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail": "../../../videos/thumbnails/delegation-revocation.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "How do you revoke one delegation without breaking everything?",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "idea_number": 2,
+  "series_order": 7,
+  "thumbnail_alt_text": "A conceptual four-node delegation graph with one crossed path asks which delegation was revoked; it does not claim graph-preserving revocation support.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "31f61006635c4383d6640f4f63a8e8463d0cc5ef994bf24f548cf0890d126f16"
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "identity-mobility",
+  "title": "Identity should survive a network move",
+  "status": "reviewed",
+  "category": "identity",
+  "audience": [
+    "builders",
+    "security",
+    "operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "An address can change without creating a new trust relationship. But a familiar identifier is not proof that the current process still holds valid authority.",
+  "call_to_action": "Inspect the linked example and its failure path before integrating.",
+  "source_docs": [
+    "https://arxiv.org/abs/2601.14567",
+    "https://docs.genesismesh.org/rfcs/rfc-001-sovereign-identity.html",
+    "https://docs.genesismesh.org/concepts/security-model.html",
+    "https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/public.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_peer_identity_renewal.py"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/identity-mobility.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "Identity should survive a network move",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "approval": {
+    "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
+    "patreon_publication": false
+  },
+  "idea_number": 11,
+  "series_order": 13,
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail_alt_text": "One identity connects to edge and cloud endpoints while the address changes; the illustration does not claim automatic migration.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "461d4310542d44ce0455d85bc2b2547ed4728b57d35c5d0f3172907291a94377"
+}

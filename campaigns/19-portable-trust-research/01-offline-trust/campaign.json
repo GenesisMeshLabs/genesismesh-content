@@ -4,16 +4,14 @@
   "status": "published",
   "series_order": 1,
   "idea_number": 1,
-  "release_week": 1,
-  "release_slot": 1,
   "audience": [
     "system builders",
     "security engineers",
     "independent operators"
   ],
   "channels": [
-    "patreon",
     "article",
+    "patreon",
     "linkedin"
   ],
   "primary_message": "Pre-issued grants bound offline authority; revocation freshness, configured exceptions and later evidence admission remain distinct.",
@@ -31,21 +29,24 @@
     "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/docs/verifier.md"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
-  "voice": "",
-  "voice_role": "",
-  "images": [],
   "thumbnail": "../../../videos/thumbnails/offline-trust.png",
-  "output": "",
   "publishing": {
     "patreon": {
       "title": "Offline trust and revocation: what a disconnected system can know",
       "url": "https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054",
       "published_at": "2026-11-04",
-      "thumbnail": "thumbnail.png"
+      "thumbnail": "thumbnail.png",
+      "status": "published",
+      "audience": "public"
     },
     "linkedin": {
-      "url": "",
-      "status": "draft_not_published"
+      "status": "draft_not_published",
+      "url": ""
+    },
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed",
+      "source_review_date": "2026-11-04"
     }
   },
   "article_approved": true,

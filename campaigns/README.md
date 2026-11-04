@@ -88,8 +88,6 @@ Use the stable slug in each `campaign.json` with the existing narration and vide
 
 ## Portable Trust Research
 
-Research-led articles are published here alongside their Patreon release. Only released articles are included; LinkedIn publication and media production are tracked separately.
+The complete 24-idea research collection is available in the repository. Patreon publication is tracked separately: two articles are live, four retain their November 5-6 schedules, and 18 additional articles are not scheduled. LinkedIn drafts remain unsent.
 
-| Folder | Title | Published |
-|---|---|---|
-| `19-portable-trust-research/01-offline-trust` | Offline trust and revocation: what a disconnected system can know | [Patreon, 2026-11-04](https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054) |
+See the [full research inventory](19-portable-trust-research/README.md) for every article, source/review packet and Patreon state. Repository publication no longer waits for each Patreon release.

@@ -1,0 +1,487 @@
+{
+  "scope": "The eighteen additional research covers; existing six covers are excluded",
+  "source_repository": "GenesisMeshLabs/genesismesh-content",
+  "template_source_commit": "3ccf2dd7caaeb9d0521949c3e9f8d9c0786d21ad",
+  "generator": "videos/scripts/generate_research_thumbnails.py",
+  "generator_sha256": "1272aa836a864e0ea5e2578378d4f13e76c5240ac61395f225ebe899c40e4cdd",
+  "font": {
+    "name": "arialbd.ttf",
+    "sha256": "4d59199834e7439c67ea4949407639961060b21b173833f566eb60ac6fd8f5af"
+  },
+  "pillow_version": "12.3.0",
+  "source_assets": [
+    {
+      "path": "shared/images/brand/logo-reverse.png",
+      "sha256": "3bae127b4f7e82c6b43d643fc7f66673c661af051de52477672001b4347cca0e",
+      "git_blob_sha": "6487d60ee35718de8c3ee16163a0a3777b9f6be4"
+    },
+    {
+      "path": "shared/images/brand/background.png",
+      "sha256": "4f3803d02739d48772fe54c1ecd7492a3d5cdec65fd6a41855133598bb3a8f9b",
+      "git_blob_sha": "8dcbbd29f236a85b57bc29b4ecc053e40cee16e7"
+    },
+    {
+      "path": "shared/images/marketing/marketing-provenance-chain.png",
+      "sha256": "f8c7007bfb61a9de1a1b6851c56183b9c9a6f5580c466576a086ee769a6f4ac7",
+      "git_blob_sha": "832ba4b3bf5252389ddb3ddb193c6657cf92880d"
+    },
+    {
+      "path": "shared/images/marketing/marketing-independent-operators.png",
+      "sha256": "eea7cb73275488484dc6ebd3cadf936f82d8e0894096472dcaa870d7574b20ed",
+      "git_blob_sha": "c5b4e24990144158202a3d98ea2e45c8121dc881"
+    }
+  ],
+  "status": "Reviewed artifact snapshot; regeneration requires renewed visual review",
+  "covers": [
+    {
+      "idea_id": 2,
+      "series_label": "PORTABLE TRUST / IDEA 02",
+      "hook": "WHICH PATH\nWAS REVOKED?",
+      "hook_font_pixels": 80,
+      "motif": "revoke_path",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A conceptual four-node delegation graph with one crossed path asks which delegation was revoked; it does not claim graph-preserving revocation support.",
+      "sha256": "a26e2b61904d45fde68a5637ae7312213ec405f2c81602cc4b11073021c7616f",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        255,
+        190,
+        80
+      ],
+      "cover": "campaigns/19-portable-trust-research/07-delegation-revocation/thumbnail.png",
+      "upload_copy": "videos/thumbnails/delegation-revocation.png",
+      "upload_sha256": "a26e2b61904d45fde68a5637ae7312213ec405f2c81602cc4b11073021c7616f",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 3,
+      "series_label": "PORTABLE TRUST / IDEA 03",
+      "hook": "WHO GETS\nTO DECIDE?",
+      "hook_font_pixels": 96,
+      "motif": "decision",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A proposal sits above a distinct policy boundary, asking who decides whether an action is authorized.",
+      "sha256": "74038535f0feb8a6ba93cc8abe688d06281c507396cad22e9673dabba91d9625",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/08-reasoning-and-authority/thumbnail.png",
+      "upload_copy": "videos/thumbnails/reasoning-and-authority.png",
+      "upload_sha256": "74038535f0feb8a6ba93cc8abe688d06281c507396cad22e9673dabba91d9625",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 5,
+      "series_label": "PORTABLE TRUST / IDEA 05",
+      "hook": "WHAT'S\nMISSING?",
+      "hook_font_pixels": 96,
+      "motif": "missing",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "Numbered evidence rows include a visible gap, asking what a signed audit history may leave out.",
+      "sha256": "ca1dc4c7e69900c0546454df5f655778a5f70dff7de8a3b7acbc0656b00505df",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/09-audit-completeness/thumbnail.png",
+      "upload_copy": "videos/thumbnails/audit-completeness.png",
+      "upload_sha256": "ca1dc4c7e69900c0546454df5f655778a5f70dff7de8a3b7acbc0656b00505df",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 6,
+      "series_label": "PORTABLE TRUST / IDEA 06",
+      "hook": "LIMITS AT\nEVERY HOP",
+      "hook_font_pixels": 96,
+      "motif": "hops",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "MCP, A2A and HTTP boxes cross separate boundaries, illustrating the need to preserve and recheck limits at each handoff.",
+      "sha256": "78e27f8f42cd24ef990875d2cf298de6e3bdb1e7f5481f52a1569c657f5dfc85",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        178,
+        150,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/10-cross-system-limits/thumbnail.png",
+      "upload_copy": "videos/thumbnails/cross-system-limits.png",
+      "upload_sha256": "78e27f8f42cd24ef990875d2cf298de6e3bdb1e7f5481f52a1569c657f5dfc85",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 7,
+      "series_label": "PORTABLE TRUST / IDEA 07",
+      "hook": "ASSUME\nCOMPROMISE",
+      "hook_font_pixels": 94,
+      "motif": "compromise",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A marked actor approaches a resource boundary through a question mark; the illustration asks what remains protected after compromise.",
+      "sha256": "5241782b68e82fe7a98f51c2d48653417e7a021df0c9e0b8cf11e445d97c78d6",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        255,
+        190,
+        80
+      ],
+      "cover": "campaigns/19-portable-trust-research/11-compromised-agent/thumbnail.png",
+      "upload_copy": "videos/thumbnails/compromised-agent.png",
+      "upload_sha256": "5241782b68e82fe7a98f51c2d48653417e7a021df0c9e0b8cf11e445d97c78d6",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 8,
+      "series_label": "PORTABLE TRUST / IDEA 08",
+      "hook": "REPUTATION\nIS NOT\nPERMISSION",
+      "hook_font_pixels": 84,
+      "motif": "reputation",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A feedback star and a permission card are separated by the words IS NOT, distinguishing reputation from authorization.",
+      "sha256": "aa56c0b9aa55da316f66c1f6a54e2f988839deb7021f1176444ed5a683681d70",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/12-reputation-and-permission/thumbnail.png",
+      "upload_copy": "videos/thumbnails/reputation-and-permission.png",
+      "upload_sha256": "aa56c0b9aa55da316f66c1f6a54e2f988839deb7021f1176444ed5a683681d70",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 11,
+      "series_label": "PORTABLE TRUST / IDEA 11",
+      "hook": "IDENTITY\nON THE MOVE",
+      "hook_font_pixels": 94,
+      "motif": "move",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "One identity connects to edge and cloud endpoints while the address changes; the illustration does not claim automatic migration.",
+      "sha256": "5b5887a4fbc6a86ee7e25fe04fe3646a5c4df14c44f3a597e812f487b84ca0af",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        178,
+        150,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/13-identity-mobility/thumbnail.png",
+      "upload_copy": "videos/thumbnails/identity-mobility.png",
+      "upload_sha256": "5b5887a4fbc6a86ee7e25fe04fe3646a5c4df14c44f3a597e812f487b84ca0af",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 14,
+      "series_label": "PORTABLE TRUST / IDEA 14",
+      "hook": "WHO DID\nWHAT?",
+      "hook_font_pixels": 96,
+      "motif": "accountable",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A conceptual sequence distinguishes identity, policy, action and evidence in an accountable interaction.",
+      "sha256": "3a37d3db33739fc63803724f0659acd36d75564e22752d1c495f1947ec5e7d3d",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/14-interaction-accountability/thumbnail.png",
+      "upload_copy": "videos/thumbnails/interaction-accountability.png",
+      "upload_sha256": "3a37d3db33739fc63803724f0659acd36d75564e22752d1c495f1947ec5e7d3d",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 15,
+      "series_label": "PORTABLE TRUST / IDEA 15",
+      "hook": "ONE MEMBER\nCOMPROMISED",
+      "hook_font_pixels": 84,
+      "motif": "member",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A small team graph has one crossed member, asking how delegated scope changes the impact of compromise.",
+      "sha256": "d80c07028215fd6c682f32b33aae5b5de9fb84a502f29faab7ef1a0bd639bfff",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        255,
+        190,
+        80
+      ],
+      "cover": "campaigns/19-portable-trust-research/15-swarm-containment/thumbnail.png",
+      "upload_copy": "videos/thumbnails/swarm-containment.png",
+      "upload_sha256": "d80c07028215fd6c682f32b33aae5b5de9fb84a502f29faab7ef1a0bd639bfff",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 16,
+      "series_label": "PORTABLE TRUST / IDEA 16",
+      "hook": "CLAIMS\nNEED PROOF",
+      "hook_font_pixels": 96,
+      "motif": "claims",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A speech bubble saying I AM leads to a proof question, distinguishing a conversational claim from verified identity.",
+      "sha256": "d256258d9937e8440accce75d193422b347723e615cceffa351ee96ab822dadb",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/16-identity-checks/thumbnail.png",
+      "upload_copy": "videos/thumbnails/identity-checks.png",
+      "upload_sha256": "d256258d9937e8440accce75d193422b347723e615cceffa351ee96ab822dadb",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 17,
+      "series_label": "PORTABLE TRUST / IDEA 17",
+      "hook": "WHAT DOES\nID REVEAL?",
+      "hook_font_pixels": 96,
+      "motif": "disclosure",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A credential card names NAME, ISSUER and SCOPE; the issuer field is highlighted to ask what identifying information is disclosed.",
+      "sha256": "b1d240b7d02e5bbc715f644d594715ff2459f2657832fff73d025a702899f8f7",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/17-issuer-privacy/thumbnail.png",
+      "upload_copy": "videos/thumbnails/issuer-privacy.png",
+      "upload_sha256": "b1d240b7d02e5bbc715f644d594715ff2459f2657832fff73d025a702899f8f7",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 18,
+      "series_label": "PORTABLE TRUST / IDEA 18",
+      "hook": "WHO CAN SEE\nREVOCATION?",
+      "hook_font_pixels": 90,
+      "motif": "status_privacy",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A status feed and an observing eye illustrate the privacy question raised by credential-status checks.",
+      "sha256": "af80eb8da0ea92a71fbbda01f651b7a2b37aa0fa170264c1bc9edd16e5eefc4c",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/18-revocation-privacy/thumbnail.png",
+      "upload_copy": "videos/thumbnails/revocation-privacy.png",
+      "upload_sha256": "af80eb8da0ea92a71fbbda01f651b7a2b37aa0fa170264c1bc9edd16e5eefc4c",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 19,
+      "series_label": "PORTABLE TRUST / IDEA 19",
+      "hook": "SAME ID.\nSAME AGENT?",
+      "hook_font_pixels": 90,
+      "motif": "same_agent",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "One identity points to before and after states, asking whether persistent identity proves continuity of current behavior.",
+      "sha256": "dba389da1e9e30b61b126eaf6b285a5a3bc784b9845d0b19fcf42476db64d128",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        178,
+        150,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/19-identity-continuity/thumbnail.png",
+      "upload_copy": "videos/thumbnails/identity-continuity.png",
+      "upload_sha256": "dba389da1e9e30b61b126eaf6b285a5a3bc784b9845d0b19fcf42476db64d128",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 20,
+      "series_label": "PORTABLE TRUST / IDEA 20",
+      "hook": "WHO TRUSTS\nWHOM?",
+      "hook_font_pixels": 96,
+      "motif": "telecom",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "Two independently outlined network domains illustrate cross-domain authorization as a design question, not a deployed 6G system.",
+      "sha256": "f0d6255256e5504933d303fe8d303600d9a34db70db83d70c535fc6952f52fa1",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        255,
+        128,
+        102
+      ],
+      "cover": "campaigns/19-portable-trust-research/20-cross-domain-6g/thumbnail.png",
+      "upload_copy": "videos/thumbnails/cross-domain-6g.png",
+      "upload_sha256": "f0d6255256e5504933d303fe8d303600d9a34db70db83d70c535fc6952f52fa1",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 21,
+      "series_label": "PORTABLE TRUST / IDEA 21",
+      "hook": "WHO ALLOWED\nTHE PAYMENT?",
+      "hook_font_pixels": 84,
+      "motif": "car_mandate",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "An owner mandate points toward a car, illustrating bounded machine-payment authority, not an implemented payment network.",
+      "sha256": "aa8b15399fb397c103f9bd95dfd8ac1b2ee7f74204d6f469bca93317db424159",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        255,
+        190,
+        80
+      ],
+      "cover": "campaigns/19-portable-trust-research/21-vehicle-mandates/thumbnail.png",
+      "upload_copy": "videos/thumbnails/vehicle-mandates.png",
+      "upload_sha256": "aa8b15399fb397c103f9bd95dfd8ac1b2ee7f74204d6f469bca93317db424159",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 22,
+      "series_label": "PORTABLE TRUST / IDEA 22",
+      "hook": "PAID.\nAUTHORIZED?",
+      "hook_font_pixels": 92,
+      "motif": "paid",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "Payment and permission appear in separate panels joined by a question mark, asking whether a settled payment matched the mandate.",
+      "sha256": "74de7831a3e4f501e5bc72da2d6fbc293e8ac684fa1007099f8a7664e64ebce0",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        255,
+        190,
+        80
+      ],
+      "cover": "campaigns/19-portable-trust-research/22-purchase-binding/thumbnail.png",
+      "upload_copy": "videos/thumbnails/purchase-binding.png",
+      "upload_sha256": "74de7831a3e4f501e5bc72da2d6fbc293e8ac684fa1007099f8a7664e64ebce0",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 23,
+      "series_label": "PORTABLE TRUST / IDEA 23",
+      "hook": "OFFLINE.\nWHAT'S PROVEN?",
+      "hook_font_pixels": 72,
+      "motif": "offline_payment",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A broken link separates an authority from a local-proof question, illustrating offline authorization limits without promising payment settlement.",
+      "sha256": "d80fa34033f0c05ec0784d9e47a469dcb6e7c90ce21a9dd6f355767eb82326ff",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        255,
+        128,
+        102
+      ],
+      "cover": "campaigns/19-portable-trust-research/23-offline-payments/thumbnail.png",
+      "upload_copy": "videos/thumbnails/offline-payments.png",
+      "upload_sha256": "d80fa34033f0c05ec0784d9e47a469dcb6e7c90ce21a9dd6f355767eb82326ff",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    },
+    {
+      "idea_id": 24,
+      "series_label": "PORTABLE TRUST / IDEA 24",
+      "hook": "HOW MUCH\nMUST YOU\nREVEAL?",
+      "hook_font_pixels": 84,
+      "motif": "minimum",
+      "motif_scope": "Conceptual illustration; not product output or a claim of research implementation",
+      "alt_text": "A document highlights one of several fields, asking which information is necessary without claiming anonymity or a zero-knowledge implementation.",
+      "sha256": "f944a9ff27f04a07aefbe4a6f213ccecaaad1bd9a2c4d71e275a4b6643459179",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGB",
+      "accent": [
+        97,
+        218,
+        255
+      ],
+      "cover": "campaigns/19-portable-trust-research/24-payment-disclosure/thumbnail.png",
+      "upload_copy": "videos/thumbnails/payment-disclosure.png",
+      "upload_sha256": "f944a9ff27f04a07aefbe4a6f213ccecaaad1bd9a2c4d71e275a4b6643459179",
+      "visual_review": "Passed actual-pixel review at full resolution and 320x180, color and grayscale",
+      "reviewed_at_utc": "2026-11-04T21:19:40.289827+00:00"
+    }
+  ]
+}

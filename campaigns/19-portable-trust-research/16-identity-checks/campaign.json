@@ -1,0 +1,57 @@
+{
+  "slug": "identity-checks",
+  "title": "Can an agent talk its way past an identity check?",
+  "status": "reviewed",
+  "category": "identity",
+  "audience": [
+    "builders",
+    "security",
+    "operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "A familiar name and a convincing explanation do not establish a peer's identity.",
+  "call_to_action": "Inspect the linked example and its failure path before integrating.",
+  "source_docs": [
+    "https://arxiv.org/abs/2511.02841",
+    "https://docs.genesismesh.org/concepts/security-model.html",
+    "https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_node_vouching_horizon.py"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/identity-checks.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "Can an agent talk its way past an identity check?",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "approval": {
+    "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
+    "patreon_publication": false
+  },
+  "idea_number": 16,
+  "series_order": 16,
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail_alt_text": "A speech bubble saying I AM leads to a proof question, distinguishing a conversational claim from verified identity.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "ffb9ceed104f31518b69de59fc6e48d78ff03c2a137b770f2ba00b26fe4133c4"
+}

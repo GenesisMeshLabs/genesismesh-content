@@ -1,0 +1,51 @@
+{
+  "slug": "cross-system-limits",
+  "title": "Can an agent keep its limits when it crosses systems?",
+  "status": "reviewed",
+  "category": "Interoperability",
+  "audience": [
+    "builders",
+    "security engineers",
+    "system operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Issuance refuses capabilities outside the supplied agreement or delegation scope.",
+  "call_to_action": "Inspect the linked documented flow and test its stated refusal in your own environment.",
+  "source_docs": [
+    "https://docs.genesismesh.org/examples/invocation-bound-tokens.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py",
+    "https://arxiv.org/abs/2603.24775"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail": "../../../videos/thumbnails/cross-system-limits.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "Can an agent keep its limits when it crosses systems?",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "idea_number": 6,
+  "series_order": 10,
+  "thumbnail_alt_text": "MCP, A2A and HTTP boxes cross separate boundaries, illustrating the need to preserve and recheck limits at each handoff.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "3a11e71cf3cba793c6df84538ccad05a38018613059a0ef2bd27ee0d16f2d284"
+}

@@ -1,0 +1,205 @@
+{
+  "review_date": "2026-11-04",
+  "repositories": [
+    {
+      "repo": "genesismesh",
+      "sha": "a54b2d81f205c9b0203158f846f7ad44dc677063",
+      "date": "2026-11-04T08:32:56Z",
+      "url": "https://github.com/GenesisMeshLabs/genesismesh/commit/a54b2d81f205c9b0203158f846f7ad44dc677063",
+      "message": "Merge pull request #138 from GenesisMeshLabs/release/1.9.1\n\nrelease: 1.9.1",
+      "release": {
+        "tag": "v1.9.1",
+        "url": "https://github.com/GenesisMeshLabs/genesismesh/releases/tag/v1.9.1",
+        "published_at": "2026-11-04T08:56:05Z",
+        "draft": false,
+        "prerelease": false,
+        "assets": []
+      }
+    },
+    {
+      "repo": "sdk-typescript",
+      "sha": "8154ca7ac459ffbcd22d35900ca72f8093165bfc",
+      "date": "2026-11-04T08:42:49Z",
+      "url": "https://github.com/GenesisMeshLabs/sdk-typescript/commit/8154ca7ac459ffbcd22d35900ca72f8093165bfc",
+      "message": "Merge pull request #73 from GenesisMeshLabs/release/1.9.1\n\nrelease: 1.9.1",
+      "release": {
+        "tag": "v1.9.1",
+        "url": "https://github.com/GenesisMeshLabs/sdk-typescript/releases/tag/v1.9.1",
+        "published_at": "2026-11-04T08:56:26Z",
+        "draft": false,
+        "prerelease": false,
+        "assets": []
+      }
+    },
+    {
+      "repo": "sdk-go",
+      "sha": "ade949888eacd0ccc16126941427e1211f82aec8",
+      "date": "2026-11-04T08:42:49Z",
+      "url": "https://github.com/GenesisMeshLabs/sdk-go/commit/ade949888eacd0ccc16126941427e1211f82aec8",
+      "message": "Merge pull request #52 from GenesisMeshLabs/release/1.9.1\n\nrelease: 1.9.1",
+      "release": {
+        "tag": "v1.9.1",
+        "url": "https://github.com/GenesisMeshLabs/sdk-go/releases/tag/v1.9.1",
+        "published_at": "2026-11-04T08:56:46Z",
+        "draft": false,
+        "prerelease": false,
+        "assets": []
+      }
+    },
+    {
+      "repo": "sdk-rust",
+      "sha": "b67c248717d5d99aca6f4dad320692f3f6c07c69",
+      "date": "2026-11-04T08:42:48Z",
+      "url": "https://github.com/GenesisMeshLabs/sdk-rust/commit/b67c248717d5d99aca6f4dad320692f3f6c07c69",
+      "message": "Merge pull request #73 from GenesisMeshLabs/release/1.9.1\n\nrelease: 1.9.1",
+      "release": {
+        "tag": "v1.9.1",
+        "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/tag/v1.9.1",
+        "published_at": "2026-11-04T09:00:01Z",
+        "draft": false,
+        "prerelease": false,
+        "assets": [
+          {
+            "name": "edge.toml.example",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/edge.toml.example"
+          },
+          {
+            "name": "genesis-mesh-edge-1.9.1-aarch64-unknown-linux-musl",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-edge-1.9.1-aarch64-unknown-linux-musl"
+          },
+          {
+            "name": "genesis-mesh-edge-1.9.1-aarch64-unknown-linux-musl.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-edge-1.9.1-aarch64-unknown-linux-musl.sigstore.json"
+          },
+          {
+            "name": "genesis-mesh-edge-1.9.1-x86_64-unknown-linux-musl",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-edge-1.9.1-x86_64-unknown-linux-musl"
+          },
+          {
+            "name": "genesis-mesh-edge-1.9.1-x86_64-unknown-linux-musl.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-edge-1.9.1-x86_64-unknown-linux-musl.sigstore.json"
+          },
+          {
+            "name": "genesis-mesh-edge.service",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-edge.service"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl.buildinfo",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl.buildinfo"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl.sha256",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl.sha256"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-aarch64-unknown-linux-musl.sigstore.json"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl.buildinfo",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl.buildinfo"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl.sha256",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl.sha256"
+          },
+          {
+            "name": "genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/genesis-mesh-verify-1.9.1-x86_64-unknown-linux-musl.sigstore.json"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/SHA256SUMS"
+          },
+          {
+            "name": "SHA256SUMS-edge",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/SHA256SUMS-edge"
+          },
+          {
+            "name": "SHA256SUMS-edge.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/SHA256SUMS-edge.sigstore.json"
+          },
+          {
+            "name": "SHA256SUMS.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/sdk-rust/releases/download/v1.9.1/SHA256SUMS.sigstore.json"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "sdk-dotnet",
+      "sha": "241d99b7508b378ce7c613dfc0baeed7cc5df56c",
+      "date": "2026-11-04T08:42:49Z",
+      "url": "https://github.com/GenesisMeshLabs/sdk-dotnet/commit/241d99b7508b378ce7c613dfc0baeed7cc5df56c",
+      "message": "Merge pull request #88 from GenesisMeshLabs/release/1.9.1\n\nrelease: 1.9.1",
+      "release": {
+        "tag": "v1.9.1",
+        "url": "https://github.com/GenesisMeshLabs/sdk-dotnet/releases/tag/v1.9.1",
+        "published_at": "2026-11-04T09:46:20Z",
+        "draft": false,
+        "prerelease": false,
+        "assets": []
+      }
+    },
+    {
+      "repo": "gateway",
+      "sha": "2e6486ee6a6481adca1be3b9dae70a4ef32036f9",
+      "date": "2026-11-04T08:42:49Z",
+      "url": "https://github.com/GenesisMeshLabs/gateway/commit/2e6486ee6a6481adca1be3b9dae70a4ef32036f9",
+      "message": "Merge pull request #85 from GenesisMeshLabs/release/1.9.1\n\nrelease: 1.9.1",
+      "release": {
+        "tag": "v1.9.1",
+        "url": "https://github.com/GenesisMeshLabs/gateway/releases/tag/v1.9.1",
+        "published_at": "2026-11-04T09:21:51Z",
+        "draft": false,
+        "prerelease": false,
+        "assets": [
+          {
+            "name": "gateway-oci.tar",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/gateway-oci.tar"
+          },
+          {
+            "name": "gateway-oci.tar.sha256",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/gateway-oci.tar.sha256"
+          },
+          {
+            "name": "gateway-oci.tar.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/gateway-oci.tar.sigstore.json"
+          },
+          {
+            "name": "genesis-mesh-gateway-1.9.1-linux-amd64-glibc239.zip",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/genesis-mesh-gateway-1.9.1-linux-amd64-glibc239.zip"
+          },
+          {
+            "name": "genesis-mesh-gateway-1.9.1-linux-amd64-glibc239.zip.sha256",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/genesis-mesh-gateway-1.9.1-linux-amd64-glibc239.zip.sha256"
+          },
+          {
+            "name": "genesis-mesh-gateway-1.9.1-linux-amd64-glibc239.zip.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/genesis-mesh-gateway-1.9.1-linux-amd64-glibc239.zip.sigstore.json"
+          },
+          {
+            "name": "genesis-mesh-gateway-1.9.1-windows-amd64.zip",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/genesis-mesh-gateway-1.9.1-windows-amd64.zip"
+          },
+          {
+            "name": "genesis-mesh-gateway-1.9.1-windows-amd64.zip.sha256",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/genesis-mesh-gateway-1.9.1-windows-amd64.zip.sha256"
+          },
+          {
+            "name": "genesis-mesh-gateway-1.9.1-windows-amd64.zip.sigstore.json",
+            "url": "https://github.com/GenesisMeshLabs/gateway/releases/download/v1.9.1/genesis-mesh-gateway-1.9.1-windows-amd64.zip.sigstore.json"
+          }
+        ]
+      }
+    }
+  ]
+}

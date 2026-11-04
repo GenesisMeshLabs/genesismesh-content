@@ -27,8 +27,8 @@
   "thumbnail_alt_text": "Delegate with limits. A network of connected nodes illustrates coordinated agents whose individual actions still need an authority boundary.",
   "status": "published",
   "channels": [
-    "patreon",
     "article",
+    "patreon",
     "linkedin"
   ],
   "thumbnail": "../../../videos/thumbnails/swarm-boundaries.png",
@@ -37,11 +37,18 @@
       "title": "A swarm needs boundaries, not just coordination",
       "url": "https://www.patreon.com/GenesisMeshLabs/posts/swarm-needs-not-174297241",
       "published_at": "2026-11-04",
-      "thumbnail": "thumbnail.png"
+      "thumbnail": "thumbnail.png",
+      "status": "published",
+      "audience": "public"
     },
     "linkedin": {
-      "url": "",
-      "status": "draft_not_published"
+      "status": "draft_not_published",
+      "url": ""
+    },
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed",
+      "source_review_date": "2026-11-04"
     }
   },
   "article_approved": true,
@@ -49,5 +56,6 @@
   "media_production": "thumbnail_ready_audio_video_not_started",
   "source_reviewed_at": "2026-11-04",
   "article_sha256": "5b54711ed4ed721fcdbaad53e9527b6f19c86d660a22f4205f59eb19006216e9",
-  "article_updated_at": "2026-11-04"
+  "article_updated_at": "2026-11-04",
+  "idea_number": 9
 }

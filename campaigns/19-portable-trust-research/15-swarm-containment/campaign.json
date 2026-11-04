@@ -1,0 +1,61 @@
+{
+  "slug": "swarm-containment",
+  "title": "Can a swarm limit a compromised member?",
+  "status": "reviewed",
+  "category": "authorization",
+  "audience": [
+    "builders",
+    "security",
+    "operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "A specialist agent receives a reading task. After compromise, it asks to modify the dataset.",
+  "call_to_action": "Inspect the linked example and its failure path before integrating.",
+  "source_docs": [
+    "https://arxiv.org/abs/2609.00267",
+    "https://docs.genesismesh.org/examples/delegation-chain.html",
+    "https://docs.genesismesh.org/examples/process-level-mediation.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py",
+    "https://docs.genesismesh.org/reference/public-contract.html"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/swarm-containment.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "Can a swarm limit a compromised member?",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "approval": {
+    "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
+    "patreon_publication": false
+  },
+  "idea_number": 15,
+  "series_order": 15,
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail_alt_text": "A small team graph has one crossed member, asking how delegated scope changes the impact of compromise.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "d24ce76c2bae3b08aa9a9d20da1c53c4534b82bd9285a700dba40d1ec6994eac"
+}

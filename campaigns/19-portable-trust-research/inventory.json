@@ -1,0 +1,222 @@
+{
+  "review_date": "2026-11-04",
+  "total": 24,
+  "articles": [
+    {
+      "idea_number": 1,
+      "original_title": "What happens to trust when a device goes offline?",
+      "title": "Offline trust and revocation: what a disconnected system can know",
+      "folder": "01-offline-trust",
+      "patreon_status": "published",
+      "patreon_url": "https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054",
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 2,
+      "original_title": "How do you revoke one delegation without breaking everything?",
+      "title": "How do you revoke one delegation without breaking everything?",
+      "folder": "07-delegation-revocation",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 3,
+      "original_title": "The agent can reason. Should it grant itself authority?",
+      "title": "The agent can reason. Should it grant itself authority?",
+      "folder": "08-reasoning-and-authority",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 4,
+      "original_title": "Revoked, but still running: the actions that happen too late",
+      "title": "Revoked, but still running: the actions that happen too late",
+      "folder": "05-queued-actions",
+      "patreon_status": "scheduled",
+      "patreon_url": "https://www.patreon.com/GenesisMeshLabs/posts/revoked-but-that-174297277",
+      "scheduled_at": "2026-11-05T16:00:00+01:00"
+    },
+    {
+      "idea_number": 5,
+      "original_title": "A signed audit log does not tell the whole story",
+      "title": "A signed audit log does not tell the whole story",
+      "folder": "09-audit-completeness",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 6,
+      "original_title": "Can an agent keep its limits when it crosses systems?",
+      "title": "Can an agent keep its limits when it crosses systems?",
+      "folder": "10-cross-system-limits",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 7,
+      "original_title": "What if the agent is fully compromised?",
+      "title": "What if the agent is fully compromised?",
+      "folder": "11-compromised-agent",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 8,
+      "original_title": "Should an agent’s reputation give it authority?",
+      "title": "Should an agent's reputation give it authority?",
+      "folder": "12-reputation-and-permission",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 9,
+      "original_title": "A swarm needs boundaries, not just coordination",
+      "title": "A swarm needs boundaries, not just coordination",
+      "folder": "04-swarm-boundaries",
+      "patreon_status": "published",
+      "patreon_url": "https://www.patreon.com/GenesisMeshLabs/posts/swarm-needs-not-174297241",
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 10,
+      "original_title": "P2P transport is only half the handshake",
+      "title": "P2P transport is only half the handshake",
+      "folder": "02-p2p-handshake",
+      "patreon_status": "scheduled",
+      "patreon_url": "https://www.patreon.com/GenesisMeshLabs/posts/p2p-transport-is-174297160",
+      "scheduled_at": "2026-11-05T09:00:00+01:00"
+    },
+    {
+      "idea_number": 11,
+      "original_title": "Identity should survive a network move",
+      "title": "Identity should survive a network move",
+      "folder": "13-identity-mobility",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 12,
+      "original_title": "Federation without surrendering local control",
+      "title": "Federation without surrendering local control",
+      "folder": "03-federation",
+      "patreon_status": "scheduled",
+      "patreon_url": "https://www.patreon.com/GenesisMeshLabs/posts/federation-local-174297216",
+      "scheduled_at": "2026-11-06T09:00:00+01:00"
+    },
+    {
+      "idea_number": 13,
+      "original_title": "Offline IoT trust has a freshness budget",
+      "title": "Offline IoT trust has a freshness budget",
+      "folder": "06-iot-freshness",
+      "patreon_status": "scheduled",
+      "patreon_url": "https://www.patreon.com/GenesisMeshLabs/posts/offline-iot-has-174297309",
+      "scheduled_at": "2026-11-06T16:00:00+01:00"
+    },
+    {
+      "idea_number": 14,
+      "original_title": "Make agent-to-agent interactions accountable",
+      "title": "Make agent-to-agent interactions accountable",
+      "folder": "14-interaction-accountability",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 15,
+      "original_title": "Can a swarm limit a compromised member?",
+      "title": "Can a swarm limit a compromised member?",
+      "folder": "15-swarm-containment",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 16,
+      "original_title": "Can an agent talk its way past an identity check?",
+      "title": "Can an agent talk its way past an identity check?",
+      "folder": "16-identity-checks",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 17,
+      "original_title": "Can a credential reveal your organization even when it hides your name?",
+      "title": "Can a credential reveal your organization even when it hides your name?",
+      "folder": "17-issuer-privacy",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 18,
+      "original_title": "Revocation is a privacy problem too",
+      "title": "Revocation is a privacy problem too",
+      "folder": "18-revocation-privacy",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 19,
+      "original_title": "Your agent has an identity. Is it still the same agent?",
+      "title": "Your agent has an identity. Is it still the same agent?",
+      "folder": "19-identity-continuity",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 20,
+      "original_title": "Who trusts whom in a 6G network?",
+      "title": "Who trusts whom in a 6G network?",
+      "folder": "20-cross-domain-6g",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 21,
+      "original_title": "Your car can pay. Who gave it permission?",
+      "title": "Your car can pay. Who gave it permission?",
+      "folder": "21-vehicle-mandates",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 22,
+      "original_title": "A valid payment can still be an unauthorized purchase",
+      "title": "A valid payment can still be an unauthorized purchase",
+      "folder": "22-purchase-binding",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 23,
+      "original_title": "What can you trust when an offline payment happens?",
+      "title": "What can you trust when an offline payment happens?",
+      "folder": "23-offline-payments",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    },
+    {
+      "idea_number": 24,
+      "original_title": "Prove permission without exposing the whole payment trail",
+      "title": "Prove permission without exposing the whole payment trail",
+      "folder": "24-payment-disclosure",
+      "patreon_status": "not_scheduled",
+      "patreon_url": null,
+      "scheduled_at": null
+    }
+  ]
+}

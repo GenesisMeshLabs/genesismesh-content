@@ -1,0 +1,59 @@
+{
+  "slug": "interaction-accountability",
+  "title": "Make agent-to-agent interactions accountable",
+  "status": "reviewed",
+  "category": "evidence",
+  "audience": [
+    "builders",
+    "security",
+    "operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Who requested it? Who allowed it? What did the executor report doing?",
+  "call_to_action": "Inspect the linked example and its failure path before integrating.",
+  "source_docs": [
+    "https://arxiv.org/abs/2508.01332",
+    "https://docs.genesismesh.org/examples/execution-evidence-chain.html",
+    "https://docs.genesismesh.org/concepts/governed-changes.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/execution.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/execution.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_execution.py",
+    "https://docs.genesismesh.org/reference/public-contract.html"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/interaction-accountability.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "Make agent-to-agent interactions accountable",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "approval": {
+    "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
+    "patreon_publication": false
+  },
+  "idea_number": 14,
+  "series_order": 14,
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail_alt_text": "A conceptual sequence distinguishes identity, policy, action and evidence in an accountable interaction.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "53473c9121423126f78764ec94e78999ce78c0fad5c9062bcf841d0de7a99668"
+}

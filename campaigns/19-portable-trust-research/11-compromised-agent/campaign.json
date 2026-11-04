@@ -1,0 +1,51 @@
+{
+  "slug": "compromised-agent",
+  "title": "What if the agent is fully compromised?",
+  "status": "reviewed",
+  "category": "Execution controls",
+  "audience": [
+    "builders",
+    "security engineers",
+    "system operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Guard requires signed request, trusted decision/token and matching agreement before permitted spawn.",
+  "call_to_action": "Inspect the linked documented flow and test its stated refusal in your own environment.",
+  "source_docs": [
+    "https://docs.genesismesh.org/examples/process-level-mediation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_process_level_mediation.py",
+    "https://arxiv.org/abs/2609.00267"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail": "../../../videos/thumbnails/compromised-agent.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "What if the agent is fully compromised?",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "idea_number": 7,
+  "series_order": 11,
+  "thumbnail_alt_text": "A marked actor approaches a resource boundary through a question mark; the illustration asks what remains protected after compromise.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "5b7baa1e11273ca6f50b0d819d668697ac3c5fb26cde98df6fa0e7dd03da13cf"
+}

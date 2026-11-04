@@ -1,0 +1,66 @@
+{
+  "idea_number": 23,
+  "slug": "offline-payments",
+  "title": "What can you trust when an offline payment happens?",
+  "status": "reviewed",
+  "category": "Offline trust and payments",
+  "audience": [
+    "systems builders",
+    "security architects",
+    "operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Offline authorization and offline payment are different guarantees. A pre-issued grant can bound a device's permitted actions and support later examination of signed use records. It does not reserve funds, settle a payment or prevent double-spending across disconnected wallets.",
+  "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
+  "source_docs": [
+    "https://arxiv.org/abs/2408.06956",
+    "https://docs.genesismesh.org/examples/pre-issued-grants.html",
+    "https://docs.genesismesh.org/operations/grants.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L266",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L383",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/grants.py#L766",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/operations/grants.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L366",
+    "https://docs.genesismesh.org/reference/public-contract.html"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/offline-payments.png",
+  "cover_hook": "OFFLINE.\nWHAT'S PROVEN?",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "What can you trust when an offline payment happens?",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "approval": {
+    "writing": true,
+    "patreon_publication": false,
+    "linkedin_publication": false,
+    "repository_publication_authorized": true,
+    "technical_review": "pending_final_record",
+    "visual_review": "handled_by_root"
+  },
+  "research_scope": "Illustrative design discussion; no telecom/payment/deployment claim",
+  "series_order": 23,
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail_alt_text": "A broken link separates an authority from a local-proof question, illustrating offline authorization limits without promising payment settlement.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "4633376a9c8bcb9234a908b6ea3fd54307b0e646a1634da96e9bb2914839c3a3"
+}

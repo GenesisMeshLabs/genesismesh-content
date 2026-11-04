@@ -1,0 +1,58 @@
+{
+  "slug": "issuer-privacy",
+  "title": "Can a credential reveal your organization even when it hides your name?",
+  "status": "reviewed",
+  "category": "privacy",
+  "audience": [
+    "builders",
+    "security",
+    "operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Removing a name is not the same as hiding an affiliation.",
+  "call_to_action": "Inspect the linked example and its failure path before integrating.",
+  "source_docs": [
+    "https://arxiv.org/abs/2512.20234",
+    "https://docs.genesismesh.org/examples/selective-disclosure.html",
+    "https://docs.genesismesh.org/installation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py",
+    "https://docs.genesismesh.org/reference/public-contract.html"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/issuer-privacy.png",
+  "publishing": {
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed"
+    },
+    "patreon": {
+      "status": "not_scheduled",
+      "url": null,
+      "scheduled_at": null,
+      "title": "Can a credential reveal your organization even when it hides your name?",
+      "thumbnail": "thumbnail.png"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": null
+    }
+  },
+  "approval": {
+    "repository_publication": "Explicit user instruction to push all, pending review; parent coordinates.",
+    "patreon_publication": false
+  },
+  "idea_number": 17,
+  "series_order": 17,
+  "images": [
+    "thumbnail.png"
+  ],
+  "thumbnail_alt_text": "A credential card names NAME, ISSUER and SCOPE; the issuer field is highlighted to ask what identifying information is disclosed.",
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "8e477dd6ee4768169003ed52803ed24f0af11462cfcbd4417a9e2f8226a3ba5b"
+}

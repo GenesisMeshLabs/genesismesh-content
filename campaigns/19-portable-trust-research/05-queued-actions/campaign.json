@@ -1,0 +1,63 @@
+{
+  "slug": "queued-actions",
+  "title": "Revoked, but still running: the actions that happen too late",
+  "status": "scheduled",
+  "series_order": 5,
+  "idea_number": 4,
+  "audience": [
+    "system builders",
+    "security engineers",
+    "independent operators"
+  ],
+  "channels": [
+    "article",
+    "patreon",
+    "linkedin"
+  ],
+  "primary_message": "Revoked, but still running: the actions that happen too late",
+  "call_to_action": "Where is the last point your system can stop a queued action?",
+  "source_docs": [
+    "https://arxiv.org/abs/2609.21284",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/governed-changes.md",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/sdk/typescript/governance.md",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/161ef82f6c99f8656c424eab87ab92404cdf1c55/src/governance.ts",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/161ef82f6c99f8656c424eab87ab92404cdf1c55/src/outbox.ts",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/161ef82f6c99f8656c424eab87ab92404cdf1c55/src/evidence_store.ts",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/sdk/index.md",
+    "https://www.youtube.com/watch?v=gp5yqnNQdZI",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/out-of-band-changes.md",
+    "https://genesismesh.org",
+    "https://docs.genesismesh.org",
+    "https://mesh.genesismesh.org",
+    "https://github.com/GenesisMeshLabs"
+  ],
+  "slogan": "Genesis Mesh: portable trust for sovereign systems.",
+  "thumbnail": "../../../videos/thumbnails/queued-actions.png",
+  "publishing": {
+    "patreon": {
+      "title": "Revoked, but still running: the actions that happen too late",
+      "url": "https://www.patreon.com/GenesisMeshLabs/posts/revoked-but-that-174297277",
+      "status": "scheduled",
+      "thumbnail": "thumbnail.png",
+      "audience": "public",
+      "scheduled_at": "2026-11-05T16:00:00+01:00",
+      "timezone": "Europe/Stockholm"
+    },
+    "linkedin": {
+      "status": "draft_not_published",
+      "url": ""
+    },
+    "repository": {
+      "publication_authorized": true,
+      "review_status": "passed",
+      "source_review_date": "2026-11-04"
+    }
+  },
+  "article_approved": true,
+  "published": false,
+  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "thumbnail_alt_text": "Revoked. Still running? Linked blocks illustrate a sequence of queued work, asking whether revocation is checked before an external effect.",
+  "word_count": 949,
+  "source_reviewed_at": "2026-11-04",
+  "article_sha256": "0b482a025171f1350c4c1796a61e6465ecd4d6a8d042aaaaf79e137f5ccc61ef"
+}
