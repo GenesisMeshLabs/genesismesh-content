@@ -10,7 +10,7 @@ Before an outage, the operator needs to specify which actions may proceed, for h
 
 ## What runs on the device
 
-The [Genesis Mesh edge-agent runbook](https://docs.genesismesh.org/operations/edge-agent.html) documents an edge agent that runs on a node. It enrolls with a one-time invite and keeps separate node and executor keys on the device. Local services ask it about a requested action; the services still perform the external change.
+The [Genesis Mesh edge-agent runbook](https://docs.genesismesh.org/operations/edge-agent.html) documents a beta edge agent that runs on a node. It enrolls with a one-time invite and keeps separate node and executor keys on the device. Local services ask it about a requested action; the services still perform the external change.
 
 While connected, the agent asks the Network Authority, the operator's service that signs trust decisions, for a decision scoped to its node. When current authority cannot be obtained, a pre-issued grant can cover a bounded request. The [grant runbook](https://docs.genesismesh.org/operations/grants.html) defines the bearer, capabilities, validity interval, parameter envelope and maximum uses. Signed time tokens and chained use records support later verification. Grants and their evidence prerequisites require operator configuration and are off by default; the grant routes are beta.
 
@@ -20,9 +20,9 @@ When the snapshot is stale, the agent stops using grants. That is a concrete fre
 
 ## Break-glass is a separate decision
 
-The edge agent has its own failure classification, so a controller's fallback behavior must not be assumed to apply to it. An NA 429 or 5xx response is treated as throttled or failing, allowing a covering grant but not break-glass. There is a specific exception: a proxy's 502, 503, 504 or 520–527 page without the NA's JSON error body is classified as unreachable, alongside connection, DNS, TLS and timeout failures. A suitable grant may cover the gap. An explicit deny cannot be overridden by a grant or break-glass.
+The [edge-agent failure rules](https://docs.genesismesh.org/operations/edge-agent.html) have their own classification, so a controller's fallback behavior must not be assumed to apply to it. An NA 429 or 5xx response is treated as throttled or failing, allowing a covering grant but not break-glass. There is a specific exception: a proxy's 502, 503, 504 or 520–527 page without the NA's JSON error body is classified as unreachable, alongside connection, DNS, TLS and timeout failures. A suitable grant may cover the gap. An explicit deny cannot be overridden by a grant or break-glass.
 
-When the authority is actually unreachable and no usable grant covers the action, a caller's justification may permit exceptional execution under the documented rules. Requests that fall outside a matching grant's scope remain refused. A hard requirement to stop on stale authority must therefore be checked at the precise local action boundary, including the exceptional route, rather than inferred from grant expiry alone.
+When the authority is actually unreachable and no usable grant covers the action, a caller's justification may permit [exceptional execution](https://docs.genesismesh.org/operations/emergency-changes.html) under the documented rules. Requests that fall outside a matching grant's scope remain refused. A hard requirement to stop on stale authority must therefore be checked at the precise local action boundary, including the exceptional route, rather than inferred from grant expiry alone.
 
 The edge agent records activity in a durable outbox for later submission. Revoking a node at the authority also ends the associated authority that the runbook describes, including its grants and executor registration. The disconnected device learns the new state at its next synchronization. Refusing its later evidence cannot stop a physical effect it already produced while offline.
 
@@ -40,19 +40,10 @@ Follow the linked edge-agent runbook's documented enrollment and local-service s
 
 This is a documented procedure with proposed simulator cases, not executed in this review. Reconnect and inspect evidence admission separately from the simulator's action log. No physical actuator or production resource is required to examine these trust boundaries.
 
-**Builds on our video** [Edge Infrastructure Needs Portable Identity](https://www.youtube.com/watch?v=J7OpYQy3ZkU)
+## Further reading
 
-**Go deeper:**
+- [Edge-agent runbook](https://docs.genesismesh.org/operations/edge-agent.html): device keys, snapshots, failure classification and reconnect behavior.
+- [Pre-issued grants](https://docs.genesismesh.org/operations/grants.html): scope, time tokens, use budgets and evidence admission.
+- [Emergency changes and break-glass](https://docs.genesismesh.org/operations/emergency-changes.html): exceptional changes and the later judgment.
 
-[The edge agent](https://docs.genesismesh.org/operations/edge-agent.html)
-
-**Related:** [Pre-issued grants and offline use](https://docs.genesismesh.org/operations/grants.html)
-
----
-
-Genesis Mesh is a portable trust layer for sovereign systems, and it is open source.
-
-Website: https://genesismesh.org
-Documentation: https://docs.genesismesh.org
-Live demo: https://mesh.genesismesh.org
-GitHub: https://github.com/GenesisMeshLabs
+Explore the [website](https://genesismesh.org/), [documentation](https://docs.genesismesh.org/), [public trust console](https://mesh.genesismesh.org/) and [source repository](https://github.com/GenesisMeshLabs/genesismesh). The console is not an offline hardware demonstration. Choose the freshness budget for the actual operation and test its refusal path before deployment.

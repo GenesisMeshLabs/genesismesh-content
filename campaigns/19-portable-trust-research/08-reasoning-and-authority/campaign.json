@@ -46,16 +46,22 @@
   "idea_number": 3,
   "series_order": 8,
   "thumbnail_alt_text": "A proposal sits above a distinct policy boundary, asking who decides whether an action is authorized.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "da68376899bcf39275952d3ca9d1d83420174f6663362af5dce30ce34bdaca35",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 302,
-    "previous_visible_word_count": 655,
-    "reduction_percent": 53.9,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "90efd14b40bb20150aeb37ecc89069876a6adf17095e87d20a9b2b3b15ef60f2",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 856,
+    "previous_visible_word_count": 302,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

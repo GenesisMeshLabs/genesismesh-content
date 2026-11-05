@@ -30,93 +30,174 @@ Canonical documentation pages were reached through the live documentation naviga
 
 Reader procedures require a disposable source checkout and the development dependencies in the installation guide. Source-based test commands select actual inspected test files. Local demo commands are copied from the linked documentation. All are explicitly marked not executed. Failure outcomes are documented or asserted in inspected test source; they are not new runtime results.
 
+## Expanded revision verification - 2026-11-05
 
-## Exact claim ledger for the concise revision
+On 2026-11-05 the author reopened CRSet's primary abstract, the revocation runbook, security model and pinned CRL model. The retained CRL route/test sources were re-inspected: revocation adds an entry and blocks heartbeat/renewal; quiet/expired CRL refresh increases the sequence with unchanged revocation entries. Independent reviewer confirmed unchanged core main and latest v1.9.1 release. Privacy consequences are identified as metadata inferences, not measurements. CRSet and private non-revocation proofs are research context, not claimed Genesis Mesh features.
 
-Each entry quotes the final saved paragraph verbatim. Illustrative scenes are not deployment evidence. Source observations and releases remain as recorded above; no product test was executed during this shortening pass.
+The source and release matrix above retains its dated observations; the common source review records the current publication check. No product example, test or live scenario was executed for this revision. The prior concise corrections are retained. This article uses signed records and local authority as its frame, not token economics, a reputation score or a blockchain platform.
 
-### C01
-
-An organization revokes a departing contractor's credential. Its partner needs the update to stop accepting access, while an observer may learn something from the timing and identifiers. This illustrative case has both an enforcement requirement and a privacy question.
-
-Sources: Illustrative scenario; no factual deployment claim.
-
-Classification: Illustrative operator scenario; no customer or deployment assertion.
+## Exact claim ledger for the expanded revision
 
 ### C02
 
-[CRSet](https://arxiv.org/abs/2501.17089) studies non-interactive revocation with issuer-activity privacy; that research mechanism is not a Genesis Mesh feature claimed here.
+A contractor leaves a project, and the operator revokes its access certificate. That is the right security action. But suppose an outside observer watches the organization's revocation data over time. Even without a person's name, changing identifiers, reasons and timestamps may reveal patterns of activity. This illustrative case asks two questions: will the revoked credential be refused, and what does publishing that refusal reveal?
 
-Sources: S01
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
 
-Classification: Primary research context only; no product guarantee or integration inferred.
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
 
 ### C03
 
-Genesis Mesh's Network Authority is the operator's service for issuing and revoking membership credentials. The [revocation runbook](https://docs.genesismesh.org/operations/revocation.html) describes a privileged operator revoking a certificate, publication of a signed certificate revocation list, and refusal of the revoked certificate's heartbeat and renewal.
+[CRSet research](https://arxiv.org/abs/2501.17089) studies private, non-interactive credential revocation, including the risk that revocation activity exposes information about an issuer. Genesis Mesh does not claim to implement CRSet. Its signed certificate revocation list provides a concrete way to examine the difference between authentic revocation information and private revocation information.
 
-Sources: S02
+Evidence: https://arxiv.org/abs/2501.17089
 
-Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
-
-### C04
-
-The [CRL model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py) exposes issuer, sequence, issue time, next-update time and revoked entries. Each entry contains certificate ID, revocation time, reason and issuer. Signing authenticates that material; it does not hide it. An opaque identifier may still be linkable to other records.
-
-Sources: S03
-
-Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
 
 ### C05
 
-Sequence changes also need careful interpretation. The [authority tests](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py) refresh an expiring list with a higher sequence but unchanged revoked entries. A sequence increment is not necessarily another departure or compromise.
+A Genesis Mesh Network Authority is the operator's service for membership credentials and trust material. The [revocation runbook](https://docs.genesismesh.org/operations/revocation.html) describes an operator-authenticated `POST /admin/revoke` request. It requires a privileged operator key; possession of the certificate being revoked is not administrative authority to change the domain's revocation state.
 
-Sources: S04
+Evidence: https://docs.genesismesh.org/operations/revocation.html
 
-Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
 
 ### C06
 
-A receiving peer checks the revocation state it holds. It cannot enforce an update it has not received. This flow establishes neither private status queries nor issuer-activity hiding; caching alone does not erase visible metadata.
+The operator identifies the certificate and gives a reason. The authority marks the certificate revoked, produces a new certificate revocation list, increments its sequence and signs it. The active list is available through `GET /crl`. The [route implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/crl.py) serializes the active signed CRL for readers.
 
-Sources: S04
+Evidence: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/crl.py
 
-Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
 
 ### C07
 
-Use synthetic identities in a disposable [development installation](https://docs.genesismesh.org/installation.html):
+The authority then refuses heartbeat and renewal requests using the revoked certificate. The [tests](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py) exercise both refusal paths and check that the certificate identifier appears in the CRL. This is an inspectable local consequence of the operator's decision, not merely a note in an incident document.
 
-Sources: S05
+Evidence: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py
 
-Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
 
 ### C08
+
+Other participants need the relevant state before they can enforce that withdrawal. The [security model](https://docs.genesismesh.org/concepts/security-model.html) describes peer certificate checks against known revocation state. A participant using an older copy cannot learn a new withdrawal from a signature alone. Authenticity and freshness are different properties of the information it has.
+
+Evidence: https://docs.genesismesh.org/concepts/security-model.html
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C10
+
+The [CRL model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py) exposes the list identifier, sequence, issue time, next-update time and issuer. Each revoked-certificate entry contains a certificate identifier, revocation time, reason and issuer. The authority's signature lets a consumer check the signed content. It does not encrypt those fields.
+
+Evidence: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C11
+
+For the departing contractor, the certificate identifier need not contain a human-readable name to be linkable. A recipient may already have seen that identifier during a previous interaction. Matching the later CRL entry to that earlier observation can reveal that the same credential was withdrawn. This is an inference from visible metadata, not a claim that every observer can identify every holder.
+
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C12
+
+The reason field can add context. The [runbook](https://docs.genesismesh.org/operations/revocation.html) distinguishes reasons such as key compromise and cessation of operation. Operators should select an accurate reason because these choices have operational meaning; the privacy question is what recipients can infer from the reason and its timing. Replacing a meaningful reason with an inaccurate one is not a sound privacy mechanism.
+
+Evidence: https://docs.genesismesh.org/operations/revocation.html
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C13
+
+Counting sequence changes also needs care. The [refresh test](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py) shows a quiet authority republishing an expiring CRL with a higher sequence and unchanged revocation entries. A new sequence therefore does not necessarily mean another certificate was revoked. Comparing the actual entries supports a more precise observation than treating every refresh as new organizational activity.
+
+Evidence: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C15
+
+Downloading a signed list can support local verification of the information already obtained. It does not erase the contents of that list, prevent recipients from retaining earlier copies or hide information that an observer can correlate with another source. The [CRL representation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py) remains explicit about the revoked entries.
+
+Evidence: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C16
+
+That makes the operator's privacy review different from the signature review. A valid signature answers who signed these bytes and whether they were altered. It does not answer whether the bytes reveal more than the recipient needs. Likewise, an accurate timestamp can be useful for investigation while also contributing to an activity pattern.
+
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C17
+
+The receiving service still owns its admission and resource decisions. It should verify the relevant trust material, apply the state it knows and avoid presenting an old copy as evidence of fresh permission. A disconnected verifier cannot promise immediate knowledge of a new revocation. These operational limits remain even if the certificate identifier looks opaque.
+
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C18
+
+CRSet addresses a separate design objective around issuer activity. Its research results should prompt explicit requirements, not an assumption that a signed Genesis Mesh CRL has the same privacy properties. If a deployment requires private non-revocation proofs or concealed revocation activity, that requirement remains unmet by the inspected CRL mechanism.
+
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C19
+
+For the contractor's operator, a practical review would keep the authorized withdrawal, the resulting signed list and the observed refusal together. It would also inventory who can retrieve or retain that list. This separates evidence that access was withdrawn from the broader privacy question of what outsiders learn. Both deserve review, and neither should be inferred from the other.
+
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C21
+
+Use a disposable [development installation](https://docs.genesismesh.org/installation.html) with synthetic identities. Read and run the source-based CRL checks:
+
+Evidence: https://docs.genesismesh.org/installation.html
+
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
+
+### C22
 
 ```text
 python -m pytest genesis_mesh/tests/test_na_crl.py -v
 ```
 
-Sources: S05
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
 
-Classification: Previously documented/source-based procedure; not executed.
+Classification: Documented procedure, not executed.
 
-### C09
+### C23
 
-The fixtures enroll and revoke a node: its certificate should appear in the list, and heartbeat and renewal should return refusal. A separate test refreshes the list without adding revocations. Compare the before-and-after fields. This source-based test procedure was not executed in this review.
+Inspect the CRL before and after the fixture revokes a certificate. Expected results include the new entry and refused heartbeat and renewal. Then inspect the quiet-refresh test: its sequence increases while the entries remain equal. Compare what a verifier needs with every field a recipient can see. These tests were inspected, not executed in this review.
 
-Sources: S05
+Evidence: Illustrative scenario, operational inference, or reproduction guidance; assessed with the immediately preceding/following cited mechanism. This paragraph asserts no independent deployment result.
 
-Classification: Previously inspected documentation and/or implementation; tests establish source coverage only. The paragraph states its operative limits.
+Classification: Source-based explanation with limits; cited code is implementation evidence, cited tests are source coverage only, and research is not a product guarantee.
 
-## Inspected sources retained by this revision
+## Reader-accessible sources
 
-- S01: https://arxiv.org/abs/2501.17089
-- S02: https://docs.genesismesh.org/operations/revocation.html
-- S03: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py
-- S04: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py
-- S05: https://docs.genesismesh.org/installation.html
+- https://arxiv.org/abs/2501.17089
+- https://docs.genesismesh.org/operations/revocation.html
+- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/crl.py
+- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py
+- https://docs.genesismesh.org/concepts/security-model.html
+- https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py
+- https://docs.genesismesh.org/installation.html
+- https://genesismesh.org/
+- https://docs.genesismesh.org/
+- https://mesh.genesismesh.org/
+- https://github.com/GenesisMeshLabs/genesismesh
 
-## Revision decision
+## Review and channel decision
 
-The article was shortened at the user's request without new capability claims. Secondary tours and repeated explanation were removed. Exact article/Patreon parity is preserved. Publication states and covers are unchanged. Independent review of this concise revision is pending; repository publication is coordinated by the parent. No new Patreon or LinkedIn action is authorized by this record.
+Expanded wording passed independent source-based technical and editorial review. Repository publication was explicitly authorized and remains subject to the final publication checks. This revision makes no Patreon or LinkedIn publication or schedule change. Covers remain unchanged.

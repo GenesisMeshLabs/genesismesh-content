@@ -1,5 +1,6 @@
 {
-  "review_date": "2026-11-04",
+  "review_date": "2026-11-05",
+  "method": "Independent reviewer re-fetched six current main commits and six latest GitHub releases on 2026-11-05; all heads, release tags, dates, flags and asset lists match the prior snapshot. No binaries executed; no fresh registry or deployment assertion.",
   "repositories": [
     {
       "repo": "genesismesh",
@@ -201,5 +202,15 @@
         ]
       }
     }
-  ]
+  ],
+  "package_registry_observation_date": "2026-11-04",
+  "package_registry_rechecked_on_review_date": false,
+  "deployment_observation": {
+    "date": "2026-11-05",
+    "method": "Read-only public website and console inspection; no sign-in or product action.",
+    "website_marketing_version": "1.8.1",
+    "console_runtime_version": "1.9.0",
+    "console_status": "Operational Ready",
+    "limitation": "Page availability and displayed labels do not establish deployed-source parity or a completed scenario."
+  }
 }

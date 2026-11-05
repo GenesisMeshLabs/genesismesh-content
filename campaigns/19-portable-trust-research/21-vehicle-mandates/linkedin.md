@@ -1,8 +1,8 @@
-A payment credential does not explain what a vehicle's owner allowed it to buy.
+A car having a payment credential does not explain what its owner allowed it to buy.
 
-Genesis Mesh's policy and governed-action mechanisms offer authorization building blocks. The proposed payment adapter must still enforce the approved purchase and handle provider idempotency and reconciliation.
+The expanded article traces an illustrative charging mandate through Genesis Mesh policy evaluation and the application's payment callback. A per-request maximum is not a shared budget, and signed execution evidence is not proof of settlement.
 
-A per-request cap is not a shared spending balance. This is an illustrative design, not an existing EV payment product.
+The owner, authority, controller and payment provider each retain distinct responsibilities.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 

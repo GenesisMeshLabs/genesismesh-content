@@ -17,14 +17,14 @@
   "primary_message": "Offline IoT trust has a freshness budget",
   "call_to_action": "For your device, which action has the smallest tolerance for stale authority?",
   "source_docs": [
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/edge-agent.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md",
+    "https://docs.genesismesh.org/operations/edge-agent.html",
+    "https://docs.genesismesh.org/operations/grants.html",
+    "https://docs.genesismesh.org/operations/emergency-changes.html",
     "https://d2j16w31g89z0j.cloudfront.net/site/icoin2026/abs/P1-27.pdf",
-    "https://www.youtube.com/watch?v=J7OpYQy3ZkU",
-    "https://genesismesh.org",
-    "https://docs.genesismesh.org",
-    "https://mesh.genesismesh.org",
-    "https://github.com/GenesisMeshLabs"
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/iot-freshness.png",
@@ -50,9 +50,24 @@
   },
   "article_approved": true,
   "published": false,
-  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 899,
+    "previous_visible_word_count": 873,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
+    "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "pending_user_confirmation",
+    "examples_executed": false
+  },
   "thumbnail_alt_text": "How old is trust? An edge-device chip illustrates the need to limit the age of cached authority information while disconnected.",
   "word_count": 879,
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "2806797542157754e63593ab8c07a770e197e16051f72b8c47db7d23136b5179"
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "e2518dd0f507de054979a69b8aa5abeafb2542785ad39d31f8a0325087f3db3b"
 }

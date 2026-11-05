@@ -2,7 +2,7 @@
 
 ## Default Article Package
 
-“Campaign” is a repository label. Default to a short, substantive `article.md`, branded `thumbnail.png`, source links, `linkedin.md` draft and the evidence/review packet. Use as few words as substance allows; there is no rigid word count. Add `patreon.md` only for that selected channel and metadata when the chosen scripts require it. Do not create media placeholders or make audio/video a completion requirement.
+"Campaign" is a repository label. Default to a substantive `article.md` of around 900 words, branded `thumbnail.png`, source links, `linkedin.md` draft and the evidence/review packet. Use 850–1000 words as a working range, without padding or removing essential limits to hit a quota. Record the visible-word count and method in `review.md` using the editorial evidence standard. Keep relevant verified canonical documentation links throughout the article and finish with a **Further reading** section of topic-specific guides; a generic project footer alone is insufficient. Add `patreon.md` only for that selected channel, preserving the article's substance and documentation links, and metadata when the chosen scripts require it. The LinkedIn draft remains concise. Do not create media placeholders or make audio/video a completion requirement.
 
 ## Optional Full-Media Folder Shape
 

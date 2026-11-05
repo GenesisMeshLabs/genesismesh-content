@@ -1,6 +1,6 @@
 # Evidence ledger: idea 22
 
-Review date: 2026-11-04. Author: Codex draft researcher. Independent source review is recorded separately against final hashes. This is a source-review packet, not a product certification or a passing test report.
+Review date: 2026-11-05. Author: Codex draft researcher. Independent source review is recorded separately against final hashes. This is a source-review packet, not a product certification or a passing test report.
 
 ## Research scope
 
@@ -18,43 +18,58 @@ The public website and trust demo were viewed without authentication on 2026-11-
 
 ## Material claims
 
-Concise revision: each quotation below appears in the revised article. The same claims apply to the identical Patreon copy; LinkedIn uses a narrower summary. Existing dated source and release checks remain the baseline. No product examples or tests were executed.
-
 ### 22-1
 
-Exact article wording: Its signed `BoundaryDecision` can contain a `PolicyBinding` identifying policy versions, gate outcomes and `context_digest`, the hash of the canonical request context.
+Exact article wording: Its signed `BoundaryDecision` includes a `PolicyBinding`: policy versions and digests, gate outcomes and `context_digest`, the hash of the canonical request context.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/boundary_policy.py#L225).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_boundary_policy.py#L603); not executed.
-- Scope, limits and authority boundary: Policy-aware evaluation produces this binding. ContextRecord canonical JSON is hashed with SHA-256; the legacy decide route does not carry it. Merchant and monetary fields are proposed application parameters.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Policy-aware decisions only; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/boundary_policy.py#L225).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_boundary_policy.py#L603). **Not executed** in this review.
+- Scope, limitations and decision: Implemented and test-covered for policy-aware decisions. ContextRecord canonical JSON is hashed with SHA-256. The legacy decide route does not carry this binding; the article discusses policy-aware evaluation.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
 
 ### 22-2
 
-Exact article wording: A verified denial prevents the callback.
+Exact article wording: The documented `governedAction` helper verifies the authority's decision, expected policies and applicable attestation, checks the response's context identifier and checks expiry again after reading resource history.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts); not executed.
-- Scope, limits and authority boundary: Ordinary governedAction path verifies decision, expected policies and applicable attestation, compares context identifiers and rechecks expiry after resource history. No fallback or universal SDK claim.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Client bindings; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts). **Not executed** in this review.
+- Scope, limitations and decision: Implemented and test-covered. The article does not claim the helper automatically compares every payment field or recomputes context_digest. These are consuming integration requirements.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
 
 ### 22-3
 
-Exact article wording: The helper does not automatically compare every purchase field or recompute `context_digest`.
+Exact article wording: The callback is supplied by the application.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L426).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts); not executed.
-- Scope, limits and authority boundary: Consumer-supplied callback owns execution arguments. Freezing and comparing purchase data, checking relevant signed binding and rejecting changed terms are proposed adapter requirements. This is not an implemented payment integration.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Execution boundary; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L426).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts). **Not executed** in this review.
+- Scope, limitations and decision: The actual callback receives the decision; merchant arguments remain application-owned. Freezing, comparing and reconciling the purchase are proposed integration requirements.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
 
 ### 22-4
 
-Exact article wording: Evidence delivery and the payment operation remain separate: repairing a failed evidence upload must not buy the service again.
+Exact article wording: If evidence delivery fails after a successful action, repair delivery of the evidence; do not blindly repeat the action.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L439).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts); not executed.
-- Scope, limits and authority boundary: Design inference from separate action and evidence stages. Executor metadata reports observed outcome; provider idempotency, reconciliation and fulfillment require separate evidence.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Evidence outbox boundary; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L439).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts). **Not executed** in this review.
+- Scope, limitations and decision: Documented and source-inspected. No exactly-once distributed payment guarantee is claimed. Provider-specific idempotency and reconciliation remain necessary.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+
+### 22-5
+
+Exact article wording: Matching a context identifier is useful; it does not by itself demonstrate that every commercial field submitted to a merchant matches the owner's instruction.
+
+- Implementation basis: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/boundary_policy.py#L225).
+- Test basis: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_boundary_policy.py#L603); not executed.
+- Scope and inference: The preserved purchase-record and reconciliation discussion is illustrative integration guidance. The inspected generic callback does not freeze or compare the application's commercial arguments; provider outcome reconciliation is not supplied by Genesis Mesh.
+- Affected assets: article.md, identical Patreon copy and the bounded LinkedIn summary. Expanded wording awaits independent review.
 
 ## Documentation and source comparison
 
@@ -88,6 +103,10 @@ The reader procedure uses documented commands, prerequisites, expected acceptanc
 
 Reader URL inventory: campaign.json source_docs and the article citations. Final asset hashes and release gates are recorded in review.md. Recheck release/deployment evidence before any later material revision or publication claim.
 
-## Concise revision record
+## Expanded revision and current-source check
 
-The article was shortened at the user's request on 2026-11-04. Secondary mechanisms and repeated caveats were removed; the retained claim quotations above supersede the earlier wording. Same-session primary-source, pinned implementation, canonical-documentation and release checks remain applicable. No new capability or deployment claim was added. The condensed revision awaits independent review against its updated hashes.
+On 2026-11-05, the six current implementation heads and latest GitHub releases were rechecked: core, TypeScript, Rust, .NET, Go and gateway retain the exact revisions in the matrix above, with latest tags v1.9.1. Primary research abstracts were reopened. Canonical public-contract, logic-attestation, recognition, governed-action, pre-issued-grant, selective-disclosure, attestation-backed-evaluation, declarative-policy, installation and SDK-overview pages were opened and their relevant content inspected. The public contract still classifies logic-attestation and selective-disclosure functions, and grant routes, as beta.
+
+Targeted pinned verifier/source reads reconfirmed logic-attestation limits, direct treaty recognition, governedAction callback boundaries and unsalted deterministic capability leaf hashing. PyPI currently reports 1.9.1. The web tool could not reopen npm/NuGet JSON endpoints or the website/demo; their earlier dated observations above are retained rather than represented as new successful checks. The repository-wide reviewer is refreshing shared availability evidence.
+
+The expanded article follows the user's request for roughly 900 words, canonical documentation links throughout and a final Further reading section. New scenario detail is expressly illustrative integration guidance, not a new product capability. No package, test, demo, payment or deployment was executed. Independent source-based technical and editorial review of the expanded wording passed; final asset hashes are recorded in review.md.

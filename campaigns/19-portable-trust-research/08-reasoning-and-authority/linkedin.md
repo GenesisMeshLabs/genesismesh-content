@@ -1,9 +1,13 @@
-An agent can propose a payment. It should not rewrite the rule that authorizes it.
+# LinkedIn draft
 
-Genesis Mesh's boundary-policy workflow returns a signed decision tied to the evaluated context. The executor must still supply trusted facts, use the same parameters and control the credentials.
+An urgent email can help an agent propose a payment. It should not give the agent authority to approve it.
 
-A short example of separating reasoning, permission and execution:
+Genesis Mesh's boundary-policy workflow lets an operator define explicit gates and obtain a signed decision tied to the evaluated context. A failed enforce gate denies; an observe gate records without blocking.
 
-[PATREON_URL_PENDING]
+The executor still has to use trusted facts, bind the actual transfer to the evaluated request and protect credentials from bypass.
 
-#GenesisMesh #AgentSecurity #Policy
+The article follows one payment example from proposal to refusal, with the documented local check and its limits.
+
+Read the article: {{PENDING_PATREON_ARTICLE_URL}}
+
+#GenesisMesh #AIAgents #Authorization

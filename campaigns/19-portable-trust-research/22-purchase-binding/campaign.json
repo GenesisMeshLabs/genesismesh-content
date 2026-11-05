@@ -14,16 +14,18 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "A valid payment can still buy something the owner never approved.",
+  "primary_message": "A valid payment can still buy something the owner never authorized.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2609.00060",
+    "https://docs.genesismesh.org/examples/declarative-boundary-policy.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/context.py#L44",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/boundary_policy.py#L225",
     "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360",
-    "https://docs.genesismesh.org/examples/declarative-boundary-policy.html",
+    "https://docs.genesismesh.org/sdk/typescript/governance.html",
     "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts",
-    "https://genesismesh.org/",
     "https://docs.genesismesh.org/sdk/index.html",
+    "https://genesismesh.org/",
     "https://mesh.genesismesh.org/",
     "https://github.com/GenesisMeshLabs/genesismesh"
   ],
@@ -61,16 +63,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "Payment and permission appear in separate panels joined by a question mark, asking whether a settled payment matched the mandate.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "3b2a5949baae5cf999cf964297f178672932b7f7631f8ff7f53ca0d8a31d839e",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 356,
-    "previous_visible_word_count": 737,
-    "reduction_percent": 51.7,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "678f4d979e7219fe40c95528928b8c8d33a44f8904db8886c556eb0b69f003b5",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 964,
+    "previous_visible_word_count": 356,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

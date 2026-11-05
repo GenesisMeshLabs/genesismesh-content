@@ -1,10 +1,9 @@
-A recently downloaded revocation snapshot can still contain old signed information.
+An offline device cannot learn a revocation that happened after its last connection.
 
-Genesis Mesh's beta edge agent uses signed snapshot times and a configured age limit before trusting offline grants. Its documented defaults include a one-day maximum age and 60-second synchronization interval, not a universal safety budget.
+Genesis Mesh's beta edge workflow makes the remaining authority explicit through signed snapshots, bounded grants and recorded exceptional changes. Grant fallback, an explicit denial and break-glass are different paths.
 
-The final draft follows grants, stale snapshots, the stricter edge-agent break-glass rules and the point at which revocation reaches a disconnected device.
+The article explains their limits and links the documentation for testing a freshness budget in a simulator.
 
-Which action on your device must wait when current authority cannot be established?
+Read after the scheduled release is verified: https://www.patreon.com/GenesisMeshLabs/posts/offline-iot-has-174297309
 
-<!-- Send only after verifying this scheduled Patreon post is live. -->
-Read the article: https://www.patreon.com/GenesisMeshLabs/posts/offline-iot-has-174297309
+#GenesisMesh #EdgeComputing #OfflineSystems

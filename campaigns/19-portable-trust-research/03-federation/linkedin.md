@@ -1,10 +1,9 @@
-Your partner can identify its members. You still decide which of their claims to accept and which local actions to allow.
+A partner can identify its researchers. Your organization still decides what those researchers may access.
 
-Genesis Mesh recognition treaties name keys, roles, validity and status. Membership revocation and recognition withdrawal remain separate controls, and a receiver needs current signed information to learn what changed.
+Genesis Mesh recognition treaties make that relationship signed, scoped and revocable. Membership withdrawal, recognition withdrawal and local permission remain separate controls.
 
-This draft follows the treaty verifier and the recorded two-cloud proof. It keeps the evidence precise: two separately keyed authorities operated by one maintainer are not independent external adoption.
+The article follows the artifacts and documentation, including what a disconnected receiver cannot know immediately.
 
-Which shared permission would you test first, including its withdrawal?
+Read after the scheduled release is verified: https://www.patreon.com/GenesisMeshLabs/posts/federation-local-174297216
 
-<!-- Send only after verifying this scheduled Patreon post is live. -->
-Read the article: https://www.patreon.com/GenesisMeshLabs/posts/federation-local-174297216
+#GenesisMesh #Federation #SovereignSystems

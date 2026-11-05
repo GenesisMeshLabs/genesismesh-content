@@ -1,8 +1,8 @@
-Encrypted connectivity does not decide which partner claims a network operator should accept.
+Which partner claims should a network operator accept, and what may that partner's service actually do?
 
-Genesis Mesh's recognition treaties make the accepting domain's scope explicit. Local service permission and enforcement remain separate.
+Genesis Mesh's scoped recognition treaties make the first relationship explicit. Local authorization and service enforcement still need their own design.
 
-A 5G research prototype motivates this future 6G question; the article does not claim a deployed telecom integration.
+A 5G research prototype motivates this future 6G question. The article explores direct recognition, revocation and the integration boundary without claiming a deployed telecom product.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 

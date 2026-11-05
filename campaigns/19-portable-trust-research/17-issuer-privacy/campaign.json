@@ -54,16 +54,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "A credential card names NAME, ISSUER and SCOPE; the issuer field is highlighted to ask what identifying information is disclosed.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "5ff4f550aba8f835c4396c87dd4d81511ab3422499f942547b81261ee5708e4a",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 269,
-    "previous_visible_word_count": 575,
-    "reduction_percent": 53.2,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "1f749a3935152afc6c19aa7017d3aedfb6792bb6dbe5fd8d3933d5cee1693272",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 855,
+    "previous_visible_word_count": 269,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

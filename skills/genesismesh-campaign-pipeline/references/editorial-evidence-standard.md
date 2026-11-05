@@ -12,7 +12,9 @@ Lead with a concrete operator problem, explain the mechanism, show what a reader
 4. Evidence beside material technical claims, a practical “Check it yourself” section, and a useful call to action.
 5. What the mechanism does **not** establish. Verification is not authorization; authorization is not execution; a signature is not evidence that an action is safe or that its payload is true.
 
-Default to short, substantive articles: use as few words as the real flow, evidence and limits require, without a rigid word count. Move detailed reproduction steps and technical background into precise source links when that keeps the article useful and readable. Brevity is not permission to replace evidence with slogans. The standard package is the article, branded cover, source links and LinkedIn draft; audio, video and other multimedia are optional only when requested.
+Default to a substantive article of around 900 words, with 850–1000 words as the working range. This is guidance, not a rigid quota: use the space for a concrete flow, evidence, failure behavior and meaningful limits. Expand a thin draft with relevant explanation rather than repetition; remove redundant caveats and background from an overlong one. Do not pad to meet a count or remove essential qualifications to fit the range. The standard package is the article, branded cover, source links and LinkedIn draft; audio, video and other multimedia are optional only when requested.
+
+Record the visible-word count and method in `review.md`. Count rendered reader-facing text, including the title, headings, code and link labels; exclude Markdown syntax and URL destinations. Use alphanumeric words, retaining internal apostrophes, dots, underscores and hyphens consistently. A substantial departure from the working range needs an editorial reason or an explicit user preference. The article target does not apply to the shorter LinkedIn draft, evidence ledger or review record.
 
 Explain the Network Authority on first use. Keep portable trust for sovereign systems as the frame; agents are one application. Show who owns keys, who recognizes whom, who decides, who executes, and who verifies. Do not attribute local authority to a gateway or imply that Genesis Mesh chooses who deserves trust.
 
@@ -106,9 +108,12 @@ Reader-facing walkthroughs, tutorials and guides should link to the verified can
 
 Keep direct GitHub links for implementation code and tests. Keep pinned source-document revisions, package/platform coverage and dated checks in the internal evidence ledger, recording the public docs destination alongside its underlying evidence. Canonical docs can change or lag the source: compare their substance before linking, and do not replace a precise implementation citation with an unrelated docs homepage. If no canonical counterpart can be verified, a valid repository document is acceptable; label it “Repository documentation” rather than presenting it as the docs website. This presentation rule does not weaken the claim-verification requirements.
 
+Place relevant canonical documentation links throughout the article where readers encounter the mechanism, prerequisites or limits. End with a **Further reading** section that names the topic-specific guides or walkthroughs and briefly explains what each adds. Prefer a small useful set, typically three to five links, over a link dump. This final list complements the inline citations; neither it nor a generic Website/Documentation/Demo/GitHub footer satisfies the inline documentation requirement. Keep source-only code, tests and primary research links where they support a claim; do not replace them with unrelated documentation merely to use the docs domain.
+
 Every substantive article and publication description must provide:
 
 - **Check it yourself:** an exact, tested example or documented procedure, prerequisites, expected result and at least one relevant denial/failure case. Keep the pinned version in the internal ledger and linked reproducible instructions rather than routinely inserting it into evergreen prose; expose any version constraint necessary for the reader to reproduce the example. If not run, say “documented example, not executed in this review.” Do not label it tested.
+- **Further reading:** a final article section with verified, descriptive links to the most useful relevant documentation, in addition to the canonical documentation links already placed throughout the body. A selected Patreon article keeps these links and this section. Short social copy should link to the article rather than reproduce its full reading list.
 - **Website**, **documentation**, **demo**, and **GitHub** links, verified at review time. Prefer the specific relevant docs/demo/source over four generic homepages. If no public demo exists or it is unavailable, state that and link a reproducible local example instead; do not fabricate a URL.
 - A distinction between illustrative footage/diagrams and actual product output. A recorded demo is not evidence that the live service is currently available.
 
@@ -121,7 +126,7 @@ Maintain `review.md` with the draft revision or content hashes, evidence snapsho
 Required sequence:
 
 1. Research and evidence inventory completed; unresolved claims qualified or removed.
-2. Editorial review: substantive flow, honest limits, citations and actionable reader links.
+2. Editorial review: substantive flow around 900 words, honest limits, inline citations and canonical documentation, a useful final Further reading section, and actionable reader links. Record the word count and explain any justified variation from the working range.
 3. Technical review: status/version distinctions, all relevant surfaces and precise failure/fallback behavior.
 4. User approves the exact article. If narration or paid media is explicitly requested, obtain the applicable approval before generating it; otherwise skip media production and media-specific approval steps.
 5. Derived copy/assets checked against the approved article and the [design system](design-system.md). New claims require new evidence and review.

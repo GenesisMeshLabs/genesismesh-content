@@ -18,8 +18,10 @@
   "source_docs": [
     "https://arxiv.org/abs/2501.17089",
     "https://docs.genesismesh.org/operations/revocation.html",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/na_service/routes/crl.py",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_crl.py",
+    "https://docs.genesismesh.org/concepts/security-model.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/revocation.py",
     "https://docs.genesismesh.org/installation.html"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
@@ -52,16 +54,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "A status feed and an observing eye illustrate the privacy question raised by credential-status checks.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "5b00a5d54caea748fd15c209afaf9ac5661480933d78bd5ebbfc17b5b01dcb5b",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 284,
-    "previous_visible_word_count": 607,
-    "reduction_percent": 53.2,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "cf7a56a88aa3b053aa44b4acdf38f3c43c2db566de85bd024432edc6f628e27f",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 899,
+    "previous_visible_word_count": 284,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

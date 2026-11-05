@@ -1,6 +1,6 @@
 # Evidence ledger - idea 6: Can an agent keep its limits when it crosses systems?
 
-Review date: 2026-11-04. Intended publication date: not assigned. Authoring reviewer: Codex campaign author.
+Review date: 2026-11-05. Intended publication date: not assigned. Authoring reviewer: Codex campaign author.
 Core source inspected at a54b2d81f205c9b0203158f846f7ad44dc677063. Latest core release v1.9.1 confirmed from the GitHub release API. Release availability and source-head content are distinct; no hosted deployment or cross-language parity is inferred.
 Observed work: public primary-source web reads; GitHub code/test/contract inspection; local editorial review. No Genesis Mesh test, demo, deployment, payment or side effect was executed. Test-covered means assertions read, not passing test execution.
 
@@ -23,31 +23,48 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 
 ## Material claims
 
-Exact wording below follows the shortened article revision. Source inspection and test-execution status are unchanged.
+Exact wording below follows the expanded revision (rendered Markdown where code or links occur). Each item applies to article.md, identical patreon.md, and the narrower LinkedIn summary where relevant. All code and tests remain pinned to the unchanged core revision; test sources were inspected, not executed.
 
 ### Claim 6-1
-- Exact wording / scope: Issuance refuses capabilities outside the supplied scope.
-- Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
+- Exact wording / scope: The issue_invocation_token function takes the supplied agreement or delegated scope and refuses requested capabilities outside that scope.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L108-L199
-- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py#L100-L192
-- Verification and limits: Beta primitive; caller must validate source agreement/delegation. No AIP wire compatibility claim.
-- Decision: retained with the stated scope after author shortening review; independent revision review follows.
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py#L203-L339
+- Verification and limits: Rendered wording; caller validates source basis and lifetime. Not an independent authentication of the source agreement.
+- Decision: retained after author and independent source-based expanded-revision review.
 
 ### Claim 6-2
-- Exact wording / scope: The verifier counts caller-supplied use records, so a budget is not a shared replay counter.
-- Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
+- Exact wording / scope: The receiver calls verify_invocation_token with trusted issuer keys, the requested capability, bearer identity and verification time.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L257-L311
 - Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py#L203-L339
-- Verification and limits: No authenticated identity establishment or global durable replay ledger inside this verifier; no whole-use-chain verifier.
-- Decision: retained with the stated scope after author shortening review; independent revision review follows.
+- Verification and limits: Rendered wording; wrong bearer, expiry or missing capability fail. Caller authenticates identity, chooses trusted keys and binds actual execution.
+- Decision: retained after author and independent source-based expanded-revision review.
 
 ### Claim 6-3
-- Exact wording / scope: The supported peer_sovereign: constraint checks the bearer, not a general URL or service audience; unknown constraints are refused.
-- Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L207-L250
+- Exact wording / scope: A token may include max_invocations, but the verifier counts caller-supplied use records.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L257-L311
 - Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py#L359-L387
-- Verification and limits: Exact vocabulary retained; additional audience/resource semantics require integration.
-- Decision: retained with the stated scope after author shortening review; independent revision review follows.
+- Verification and limits: Rendered wording. No global durable counter, concurrent coordination or record-set completeness guarantee.
+- Decision: retained after author and independent source-based expanded-revision review.
+
+### Claim 6-4
+- Exact wording / scope: The API does not verify the entire linked use-record chain, so merely passing a collection of records should not be described as proof of globally complete consumption.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L257-L311
+- Verification and limits: Bounded negative from inspected verifier; creation of linked records is not whole-chain verification.
+- Decision: retained after author and independent source-based expanded-revision review.
+
+### Claim 6-5
+- Exact wording / scope: The supported peer_sovereign: constraint checks the bearer; it is not a general service URL or audience binding.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/invocation_token.py#L207-L250
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py
+- Verification and limits: Rendered wording; only known constraint implementations accepted.
+- Decision: retained after author and independent source-based expanded-revision review.
+
+### Claim 6-6
+- Exact wording / scope: Expect acceptance for the intended bearer and capability, and refusal with a wrong bearer or ungranted capability.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/invocation-bound-tokens-demo.py
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_invocation_tokens.py
+- Verification and limits: Source demo uses controlled clock. Not executed; AIP research supplies motivation, not transport compatibility or SDK parity.
+- Decision: retained after author and independent source-based expanded-revision review.
 
 ## Research and primary reader links
 - Research source: https://arxiv.org/abs/2603.24775
@@ -62,6 +79,7 @@ Exact wording below follows the shortened article revision. Source inspection an
 The article links the actual documented local procedure with prerequisites, expected result and failure. Its command was inspected in the documented example; it was not run here. Example source dates and expiry must be current when readers create their own records. Prefer the source demo's controlled fixture clock, where supplied, to blindly reusing historical timestamps; the delegation demo uses a fixed scenario time.
 Sources show a mechanism and tests show asserted cases. Production adoption still needs integration-specific execution binding, key management, trusted facts and appropriate confinement. No research performance or security percentage is transferred to Genesis Mesh.
 
-## Concise revision
 
-Shortened 2026-11-04 at the user's request. One scenario and one mechanism retained, with essential refusals and limitations. The same pinned evidence supports this revision; no new feature, deployment or test-run claim was added. Independent concise-revision review is pending. Superseded prose was removed, not silently treated as reviewed. No publication or schedule field changed.
+## Expanded revision — 2026-11-05
+
+The user requested approximately 900 words, documentation links throughout and final Further reading. This revision reworks the prior reviewed mechanism and its essential limits; source-head and release checks on 2026-11-05 confirmed core a54b2d81f205c9b0203158f846f7ad44dc677063 and release v1.9.1 unchanged. The independent source reviewer also reconfirmed all six recorded source heads and latest releases unchanged. Relevant canonical guides were reopened. No SDK parity, live deployment, current revocation propagation or executed-test claim was added. Research remains motivation, not a Genesis Mesh guarantee. Public website and demo links identify available public entry points, not a tested deployment. A separate reviewer completed source-based review of the exact expanded article and LinkedIn text and the changed claim ledger; the author verified the staged hashes. No product example was executed. Covers and channel publication states are preserved.

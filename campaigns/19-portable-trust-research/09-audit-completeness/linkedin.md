@@ -1,9 +1,13 @@
-Valid signatures do not prove a complete history.
+# LinkedIn draft
 
-Genesis Mesh's audit-pack workflow uses independently held anchors to check recorded history, and an outside change log to find changes never reported to the store.
+Ten signed audit records can all verify while a real change is missing.
 
-Both comparisons have limits. The key operational question is who holds the evidence outside the system being audited.
+Genesis Mesh's audit workflow separates the questions: check the supplied pack against independently held anchors, then compare it with a change log collected outside the evidence store.
 
-Read: [PATREON_URL_PENDING]
+A missing external change can produce change_unmatched. A changed pack file can produce manifest_digest_mismatch. Neither check makes an incomplete outside log complete.
 
-#GenesisMesh #Audit #SecurityEngineering
+The article follows a credential-rotation audit and explains anchor custody, comparison coverage and the limits of the second verifier.
+
+Read the article: {{PENDING_PATREON_ARTICLE_URL}}
+
+#GenesisMesh #Auditability #SecurityEngineering

@@ -1,8 +1,8 @@
-An agent can keep its identity key while its prompt and tools change.
+An agent can keep yesterday's identity key while changing its prompt and tools.
 
-Genesis Mesh's beta logic-attestation functions let an operator check signed configuration declarations. They do not independently measure the running process.
+Genesis Mesh's beta logic-attestation functions make configuration declarations inspectable. They check declared values against an operator's policy; they do not measure the running process.
 
-The execution boundary still needs to authenticate the caller and enforce permission for the action.
+The expanded article follows an update through declaration checks, local permission and the execution boundary, including empty allowlists and token-binding limits.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 

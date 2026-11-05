@@ -19,11 +19,11 @@
     "https://arxiv.org/abs/2609.00267",
     "https://docs.genesismesh.org/examples/delegation-chain.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py",
     "https://docs.genesismesh.org/examples/process-level-mediation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py",
     "https://docs.genesismesh.org/reference/public-contract.html",
-    "https://docs.genesismesh.org/installation.html",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_trust_delegation.py"
+    "https://docs.genesismesh.org/installation.html"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/swarm-containment.png",
@@ -55,16 +55,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "A small team graph has one crossed member, asking how delegated scope changes the impact of compromise.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "6157f15c7a40d54302757d4912abe6197711a39419fd34d64cc7bcdf49a57733",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 288,
-    "previous_visible_word_count": 623,
-    "reduction_percent": 53.8,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "a7ca42097a0638e9ef70860e271294ddddba2f9c4d10d6a00d6196d81f26d334",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 855,
+    "previous_visible_word_count": 288,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

@@ -14,16 +14,20 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "Proving one permission should not require exposing every unrelated capability.",
+  "primary_message": "A proof can reveal less data without making an interaction anonymous.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2407.13776",
     "https://docs.genesismesh.org/reference/public-contract.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L156",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L308",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py#L20",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L308",
     "https://docs.genesismesh.org/examples/selective-disclosure.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/boundary_policy.py#L106",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L183",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L94",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py#L256",
+    "https://docs.genesismesh.org/examples/declarative-boundary-policy.html",
     "https://genesismesh.org/",
     "https://docs.genesismesh.org/sdk/index.html",
     "https://mesh.genesismesh.org/",
@@ -63,16 +67,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "A document highlights one of several fields, asking which information is necessary without claiming anonymity or a zero-knowledge implementation.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "4bd4509ccef326a483be0ac538aa13d244182ccf534aff15dead1e7cba140974",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 331,
-    "previous_visible_word_count": 736,
-    "reduction_percent": 55.0,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "10427f8a20d728942ec9fbad7b2a7550117419526b4ba7800f9658043c056c75",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 945,
+    "previous_visible_word_count": 331,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

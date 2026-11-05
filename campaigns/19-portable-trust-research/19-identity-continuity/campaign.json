@@ -14,15 +14,17 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "An agent can keep its identity key while its prompt and tools change.",
+  "primary_message": "An agent can keep yesterday's identity key while changing its prompt and tools.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2604.25189",
     "https://docs.genesismesh.org/reference/public-contract.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/attestation.py#L47",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/logic_attestation.py#L86",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_verifiable_logic_attestation.py#L253",
     "https://docs.genesismesh.org/examples/attestation-backed-evaluation.html",
-    "https://docs.genesismesh.org/installation.html",
     "https://docs.genesismesh.org/examples/verifiable-logic-attestation.html",
+    "https://docs.genesismesh.org/installation.html",
     "https://genesismesh.org/",
     "https://docs.genesismesh.org/sdk/index.html",
     "https://mesh.genesismesh.org/",
@@ -62,16 +64,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "One identity points to before and after states, asking whether persistent identity proves continuity of current behavior.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "b9fb5a11c5848862e82902acc6e514326b1908cf5c387e0706d5ac7803da80a5",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 317,
-    "previous_visible_word_count": 726,
-    "reduction_percent": 56.3,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "2d9dcdb591f9ccf9b7fd6b59717242851c806ecda257eb135e1757244e3acebd",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 934,
+    "previous_visible_word_count": 317,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

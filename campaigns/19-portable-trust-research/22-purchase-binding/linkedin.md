@@ -1,8 +1,8 @@
-A valid payment can still buy something the owner never approved.
+A valid payment can still buy something the owner never authorized.
 
-Genesis Mesh's signed policy decisions preserve a request binding. The consuming adapter must carry that exact request into execution; the generic helper does not compare every purchase field.
+The expanded article follows a purchase from the owner's instruction through policy evaluation, the application's callback and the observed result.
 
-The article shows this boundary through an illustrative purchase design, not an existing payment product.
+Genesis Mesh supplies signed decisions and execution evidence. The payment adapter must still preserve the exact purchase, reject changed terms and reconcile uncertain provider outcomes.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 

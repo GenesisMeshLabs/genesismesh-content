@@ -1,9 +1,13 @@
-If finance withdraws an agent's invoice access, should unrelated maintenance work stop too?
+# LinkedIn draft
 
-Genesis Mesh's beta delegation-chain workflow makes a request's authority path inspectable. It does not automatically preserve every alternative path or stop dispatched work.
+Withdrawing one delegation should start with a precise question: which authority path are we removing?
 
-The short article separates chain verification from the runtime decisions needed for precise revocation.
+Genesis Mesh's beta delegation workflow checks a supplied chain: parent linkage, bound terms, contained capabilities, expiry ceilings and signatures. It can refuse a child that tries to add authority its parent never held.
 
-Read: [PATREON_URL_PENDING]
+That does not establish current root validity or automatically preserve every alternative path. The receiving system still owns current-use policy, and the executor must bind permission to the actual operation.
 
-#GenesisMesh #Authorization #DistributedSystems
+The article walks through a logistics example, a documented refusal and the limits that matter during withdrawal.
+
+Read the article: {{PENDING_PATREON_ARTICLE_URL}}
+
+#GenesisMesh #AgentSecurity #Authorization

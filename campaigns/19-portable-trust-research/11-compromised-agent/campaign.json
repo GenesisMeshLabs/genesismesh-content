@@ -46,16 +46,22 @@
   "idea_number": 7,
   "series_order": 11,
   "thumbnail_alt_text": "A marked actor approaches a resource boundary through a question mark; the illustration asks what remains protected after compromise.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "81cd93e0b1ed61b2dc3f7beafb498621f379482951a0a52bc19491a6a60dd2a8",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 311,
-    "previous_visible_word_count": 710,
-    "reduction_percent": 56.2,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "91f31f41051264cfa428adc2f5394951561e6d70ee890f2d11653e03bee48793",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 851,
+    "previous_visible_word_count": 311,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

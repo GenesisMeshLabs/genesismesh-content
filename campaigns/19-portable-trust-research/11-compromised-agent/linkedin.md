@@ -1,9 +1,13 @@
-Assume the agent ignores every instruction. Can it still execute around the gate?
+# LinkedIn draft
 
-Genesis Mesh's beta GenesisGuard checks signed authorization artifacts and a command allowlist. Mandatory mediation also requires the operator to remove direct execution and credential paths.
+Assume the agent ignores every instruction. What still prevents the unauthorized action?
 
-The short article keeps the essential limits: process-local budgets, no revocation fetch, and an illustrative artifact demo.
+Genesis Mesh's beta GenesisGuard checks a signed request, stored boundary decision, invocation token and command policy before mediated execution.
 
-Read: [PATREON_URL_PENDING]
+The deployment boundary matters just as much: advisory mode permits bypass, and starting the guard does not create a kernel sandbox. Its token-use counter is process-local, and it does not fetch revocations.
 
-#GenesisMesh #AgentSecurity #LeastPrivilege
+The article follows one compromised reporting agent and separates artifact validation from the restrictions a deployment must actually verify.
+
+Read the article: {{PENDING_PATREON_ARTICLE_URL}}
+
+#GenesisMesh #AgentSecurity #RuntimeSecurity

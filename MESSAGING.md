@@ -4,6 +4,14 @@
 
 Genesis Mesh is a portable trust layer for sovereign systems.
 
+## Connect and Product Direction
+
+The [product vision reviewed on 2026-11-05](https://claude.ai/artifact/ParjPaubYJkVdkWcaCx4pt) distinguishes Connect, the intended everyday application, from Genesis Mesh, the trust layer beneath it. Independent owners control access to their resources. Describe this as product direction and retain the receiving owner's authority in examples; technical articles need not introduce Connect when it is not relevant to their mechanism.
+
+The vision's proposed first proof is a document read across independent owners: identify the exact document, version, action and expiry; obtain one signed approval on the owner's phone; and retain verifiable evidence. This is a proof to build, not a demonstrated end-to-end flow. The reviewed vision places human approval at library/CLI scope and identifies Network Authority routes, SDK support, single-use replay tracking and the phone approval screen as not yet built. Connect agent requests, phone approvals and cross-owner actions are also not yet built. Production federation between independent operators and a second independent implementation remain unproven.
+
+Recheck implementation and release evidence before changing those availability claims. Existing signed records, recognition examples or a maintainer-operated two-cloud demonstration do not establish that this proposed experience has shipped or been independently operated.
+
 ## Not This
 
 - Not only an AI-agent framework
@@ -38,7 +46,7 @@ Genesis Mesh is a portable trust layer for sovereign systems.
 
 - Apply the [editorial evidence standard](skills/genesismesh-campaign-pipeline/references/editorial-evidence-standard.md) and [design system](skills/genesismesh-campaign-pipeline/references/design-system.md) to all future campaigns and material revisions.
 - Explain a real Genesis Mesh flow, its authority boundary, concrete outputs and failure behavior. Do not substitute slogans or word count for substance.
-- Cite pinned implementation, documentation and tests near claims. Distinguish documented, implemented, test-covered and actually tested behavior, and released functionality from in-flight work. Strategy and roadmap support positioning, not proof of availability.
+- Cite verified canonical documentation near reader-facing guide claims throughout the article, and retain pinned implementation/test links for those precise sources. Keep immutable documentation revisions in the evidence ledger. Finish the article with a topic-specific **Further reading** section; generic project links alone are insufficient. Distinguish documented, implemented, test-covered and actually tested behavior, and released functionality from in-flight work. Strategy and roadmap support positioning, not proof of availability.
 - Check each relevant SDK, gateway and edge surface separately. Never infer parity, authority, fresh authorization or automatic fallback from a shared name.
 - Keep research/incident findings separate from product guarantees. Include limitations and a reader-verifiable next step.
 - Use the existing brand assets and series thumbnail system, with visual QA.
@@ -46,4 +54,4 @@ Genesis Mesh is a portable trust layer for sovereign systems.
 
 - Keep public articles evergreen: generally describe capabilities without individual SDK names or version numbers unless requested or necessary for accuracy. Separate implemented capability from planned broader coverage; retain exact SDK/platform coverage, pinned revisions and dated release checks in the internal evidence ledger. Never imply unimplemented parity.
 
-- Default to short, substantive articles with a branded cover, source links and LinkedIn draft. Use as few words as the substance allows, without rigid word counts. “Campaign” is a repository label; multimedia is optional and produced only when requested.
+- Default to substantive articles of around 900 words, with 850–1000 as a working range, a branded cover, source links and a concise LinkedIn draft. Develop the concrete flow and its limits without padding or repetition; record the visible-word count and explain justified variations. "Campaign" is a repository label; multimedia is optional and produced only when requested.

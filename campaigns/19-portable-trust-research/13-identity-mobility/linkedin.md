@@ -1,5 +1,9 @@
-An agent's address can change without creating a new trust relationship.
+An inventory agent moves from a laptop to the edge, then to the cloud. Which part of its identity should change?
 
-The key distinction is between a reachability hint and a trust anchor. This short article follows Genesis Mesh's sovereign identity document and signed genesis block, including the root-key mismatch that must not be accepted silently.
+Genesis Mesh separates a sovereign domain's identity from its advertised endpoint. Consumers verify required trust fields against root-signed genesis material; they do not grant trust because a familiar address responds.
 
-Read: {{PATREON_URL_AFTER_VERIFIED_PUBLICATION}}
+The article walks through that boundary, the difference between domain and node keys, and the failure case of an unchanged name with a changed root.
+
+This is domain continuity, not automatic workload migration or permission to access a resource.
+
+Read the article: {{PATREON_URL_AFTER_VERIFIED_PUBLICATION}}

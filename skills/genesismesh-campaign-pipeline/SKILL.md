@@ -7,7 +7,7 @@ description: End-to-end Genesis Mesh content campaign creation inside genesismes
 
 Use this skill from the repository root.
 
-The default deliverable is a short, substantive article, branded cover, source links and a LinkedIn draft. “Campaign” is the existing repository label, not a requirement to produce a multimedia campaign. Keep articles as short as the substance allows, with no rigid word count. Keep generated/private files out of Git.
+The default deliverable is a substantive article of around 900 words, a branded cover, source links and a LinkedIn draft. Use 850–1000 words as a working range, not a rigid quota; develop the concrete flow, evidence and limits without padding or repetition. "Campaign" is the existing repository label, not a requirement to produce a multimedia campaign. Keep generated/private files out of Git.
 
 ## Hard Rules
 
@@ -15,13 +15,14 @@ The default deliverable is a short, substantive article, branded cover, source l
 - Read and apply `references/editorial-evidence-standard.md` and `references/design-system.md` before drafting. Evidence, technical review, visual review and explicit publication approval are mandatory release gates.
 - Every substantive article must explain a concrete, sourced Genesis Mesh flow, its authority boundary, actual SDK/API calls or artifacts, a failure path and limitations. Word count is guidance, not a substitute for substance.
 - Write evergreen public-facing articles: generally describe capabilities without individual SDK names or version numbers, unless the user requests them or they are necessary to avoid material ambiguity. Clearly separate implemented capabilities from planned broader coverage; never imply parity that is not implemented. Keep exact SDK/platform coverage, pinned revisions and dated release checks in the internal evidence ledger; precise source links need not put versions in the prose.
-- Pin code, docs and tests to inspected revisions; separate documented, implemented, test-covered and actually tested behavior. Verify package/release availability independently from repository heads. Research, incident reports and formal models are not product guarantees.
+- Keep pinned code, documentation and test revisions in the evidence ledger; use verified canonical documentation pages for reader-facing guides and pinned GitHub links for implementation/tests. Separate documented, implemented, test-covered and actually tested behavior. Verify package/release availability independently from repository heads. Research, incident reports and formal models are not product guarantees.
 - Inventory all relevant SDK languages, gateway, Network Authority, CLI and edge surfaces. Do not assume parity. Trace exact fallback triggers, exclusions, opt-in flags, freshness limits and reconnect behavior for the version recorded in the evidence ledger; distinguish queued evidence from queued actions.
-- Include citations beside material claims, a reproducible “Check it yourself” section, and verified Website, documentation, demo and GitHub links. If a public demo is unavailable, say so and supply a documented local example instead.
+- Include citations beside material claims, a reproducible "Check it yourself" section, and a final **Further reading** section with topic-specific documentation links. Keep relevant canonical documentation links throughout the explanation; a final list or generic project footer does not replace inline sources. Also provide verified Website, documentation, demo and GitHub links. If a public demo is unavailable, say so and supply a documented local example instead.
 - For reader-facing walkthroughs and guides, prefer the verified canonical page on `docs.genesismesh.org`, with the exact relevant anchor when available. Open the page and verify its content and anchor; never derive or guess a URL from a repository path. Keep direct GitHub links for code/tests and pinned internal evidence. If no canonical docs counterpart can be verified, use a valid repository document and label it explicitly as repository documentation.
 - Use the existing branded series thumbnail layout and supplied logo, palette and typography; inspect actual final pixels at full size and 320 × 180. Keep hooks and diagrams no stronger than the evidence.
 - Do not publish or push campaign drafts to the public repository until those gates pass. Existing generator scripts do not enforce approval.
 - Keep Genesis Mesh framed as portable trust for sovereign systems. Read `MESSAGING.md` before drafting.
+- When discussing Connect, distinguish the intended everyday application from the Genesis Mesh trust layer beneath it; independent owners retain control over access. Use the dated [product vision](https://claude.ai/artifact/ParjPaubYJkVdkWcaCx4pt) and `MESSAGING.md` boundaries as positioning context, not release evidence. Keep proposed phone-approved cross-owner actions and unproven production federation separate from inspected mechanisms. Technical articles need not mention Connect when it adds no useful context.
 - Ask until the article is good enough. Do not proceed from `article.md` to voiceover until the user approves the article.
 - Create/update `campaign.json` when required by the chosen repository workflow or scripts; do not populate unused media fields or fabricate media assets for an article-only deliverable.
 - When Revid video is explicitly requested, run Revid `estimate` before `render`; do not run `render --yes` until the user explicitly accepts the estimate.
@@ -90,9 +91,9 @@ Gather at least:
 - intended channels
 - whether the tone is technical, founder-note, enterprise/security, or developer-facing
 
-Create `evidence.md` with pinned implementation/docs/tests, per-surface coverage, release status and observed verification. Trace a real Genesis Mesh flow and its failure path; qualify SDK/gateway/edge differences and exact fallback semantics. Create `review.md` to track blocking issues and approval of exact revisions. Include claim-level citations, a “Check it yourself” section, and verified Website/docs/demo/GitHub links. Keep private or unreleased evidence in the ignored local review packet.
+Create `evidence.md` with pinned implementation/docs/tests, per-surface coverage, release status and observed verification. Trace a real Genesis Mesh flow and its failure path; qualify SDK/gateway/edge differences and exact fallback semantics. Create `review.md` to track blocking issues and approval of exact revisions. Include claim-level citations and canonical documentation links throughout, a "Check it yourself" section, a final **Further reading** section and verified Website/docs/demo/GitHub links. Keep private or unreleased evidence in the ignored local review packet.
 
-Draft `article.md`. Ask focused follow-up questions when the article has weak claims, vague audience, missing proof, or messaging drift. Iterate until the user approves.
+Draft `article.md` around 900 words, normally 850–1000. Use that space to explain the actors, decisions, artifacts, failure path and reader check. Add relevant substance when a draft is too thin; remove repetition when it is too long. Do not pad to hit a number or cut an essential limit to fit the range. Record the visible-word count and method in `review.md` as defined in the editorial evidence standard. Ask focused follow-up questions when the article has weak claims, vague audience, missing proof, or messaging drift. Iterate until the user approves.
 
 ### 3. Generate Voiceover (Optional, Only When Requested)
 
@@ -214,12 +215,12 @@ Before calling the campaign complete:
 
 - `evidence.md` and `review.md` complete; no unresolved blocking claims
 - implementation/docs/test distinctions and current release availability checked across all relevant surfaces
-- claim-level citations, reproducible reader check, and public Website/docs/demo/GitHub links verified; reader-facing walkthroughs/guides use verified canonical docs pages and exact anchors where available, with repository-document fallbacks labeled explicitly
+- claim-level citations and canonical documentation links throughout, reproducible reader check, and a final **Further reading** section verified; reader-facing walkthroughs/guides use verified canonical pages and exact anchors where available, with repository-document fallbacks labeled explicitly; generic Website/docs/demo/GitHub links are supplementary
 - final thumbnail inspected at full resolution and 320 × 180 against the design system
 - derived assets contain no new unsupported claims
 - exact final assets and destination channels explicitly approved before publication
 - article approved by user
-- short substantive article, branded cover, source links and `linkedin.md` draft complete
+- substantive article around 900 words (850–1000 working range), branded cover, source links and `linkedin.md` draft complete; visible-word count recorded, with any justified length variation explained rather than padded
 - publishing files created only for selected channels
 - `campaign.json` finalized and valid when used
 - only if narration/video was requested: applicable voiceover/SSML, voice plan, TTS, approved Revid estimate/render and video checks complete or an explicit pending job noted

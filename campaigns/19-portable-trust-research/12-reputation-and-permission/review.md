@@ -1,37 +1,33 @@
 # Review record: Should an agent's reputation give it authority?
 
-Original research idea: 8. Review date: 2026-11-04.
+Original research idea: 8. Revision and review date: 2026-11-05.
 
 ## Evidence and editorial review
 
-On 2026-11-04 this article was substantially shortened at the user's request. The revised article and LinkedIn draft passed a separate agent's source-based technical and editorial review against the prior evidence ledger and the same-session pinned source snapshot. The concrete mechanism, authority and execution boundary, relevant failure path, material limitations and documented reader check remain. Exact revised claims are recorded in evidence.md. Article and Patreon copy are byte-identical.
+The user requested articles around 900 words, documentation links throughout and a final Further reading section, and authorized the corresponding repository updates. Earlier longer material was restored where useful and improved against the current evidence; the revision was not a blind revert. Material mechanisms, authority and execution boundaries, failure paths and limitations were checked by a separate agent reviewing the exact revised prose and LinkedIn draft against pinned implementation, current canonical guides and the source ledger. Blocking findings were corrected before publication.
 
-The review checked the shortened wording, not just the preceding longer version. No product test, demo or deployment was executed for this review.
+Source-based technical and editorial review passed using relayed exact text and changes against inspected source. The final evidence ledger records the wording and its limits. The preparing and publishing agents separately verified file hashes and byte-identical article/Patreon copies; the independent reviewer did not claim filesystem execution. No product tests, examples, live scenario or hardware exercise were executed for this review. Current source/release checks are distinguished from dated registry and deployment observations in the shared source review.
 
-## Visual review
+## Length and reader links
 
-The final cover is 1280 x 720 RGB PNG, using the established logo, palette and series template. Each final cover was inspected at full size and 320 x 180, including grayscale. The conceptual motif is not product output.
+Visible words: 924 (previous repository revision: 319). Target: around 900; working range: 850–1000 without padding or removing essential qualifications.
 
-Hook: REPUTATION / IS NOT / PERMISSION. Original idea number: 8.
+Method: Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.
 
-Alt text: A feedback star and a permission card are separated by the words IS NOT, distinguishing reputation from authorization.
+The article contains 5 canonical documentation links before its final Further reading section and 3 in that section. Topic-specific guides are explained; project Website, documentation, public console and GitHub links remain available. Research and source-code/test links retain their distinct purposes.
 
-The campaign and upload thumbnail copies are byte-identical. The public generation recipe is `videos/scripts/generate_research_thumbnails.py`; it requires an explicit idea selection. A future Patreon upload requires its own platform preview.
+## Visual review and preservation
 
-## Channel state
+The branded cover and upload copy are unchanged from the previously reviewed package. Their bytes were preserved rather than regenerated, retaining the established layout, logo, palette and typography. Existing full-size and small-preview visual review applies to those unchanged pixels. No title, slug, idea or series identifier, cover, public audience or existing release date was changed by this repository revision.
 
-Repository publication was explicitly requested for all completed campaign packages. This record does not authorize a new Patreon release: this article is not published or scheduled on Patreon. LinkedIn remains a draft; its pending link must be replaced only after the Patreon publication is verified.
+## Publication state
 
-## Concise revision
-
-Visible words: 319 (previously 699; reduction 54.4%). Counts include the title, headings, code and footer labels, excluding Markdown markup and link destinations. Alphanumeric words retain internal apostrophes, dots, underscores and hyphens.
-
-Title, slug, idea and series identifiers, cover and channel publication states are preserved. The six existing campaign packages and all shared files are unchanged. This revision does not publish or schedule anything on Patreon or LinkedIn.
+Repository publication of the reviewed updates was explicitly requested. The article remains unpublished and unscheduled on Patreon. No new Patreon publication or schedule is authorized by this review. LinkedIn remains a draft and was not posted. A prepared social draft does not establish that its linked Patreon release has occurred.
 
 ## Asset hashes
 
-- article.md: `26a1598eb65face7a14e5bf65b85e8beeb91421f50017ed769dde3814637e715`
-- patreon.md: `26a1598eb65face7a14e5bf65b85e8beeb91421f50017ed769dde3814637e715`
-- linkedin.md: `229e0b9243682f0e54c26db7e0a2c0ecb0baa941d9401158603ad99ee0cc0927`
-- evidence.md: `26fadf30020ae5e6f24f33d7d7fa8d86275a649fa235bd85390ff1b7b2ac397a`
+- article.md: `265d71174e659468b0f1d8e14e22a6ef189284e01347cee6bad3e9fd8c091ded`
+- patreon.md: `265d71174e659468b0f1d8e14e22a6ef189284e01347cee6bad3e9fd8c091ded`
+- linkedin.md: `2ac7549cfc2c4b96404c821ed52e95275f07cb84bb1612f7efd16f5ba4d92d2e`
+- evidence.md: `a8acb41ce1265b6a87f3f928e9c9d1bdc0485785b24f8709a6bac642b9b087ed`
 - thumbnail.png: `aa56c0b9aa55da316f66c1f6a54e2f988839deb7021f1176444ed5a683681d70`

@@ -46,16 +46,22 @@
   "idea_number": 6,
   "series_order": 10,
   "thumbnail_alt_text": "MCP, A2A and HTTP boxes cross separate boundaries, illustrating the need to preserve and recheck limits at each handoff.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "26b3f4f2ea8c0bf49865966e31327220e040a4f27246ee12961a50fa817ee316",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 313,
-    "previous_visible_word_count": 630,
-    "reduction_percent": 50.3,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "361f9147322922b50b4212c3ee1420c1a6211d0eb5dd12fea17b74fa3fabdd51",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 878,
+    "previous_visible_word_count": 313,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

@@ -1,10 +1,9 @@
-Two peers complete an encrypted handshake. One asks to export data. Which component can still refuse?
+An authenticated connection identifies the peer. The receiving application still decides whether that peer may export a dataset.
 
-Genesis Mesh's code makes the boundaries concrete: Noise session binding, same-network certificate checks, then separate trust and application authorization. A valid signed deny can verify successfully while still authorizing nothing.
+Genesis Mesh separates peer authentication, trust verification and the receiving application's permission check. Even a valid signed decision can be a denial.
 
-The article follows those paths, explains why the dormant mesh transport should not be sold as a production P2P runtime, and places DIAP alongside the implementation as research context.
+The article follows those boundaries, explains the reference runtime's scope and links the documentation for checking them.
 
-Where does your application enforce the decision after authentication succeeds?
+Read after the scheduled release is verified: https://www.patreon.com/GenesisMeshLabs/posts/p2p-transport-is-174297160
 
-<!-- Send only after verifying this scheduled Patreon post is live. -->
-Read the article: https://www.patreon.com/GenesisMeshLabs/posts/p2p-transport-is-174297160
+#GenesisMesh #DistributedSystems #Authorization

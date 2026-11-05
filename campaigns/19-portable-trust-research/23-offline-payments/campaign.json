@@ -14,14 +14,17 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "Offline permission is not proof of funds or settlement.",
+  "primary_message": "What has an offline device actually established: permission, a payment result, or both?",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://arxiv.org/abs/2408.06956",
     "https://docs.genesismesh.org/reference/public-contract.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L266",
     "https://docs.genesismesh.org/examples/pre-issued-grants.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/grants.py#L383",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/grants.py#L766",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_grants.py#L336",
+    "https://docs.genesismesh.org/operations/grants.html",
     "https://genesismesh.org/",
     "https://docs.genesismesh.org/sdk/index.html",
     "https://mesh.genesismesh.org/",
@@ -61,16 +64,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "A broken link separates an authority from a local-proof question, illustrating offline authorization limits without promising payment settlement.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "686c7bc240e69c1af1914d045818f279fdaeb59a093715f2b3e8c74dd9abe61c",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 351,
-    "previous_visible_word_count": 719,
-    "reduction_percent": 51.2,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "8cbce5afe88864dae03a04532fb2f5a964b8a17002f0999700a3c4ef9ab6b912",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 938,
+    "previous_visible_word_count": 351,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

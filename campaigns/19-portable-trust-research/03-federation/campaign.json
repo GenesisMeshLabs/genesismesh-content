@@ -17,16 +17,17 @@
   "primary_message": "Federation without surrendering local control",
   "call_to_action": "If you could federate one permission with a partner today, which would it be, and who would retain the power to withdraw it?",
   "source_docs": [
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/recognition-treaties.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/treaty.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/independent-sovereigns.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/VISION.md",
+    "https://docs.genesismesh.org/examples/recognition-treaties.html",
+    "https://docs.genesismesh.org/examples/cross-sovereign-revocation.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py",
+    "https://docs.genesismesh.org/examples/independent-sovereigns.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/VISION.md",
     "https://arxiv.org/abs/2609.06595",
-    "https://www.youtube.com/watch?v=y3GBM5h-RdY",
-    "https://genesismesh.org",
-    "https://docs.genesismesh.org",
-    "https://mesh.genesismesh.org",
-    "https://github.com/GenesisMeshLabs"
+    "https://claude.ai/artifact/ParjPaubYJkVdkWcaCx4pt",
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/federation.png",
@@ -52,9 +53,24 @@
   },
   "article_approved": true,
   "published": false,
-  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 956,
+    "previous_visible_word_count": 794,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
+    "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "pending_user_confirmation",
+    "examples_executed": false
+  },
   "thumbnail_alt_text": "Trust across boundaries. Two independent nodes exchange signals above a verification symbol, illustrating scoped recognition between operators, not universal approval.",
   "word_count": 805,
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "3317942c1ef26ee20b7b8b9971c03979cc83ba6f3d07794c388252eb4fe6dcff"
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "00e3fbc8a300201b8ae7c8c6d99f969b1de02619c11ced5316950c3895e41976"
 }

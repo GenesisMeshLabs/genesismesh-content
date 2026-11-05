@@ -18,18 +18,17 @@
   "call_to_action": "Where is the last point your system can stop a queued action?",
   "source_docs": [
     "https://arxiv.org/abs/2609.21284",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/governed-changes.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/sdk/typescript/governance.md",
-    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/161ef82f6c99f8656c424eab87ab92404cdf1c55/src/governance.ts",
-    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/161ef82f6c99f8656c424eab87ab92404cdf1c55/src/outbox.ts",
-    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/161ef82f6c99f8656c424eab87ab92404cdf1c55/src/evidence_store.ts",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/sdk/index.md",
-    "https://www.youtube.com/watch?v=gp5yqnNQdZI",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/out-of-band-changes.md",
-    "https://genesismesh.org",
-    "https://docs.genesismesh.org",
-    "https://mesh.genesismesh.org",
-    "https://github.com/GenesisMeshLabs"
+    "https://docs.genesismesh.org/concepts/governed-changes.html",
+    "https://docs.genesismesh.org/operations/out-of-band-changes.html",
+    "https://docs.genesismesh.org/sdk/typescript/governance.html",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/outbox.ts",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/evidence_store.ts",
+    "https://docs.genesismesh.org/sdk/index.html",
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/queued-actions.png",
@@ -55,9 +54,24 @@
   },
   "article_approved": true,
   "published": false,
-  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 962,
+    "previous_visible_word_count": 939,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
+    "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "pending_user_confirmation",
+    "examples_executed": false
+  },
   "thumbnail_alt_text": "Revoked. Still running? Linked blocks illustrate a sequence of queued work, asking whether revocation is checked before an external effect.",
   "word_count": 949,
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "0b482a025171f1350c4c1796a61e6465ecd4d6a8d042aaaaf79e137f5ccc61ef"
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "719cdd797b0bf3a9583107b5e0880d9acba3cc787d3d61b0c407d14f46439b47"
 }

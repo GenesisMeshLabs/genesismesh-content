@@ -1,8 +1,8 @@
-Proving one permission should not require exposing every unrelated capability.
+A proof can reveal less data without making an interaction anonymous.
 
-Genesis Mesh's beta selective-disclosure functions support a signed Merkle membership proof. Agreement and issuer identifiers still remain visible; this is not zero-knowledge or anonymous commerce.
+Genesis Mesh's beta selective-disclosure functions use Merkle membership proofs. Agreement and issuer identifiers remain visible, and deterministic capability hashes need careful interpretation.
 
-The practical question is what the complete record reveals to its recipient.
+The expanded article examines the complete exchange: proof fields, request binding and recorded inputs. It distinguishes reduced disclosure from zero-knowledge or payment privacy guarantees.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 

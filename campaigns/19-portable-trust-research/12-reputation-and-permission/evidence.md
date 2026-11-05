@@ -1,6 +1,6 @@
 # Evidence ledger - idea 8: Should an agent's reputation give it authority?
 
-Review date: 2026-11-04. Intended publication date: not assigned. Authoring reviewer: Codex campaign author.
+Review date: 2026-11-05. Intended publication date: not assigned. Authoring reviewer: Codex campaign author.
 Core source inspected at a54b2d81f205c9b0203158f846f7ad44dc677063. Latest core release v1.9.1 confirmed from the GitHub release API. Release availability and source-head content are distinct; no hosted deployment or cross-language parity is inferred.
 Observed work: public primary-source web reads; GitHub code/test/contract inspection; local editorial review. No Genesis Mesh test, demo, deployment, payment or side effect was executed. Test-covered means assertions read, not passing test execution.
 
@@ -23,31 +23,46 @@ The current public-surface contract is pinned at https://github.com/GenesisMeshL
 
 ## Material claims
 
-Exact wording below follows the shortened article revision. Source inspection and test-execution status are unchanged.
+Exact wording below follows the expanded revision (rendered Markdown where code or links occur). Each item applies to article.md, identical patreon.md, and the narrower LinkedIn summary where relevant. All code and tests remain pinned to the unchanged core revision; test sources were inspected, not executed.
 
 ### Claim 8-1
-- Exact wording / scope: The boundary engine checks capability, validity and freshness in the supplied context before returning a signed BoundaryDecision.
-- Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
+- Exact wording / scope: The boundary engine checks capabilities, validity and freshness in the supplied context.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/engine.py#L45-L118
-- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Verification and limits: No claim that arbitrary supplied facts are independently true. Reputation cannot expand signed agreement scope.
-- Decision: retained with the stated scope after author shortening review; independent revision review follows.
+- Verification and limits: Rendered wording; base authority checks do not become a universal reputation model or resource adapter.
+- Decision: retained after author and independent source-based expanded-revision review.
 
 ### Claim 8-2
-- Exact wording / scope: An enforce gate can deny; an observe gate records without blocking.
-- Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
-- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/policy.py#L439-L511
-- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Verification and limits: No universal reputation connector claimed. New gate types require trusted implementation/testing.
-- Decision: retained with the stated scope after author shortening review; independent revision review follows.
+- Exact wording / scope: A request for contracts.export needs its own valid authority.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/engine.py#L45-L118
+- Verification and limits: Rendered wording; scenario capability names are explicitly illustrative, not claimed built-in commands.
+- Decision: retained after author and independent source-based expanded-revision review.
 
 ### Claim 8-3
-- Exact wording / scope: Inspect the signed decision: the amount-cap request is denied, while the business-hours gate configured in observe mode records its outcome without becoming an enforcement rule.
-- Affected assets: article.md, identical patreon.md and the narrower linkedin.md.
+- Exact wording / scope: A decision's PolicyBinding records the policy versions, gate outcomes and context digest used for evaluation.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/policy.py#L439-L511
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: Rendered wording; signed result does not certify honesty of caller-supplied reputation or MFA facts.
+- Decision: retained after author and independent source-based expanded-revision review.
+
+### Claim 8-4
+- Exact wording / scope: A failed enforce gate denies a request; an observe gate records its outcome without blocking the action.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/policy.py#L439-L511
+- Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
+- Verification and limits: Observation is not additional enforcement. No fail-closed claim for observe mode.
+- Decision: retained after author and independent source-based expanded-revision review.
+
+### Claim 8-5
+- Exact wording / scope: This article does not claim a universal reputation-scoring connector.
+- Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/policy.py
+- Verification and limits: Bounded implementation scope; explicit registered gates, no ERC-8004 connector or SDK parity inferred.
+- Decision: retained after author and independent source-based expanded-revision review.
+
+### Claim 8-6
+- Exact wording / scope: The example creates a temporary local authority and signed policies.
 - Implementation: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/docs/examples/assets/scripts/boundary-policy-demo.py#L50-L126
 - Test source: https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_na_boundary_policy.py
-- Verification and limits: Documented expected behavior; no demo executed. Research dataset finding remains bounded.
-- Decision: retained with the stated scope after author shortening review; independent revision review follows.
+- Verification and limits: Documented amount denial, observe-mode business-hours gate and unknown-gate refusal inspected, not executed. Research findings remain scoped to observed dataset.
+- Decision: retained after author and independent source-based expanded-revision review.
 
 ## Research and primary reader links
 - Research source: https://arxiv.org/abs/2606.26028
@@ -62,6 +77,7 @@ Exact wording below follows the shortened article revision. Source inspection an
 The article links the actual documented local procedure with prerequisites, expected result and failure. Its command was inspected in the documented example; it was not run here. Example source dates and expiry must be current when readers create their own records. Prefer the source demo's controlled fixture clock, where supplied, to blindly reusing historical timestamps; the delegation demo uses a fixed scenario time.
 Sources show a mechanism and tests show asserted cases. Production adoption still needs integration-specific execution binding, key management, trusted facts and appropriate confinement. No research performance or security percentage is transferred to Genesis Mesh.
 
-## Concise revision
 
-Shortened 2026-11-04 at the user's request. One scenario and one mechanism retained, with essential refusals and limitations. The same pinned evidence supports this revision; no new feature, deployment or test-run claim was added. Independent concise-revision review is pending. Superseded prose was removed, not silently treated as reviewed. No publication or schedule field changed.
+## Expanded revision — 2026-11-05
+
+The user requested approximately 900 words, documentation links throughout and final Further reading. This revision reworks the prior reviewed mechanism and its essential limits; source-head and release checks on 2026-11-05 confirmed core a54b2d81f205c9b0203158f846f7ad44dc677063 and release v1.9.1 unchanged. The independent source reviewer also reconfirmed all six recorded source heads and latest releases unchanged. Relevant canonical guides were reopened. No SDK parity, live deployment, current revocation propagation or executed-test claim was added. Research remains motivation, not a Genesis Mesh guarantee. Public website and demo links identify available public entry points, not a tested deployment. A separate reviewer completed source-based review of the exact expanded article and LinkedIn text and the changed claim ledger; the author verified the staged hashes. No product example was executed. Covers and channel publication states are preserved.

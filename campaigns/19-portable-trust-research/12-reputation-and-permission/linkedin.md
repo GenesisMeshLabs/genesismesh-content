@@ -1,9 +1,13 @@
-Excellent reviews can help select a service. They do not authorize it to export a private contract.
+# LinkedIn draft
 
-Genesis Mesh's policy workflow makes the requested capability and local rule inspectable. The executor must still use trusted facts, enforce the evaluated action and protect other access paths.
+A service can have excellent reviews and still have no authority to export your contracts.
 
-A short look at reputation, permission and evidence:
+Reputation can help select a provider. Permission must identify what that provider may do with a particular resource.
 
-[PATREON_URL_PENDING]
+Genesis Mesh's boundary-policy workflow makes the local rule and its decision inspectable. A favorable signal does not add a missing capability, and an observe gate records without blocking.
 
-#GenesisMesh #Authorization #SovereignSystems
+The article follows a procurement example, explains the executor's responsibility and distinguishes the documented policy mechanism from reputation scoring.
+
+Read the article: {{PENDING_PATREON_ARTICLE_URL}}
+
+#GenesisMesh #AgentTrust #Authorization

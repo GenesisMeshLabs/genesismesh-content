@@ -4,7 +4,9 @@ All 24 ideas from the research backlog are collected here. The six previously de
 
 Each package includes an article, matching Patreon copy, a branded cover, a LinkedIn draft and source/review notes. Repository publication is independent of Patreon publication. Two articles are live on Patreon and four retain their existing schedules; the other 18 are not scheduled. LinkedIn copy is not posted automatically.
 
-The articles distinguish research from implemented behavior and illustrative scenarios from deployments. Evidence was reviewed against the current source/release snapshot on 2026-11-04. Reproduction procedures are documented, not newly executed tests.
+The November 5 repository revision expands the 22 upcoming articles to around 900 words, with verified documentation links throughout and a final Further reading section. The two live packages are preserved. The four scheduled Patreon copies require separately confirmed synchronization; preparing these repository copies does not update Patreon or verify a new release. Their existing schedule is recorded below.
+
+The articles distinguish research from implemented behavior and illustrative scenarios from deployments. Source and GitHub release evidence was rechecked on 2026-11-05; package registry observations remain dated 2026-11-04. Reproduction procedures are documented, not newly executed tests.
 
 | Original idea | Article | Patreon state |
 |---:|---|---|

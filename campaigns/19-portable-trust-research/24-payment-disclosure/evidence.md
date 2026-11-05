@@ -1,6 +1,6 @@
 # Evidence ledger: idea 24
 
-Review date: 2026-11-04. Author: Codex draft researcher. Independent source review is recorded separately against final hashes. This is a source-review packet, not a product certification or a passing test report.
+Review date: 2026-11-05. Author: Codex draft researcher. Independent source review is recorded separately against final hashes. This is a source-review packet, not a product certification or a passing test report.
 
 ## Research scope
 
@@ -18,43 +18,69 @@ The public website and trust demo were viewed without authentication on 2026-11-
 
 ## Material claims
 
-Concise revision: each quotation below appears in the revised article. The same claims apply to the identical Patreon copy; LinkedIn uses a narrower summary. Existing dated source and release checks remain the baseline. No product examples or tests were executed.
-
 ### 24-1
 
-Exact article wording: The verifier uses trusted issuer keys to check the signature, leaf hash and Merkle path without receiving the full list.
+Exact article wording: The verifier checks the commitment's signature, the revealed capability's leaf hash and the Merkle path back to the committed root.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L156).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py#L256); not executed.
-- Scope, limits and authority boundary: Beta selective-disclosure functions verify Merkle membership. The consuming system supplies trusted issuer keys. No formal zero-knowledge, payment credential ownership, mandate or settlement claim.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Merkle membership; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L219).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py#L256). **Not executed** in this review.
+- Scope, limitations and decision: Implemented and test-covered Merkle membership. No formal zero-knowledge, holder authentication, settlement or balance guarantee is claimed.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
 
 ### 24-2
 
-Exact article wording: The local `SelectiveDisclosureGate` also requires the commitment's agreement to match the request's agreement, and the revealed capability to match the requested capability.
+Exact article wording: The [commitment schema](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py#L20) includes `agreement_id`, `issuer_sovereign_id`, `capability_count` and a timestamp. The proof includes a prover identifier.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L308).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py); not executed.
-- Scope, limits and authority boundary: Explicit request relationships checked by the local gate. Caller authentication, current policy and execution remain consuming-application duties. No automatic cross-SDK integration is implied.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Actual disclosure; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py#L20).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py). **Not executed** in this review.
+- Scope, limitations and decision: Actual schema inspected. This corrects the walkthrough's broad wording about hiding the agreement identifier. Public prose explicitly says these identifiers remain visible.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
 
 ### 24-3
 
-Exact article wording: These fields can expose relationships or link events.
+Exact article wording: Genesis Mesh's `SelectiveDisclosureGate` checks two important relationships after proof verification: the commitment's agreement must match the request's agreement, and the revealed capability must match the requested capability.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/selective_disclosure.py#L20).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py); not executed.
-- Scope, limits and authority boundary: The normal commitment carries agreement_id, issuer_sovereign_id, capability_count and timestamp; the proof carries a prover identifier. This corrects broad identifier-hiding implications in the guide introduction. Linkability is a design limitation, not an exploitation result.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Request binding; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L308).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py). **Not executed** in this review.
+- Scope, limitations and decision: Implemented and test-covered local gate. Trusted keys, current permission and payment replay protection are outside this limited claim.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
 
 ### 24-4
 
-Exact article wording: Deterministic hashes also do not guarantee secrecy for predictable capability names.
+Exact article wording: For its configurable policy gates, `disclose_input` defaults to false: the gate's recorded input describes presence and type rather than copying the raw value.
 
-- Implementation: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L94).
-- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py#L136); not executed.
-- Scope, limits and authority boundary: Inference from deterministic tree construction over capability values. No attack was executed. The article narrows the privacy property to capability-set disclosure and explicitly distinguishes Groth-Sahai research from this implementation.
-- Evidence level: source-inspected implementation and test assertions; no runtime result is claimed. The relevant release and surface matrix below controls availability, not the illustrative application.
+Affected sections/assets: Input minimization; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/models/boundary_policy.py#L106).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_boundary_policy.py#L685). **Not executed** in this review.
+- Scope, limitations and decision: Implemented and test-covered. The input-recording code is https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L183 . It does not hide request facts from the authority or govern every other log.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+
+### 24-5
+
+Exact article wording: The scheme uses deterministic hashes.
+
+Affected sections/assets: Information limit; article.md, identical patreon.md and corresponding bounded LinkedIn wording.
+
+- Implementation: [inspected symbol or model](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L94).
+- Tests: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py#L136). **Not executed** in this review.
+- Scope, limitations and decision: Implementation inspected. The privacy limitation is an inference: predictable values and visible identifiers prevent treating absence of plaintext as proof against guessing. No exploitation test is claimed.
+- Availability: underlying source is in the pinned 1.9.1 release train. Telecom, EV and payment adaptations remain illustrative, not implemented by this work. No complete SDK parity or live feature availability is asserted.
+
+### 24-6
+
+Exact article wording: A smaller payload can still carry a stable link between interactions.
+
+- Implementation basis: [inspected source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/selective_disclosure.py#L94).
+- Test basis: [inspected test source](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_selective_disclosure.py#L136); not executed.
+- Scope and inference: Privacy-inventory guidance is illustrative. Actual commitment/proof fields expose identifiers; capability leaves are SHA-256 of unsalted capability strings. Guessability is a source-based limitation, not an executed attack or a measured anonymity result.
+- Affected assets: article.md, identical Patreon copy and the bounded LinkedIn summary. Expanded wording awaits independent review.
 
 ## Documentation and source comparison
 
@@ -93,6 +119,10 @@ Reader URL inventory: campaign.json source_docs and the article citations. Final
 
 Selective-disclosure functions are explicitly qualified as beta in the article and Patreon copy; the concluding privacy-property sentence uses clear comma punctuation. The canonical [public contract](https://docs.genesismesh.org/reference/public-contract.html) was opened and checked on 2026-11-04. This classification does not establish production deployment or complete SDK parity.
 
-## Concise revision record
+## Expanded revision and current-source check
 
-The article was shortened at the user's request on 2026-11-04. Secondary mechanisms and repeated caveats were removed; the retained claim quotations above supersede the earlier wording. Same-session primary-source, pinned implementation, canonical-documentation and release checks remain applicable. No new capability or deployment claim was added. The condensed revision awaits independent review against its updated hashes.
+On 2026-11-05, the six current implementation heads and latest GitHub releases were rechecked: core, TypeScript, Rust, .NET, Go and gateway retain the exact revisions in the matrix above, with latest tags v1.9.1. Primary research abstracts were reopened. Canonical public-contract, logic-attestation, recognition, governed-action, pre-issued-grant, selective-disclosure, attestation-backed-evaluation, declarative-policy, installation and SDK-overview pages were opened and their relevant content inspected. The public contract still classifies logic-attestation and selective-disclosure functions, and grant routes, as beta.
+
+Targeted pinned verifier/source reads reconfirmed logic-attestation limits, direct treaty recognition, governedAction callback boundaries and unsalted deterministic capability leaf hashing. PyPI currently reports 1.9.1. The web tool could not reopen npm/NuGet JSON endpoints or the website/demo; their earlier dated observations above are retained rather than represented as new successful checks. The repository-wide reviewer is refreshing shared availability evidence.
+
+The expanded article follows the user's request for roughly 900 words, canonical documentation links throughout and a final Further reading section. New scenario detail is expressly illustrative integration guidance, not a new product capability. No package, test, demo, payment or deployment was executed. Independent source-based technical and editorial review of the expanded wording passed; final asset hashes are recorded in review.md.

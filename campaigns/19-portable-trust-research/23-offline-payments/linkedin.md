@@ -1,8 +1,8 @@
-Offline permission is not proof of funds or settlement.
+What has an offline device actually established: permission, a payment result, or both?
 
-Genesis Mesh's beta grants bound an authorized action and support later evidence admission. A refused record cannot undo an action already performed.
+Genesis Mesh's beta grants bound authorization and provide signed use records for later admission. They do not reserve money, prevent payment double spending or establish settlement.
 
-The article separates this authorization mechanism from the payment protocol needed for value conservation, replay and double-spending handling.
+The expanded article follows the grant, disconnected action and reconnection review, keeping payment recovery separate.
 
 Read: [ARTICLE_URL_PENDING_PUBLICATION]
 

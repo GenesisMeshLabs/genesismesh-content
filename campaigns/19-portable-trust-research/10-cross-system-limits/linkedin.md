@@ -1,9 +1,13 @@
-A token can cross MCP, A2A and HTTP while its limits disappear at an adapter.
+# LinkedIn draft
 
-Genesis Mesh's beta invocation-token workflow checks bearer, capability, expiry and supplied use state. It does not create a global replay counter or universal audience binding.
+A request can cross three systems successfully and lose its permission limits along the way.
 
-The receiving service still has to enforce the intended action.
+Genesis Mesh's beta invocation tokens give a receiver something explicit to check: issuer signature, bearer, capability and expiry. The consuming service still has to authenticate the caller and bind that permission to the actual resource and operation.
 
-Read: [PATREON_URL_PENDING]
+A usage budget also needs coordinated, trustworthy state. The verifier counts caller-supplied use records; it is not a global replay counter.
 
-#GenesisMesh #Interoperability #Authorization
+The article follows one report-reading request through these boundaries, with a documented acceptance and refusal check.
+
+Read the article: {{PENDING_PATREON_ARTICLE_URL}}
+
+#GenesisMesh #AgentSecurity #Interoperability

@@ -17,20 +17,21 @@
   "primary_message": "P2P transport is only half the handshake",
   "call_to_action": "Which part of your P2P stack can refuse a specific action after authentication succeeds?",
   "source_docs": [
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/transport/noise_handshake.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/node/peer_identity.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/development/strategy.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/rust-gateway.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/concepts/security-model.md",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/context/decisions.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/tests/test_attestation_boundary.py",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/tests/test_boundary_policy.py",
+    "https://docs.genesismesh.org/concepts/security-model.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/transport/noise_handshake.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/node/peer_identity.py",
+    "https://docs.genesismesh.org/development/decisions/0007-dormant-packages.html",
+    "https://docs.genesismesh.org/concepts/rust-gateway.html",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/decisions.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_attestation_boundary.py",
+    "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/tests/test_boundary_policy.py",
+    "https://docs.genesismesh.org/examples/attestation-backed-evaluation.html",
     "https://arxiv.org/abs/2511.11619",
-    "https://www.youtube.com/watch?v=E2UQRM7c3Vo",
-    "https://genesismesh.org",
-    "https://docs.genesismesh.org",
-    "https://mesh.genesismesh.org",
-    "https://github.com/GenesisMeshLabs"
+    "https://claude.ai/artifact/ParjPaubYJkVdkWcaCx4pt",
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/p2p-handshake.png",
@@ -56,9 +57,24 @@
   },
   "article_approved": true,
   "published": false,
-  "editorial_revision": "concise_article_and_cover_2026-11-04",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 952,
+    "previous_visible_word_count": 742,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
+    "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "pending_user_confirmation",
+    "examples_executed": false
+  },
   "thumbnail_alt_text": "Connected. Authorized? Requests approach a doorway, illustrating that an established connection does not itself grant permission.",
   "word_count": 752,
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "10425c15b33eec14bc1fdacb06363090fbfe5116eb0a9d33435da05923ee7053"
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "67a069decf78f1d18693f2943300804b5fd4f6416e7beb2bb7c9eaaedc037b00"
 }

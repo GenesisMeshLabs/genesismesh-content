@@ -16,19 +16,23 @@ Consider a researcher whose membership is valid at Organization A. Organization 
 
 This also gives withdrawal more than one meaning. A can revoke its member's attestation. B can withdraw its recognition of A. B can narrow what a recognized researcher may do without changing either membership or recognition. An integration that tests only admission misses these separate controls.
 
-The treaty documentation distinguishes recognition from the foreign membership-revocation feed. A valid treaty does not make a revoked foreign membership valid. Receiving the relevant signed feed is part of learning that change. No claim of immediate global propagation follows from the existence of the signature.
+The [cross-sovereign revocation walkthrough](https://docs.genesismesh.org/examples/cross-sovereign-revocation.html) distinguishes recognition from the foreign membership-revocation feed. A valid treaty does not make a revoked foreign membership valid. Receiving the relevant signed feed is part of learning that change. No claim of immediate global propagation follows from the existence of the signature.
 
 ## What the verifier checks
 
-The [treaty implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/treaty.py) checks the expected issuer and subject, local revocation, status, validity and signatures. It turns the treaty's subject public keys, allowed roles and accepted statuses into a recognition policy. These fields make the scope operational: the receiving verifier is not merely matching the partner's display name.
+The [treaty implementation](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/treaty.py) checks the expected issuer and subject, local revocation, status, validity and signatures. It turns the treaty's subject public keys, allowed roles and accepted statuses into a recognition policy. These fields make the scope operational: the receiving verifier is not merely matching the partner's display name.
 
 The signed revocation-feed verifier also rejects a sequence at or below the minimum sequence supplied to it. That makes the caller's retained sequence state important. A fresh download of an old signed feed is still old information. The operator must preserve and use the relevant freshness and sequence state rather than assuming the signature alone prevents rollback.
+
+The [recognition example](https://docs.genesismesh.org/examples/recognition-treaties.html) is direct rather than transitive. If B recognizes C, A does not thereby accept C under its treaty with B. An integration must identify the actual issuer, the applicable signed relationship and the receiver's own acceptance scope. This keeps a partnership from silently becoming permission for every organization connected to the partner.
+
+For our researchers, capture the membership attestation and recognition treaty as separate inputs. A local workspace role belongs to a third decision. When a request is refused, those records help distinguish an expired membership, an ended recognition relationship and a local project restriction. The application must still authenticate the requester and enforce the operation at the point where it can access the workspace. This is the proposed integration boundary, not a built-in research-workspace adapter.
 
 ## What has actually been demonstrated
 
 The [independent-sovereigns walkthrough](https://docs.genesismesh.org/examples/independent-sovereigns.html) documents a maintainer-operated two-cloud proof. Separate authorities use separate keys and infrastructure. That is evidence for the mechanism and for that recorded configuration, not an independent production deployment or a current live measurement.
 
-The [project vision](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/VISION.md) distinguishes this from a separate external operator establishing its own sovereign and a real recognition relationship. Independent key material and independent organizational ownership are different claims. The former can be demonstrated by one team; the latter needs another operator.
+The [project vision](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/VISION.md) distinguishes this from a separate external operator establishing its own sovereign and a real recognition relationship. Independent key material and independent organizational ownership are different claims. The former can be demonstrated by one team; the latter needs another operator.
 
 ## A useful comparison, with a clear limit
 
@@ -36,7 +40,7 @@ The [project vision](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b
 
 A useful next operator proof would choose one real shared permission, then exercise each withdrawal separately: foreign membership revocation, local recognition withdrawal and local permission reduction. Capture the signed inputs, the receiver's last refresh, the result and the application's response. Include a disconnected receiver so the evidence shows the actual freshness limit.
 
-That is an evaluation plan, not a claim that this new test has run. The practical starting point is small: name who issues the claim, who recognizes it, who may withdraw each part and who can stop the final action. Federation becomes easier to inspect when those responsibilities remain separate.
+The [Connect vision](https://claude.ai/artifact/ParjPaubYJkVdkWcaCx4pt) proposes a concrete next proof: a user asks a genuinely independent owner to permit one document read, approved for the exact document, version, action and expiry, with verifiable evidence. It explicitly leaves cross-owner phone approval and production federation unbuilt or unproven. That everyday experience is Connect's role; Genesis Mesh provides trust mechanisms underneath. A recorded two-cloud treaty demonstration does not complete that product proof.
 
 ## Check it yourself
 
@@ -44,19 +48,10 @@ Follow the linked recognition-treaty walkthrough using its documented local setu
 
 This is a documented example, not executed in this review. The expected distinction is a verified applicable treaty versus a rejected invalid treaty; a valid treaty must not erase a member's revocation or supply application permission on its own.
 
-**Builds on our video** [Portable Trust Across Boundaries](https://www.youtube.com/watch?v=y3GBM5h-RdY)
+## Further reading
 
-**Go deeper:**
+- [Recognition treaties](https://docs.genesismesh.org/examples/recognition-treaties.html): direct scope, accepted roles and local withdrawal.
+- [Cross-sovereign revocation](https://docs.genesismesh.org/examples/cross-sovereign-revocation.html): importing an issuer's withdrawal without ending the whole relationship.
+- [Independent-sovereigns proof](https://docs.genesismesh.org/examples/independent-sovereigns.html): the recorded two-cloud demonstration and its limits.
 
-[Recognition treaties](https://docs.genesismesh.org/examples/recognition-treaties.html)
-
-**Next:** A swarm needs boundaries, not just coordination
-
----
-
-Genesis Mesh is a portable trust layer for sovereign systems, and it is open source.
-
-Website: https://genesismesh.org
-Documentation: https://docs.genesismesh.org
-Live demo: https://mesh.genesismesh.org
-GitHub: https://github.com/GenesisMeshLabs
+Explore the [website](https://genesismesh.org/), [documentation](https://docs.genesismesh.org/), [public trust console](https://mesh.genesismesh.org/) and [source repository](https://github.com/GenesisMeshLabs/genesismesh). Start by naming one real partner claim and the local action it may support.

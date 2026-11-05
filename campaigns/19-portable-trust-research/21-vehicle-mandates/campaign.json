@@ -14,13 +14,16 @@
     "patreon",
     "linkedin"
   ],
-  "primary_message": "A payment credential does not explain what a vehicle's owner allowed it to buy.",
+  "primary_message": "A car having a payment credential does not explain what its owner allowed it to buy.",
   "call_to_action": "Read the documented example, inspect its failure case, and review the consuming integration.",
   "source_docs": [
     "https://portalcientifico.upm.es/en/ipublic/item/9930578",
+    "https://docs.genesismesh.org/examples/attestation-backed-evaluation.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/context/registry.py#L453",
     "https://docs.genesismesh.org/sdk/typescript/governance.html",
     "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/src/governance.ts#L360",
+    "https://github.com/GenesisMeshLabs/sdk-typescript/blob/8154ca7ac459ffbcd22d35900ca72f8093165bfc/tests/governance.test.ts",
+    "https://docs.genesismesh.org/examples/declarative-boundary-policy.html",
     "https://genesismesh.org/",
     "https://docs.genesismesh.org/sdk/index.html",
     "https://mesh.genesismesh.org/",
@@ -60,16 +63,22 @@
     "thumbnail.png"
   ],
   "thumbnail_alt_text": "An owner mandate points toward a car, illustrating bounded machine-payment authority, not an implemented payment network.",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "215b2af50086ccc6fd95ef3350f9b4a94bd329df98a1f70e174431aae8a31be3",
-  "concise_revision": {
-    "review_date": "2026-11-04",
-    "visible_word_count": 354,
-    "previous_visible_word_count": 726,
-    "reduction_percent": 51.2,
-    "word_count_method": "Rendered text including title, headings, code and footer labels; Markdown markup and URL destinations excluded; alphanumeric word tokens retain internal apostrophes, dots, underscores and hyphens.",
-    "source_snapshot": "unchanged; retained claims checked against the same-session pinned evidence",
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "6b78dcc8809e3f27155855abacf67a042a2e4dd0b524506cb54af73cee8e5ffa",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "working_range": [
+      850,
+      1000
+    ],
+    "visible_word_count": 939,
+    "previous_visible_word_count": 354,
+    "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
+    "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
+    "patreon_sync": "not_scheduled_or_published",
     "examples_executed": false
   }
 }

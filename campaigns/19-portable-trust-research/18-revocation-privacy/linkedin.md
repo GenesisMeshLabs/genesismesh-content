@@ -1,7 +1,9 @@
-Revocation metadata can reveal activity as well as prevent access.
+Revoking access can be necessary and still reveal information.
 
-This short article inspects Genesis Mesh's signed revocation-list fields and one important limit on interpretation: a new sequence can be a refresh with no new revoked credentials.
+A Genesis Mesh signed certificate revocation list exposes certificate identifiers, reasons, timestamps and issuer information. The signature authenticates that content; it does not conceal it.
 
-CRSet supplies research context, not an implemented Genesis Mesh privacy feature.
+The article follows a withdrawal through the authority and examines what observers could infer. It also explains why a higher CRL sequence does not always mean a new revocation.
 
-Read: {{PATREON_URL_AFTER_VERIFIED_PUBLICATION}}
+CRSet supplies the privacy research question. Its privacy properties are not claimed for the Genesis Mesh CRL.
+
+Read the article: {{PATREON_URL_AFTER_VERIFIED_PUBLICATION}}
