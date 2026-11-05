@@ -1,12 +1,12 @@
 # November 5 editorial revision: Federation without surrendering local control
 
-The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This repository revision leaves the existing Patreon post unchanged pending separate confirmation. Source-based review only: no product tests, demonstrations or live actions were executed.
+The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This reviewed revision was subsequently saved to the existing Patreon post and verified as recorded below. Source-based review only: no product tests, demonstrations or live actions were executed.
 
 ## Current verification and changed claims
 
 Current source/release refresh confirms core main a54b2d81f205c9b0203158f846f7ad44dc677063 and published v1.9.1 unchanged. The existing treaty implementation/feed verification claims retain their inspected source basis. The recognition walkthrough explicitly states scoped direct recognition, not transitive trust. Cross-sovereign revocation documentation shows imported attestation revocation while the treaty remains active, including rejection of stale sequences. The independent-sovereigns page explicitly labels its captured run as a replayed historical transcript; no current deployment or independent organizational ownership is inferred. New research-workspace handling is clearly an illustrative integration, with authentication and final permission retained by the receiver.
 
-Canonical pages were reopened on November 5. No new treaty, attestation or application operation was executed. Patreon remains unchanged pending separate confirmation.
+Canonical pages were reopened on November 5. No new treaty, attestation or application operation was executed. Patreon synchronization is verified below.
 
 The user-supplied [Connect vision](https://claude.ai/artifact/ParjPaubYJkVdkWcaCx4pt) was read in its rendered public iframe on November 5. It separates Connect as the everyday app from Genesis Mesh as the trust layer, preserves independent owner control, and labels the cross-owner document read with exact phone approval as a proposed first proof. Phone-approval screens, production federation between separate operators and a second independent implementation are not asserted as shipped or proven by these articles. This is product-vision context, not implementation evidence.
 
@@ -129,3 +129,9 @@ No material correction identified. Relevant treaty implementation and proof docu
 | sdk-rust | `b67c248717d5d99aca6f4dad320692f3f6c07c69` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-rust/releases/tag/v1.9.1) |
 | sdk-dotnet | `241d99b7508b378ce7c613dfc0baeed7cc5df56c` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-dotnet/releases/tag/v1.9.1) |
 | gateway | `2e6486ee6a6481adca1be3b9dae70a4ef32036f9` | [v1.9.1](https://github.com/GenesisMeshLabs/gateway/releases/tag/v1.9.1) |
+
+## Patreon synchronization
+
+Verified 2026-11-05: the approved revision was saved to the existing [Patreon post](https://www.patreon.com/GenesisMeshLabs/posts/federation-local-174297216) and reopened. Its rendered body and all 15 links matched the approved source; the cover and public access were preserved. The existing public schedule remains 2026-11-06T09:00:00+01:00 (Europe/Stockholm). LinkedIn remains an unpublished draft.
+
+Approved Markdown SHA-256: `00e3fbc8a300201b8ae7c8c6d99f969b1de02619c11ced5316950c3895e41976`. Rendered-body SHA-256 after collapsing whitespace: `2324389066c74af9fd7af5171cfd6464f57b92568cf4529fc815b0f92d73ee8b`. This is verification of the saved publication copy, not execution of a product example or proof that a scheduled post has been released.

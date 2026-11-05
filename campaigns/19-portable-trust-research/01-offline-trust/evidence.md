@@ -1,3 +1,20 @@
+# November 5 live-article revision: offline trust
+
+The user explicitly authorized updating this existing public Patreon post and its matching repository package. Its title, public URL, visibility, cover and publication date must be preserved. The revised text was saved and platform verification is recorded below.
+
+## Changed wording and sources
+
+The credential-rotation flow, parameter envelope, time-token accounting, refusal/quarantine distinctions and disconnected revocation limits are retained from the previously reviewed article. The historical code permalinks remain immutable evidence, not instructions to install those historical releases. Current core/Rust implementation heads and official v1.9.1 releases were rechecked earlier on 2026-11-05 and unchanged; no new package installation or runtime execution is claimed.
+
+- New wording: “The grant routes are beta and require these opt-in authority settings”. The [public contract](https://docs.genesismesh.org/reference/public-contract.html), [grant runbook](https://docs.genesismesh.org/operations/grants.html) and [worked example](https://docs.genesismesh.org/examples/pre-issued-grants.html) establish beta routes and EVIDENCE_STORE, EVIDENCE_OUT_OF_BAND, EVIDENCE_GRANTS opt-ins.
+- Replaced vague planned client coverage with: “Consult the current integration matrix for the operations and limits of the client you use. Coordinated version numbers do not establish identical fallback behavior.” The [SDK matrix](https://docs.genesismesh.org/sdk/index.html) distinguishes actual current surfaces; some older runbook paragraphs omit the released .NET governed client and are not used as availability evidence.
+- The edge fallback discussion now links the canonical [edge-agent runbook](https://docs.genesismesh.org/operations/edge-agent.html); the pinned classifier source remains for its exact proxy-error behavior. This changes the reader-facing guide, not the specified failure behavior.
+- The final Further reading links identify the grant example, grant rules, edge behavior and [offline-verifier limits](https://docs.genesismesh.org/operations/independent-verification.html). Those canonical pages were reopened on November 5; the existing time/refused-use anchors remain verified.
+
+The Connect vision is consistent context, not a new implementation claim: this article explains a trust-layer mechanism, not a built cross-owner phone-approval flow or production federation. No product tests, device exercises or live demonstrations were executed.
+
+## Prior technical source ledger
+
 # Evidence review: Offline trust and revocation: what a disconnected system can know
 
 Reviewed: 2026-11-04. Original campaign idea: 1. Evidence level: current documentation and source inspection, compared with the article’s pinned implementation snapshots. No product tests, examples, live actions or hardware exercises were run for this review.
@@ -52,3 +69,9 @@ No new operational contradiction found. The Rust security fix hardens undated re
 | sdk-rust | `b67c248717d5d99aca6f4dad320692f3f6c07c69` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-rust/releases/tag/v1.9.1) |
 | sdk-dotnet | `241d99b7508b378ce7c613dfc0baeed7cc5df56c` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-dotnet/releases/tag/v1.9.1) |
 | gateway | `2e6486ee6a6481adca1be3b9dae70a4ef32036f9` | [v1.9.1](https://github.com/GenesisMeshLabs/gateway/releases/tag/v1.9.1) |
+
+## Patreon synchronization
+
+Verified 2026-11-05: the approved revision was saved to the existing [Patreon post](https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054) and reopened. Its rendered body and all 21 links matched the approved source; the cover and public access were preserved. The post remains public and published at its existing URL; its recorded original publication date remains 2026-11-04. LinkedIn remains an unpublished draft.
+
+Approved Markdown SHA-256: `9c686e6781739a82b1bdd1a7b7621e9bae4b436ebe703c6a2f75b71d592119d6`. Rendered-body SHA-256 after collapsing whitespace: `0d95812446e6547bfca94f96204853ffb91c0eba75ef5f526f5f9724cbbf86ca`. This is verification of the saved publication copy, not execution of a product example or proof that a scheduled post has been released.

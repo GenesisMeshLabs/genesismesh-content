@@ -43,7 +43,18 @@
       "thumbnail": "thumbnail.png",
       "audience": "public",
       "scheduled_at": "2026-11-05T09:00:00+01:00",
-      "timezone": "Europe/Stockholm"
+      "timezone": "Europe/Stockholm",
+      "content_revision": {
+        "status": "saved_verified",
+        "verified_on": "2026-11-05",
+        "source_sha256": "67a069decf78f1d18693f2943300804b5fd4f6416e7beb2bb7c9eaaedc037b00",
+        "rendered_text_sha256": "6489b392f193c5f84a7b66e503f82b77b422ac982ffca4df1d6162b58c817c27",
+        "rendered_text_normalization": "All whitespace sequences collapsed to one space; leading/trailing whitespace removed.",
+        "links_verified": 21,
+        "cover_verified": true,
+        "public_audience_verified": true,
+        "existing_state_preserved": true
+      }
     },
     "linkedin": {
       "status": "draft_not_published",
@@ -52,7 +63,7 @@
     "repository": {
       "publication_authorized": true,
       "review_status": "passed",
-      "source_review_date": "2026-11-04"
+      "source_review_date": "2026-11-05"
     }
   },
   "article_approved": true,
@@ -70,11 +81,11 @@
     "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
     "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
-    "patreon_sync": "pending_user_confirmation",
+    "patreon_sync": "saved_verified",
     "examples_executed": false
   },
   "thumbnail_alt_text": "Connected. Authorized? Requests approach a doorway, illustrating that an established connection does not itself grant permission.",
-  "word_count": 752,
+  "word_count": 952,
   "source_reviewed_at": "2026-11-05",
   "article_sha256": "67a069decf78f1d18693f2943300804b5fd4f6416e7beb2bb7c9eaaedc037b00"
 }

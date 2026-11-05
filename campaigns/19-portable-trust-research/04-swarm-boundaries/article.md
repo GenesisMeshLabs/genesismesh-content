@@ -4,59 +4,69 @@
 
 *A task assignment and permission to change a resource need separate checks.*
 
-Consider an illustrative deployment: one agent diagnoses an incident. Another prepares a patch. A third is asked to deploy it. The coordination may be correct while the final request still exceeds the third agent's authority.
+One agent diagnoses an incident. Another prepares a patch. A third receives the instruction to deploy it. The handoffs may be sensible while the final request still exceeds the deployment agent's authority.
 
-A useful deployment boundary can distinguish staging from production, one resource from another and preparation from execution. It also needs an answer when the authority is unavailable. Those decisions belong in the integration that can actually perform the change.
+In this illustrative scenario, the organization permits staging changes but requires a separate authority basis for production. The important boundary is the component holding the deployment credentials. A task assignment must not silently expand what that component will execute.
 
-## Follow the deployment request
+[AgentNet](https://arxiv.org/abs/2504.00587) studies decentralized coordination through agents and changing connections. Its results provide research context for distributing work; they do not establish authorization at each organization's tool boundary. No AgentNet integration is claimed here.
 
-Genesis Mesh supplies signed trust and decision records rather than a swarm scheduler. The [project vision](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/VISION.md) keeps agent frameworks outside the core product. An orchestrator can remain responsible for assigning work while the receiving application checks authority at its own boundary.
+## Follow the authority through the handoff
 
-The [governed-changes model](https://docs.genesismesh.org/concepts/governed-changes.html) distinguishes a prior decision, a change authorized under a pre-issued grant and a later judgment about an action. For the deployment example, that means identifying the requesting principal, the target resource, the requested capability and parameters, and the executor that will report the result. Saying “the agent was assigned this task” leaves those checks unspecified.
+Genesis Mesh provides signed trust, decision and evidence records. It does not choose which agent should diagnose the incident or prepare the patch. An orchestrator can keep those responsibilities while the receiving application checks authority for the proposed resource change.
 
-## Delegation still needs an execution boundary
+The beta [delegation-chain workflow](https://docs.genesismesh.org/examples/delegation-chain.html) gives that application an inspectable path. A root `AgreementRecord` can lead to signed `DelegatedAgreementRecord` hops. Each hop identifies its parent and binds the parent's terms through a digest.
 
-The [delegation-chain walkthrough](https://docs.genesismesh.org/examples/delegation-chain.html) gives a more concrete way to narrow delegated authority: capability and validity subsets, with signatures checked at each hop. Verifying that chain does not grant permission for every interaction. The root agreement and the particular execution request still need their own verification.
+The [chain verifier](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/delegation.py#L283-L390) checks linkage, signatures, capability containment and expiry ceilings. A child may retain or narrow its parent's capabilities; it cannot add a capability the parent did not hold.
 
-The [process-level mediation example](https://docs.genesismesh.org/examples/process-level-mediation.html) exposes another integration limit. A guard is advisory if the agent can bypass it, retain the provider credentials or invoke an unrestricted subprocess. Making it mandatory requires removing those alternative paths. It is not kernel or hardware attestation. Its in-memory token budget resets on restart, and the guard makes no network calls, so a revoked token remains usable there until its expiry. Those limits matter when the proposed guarantee is containment rather than simply better records.
+For the deployment scenario, a staging-only delegation cannot acquire production authority merely because the next agent receives a more ambitious task. The capability names and resource mapping are application choices, not a built-in deployment connector.
 
-## Evidence follows the executor
+Chain verification has a separate limit: it does not establish that the root authority is currently acceptable for a new action. The root agreement and the actual execution request still need their own verification. A cryptographically intact history can outlive the operator's decision to accept it.
 
-In a supported governed integration, the controller obtains a decision, performs the permitted action and submits signed execution evidence. Broader client coverage is planned; the [integration guide](https://docs.genesismesh.org/sdk/index.html) identifies the available operations. The authority's decision and the executor's report answer different questions. A signed allow records permission; an executor's record describes what that executor reports doing. An independent observation can add evidence from the system where the change appeared.
+## Evaluate the action the executor will perform
 
-The Network Authority, the operator's service that signs trust decisions and judges evidence, does not deploy the application by recording any of these artifacts. Nor does a signed record prove that an agent was uncompromised or that every side effect was reported. The [security model](https://docs.genesismesh.org/concepts/security-model.html) should be read alongside the integration: policy protects the route where it is enforced, not every tool the agent can reach.
+The [boundary-policy workflow](https://docs.genesismesh.org/examples/declarative-boundary-policy.html) lets an operator publish rules and obtain a signed `BoundaryDecision` for a request. The Network Authority is the operator-run service that evaluates those rules. The executor remains responsible for the external deployment.
 
-## Test the handoff, not just the conversation
+The controller must bind the evaluated principal, resource, capability and relevant parameters to the actual operation. An approval for one staging service does not authorize changing a different production service. Facts supplied to policy evaluation must come from trusted integration inputs; signing the result does not make an agent's assertion true.
 
-[AgentNet](https://arxiv.org/abs/2504.00587) studies decentralized coordination through agents and changing connections. It provides research context for distributing work. Its coordination results do not establish authorization at each participating organization's tool boundary, and no AgentNet integration is claimed here.
+A denied action should stop before the deployment callback. If the authority is unavailable, the integration needs its explicitly configured outage behavior. Unavailability and a verified denial are different outcomes; neither a task assignment nor a successful delegation check supplies a blanket exception.
 
-A useful integration test would send the same deployment agent a staging request and a production request. Show the rule and enforcement point that explain the difference. Then revoke authority after assignment but before execution, and inspect the information available at that final check. Test outage and exceptional execution separately.
+## Make mediation mandatory only when bypass is closed
+
+The beta [GenesisGuard example](https://docs.genesismesh.org/examples/process-level-mediation.html) shows a local execution boundary. A signed `ExecutionMediationRequest` references a stored decision and carries an invocation token and command. The [guard](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/trust/mediation.py#L126-L267) checks the authorization artifacts and command policy before mediated subprocess execution.
+
+A guard is advisory if the agent can avoid it, retain provider credentials or invoke an unrestricted subprocess. Mandatory mediation requires verified restrictions on those alternative routes, including direct network access. Starting the guard does not provide a kernel sandbox or hardware attestation.
+
+Its [token-use counter](https://github.com/GenesisMeshLabs/genesismesh/blob/a54b2d81f205c9b0203158f846f7ad44dc677063/genesis_mesh/guard/daemon.py#L53-L111) is process-local and resets on restart. The guard does not fetch newly recorded revocations; expiry and other local checks still apply. This is neither immediate withdrawal propagation nor durable global usage accounting.
+
+These mechanisms describe parts an integration can use. They are not a ready-made swarm connector or proof that an existing deployment has closed every bypass.
+
+## Keep permission and execution evidence distinct
+
+In a supported governed integration, the controller obtains a decision, performs the permitted action and submits signed `ExecutionEvidence`. The [governed-changes model](https://docs.genesismesh.org/concepts/governed-changes.html) distinguishes permission issued beforehand from the executor's later report and from judgments about actions observed afterward.
+
+The authority does not deploy an application by recording those artifacts. A signed allow records permission. An executor's record describes what that executor reports doing. An independent observation can supply another account from the system where the change appeared. Evidence-store collection requires the relevant features to be enabled; it is not automatically on.
+
+Client choice matters. The current [capability matrix](https://docs.genesismesh.org/sdk/index.html) identifies TypeScript, Rust and .NET as governed clients; Go remains a verifier plus thin client. Their operations differ, so a shared product version does not establish feature parity.
+
+The [security model](https://docs.genesismesh.org/concepts/security-model.html) should accompany the integration review. Signed records do not prove that an agent was uncompromised, every side effect was reported or unchecked tools were inaccessible.
 
 ## Check it yourself
 
-From a prepared checkout with its documented dependencies installed:
+From an installed source checkout, follow the [delegation walkthrough](https://docs.genesismesh.org/examples/delegation-chain.html):
 
-```bash
+```text
 python docs/examples/assets/scripts/delegation-chain-demo.py --no-gif
 ```
 
-The linked walkthrough requires a dual-signed root agreement, operator keys and recognition-graph exports for its manual flow. Widening capabilities fails with “exceed parent scope”; a wrong verification key fails with `invalid_delegator_signature` or `invalid_delegate_signature`. Verify the root agreement separately, then test a verified deny with a harmless callback before connecting a deployment tool.
+The demo supplies example keys, agreements and a controlled scenario clock. Expect a valid two-hop chain to verify and an attempt to widen capabilities to fail. The manual flow requires a dual-signed root agreement, operator keys and recognition-graph exports; verify the root separately.
 
-This is a documented example and integration checklist, not executed in this review. Inspect the process-mediation example's credential and subprocess assumptions before calling its guard mandatory. A broad child delegation or a denied action should not be accepted merely because the task was assigned.
+This documented example was not executed in this review. For your deployment integration, separately test a verified denial with a harmless callback, a staging-versus-production handoff and authority withdrawal between assignment and execution. Inspect what the final checker actually knows before connecting production credentials.
 
-**Builds on our video** [Why Every Trust Decision Needs a Signed Record](https://www.youtube.com/watch?v=gp5yqnNQdZI)
+## Further reading
 
-**Go deeper:**
+- [Delegation chains](https://docs.genesismesh.org/examples/delegation-chain.html): inspecting the supplied authority path.
+- [Declarative boundary policy](https://docs.genesismesh.org/examples/declarative-boundary-policy.html): evaluating a concrete request.
+- [Process-level mediation](https://docs.genesismesh.org/examples/process-level-mediation.html): guard deployment and bypass limits.
+- [Governed changes and evidence](https://docs.genesismesh.org/concepts/governed-changes.html): decisions, execution reports and observations.
 
-[Governed changes](https://docs.genesismesh.org/concepts/governed-changes.html)
-
-**Next:** Revoked, but still running: the actions that happen too late
-
----
-
-Genesis Mesh is a portable trust layer for sovereign systems, and it is open source.
-
-Website: https://genesismesh.org
-Documentation: https://docs.genesismesh.org
-Live demo: https://mesh.genesismesh.org
-GitHub: https://github.com/GenesisMeshLabs
+[Website](https://genesismesh.org/) · [Documentation](https://docs.genesismesh.org/) · [Public demo](https://mesh.genesismesh.org/) · [GitHub](https://github.com/GenesisMeshLabs/genesismesh)

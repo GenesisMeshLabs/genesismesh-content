@@ -1,9 +1,11 @@
-“Prepare a patch” becomes “deploy to production.” The task handoff looks simple. The authority handoff needs its own check.
+"Prepare a patch" becomes "deploy to production." The task handoff looks simple. The authority handoff needs its own check.
 
-This Genesis Mesh draft follows scoped delegation, governed execution and the guard's real limits. A guard cannot contain an agent that can bypass it or still holds unrestricted provider credentials.
+Genesis Mesh's beta delegation workflow checks a supplied authority path, while the receiving application must still evaluate the actual resource change. A staging-only permission should not expand because the next agent receives a bigger task.
 
-A governed integration connects decisions to execution evidence. The application still needs to check the operations its chosen client supports, and agent coordination is not an authorization guarantee.
+A local guard also needs verified restrictions on bypass routes. Its counter is process-local, and it does not fetch new revocations; other local checks still apply.
 
-Which component checks the permission immediately before your agent changes the resource?
+The article follows one deployment handoff through delegation, policy, mediation and execution evidence, with the limits made explicit.
 
 Read the article: https://www.patreon.com/GenesisMeshLabs/posts/swarm-needs-not-174297241
+
+#GenesisMesh #AIAgents #Authorization

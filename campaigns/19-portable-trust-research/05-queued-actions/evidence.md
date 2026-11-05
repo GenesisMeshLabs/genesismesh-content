@@ -1,12 +1,12 @@
 # November 5 editorial revision: Revoked, but still running: the actions that happen too late
 
-The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This repository revision leaves the existing Patreon post unchanged pending separate confirmation. Source-based review only: no product tests, demonstrations or live actions were executed.
+The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This reviewed revision was subsequently saved to the existing Patreon post and verified as recorded below. Source-based review only: no product tests, demonstrations or live actions were executed.
 
 ## Current verification and changed claims
 
 Current source/release refresh confirms TypeScript head 8154ca7ac459ffbcd22d35900ca72f8093165bfc and v1.9.1 unchanged. The governed-action guide was reopened: it requires explicit verifier options, checks policy/attestation and context bindings, rechecks expiry after the resource-head lookup and separates callback execution from evidence delivery. Existing outbox/single-process/crash limits retain their source inspection basis; no callback or flush was run.
 
-Replaced the ambiguous statement that broader client coverage is planned with a current per-client scope instruction. The current SDK matrix confirms .NET governed-client support from v1.9.0; older prose in the governed-changes page still omits it and is not used as availability evidence. Documentation links were expanded beside relevant claims and in a final Further reading section. No general queue fencing, provider cancellation, rollback or universal SDK parity is asserted. Patreon remains unchanged pending confirmation.
+Replaced the ambiguous statement that broader client coverage is planned with a current per-client scope instruction. The current SDK matrix confirms .NET governed-client support from v1.9.0; older prose in the governed-changes page still omits it and is not used as availability evidence. Documentation links were expanded beside relevant claims and in a final Further reading section. No general queue fencing, provider cancellation, rollback or universal SDK parity is asserted. Patreon synchronization is verified below.
 
 Canonical documentation pages opened and checked on 2026-11-05:
 
@@ -137,3 +137,9 @@ No material correction identified. The cited TypeScript implementation snapshot 
 | sdk-rust | `b67c248717d5d99aca6f4dad320692f3f6c07c69` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-rust/releases/tag/v1.9.1) |
 | sdk-dotnet | `241d99b7508b378ce7c613dfc0baeed7cc5df56c` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-dotnet/releases/tag/v1.9.1) |
 | gateway | `2e6486ee6a6481adca1be3b9dae70a4ef32036f9` | [v1.9.1](https://github.com/GenesisMeshLabs/gateway/releases/tag/v1.9.1) |
+
+## Patreon synchronization
+
+Verified 2026-11-05: the approved revision was saved to the existing [Patreon post](https://www.patreon.com/GenesisMeshLabs/posts/revoked-but-that-174297277) and reopened. Its rendered body and all 16 links matched the approved source; the cover and public access were preserved. The existing public schedule remains 2026-11-05T16:00:00+01:00 (Europe/Stockholm). LinkedIn remains an unpublished draft.
+
+Approved Markdown SHA-256: `719cdd797b0bf3a9583107b5e0880d9acba3cc787d3d61b0c407d14f46439b47`. Rendered-body SHA-256 after collapsing whitespace: `10c217411897106c15e0a27182173716d28219799842a447be93fd3e7064870b`. This is verification of the saved publication copy, not execution of a product example or proof that a scheduled post has been released.

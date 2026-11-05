@@ -40,7 +40,18 @@
       "thumbnail": "thumbnail.png",
       "audience": "public",
       "scheduled_at": "2026-11-05T16:00:00+01:00",
-      "timezone": "Europe/Stockholm"
+      "timezone": "Europe/Stockholm",
+      "content_revision": {
+        "status": "saved_verified",
+        "verified_on": "2026-11-05",
+        "source_sha256": "719cdd797b0bf3a9583107b5e0880d9acba3cc787d3d61b0c407d14f46439b47",
+        "rendered_text_sha256": "10c217411897106c15e0a27182173716d28219799842a447be93fd3e7064870b",
+        "rendered_text_normalization": "All whitespace sequences collapsed to one space; leading/trailing whitespace removed.",
+        "links_verified": 16,
+        "cover_verified": true,
+        "public_audience_verified": true,
+        "existing_state_preserved": true
+      }
     },
     "linkedin": {
       "status": "draft_not_published",
@@ -49,7 +60,7 @@
     "repository": {
       "publication_authorized": true,
       "review_status": "passed",
-      "source_review_date": "2026-11-04"
+      "source_review_date": "2026-11-05"
     }
   },
   "article_approved": true,
@@ -67,11 +78,11 @@
     "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
     "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
-    "patreon_sync": "pending_user_confirmation",
+    "patreon_sync": "saved_verified",
     "examples_executed": false
   },
   "thumbnail_alt_text": "Revoked. Still running? Linked blocks illustrate a sequence of queued work, asking whether revocation is checked before an external effect.",
-  "word_count": 949,
+  "word_count": 962,
   "source_reviewed_at": "2026-11-05",
   "article_sha256": "719cdd797b0bf3a9583107b5e0880d9acba3cc787d3d61b0c407d14f46439b47"
 }

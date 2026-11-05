@@ -23,3 +23,6 @@ The Rust 1.9.1 [security advisory](https://github.com/GenesisMeshLabs/sdk-rust/s
 
 For every package, the distinction remains: documentation describes a workflow, inspected implementation shows code, tests establish asserted cases, and an executed run would establish only that run's outcome. The documented examples in these articles were not executed for this editorial review.
 
+## Publication-copy verification
+
+On 2026-11-05, the six existing Patreon copies were saved and reopened after the approved editorial updates. Rendered text and ordered links matched the approved source for each post; public access, covers, titles and existing URLs were preserved. The two published posts remain live, and the four scheduled posts retain their recorded Europe/Stockholm release times. Per-package review records contain the source and normalized rendered-text hashes. This checks the saved publication copy, not execution of any product example or a future scheduled release. LinkedIn remains unpublished.

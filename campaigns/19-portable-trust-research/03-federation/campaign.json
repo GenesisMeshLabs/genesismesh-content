@@ -39,7 +39,18 @@
       "thumbnail": "thumbnail.png",
       "audience": "public",
       "scheduled_at": "2026-11-06T09:00:00+01:00",
-      "timezone": "Europe/Stockholm"
+      "timezone": "Europe/Stockholm",
+      "content_revision": {
+        "status": "saved_verified",
+        "verified_on": "2026-11-05",
+        "source_sha256": "00e3fbc8a300201b8ae7c8c6d99f969b1de02619c11ced5316950c3895e41976",
+        "rendered_text_sha256": "2324389066c74af9fd7af5171cfd6464f57b92568cf4529fc815b0f92d73ee8b",
+        "rendered_text_normalization": "All whitespace sequences collapsed to one space; leading/trailing whitespace removed.",
+        "links_verified": 15,
+        "cover_verified": true,
+        "public_audience_verified": true,
+        "existing_state_preserved": true
+      }
     },
     "linkedin": {
       "status": "draft_not_published",
@@ -48,7 +59,7 @@
     "repository": {
       "publication_authorized": true,
       "review_status": "passed",
-      "source_review_date": "2026-11-04"
+      "source_review_date": "2026-11-05"
     }
   },
   "article_approved": true,
@@ -66,11 +77,11 @@
     "word_count_method": "Rendered alphanumeric word tokens include title/headings/code/link labels, excluding Markdown syntax and URL destinations; internal apostrophes, dots, underscores and hyphens retained.",
     "review_status": "passed_source_based_independent_review",
     "source_snapshot": "Relevant pinned implementation heads and GitHub releases rechecked November 5; canonical documentation verified. Registry observations remain dated in the shared review.",
-    "patreon_sync": "pending_user_confirmation",
+    "patreon_sync": "saved_verified",
     "examples_executed": false
   },
   "thumbnail_alt_text": "Trust across boundaries. Two independent nodes exchange signals above a verification symbol, illustrating scoped recognition between operators, not universal approval.",
-  "word_count": 805,
+  "word_count": 956,
   "source_reviewed_at": "2026-11-05",
   "article_sha256": "00e3fbc8a300201b8ae7c8c6d99f969b1de02619c11ced5316950c3895e41976"
 }

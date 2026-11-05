@@ -17,16 +17,22 @@
   "primary_message": "Pre-issued grants bound offline authority; revocation freshness, configured exceptions and later evidence admission remain distinct.",
   "call_to_action": "Which action in your system should never proceed on stale trust information?",
   "source_docs": [
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/examples/pre-issued-grants.md",
+    "https://docs.genesismesh.org/examples/pre-issued-grants.html",
     "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/grants.py#L645-L736",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md",
+    "https://docs.genesismesh.org/reference/public-contract.html",
+    "https://docs.genesismesh.org/operations/grants.html",
     "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/src/grant_holder.rs#L630-L692",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md#time",
+    "https://docs.genesismesh.org/operations/grants.html#time",
     "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/src/grant_holder.rs#L816-L825",
-    "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/edge/src/decision.rs#L132-L226",
+    "https://docs.genesismesh.org/operations/edge-agent.html",
     "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/edge/src/decision.rs#L50-L80",
-    "https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/docs/operations/grants.md#a-refused-use-keeps-its-place",
-    "https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/docs/verifier.md"
+    "https://docs.genesismesh.org/sdk/index.html",
+    "https://docs.genesismesh.org/operations/grants.html#a-refused-use-keeps-its-place",
+    "https://docs.genesismesh.org/operations/independent-verification.html",
+    "https://genesismesh.org/",
+    "https://docs.genesismesh.org/",
+    "https://mesh.genesismesh.org/",
+    "https://github.com/GenesisMeshLabs/genesismesh"
   ],
   "slogan": "Genesis Mesh: portable trust for sovereign systems.",
   "thumbnail": "../../../videos/thumbnails/offline-trust.png",
@@ -37,7 +43,18 @@
       "published_at": "2026-11-04",
       "thumbnail": "thumbnail.png",
       "status": "published",
-      "audience": "public"
+      "audience": "public",
+      "content_revision": {
+        "status": "saved_verified",
+        "verified_on": "2026-11-05",
+        "source_sha256": "9c686e6781739a82b1bdd1a7b7621e9bae4b436ebe703c6a2f75b71d592119d6",
+        "rendered_text_sha256": "0d95812446e6547bfca94f96204853ffb91c0eba75ef5f526f5f9724cbbf86ca",
+        "rendered_text_normalization": "All whitespace sequences collapsed to one space; leading/trailing whitespace removed.",
+        "links_verified": 21,
+        "cover_verified": true,
+        "public_audience_verified": true,
+        "existing_state_preserved": true
+      }
     },
     "linkedin": {
       "status": "draft_not_published",
@@ -46,13 +63,22 @@
     "repository": {
       "publication_authorized": true,
       "review_status": "passed",
-      "source_review_date": "2026-11-04"
+      "source_review_date": "2026-11-05"
     }
   },
   "article_approved": true,
   "published": true,
   "media_production": "thumbnail_ready_audio_video_not_started",
-  "source_reviewed_at": "2026-11-04",
-  "article_sha256": "b1bac7addd62898c1a193775c4c6353c0cd6647a82fbbc0c824f7a97d727fe4e",
-  "article_updated_at": "2026-11-04"
+  "source_reviewed_at": "2026-11-05",
+  "article_sha256": "9c686e6781739a82b1bdd1a7b7621e9bae4b436ebe703c6a2f75b71d592119d6",
+  "article_updated_at": "2026-11-05",
+  "editorial_revision": {
+    "type": "around_900_words_with_documentation",
+    "review_date": "2026-11-05",
+    "target_words": 900,
+    "visible_word_count": 969,
+    "review_status": "passed_source_based_independent_review",
+    "patreon_sync": "saved_verified",
+    "examples_executed": false
+  }
 }

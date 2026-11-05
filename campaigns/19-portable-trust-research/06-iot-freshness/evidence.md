@@ -1,12 +1,12 @@
 # November 5 editorial revision: Offline IoT trust has a freshness budget
 
-The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This repository revision leaves the existing Patreon post unchanged pending separate confirmation. Source-based review only: no product tests, demonstrations or live actions were executed.
+The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This reviewed revision was subsequently saved to the existing Patreon post and verified as recorded below. Source-based review only: no product tests, demonstrations or live actions were executed.
 
 ## Current verification and changed claims
 
 Current source/release refresh confirms core a54b2d81f205c9b0203158f846f7ad44dc677063, Rust SDK/edge b67c248717d5d99aca6f4dad320692f3f6c07c69 and published v1.9.1 unchanged. The edge-agent runbook was reopened on November5 and remains explicitly beta. Existing claims distinguish NA429/5xx from unreachable proxy errors, grants from break-glass, explicit DENY and out-of-envelope refusal, signed snapshot freshness, and later evidence admission from physical execution. No universal SDK fallback behavior or hardware safety property is inferred.
 
-The revision adds beta beside the edge-agent introduction, repeats precise canonical links at the failure discussion and ends with a further-reading section. Scenarios remain proposed simulator checks, not executed product/hardware tests. Patreon remains unchanged pending confirmation.
+The revision adds beta beside the edge-agent introduction, repeats precise canonical links at the failure discussion and ends with a further-reading section. Scenarios remain proposed simulator checks, not executed product/hardware tests. Patreon synchronization is verified below.
 
 Canonical documentation pages opened and checked on 2026-11-05:
 
@@ -125,3 +125,9 @@ No material correction identified. The edge implementation is explicitly unaffec
 | sdk-rust | `b67c248717d5d99aca6f4dad320692f3f6c07c69` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-rust/releases/tag/v1.9.1) |
 | sdk-dotnet | `241d99b7508b378ce7c613dfc0baeed7cc5df56c` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-dotnet/releases/tag/v1.9.1) |
 | gateway | `2e6486ee6a6481adca1be3b9dae70a4ef32036f9` | [v1.9.1](https://github.com/GenesisMeshLabs/gateway/releases/tag/v1.9.1) |
+
+## Patreon synchronization
+
+Verified 2026-11-05: the approved revision was saved to the existing [Patreon post](https://www.patreon.com/GenesisMeshLabs/posts/offline-iot-has-174297309) and reopened. Its rendered body and all 12 links matched the approved source; the cover and public access were preserved. The existing public schedule remains 2026-11-06T16:00:00+01:00 (Europe/Stockholm). LinkedIn remains an unpublished draft.
+
+Approved Markdown SHA-256: `e2518dd0f507de054979a69b8aa5abeafb2542785ad39d31f8a0325087f3db3b`. Rendered-body SHA-256 after collapsing whitespace: `4aad929fa5aeaaf1a807b67f886bf1987f618bff42c3a106be030754c21fd005`. This is verification of the saved publication copy, not execution of a product example or proof that a scheduled post has been released.

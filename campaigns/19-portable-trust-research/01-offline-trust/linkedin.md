@@ -1,7 +1,9 @@
-A disconnected controller can verify a signature. It cannot learn a revocation that nobody has delivered.
+A valid signature cannot tell a disconnected controller about a revocation it has not received.
 
-This article follows a bounded Genesis Mesh grant through a credential rotation: scope, expiry, use budgets, signed evidence and reconciliation when the link returns. It also explains what those checks cannot establish offline.
+Genesis Mesh's beta pre-issued grant routes bound authority before an outage. Scope, time-token budgets and later evidence admission remain separate from the external action and its consequences.
 
-Which actions should your system refuse when trust information becomes too old?
+The updated article follows one credential-rotation example and links the documentation for checking the limits.
 
-Read the article: https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054
+Read: https://www.patreon.com/GenesisMeshLabs/posts/offline-trust-174297054
+
+#GenesisMesh #OfflineSystems #Authorization

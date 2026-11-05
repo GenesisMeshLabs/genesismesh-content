@@ -1,6 +1,6 @@
 # November 5 editorial revision: P2P transport is only half the handshake
 
-The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This repository revision leaves the existing Patreon post unchanged pending separate confirmation. Source-based review only: no product tests, demonstrations or live actions were executed.
+The user requested articles around 900 words, canonical documentation links throughout, and a final Further reading section. This reviewed revision was subsequently saved to the existing Patreon post and verified as recorded below. Source-based review only: no product tests, demonstrations or live actions were executed.
 
 ## Current verification and changed claims
 
@@ -8,7 +8,7 @@ Core main and latest release remain a54b2d81f205c9b0203158f846f7ad44dc677063 / v
 
 The revised gateway paragraph accurately names join-certificate verification, replacing the broader 'foreign member' phrasing. The current canonical gateway guide states beta status, scoped bearer credentials, operator-provided trust inputs, returned trusted result and session/application binding. The attestation-backed guide states that caller authentication remains the relying system's job. The new log/test paragraphs are clearly an illustrative integration proposal, not observed deployment behavior. The DIAP primary abstract was reopened and used only as research context.
 
-No changes to the scheduled Patreon post were made. Its existing Nov5 09:00 Europe/Stockholm release remains pending platform-edit confirmation.
+The existing Nov5 09:00 Europe/Stockholm schedule was preserved when this revised copy was saved and verified.
 
 The user-supplied [Connect vision](https://claude.ai/artifact/ParjPaubYJkVdkWcaCx4pt) was read in its rendered public iframe on November 5. It separates Connect as the everyday app from Genesis Mesh as the trust layer, preserves independent owner control, and labels the cross-owner document read with exact phone approval as a proposed first proof. Phone-approval screens, production federation between separate operators and a second independent implementation are not asserted as shipped or proven by these articles. This is product-vision context, not implementation evidence.
 
@@ -137,3 +137,9 @@ No material correction identified. Core transport/peer/boundary implementation a
 | sdk-rust | `b67c248717d5d99aca6f4dad320692f3f6c07c69` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-rust/releases/tag/v1.9.1) |
 | sdk-dotnet | `241d99b7508b378ce7c613dfc0baeed7cc5df56c` | [v1.9.1](https://github.com/GenesisMeshLabs/sdk-dotnet/releases/tag/v1.9.1) |
 | gateway | `2e6486ee6a6481adca1be3b9dae70a4ef32036f9` | [v1.9.1](https://github.com/GenesisMeshLabs/gateway/releases/tag/v1.9.1) |
+
+## Patreon synchronization
+
+Verified 2026-11-05: the approved revision was saved to the existing [Patreon post](https://www.patreon.com/GenesisMeshLabs/posts/p2p-transport-is-174297160) and reopened. Its rendered body and all 21 links matched the approved source; the cover and public access were preserved. The existing public schedule remains 2026-11-05T09:00:00+01:00 (Europe/Stockholm). LinkedIn remains an unpublished draft.
+
+Approved Markdown SHA-256: `67a069decf78f1d18693f2943300804b5fd4f6416e7beb2bb7c9eaaedc037b00`. Rendered-body SHA-256 after collapsing whitespace: `6489b392f193c5f84a7b66e503f82b77b422ac982ffca4df1d6162b58c817c27`. This is verification of the saved publication copy, not execution of a product example or proof that a scheduled post has been released.

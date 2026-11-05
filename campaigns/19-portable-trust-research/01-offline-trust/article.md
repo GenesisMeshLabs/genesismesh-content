@@ -21,7 +21,7 @@ The [worked example](https://docs.genesismesh.org/examples/pre-issued-grants.htm
 
 The [issuance check](https://github.com/GenesisMeshLabs/genesismesh/blob/8d0869b75f107bde4cae3b6a9e2be99dca47fcb7/genesis_mesh/trust/grants.py#L645-L736) must establish that the applicable enforce-mode policies allow every request the envelope permits throughout the grant's validity. A range reaching 400 days can fail with `grant_gate_may_deny`. A gate depending on a per-request external fact, such as `attributes.owner`, cannot simply be assumed safe in advance.
 
-Grants require these opt-in authority settings:
+The [grant routes are beta](https://docs.genesismesh.org/reference/public-contract.html) and require these opt-in authority settings:
 
 ```text
 EVIDENCE_STORE=on
@@ -51,9 +51,9 @@ The [grant-holder path examined here](https://github.com/GenesisMeshLabs/sdk-rus
 
 Break-glass records an exception for later judgement. It does not turn that action into pre-issued authorization. A returned DENY is an authority decision, not an outage, and must not become permission through fallback.
 
-The [edge agent's rules](https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/edge/src/decision.rs#L132-L226) are stricter: an NA `429` or `5xx` permits only a covering grant, never break-glass. Connection failure, timeout and specifically classified proxy errors are different paths. A usable covering grant takes priority; if none exists, a held grant naming the capability but excluding the parameters or resource prevents break-glass even with justification. The [classifier](https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/edge/src/decision.rs#L50-L80) defines eligible proxy responses precisely.
+The [edge-agent runbook](https://docs.genesismesh.org/operations/edge-agent.html) describes stricter rules: an NA `429` or `5xx` permits only a covering grant, never break-glass. Connection failure, timeout and specifically classified proxy errors are different paths. A usable covering grant takes priority; if none exists, a held grant naming the capability but excluding the parameters or resource prevents break-glass even with justification. The [classifier](https://github.com/GenesisMeshLabs/sdk-rust/blob/89e5091184680c935d3fd4acea391446dcc6cd9e/edge/src/decision.rs#L50-L80) defines eligible proxy responses precisely.
 
-These capabilities exist in supported implementations; broader support across SDKs is planned. Verify the lifecycle your integration actually implements rather than assuming parity.
+Consult the [current integration matrix](https://docs.genesismesh.org/sdk/index.html) for the operations and limits of the client you use. Coordinated version numbers do not establish identical fallback behavior.
 
 ## Reconnection reconciles what already happened
 
@@ -77,13 +77,11 @@ Then test an isolated resource or fake action: revoke during an outage, exhaust 
 
 Finally, compare the records with an external change log and verify an audit pack using [the offline verifier](https://docs.genesismesh.org/operations/independent-verification.html). Supply independently held keys and anchors. This second implementation is a same-project port, so agreement cannot rule out a mistake both implementations share.
 
-The goal is specific: bounded authority before disconnection, visible exceptions, and evidence that remains useful when the network returns.
+## Further reading
 
----
+- [Grant walkthrough](https://docs.genesismesh.org/examples/pre-issued-grants.html): issue a bounded grant and inspect admitted and quarantined uses.
+- [Grant runbook](https://docs.genesismesh.org/operations/grants.html): envelopes, time tokens, revocation and reconnect limits.
+- [Edge-agent runbook](https://docs.genesismesh.org/operations/edge-agent.html): the device's distinct fallback and freshness rules.
+- [Offline verification](https://docs.genesismesh.org/operations/independent-verification.html): independently held keys, anchors and the second verifier's limits.
 
-Genesis Mesh is a portable trust layer for sovereign systems, and it is open source.
-
-Website: https://genesismesh.org  
-Documentation: https://docs.genesismesh.org  
-Live demo: https://mesh.genesismesh.org  
-GitHub: https://github.com/GenesisMeshLabs
+Find more on the [website](https://genesismesh.org/), [documentation](https://docs.genesismesh.org/), [public trust console](https://mesh.genesismesh.org/) and [source repository](https://github.com/GenesisMeshLabs/genesismesh). The console is not a demonstration of an offline device.

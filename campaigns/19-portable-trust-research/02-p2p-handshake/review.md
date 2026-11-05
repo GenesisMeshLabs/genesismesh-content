@@ -22,12 +22,18 @@ The branded cover and upload copy are unchanged from the previously reviewed pac
 
 ## Publication state
 
-Repository publication of the reviewed updates was explicitly requested. The existing public Patreon schedule is preserved. This revised repository copy has not been applied to Patreon; that edit awaits separate user confirmation. LinkedIn remains a draft and was not posted. A prepared social draft does not establish that its linked Patreon release has occurred.
+Repository publication of the reviewed updates was explicitly requested. The existing public Patreon schedule is preserved. The revised copy was saved to the existing Patreon post and verified below. LinkedIn remains a draft and was not posted. A prepared social draft does not establish that its linked Patreon release has occurred.
 
 ## Asset hashes
 
 - article.md: `67a069decf78f1d18693f2943300804b5fd4f6416e7beb2bb7c9eaaedc037b00`
 - patreon.md: `67a069decf78f1d18693f2943300804b5fd4f6416e7beb2bb7c9eaaedc037b00`
 - linkedin.md: `03827de036b717657d73cc347fed721a85cde6f28792db2610fa8da86892264e`
-- evidence.md: `058783e95a57a957724b1a2d15ea47ce672b4350b1f9082a7adac4c494fae4fb`
+- evidence.md: `5964b37f594e8ee8a1ef5dbaadc72996847e646155bf7d8235a12d2e335ca7ec`
 - thumbnail.png: `84e06525fe8feabc0fb9df955f927b4e11f73baabecb735386f602b6744244e9`
+
+## Patreon synchronization
+
+Verified 2026-11-05: the approved revision was saved to the existing [Patreon post](https://www.patreon.com/GenesisMeshLabs/posts/p2p-transport-is-174297160) and reopened. Its rendered body and all 21 links matched the approved source; the cover and public access were preserved. The existing public schedule remains 2026-11-05T09:00:00+01:00 (Europe/Stockholm). LinkedIn remains an unpublished draft.
+
+Approved Markdown SHA-256: `67a069decf78f1d18693f2943300804b5fd4f6416e7beb2bb7c9eaaedc037b00`. Rendered-body SHA-256 after collapsing whitespace: `6489b392f193c5f84a7b66e503f82b77b422ac982ffca4df1d6162b58c817c27`. This is verification of the saved publication copy, not execution of a product example or proof that a scheduled post has been released.

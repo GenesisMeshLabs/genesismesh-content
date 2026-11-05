@@ -22,12 +22,18 @@ The branded cover and upload copy are unchanged from the previously reviewed pac
 
 ## Publication state
 
-Repository publication of the reviewed updates was explicitly requested. The existing public Patreon schedule is preserved. This revised repository copy has not been applied to Patreon; that edit awaits separate user confirmation. LinkedIn remains a draft and was not posted. A prepared social draft does not establish that its linked Patreon release has occurred.
+Repository publication of the reviewed updates was explicitly requested. The existing public Patreon schedule is preserved. The revised copy was saved to the existing Patreon post and verified below. LinkedIn remains a draft and was not posted. A prepared social draft does not establish that its linked Patreon release has occurred.
 
 ## Asset hashes
 
 - article.md: `e2518dd0f507de054979a69b8aa5abeafb2542785ad39d31f8a0325087f3db3b`
 - patreon.md: `e2518dd0f507de054979a69b8aa5abeafb2542785ad39d31f8a0325087f3db3b`
 - linkedin.md: `72798ffdccde84f2a088a5acadabdc4afff839066ba5ccc0e86b32af24ee6311`
-- evidence.md: `c73974d0cb6a68ee1940df951dd5d705855e9ce87627982018c882c0f31a35f6`
+- evidence.md: `8e08cfc0b528cd1444a9a4f452e157f1421ba66e36205a2a637bc574a06be946`
 - thumbnail.png: `531810768751e721a63906af35860c84ee020ff5fa6e9749650c362e0b844fae`
+
+## Patreon synchronization
+
+Verified 2026-11-05: the approved revision was saved to the existing [Patreon post](https://www.patreon.com/GenesisMeshLabs/posts/offline-iot-has-174297309) and reopened. Its rendered body and all 12 links matched the approved source; the cover and public access were preserved. The existing public schedule remains 2026-11-06T16:00:00+01:00 (Europe/Stockholm). LinkedIn remains an unpublished draft.
+
+Approved Markdown SHA-256: `e2518dd0f507de054979a69b8aa5abeafb2542785ad39d31f8a0325087f3db3b`. Rendered-body SHA-256 after collapsing whitespace: `4aad929fa5aeaaf1a807b67f886bf1987f618bff42c3a106be030754c21fd005`. This is verification of the saved publication copy, not execution of a product example or proof that a scheduled post has been released.
